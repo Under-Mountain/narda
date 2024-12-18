@@ -1,0 +1,31 @@
+{
+  "interval": {
+    "minute": 1500,
+    "hour": 60,
+    "day": 24,
+    "year": 365
+  },
+  "worldbank": {
+    "maxDeficit": 1000000000
+  },
+  "resources": {
+    "water": {
+      "total": 1000000000,
+      "rateLo": 0,
+      "rateHi": 10
+    },
+    "mineral": {
+      "total": 1000000,
+      "rateLo": 0,
+      "rateHi": 4
+    }
+  },
+  "items": {
+    "bankstone": {
+      "rateLo": 1,
+      "rateHi": 30,
+      "capLo": 100,
+      "capHi": 10000
+    }
+  }
+}

@@ -1,0 +1,1972 @@
+[
+  {
+    "id": "WTR159",
+    "type": "water",
+    "amount": 1385,
+    "owner": "gandalf"
+  },
+  {
+    "id": "WTR2",
+    "type": "water",
+    "amount": 1160,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR112",
+    "type": "water",
+    "amount": 1065,
+    "owner": "sauron"
+  },
+  {
+    "id": "MNR47",
+    "type": "mineral",
+    "amount": 906,
+    "owner": "saruman"
+  },
+  {
+    "id": "WTR0",
+    "type": "water",
+    "amount": 240,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR161",
+    "type": "water",
+    "amount": 238,
+    "owner": "roadmap"
+  },
+  {
+    "id": "WTR154",
+    "type": "water",
+    "amount": 237,
+    "owner": "worldbank"
+  },
+  {
+    "id": "MNR160",
+    "type": "mineral",
+    "amount": -2,
+    "owner": "gandalf"
+  },
+  {
+    "id": "WTR78",
+    "type": "water",
+    "amount": 133,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR156",
+    "type": "water",
+    "amount": 131,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR82",
+    "type": "water",
+    "amount": 126,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR80",
+    "type": "water",
+    "amount": 122,
+    "owner": "worldbank"
+  },
+  {
+    "id": "MNR135",
+    "type": "mineral",
+    "amount": 119,
+    "owner": "sauron"
+  },
+  {
+    "id": "WTR79",
+    "type": "water",
+    "amount": 117,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR157",
+    "type": "water",
+    "amount": 114,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR158",
+    "type": "water",
+    "amount": 114,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR22",
+    "type": "water",
+    "amount": 107,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR21",
+    "type": "water",
+    "amount": 106,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR24",
+    "type": "water",
+    "amount": 105,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR155",
+    "type": "water",
+    "amount": 105,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR23",
+    "type": "water",
+    "amount": 103,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR81",
+    "type": "water",
+    "amount": 103,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR83",
+    "type": "water",
+    "amount": 103,
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR35",
+    "type": "water",
+    "amount": 39,
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK115",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.3,
+      "cap": 9674,
+      "staked": 9563.27549758233
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK6",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.28,
+      "cap": 7912,
+      "staked": 7827.44968984246
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK87",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.22,
+      "cap": 9463,
+      "staked": 9383.459928073522
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK103",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.24,
+      "cap": 8660,
+      "staked": 8580.620372180481
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK57",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.26,
+      "cap": 7839,
+      "staked": 7755.657183993008
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK146",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.22,
+      "cap": 8478,
+      "staked": 8406.739223312617
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK114",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.26,
+      "cap": 7133,
+      "staked": 7047.1127871250865
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK119",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.24,
+      "cap": 7561,
+      "staked": 7476.925647353754
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK40",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.21,
+      "cap": 8606,
+      "staked": 8512.40900360396
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK8",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.2,
+      "cap": 8851,
+      "staked": 8764.10787123472
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK5",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.29,
+      "cap": 6014,
+      "staked": 5933.284075258776
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK38",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.26,
+      "cap": 6679,
+      "staked": 6589.181954647252
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK77",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.17,
+      "cap": 9998,
+      "staked": 9909.894440644297
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK120",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.27,
+      "cap": 6186,
+      "staked": 6104.148845451118
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK92",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.17,
+      "cap": 9596,
+      "staked": 9515.86904123534
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK15",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.2,
+      "cap": 8158,
+      "staked": 8069.061117925419
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK13",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.17,
+      "cap": 9398,
+      "staked": 9315.18183168385
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK116",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.24,
+      "cap": 6566,
+      "staked": 6488.720162288967
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK27",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.24,
+      "cap": 6513,
+      "staked": 6432.11183971416
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK9",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.24,
+      "cap": 6491,
+      "staked": 6410.385068568188
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK54",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.17,
+      "cap": 8981,
+      "staked": 8906.004570585103
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK74",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.28,
+      "cap": 5468,
+      "staked": 5392.986972227141
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK130",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.18,
+      "cap": 8454,
+      "staked": 8383.404296569095
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK129",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.24,
+      "cap": 6246,
+      "staked": 6176.547757356374
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK28",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.18,
+      "cap": 8137,
+      "staked": 8065.072168445734
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK60",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.23,
+      "cap": 6261,
+      "staked": 6194.267152418847
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK52",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.21,
+      "cap": 6776,
+      "staked": 6710.029320801899
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK97",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.26,
+      "cap": 5272,
+      "staked": 5212.233588502454
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK71",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.3,
+      "cap": 4531,
+      "staked": 4471.7801509121155
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK29",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.14,
+      "cap": 9434,
+      "staked": 9372.673547062774
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK41",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.15,
+      "cap": 8581,
+      "staked": 8514.244911905114
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK151",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.16,
+      "cap": 7810,
+      "staked": 7752.003105948372
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK99",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.26,
+      "cap": 4703,
+      "staked": 4646.3719946515175
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK46",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.12,
+      "cap": 9865,
+      "staked": 9806.783678026002
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK102",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.16,
+      "cap": 7321,
+      "staked": 7266.634409558006
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK7",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.16,
+      "cap": 7283,
+      "staked": 7222.580305527189
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK89",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.13,
+      "cap": 8729,
+      "staked": 8679.389312988118
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK94",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.23,
+      "cap": 4955,
+      "staked": 4905.278146243369
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK148",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.21,
+      "cap": 5318,
+      "staked": 5269.255937214897
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK63",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.13,
+      "cap": 8262,
+      "staked": 8212.117570322469
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK101",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.25,
+      "cap": 4223,
+      "staked": 4176.957526655532
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK147",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.22,
+      "cap": 4709,
+      "staked": 4663.791892611441
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK61",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.21,
+      "cap": 4849,
+      "staked": 4801.790462893804
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK59",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.2,
+      "cap": 4997,
+      "staked": 4950.656088172575
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK33",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.11,
+      "cap": 8830,
+      "staked": 8782.222779013493
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK105",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.1,
+      "cap": 9423,
+      "staked": 9381.77846617121
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK133",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.16,
+      "cap": 5886,
+      "staked": 5844.852816328804
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK153",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.2,
+      "cap": 4565,
+      "staked": 4525.142136002736
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK49",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.28,
+      "cap": 3117,
+      "staked": 3076.5994127740055
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK69",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.16,
+      "cap": 5412,
+      "staked": 5371.81060299521
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK132",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.1,
+      "cap": 8544,
+      "staked": 8506.623709536958
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK134",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.11,
+      "cap": 7762,
+      "staked": 7724.656752027561
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK138",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.09,
+      "cap": 9272,
+      "staked": 9235.487624859385
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK18",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.11,
+      "cap": 7503,
+      "staked": 7464.65251042549
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK19",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.18,
+      "cap": 4547,
+      "staked": 4509.029966465543
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK137",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.09,
+      "cap": 8828,
+      "staked": 8795.404790373095
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK75",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.11,
+      "cap": 7178,
+      "staked": 7143.466396038884
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK123",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.12,
+      "cap": 6408,
+      "staked": 6376.471526412053
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK39",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.27,
+      "cap": 2836,
+      "staked": 2800.546600952266
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK45",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.16,
+      "cap": 4723,
+      "staked": 4687.927102355207
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK43",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.13,
+      "cap": 5808,
+      "staked": 5768.82228044109
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK32",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.16,
+      "cap": 4719,
+      "staked": 4681.903564930479
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK131",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.08,
+      "cap": 9261,
+      "staked": 9226.553698986281
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK149",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.19,
+      "cap": 3821,
+      "staked": 3787.327212566177
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK44",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.14,
+      "cap": 5172,
+      "staked": 5134.437996293337
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK109",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.23,
+      "cap": 3158,
+      "staked": 3124.340467551305
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK42",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.12,
+      "cap": 5453,
+      "staked": 5420.820212496278
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK17",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.09,
+      "cap": 7238,
+      "staked": 7207.71966567148
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK136",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.23,
+      "cap": 2834,
+      "staked": 2805.5617086687607
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK110",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.12,
+      "cap": 5354,
+      "staked": 5325.905830983277
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK90",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.1,
+      "cap": 6279,
+      "staked": 6251.532101144965
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK50",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.13,
+      "cap": 4676,
+      "staked": 4647.768307773887
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK65",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.14,
+      "cap": 4326,
+      "staked": 4297.878499532918
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK30",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.12,
+      "cap": 5000,
+      "staked": 4970.493501280283
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK117",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.08,
+      "cap": 7337,
+      "staked": 7311.31249883009
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK95",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.2,
+      "cap": 2702,
+      "staked": 2678.40833548289
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK91",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.1,
+      "cap": 5245,
+      "staked": 5222.055402214579
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK16",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.17,
+      "cap": 3068,
+      "staked": 3042.3808064308078
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK88",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.1,
+      "cap": 5015,
+      "staked": 4993.06155235579
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK12",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.11,
+      "cap": 4478,
+      "staked": 4453.770510127114
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK127",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.23,
+      "cap": 2121,
+      "staked": 2099.7164375746083
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK150",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.08,
+      "cap": 5947,
+      "staked": 5926.179014657563
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK122",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.05,
+      "cap": 9335,
+      "staked": 9314.56073342483
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK98",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.15,
+      "cap": 3105,
+      "staked": 3084.6463685007134
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK124",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.15,
+      "cap": 3040,
+      "staked": 3018.831325298882
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK86",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.06,
+      "cap": 7210,
+      "staked": 7189.8779817323
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK70",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.15,
+      "cap": 2722,
+      "staked": 2701.9348393962514
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK31",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.13,
+      "cap": 3111,
+      "staked": 3091.115772212025
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK106",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.15,
+      "cap": 2664,
+      "staked": 2645.449556117179
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK68",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.1,
+      "cap": 3647,
+      "staked": 3629.0566167391794
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK143",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.16,
+      "cap": 2278,
+      "staked": 2262.075215018181
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK128",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.05,
+      "cap": 6508,
+      "staked": 6493.750535953807
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK107",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.26,
+      "cap": 1197,
+      "staked": 1183.430122427435
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK141",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.26,
+      "cap": 1122,
+      "staked": 1109.28036538311
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK125",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.09,
+      "cap": 3206,
+      "staked": 3193.3750350840355
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK51",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.09,
+      "cap": 3123,
+      "staked": 3109.934859891134
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK152",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.05,
+      "cap": 5547,
+      "staked": 5534.854674698181
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK14",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.03,
+      "cap": 8969,
+      "staked": 8956.47620945451
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK139",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.22,
+      "cap": 1198,
+      "staked": 1186.4987656293279
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK140",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.15,
+      "cap": 1740,
+      "staked": 1728.5941002226225
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK144",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.04,
+      "cap": 6355,
+      "staked": 6343.866140260562
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK121",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.03,
+      "cap": 8354,
+      "staked": 8343.020687453789
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK72",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.11,
+      "cap": 2191,
+      "staked": 2179.8018992859184
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK48",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.04,
+      "cap": 5906,
+      "staked": 5895.006682241927
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK76",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.1,
+      "cap": 2304,
+      "staked": 2293.292528817636
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK108",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.07,
+      "cap": 3242,
+      "staked": 3232.0662412533047
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK62",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.04,
+      "cap": 5489,
+      "staked": 5478.782878229927
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK58",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.16,
+      "cap": 1293,
+      "staked": 1283.3982094739108
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK142",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.02,
+      "cap": 9983,
+      "staked": 9974.251376704755
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK34",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.15,
+      "cap": 1309,
+      "staked": 1299.3507365061319
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK73",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.19,
+      "cap": 1034,
+      "staked": 1024.8878141307057
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK56",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.23,
+      "cap": 853,
+      "staked": 843.9083023499886
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK126",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.13,
+      "cap": 1401,
+      "staked": 1393.037510310042
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK118",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.2,
+      "cap": 855,
+      "staked": 847.5348359873691
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK37",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.06,
+      "cap": 2583,
+      "staked": 2576.2147254678775
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK64",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.18,
+      "cap": 746,
+      "staked": 740.5006528547536
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK100",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.06,
+      "cap": 2098,
+      "staked": 2093.176881614395
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK4",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.09,
+      "cap": 1207,
+      "staked": 1202.2469330462975
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK53",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.27,
+      "cap": 398,
+      "staked": 393.6066297404525
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK111",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.04,
+      "cap": 2230,
+      "staked": 2226.5810662091494
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK66",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.04,
+      "cap": 2167,
+      "staked": 2162.729349383931
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK67",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.01,
+      "cap": 8100,
+      "staked": 8096.006409546956
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK104",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.01,
+      "cap": 6959,
+      "staked": 6955.7595322156985
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK20",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.17,
+      "cap": 406,
+      "staked": 402.4221987299044
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK3",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.29,
+      "cap": 221,
+      "staked": 217.68755720928993
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK36",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.22,
+      "cap": 286,
+      "staked": 282.7424191040469
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK10",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.19,
+      "cap": 242,
+      "staked": 239.99228824650683
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK55",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.27,
+      "cap": 155,
+      "staked": 153.2890140948998
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK11",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.05,
+      "cap": 693,
+      "staked": 691.4826554111844
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK96",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.01,
+      "cap": 2466,
+      "staked": 2465.0543054092022
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK145",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.03,
+      "cap": 576,
+      "staked": 575.337559458766
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "MNR113",
+    "type": "mineral",
+    "amount": 0,
+    "owner": "sauron"
+  },
+  {
+    "id": "MNR85",
+    "type": "mineral",
+    "amount": -3,
+    "owner": "sauron"
+  },
+  {
+    "id": "WTR84",
+    "type": "water",
+    "amount": -6,
+    "owner": "sauron"
+  },
+  {
+    "id": "MNR1",
+    "type": "mineral",
+    "amount": -6,
+    "owner": "sauron"
+  },
+  {
+    "id": "MNR26",
+    "type": "mineral",
+    "amount": -6,
+    "owner": "saruman"
+  },
+  {
+    "id": "MNR93",
+    "type": "mineral",
+    "amount": -6,
+    "owner": "sauron"
+  },
+  {
+    "id": "WTR25",
+    "type": "water",
+    "amount": -7,
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK162",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.01,
+      "cap": 9583,
+      "staked": 9583
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK163",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.03,
+      "cap": 6447,
+      "staked": 6447
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK164",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.06,
+      "cap": 292,
+      "staked": 292
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK165",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.28,
+      "cap": 2215,
+      "staked": 2215
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK166",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.04,
+      "cap": 2365,
+      "staked": 2365
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK167",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.17,
+      "cap": 2231,
+      "staked": 2231
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK168",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.03,
+      "cap": 3646,
+      "staked": 3646
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK169",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.12,
+      "cap": 7280,
+      "staked": 7280
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK170",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.27,
+      "cap": 3296,
+      "staked": 3296
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK171",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.24,
+      "cap": 2044,
+      "staked": 2044
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK172",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.19,
+      "cap": 9959,
+      "staked": 9959
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK173",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.29,
+      "cap": 6161,
+      "staked": 6161
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK174",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.18,
+      "cap": 6990,
+      "staked": 6990
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK175",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.05,
+      "cap": 1788,
+      "staked": 1788
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK176",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.06,
+      "cap": 7181,
+      "staked": 7181
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK177",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.19,
+      "cap": 429,
+      "staked": 429
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "MNR178",
+    "type": "mineral",
+    "amount": -1,
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK179",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.1,
+      "cap": 8592,
+      "staked": 8592
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK180",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.05,
+      "cap": 3999,
+      "staked": 3999
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK181",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.29,
+      "cap": 5882,
+      "staked": 5882
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK182",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.16,
+      "cap": 5032,
+      "staked": 5032
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK183",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.08,
+      "cap": 4273,
+      "staked": 4273
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK184",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.06,
+      "cap": 1307,
+      "staked": 1307
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "MNR185",
+    "type": "mineral",
+    "amount": -3,
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK186",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.07,
+      "cap": 8609,
+      "staked": 8609
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK187",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.19,
+      "cap": 5110,
+      "staked": 5110
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "MNR188",
+    "type": "mineral",
+    "amount": -4,
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK189",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.2,
+      "cap": 4951,
+      "staked": 4951
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK190",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.22,
+      "cap": 6040,
+      "staked": 6040
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK191",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.26,
+      "cap": 3893,
+      "staked": 3893
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "MNR192",
+    "type": "mineral",
+    "amount": 11,
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK193",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.01,
+      "cap": 3164,
+      "staked": 3164
+    },
+    "owner": "gandalf"
+  },
+  {
+    "id": "BNK194",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.05,
+      "cap": 1493,
+      "staked": 1493
+    },
+    "owner": "gandalf"
+  }
+]

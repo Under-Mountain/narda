@@ -1,0 +1,19 @@
+{
+  "name": "worldcore",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "data interface for the world core",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "lowdb": "^7.0.1"
+  }
+}
