@@ -2,7 +2,7 @@
   {
     "id": "sauron",
     "credits": {
-      "balance": 3766.643210744481
+      "balance": 5184.723395514245
     },
     "times": {
       "created": 21,
@@ -15,7 +15,7 @@
   {
     "id": "saruman",
     "credits": {
-      "balance": 3443.167709209166
+      "balance": 4131.886664636074
     },
     "times": {
       "created": 92,
@@ -28,7 +28,7 @@
   {
     "id": "gandalf",
     "credits": {
-      "balance": 3083.193324479088
+      "balance": 3408.469278056891
     },
     "times": {
       "created": 243,
