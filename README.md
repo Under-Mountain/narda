@@ -39,8 +39,11 @@ Silma Money (Silma, sl, SLM)
 - Monetary credit issued by Bank of Under Mountain
 - Primary currency in World of Arda
 
-Bank of Under Mountain
+Under Mountain Group
 =
+
+Bank of Under Mountain
+-
 The primary and only central bank that periodically reserves resources and craft Silmarils. Silmarils can only be crafted here as it requires great deal of energy found only at the Under Mountain.
 
 - Buys resources at floor price every hour
@@ -48,7 +51,7 @@ The primary and only central bank that periodically reserves resources and craft
 - Provides minting service to users
 
 Under Mountain Networks
-=
+-
 Media group, providing service on marketplace, content creation, publication and advertisements
 
 - User content publication service
