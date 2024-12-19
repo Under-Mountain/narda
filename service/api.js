@@ -149,6 +149,9 @@ app.post('/mint', (req, res) => {
     const userWaters = assets.filter(a => a.owner == to && a.type == "water")
     const userMinerals = assets.filter(a => a.owner == to && a.type == "mineral")
 
+    const waterCost = Math.ceil(current.resources.water.supplied*Math.log(accounts.length*accounts.length)/current.resources.mineral.supplied)
+    const mineralCost = 100
+
     const activity = {
         "type": "mint",
         "id": id,
@@ -194,9 +197,13 @@ app.post('/mint', (req, res) => {
             break
         case "bankstone":
             if (account.credits.balance < 200 ||
-                userWaters.reduce((sum, c) => sum + c.amount, 0) < 6  ||
-                userMinerals.reduce((sum, c) => sum + c.amount, 0) < 1) {
-                console.error(`not enough balance to consume`)
+                userWaters.reduce((sum, c) => sum + c.amount, 0) < waterCost ||
+                userMinerals.reduce((sum, c) => sum + c.amount, 0) < mineralCost) {
+                console.error(`not enough balance to consume ${account.id}'s \
+                    credit ${account.credits.balance}, \
+                    water ${userWaters.reduce((sum, c) => sum + c.amount, 0)}, \
+                    mineral ${userMinerals.reduce((sum, c) => sum + c.amount, 0)}`)
+
                 res.sendStatus(403)
                 return
             }
@@ -216,7 +223,6 @@ app.post('/mint', (req, res) => {
             }
         
             activities.push(creditConsumption)
-            const waterCost = Math.ceil(current.resources.water.supplied*Math.log(accounts.length*accounts.length)/current.resources.mineral.supplied)
             const waterConsumption = {
                 "type": "consume",
                 "id": `CNS${activities.length}`,

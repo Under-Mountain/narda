@@ -2,7 +2,7 @@
   {
     "id": "sauron",
     "credits": {
-      "balance": 2644.066266743164
+      "balance": 3766.643210744481
     },
     "times": {
       "created": 21,
@@ -13,9 +13,22 @@
     "bio": "I am Sauron. I'm the beginning and the ending of the world. I may hurt, I may help."
   },
   {
+    "id": "saruman",
+    "credits": {
+      "balance": 3443.167709209166
+    },
+    "times": {
+      "created": 92,
+      "updated": 92,
+      "lastActive": 92,
+      "edited": 15705
+    },
+    "bio": "I born good but turn evil. I work for Sauron."
+  },
+  {
     "id": "gandalf",
     "credits": {
-      "balance": 1842
+      "balance": 3083.193324479088
     },
     "times": {
       "created": 243,
@@ -26,17 +39,16 @@
     "bio": "I am good and I will save"
   },
   {
-    "id": "saruman",
+    "id": "hobbit",
     "credits": {
-      "balance": 926.081387278758
+      "balance": 873
     },
     "times": {
-      "created": 92,
-      "updated": 92,
-      "lastActive": 92,
-      "edited": 15705
+      "created": 54955,
+      "lastActive": 54955,
+      "edited": 55114
     },
-    "bio": "I born good but turn evil. I work for Sauron."
+    "bio": "hey i'm hobbit, i'm short but fun"
   },
   {
     "id": "legolas",
@@ -318,7 +330,7 @@
   {
     "id": "worldbank",
     "credits": {
-      "balance": -17000
+      "balance": -18000
     },
     "times": {
       "created": 0,

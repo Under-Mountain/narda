@@ -128,5 +128,29 @@
       "created": 4668
     },
     "comments": []
+  },
+  {
+    "id": "PST6",
+    "author": "hobbit",
+    "title": "test post",
+    "content": "hey world i'm hobbit how are you?",
+    "tags": [
+      "general",
+      "casual"
+    ],
+    "likes": 9,
+    "dislikes": 3,
+    "times": {
+      "created": 55144
+    },
+    "comments": [
+      {
+        "comment": "leaving own comment",
+        "author": "hobbit",
+        "time": 55156,
+        "likes": 0,
+        "dislikes": 0
+      }
+    ]
   }
 ]

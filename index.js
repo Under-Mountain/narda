@@ -226,14 +226,14 @@ app.get('/', (req, res) => {
             1 : -1})
         .sort((a, b) => { return a.amount < b.amount ? 1 : -1})
 
-    const userWaters = items.filter((a) => a.type=="water")
-    const userWaterTotal = userWaters.reduce((sum, c) => {return sum + c.amount}, 0)
-
-    const userMinerals = items.filter((a) => a.type=="mineral")
-    const userMineralTotal = userMinerals.reduce((sum, c) => {return sum + c.amount}, 0)
-
     const userActiveBankstones = items.filter((a) => a.type=="bankstone" && a.amount > 0)
     const activeEffectsTotal = current.effects.pending.length+current.effects.completed.length+current.effects.rejected.length
+
+    const userWaters = assets.filter((a) => a.type=="water" && a.owner == account.id)
+    const userWaterTotal = userWaters.reduce((sum, c) => {return sum + c.amount}, 0)
+
+    const userMinerals = assets.filter((a) => a.type=="mineral" && a.owner == account.id)
+    const userMineralTotal = userMinerals.reduce((sum, c) => {return sum + c.amount}, 0)
 
     const sendCreditHtml = `
         <form action="/transaction?return=/?user=${username}" method="post" style="text-align:right">
@@ -264,7 +264,7 @@ app.get('/', (req, res) => {
                     <input type="hidden" name="owner" value="${username}" />
                     
                     <button name="type" value="bankstone"
-                        ${userMineralTotal < 10 ||
+                        ${userMineralTotal < 100 ||
                         userWaterTotal < Math.ceil(current.resources.water.supplied/current.resources.mineral.supplied) ||
                         account.credits.balance < 200 ? "disabled": ""}>
                         Mint Bankstone (-200.00 credit)
@@ -273,7 +273,7 @@ app.get('/', (req, res) => {
                         consumes
                         ${Math.ceil(current.resources.water.supplied*Math.log(accounts.length*accounts.length)/current.resources.mineral.supplied)}
                         water +
-                        ${10} mineral
+                        ${100} mineral
                 </div>
             </form>
         <ul>`
