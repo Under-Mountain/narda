@@ -34,7 +34,7 @@ Silmarils
 
 ... more to come
 
-Silma Credit (Silma, sl, SLM)
+Silma Credit (Silma, sl, SLC)
 =
 - Issued by Bank of Under Mountain
 - Primary currency in World of Arda
