@@ -41,6 +41,7 @@ Silma Money (Silma, sl, SLM)
 
 Under Mountain Group
 =
+Under Mountain Group, a conglomerate in Arda universe that provides various services across the world. We will be the only connection to outside world from Arda and is how we protect all the user minted contents in Arda universe.
 
 Bank of Under Mountain
 -
@@ -58,5 +59,9 @@ Media group, providing service on marketplace, content creation, publication and
 - Network auditing and data insights
 - Advertisement
 - Marketplace
+
+Under Mountain Community
+-
+Union board for all community matters, setting direction of development and management
 
 ... more to come
