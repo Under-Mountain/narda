@@ -1,11 +1,12 @@
 import { onMinuteAsync } from './service/service.js'
-import { accounts, assets, world, market, current } from './service/model.js'
+import { accounts, assets, world, market, current, blog } from './service/model.js'
 import { app } from './service/api.js'
-import { PostsView, PostView, TagsView } from './views/press.js'
-import { MarketStatsView } from './views/market.js'
+import { ChannelsView, PostsView, PostView } from './views/posts.js'
+import { MarketStatsView, MarketplaceView } from './views/market.js'
 import { HeaderView } from './views/header.js'
-import { AuthView, LeaderboardView } from './views/accounts.js'
+import { AuthView,  LeaderboardView, InventoryView, ProfileView } from './views/accounts.js'
 import { FooterView } from './views/footer.js'
+import { ActivitiesView, AssetsView } from './views/world.js'
 
 console.log(`starting worldcore service..`)
 const port = 3000
@@ -20,30 +21,28 @@ app.get('/', (req, res) => {
     const username = req.query.user? req.query.user : req.session.username
     const account = accounts.find(a => a.id == username)
 
-    let listings = market.filter(l => !l.times.sold && !l.times.expired)
-        .sort((a, b) => { return a.price / a.amount < b.price / b.amount ? 1 : -1 })
-        .sort((a, b) => { return a.amount < b.amount ? 1 : -1 })
-
-    const marketStatsHtml = MarketStatsView(listings)
     const headerHtml = HeaderView(session, username)
 
-    if (!req.session.username && !req.query.user) {
+    /**
+     * World Overview
+     */
+    if (!req.query.user) {
         const leaderboardHtml = LeaderboardView()
         const blogHtml = PostsView()
 
         res.send(`
         ${headerHtml}
-        ${AuthView}
-        ${marketStatsHtml}
+        ${!session.username? AuthView() : ``}
+
         ${leaderboardHtml}
         ${blogHtml}
         
-        ${FooterView}`)
+        ${FooterView()}`)
         return
     }
 
     /**
-     * Authenticated View
+     * Account Overview
      */
     const items = assets.filter(a => a.owner == account.id && a.amount > 0)
         .sort((a, b) => { return a.properties && b.properties &&
@@ -60,26 +59,21 @@ app.get('/', (req, res) => {
     const userMinerals = assets.filter((a) => a.type=="mineral" && a.owner == account.id)
     const userMineralTotal = userMinerals.reduce((sum, c) => {return sum + c.amount}, 0)
 
-    const sendCreditHtml = BalanceView(account)
+    const inventoryHtml = InventoryView(username, items, userMineralTotal, userWaterTotal, account)
 
-    let inventoryHtml = InventoryView(username, items, userMineralTotal, userWaterTotal, account)
-
-
-    listings = market.filter(l => !l.times.sold && !l.times.expired)
+    let listings = market.filter(l => !l.times.sold && !l.times.expired)
         .sort((a, b) => { return a.price / a.amount < b.price / b.amount ? 1 : -1 })
         .sort((a, b) => { return a.amount < b.amount ? 1 : -1 })
 
     if (session.username != username) listings = listings.filter(l => l.owner == username)
-    const marketplaceHtml = MarketplaceView(listings, marketStatsHtml, username, session, account)
+    const marketplaceHtml = MarketplaceView(listings, username, session, account)
 
     res.send(`${headerHtml}
-        ${ProfileView(username, account, userWaterTotal, userMineralTotal, userActiveBankstones, activeEffectsTotal)}
-
-        ${session && session.username == username ? sendCreditHtml : ``}
+        ${ProfileView(username, account, userWaterTotal, userMineralTotal, userActiveBankstones, activeEffectsTotal, session)}
         ${session && session.username == username ? inventoryHtml : ``}
 
         ${marketplaceHtml}
-        ${FooterView}`)
+        ${FooterView()}`)
         return
 })
 
@@ -92,22 +86,21 @@ app.get('/leaderboard', (req, res) => {
     const leaderboardHtml = LeaderboardView()
     res.send(`
         ${headerHtml}
-        <h1>Leaderboard</h1>
         ${leaderboardHtml}
     `)
 })
 
-app.get('/transactions', (req, res) => {
+app.get('/explorer', (req, res) => {
     const session = req.session
     const username = req.query.user? req.query.user : req.session.username
     const account = accounts.find(a => a.id == username)
     
     const headerHtml = HeaderView(session, username)
-    const transactionsHtml = getActivitiesHtml()
+
+    let html = req.query.type == 'item' ? AssetsView() : ActivitiesView()
     res.send(`
         ${headerHtml}
-        <h1>All Activities</h1>
-        ${transactionsHtml}
+        ${html}
     `)
 })
 
@@ -116,10 +109,9 @@ app.get('/mints', (req, res) => {
     const username = req.query.user? req.query.user : req.session.username
     
     const headerHtml = HeaderView(session, username)
-    const assetsHtml = getAssetsHtml()
+    const assetsHtml = AssetsView()
     res.send(`
         ${headerHtml}
-        <h1>All Assets</h1>
         ${assetsHtml}
     `)
 })
@@ -135,16 +127,16 @@ app.get('/marketplace', (req, res) => {
     .sort((a, b) => { return a.price / a.amount < b.price / b.amount ? 1 : -1 })
     .sort((a, b) => { return a.amount < b.amount ? 1 : -1 })
 
-    const marketStatsHtml = getMarketStatsHtml(listings)
-    const marketplaceHtml = getMarketplaceHtml(listings, marketStatsHtml, username, session, account)
+    const marketStatsHtml = MarketStatsView(listings)
+    const marketplaceHtml = MarketplaceView(listings, marketStatsHtml, username, session, account)
     res.send(`
         ${headerHtml}
-        <h1>Marketplace</h1>
         ${marketplaceHtml}
+        ${FooterView()}
     `)
 })
 
-app.get('/blog', (req, res) => {
+app.get('/posts', (req, res) => {
     const session = req.session
     const username = req.query.user? req.query.user : req.session.username
 
@@ -152,34 +144,41 @@ app.get('/blog', (req, res) => {
     const postsView = PostsView(req.query.tag)
     res.send(`
         ${headerHtml}
-        <h1>All Posts</h1>
         ${postsView}
     `)
 })
 
-app.get('/tags', (req, res) => {
+app.get('/post', (req, res) => {
     const session = req.session
     const username = req.query.user? req.query.user : req.session.username
+    const account = accounts.find(a => a.id == username)
+
+    if (!req.query.id) {
+        console.error(`invalid request`)
+        res.sendStatus(400)
+    }
+
+    const post = blog.find(p => p.id == req.query.id)
+    if (!post) {
+        console.error(`post ${req.query.id} not found`)
+        req.sendStatus(404)
+    }
 
     const headerHtml = HeaderView(session, username)
-    const tagsHtml = TagsView()
-    res.send(`
-        ${headerHtml}
-        <h1>All Tags</h1>
-        ${tagsHtml}
-    `)
-})
-
-app.get('/blog/post', (req, res) => {
-    const session = req.session
-    const username = req.query.user? req.query.user : req.session.username
-
-    const headerHtml = HeaderView(session, username)
-    const postHtml = PostView()
+    const postHtml = PostView(post, session, account)
     
     res.send(`
         ${headerHtml}
-        <h1>Blog</h1>
         ${postHtml}
+    `)
+})
+
+app.get('/channels', (req, res) => {
+    const session = req.session
+    const username = req.query.user? req.query.user : req.session.username
+
+    res.send(`
+        ${HeaderView(session, username)}
+        ${ChannelsView()}
     `)
 })

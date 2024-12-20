@@ -20,7 +20,7 @@ app.set('view engine', 'ejs')
 app.use(express.static(path.join(__dirname, '../public')))
 app.use(express.urlencoded({ extended: true }))
 
-app.get('/accounts/:id', (req, res) => {
+app.get('/api/accounts/:id', (req, res) => {
     const data = {
         title: 'Profile'
     }
@@ -44,7 +44,7 @@ app.get('/overview', (req, res) => {
     res.render('index', data)
 })
 
-app.post('/auth', function(req, res) {
+app.post('/api/auth', function(req, res) {
 	let username = req.body.username;
 	let password = req.body.password;
 
@@ -65,22 +65,22 @@ app.post('/auth', function(req, res) {
     }
 });
 
-app.get('/auths', function(req, res) {
+app.get('/api/auths', function(req, res) {
     res.json(auth)
 })
 
-app.get('/exit', function(req, res) {
+app.get('/api/exit', function(req, res) {
     req.session.destroy((err) => {
         if (err) console.warn(err)
         res.redirect('/')
     })
 })
 
-app.get('/accounts', (req, res) => {
+app.get('/api/accounts', (req, res) => {
     res.json(accounts)
 })
 
-app.get('/activities', (req, res) => {
+app.get('/api/activities', (req, res) => {
     let filteredActivities = activities
     if (req.query.type) {
         filteredActivities = activities.filter(a => a.type == req.query.type)
@@ -93,7 +93,7 @@ app.get('/activities', (req, res) => {
     res.json(filteredActivities)
 })
 
-app.get('/assets', (req, res) => {
+app.get('/api/assets', (req, res) => {
     let filteredAssets = assets
     if (req.query.user) {
         filteredAssets = assets.filter(a => a.owner == req.query.user)
@@ -102,11 +102,11 @@ app.get('/assets', (req, res) => {
     res.json(filteredAssets)
 })
 
-app.get('/current', (req, res) => {
+app.get('/api/current', (req, res) => {
     res.json(current)
 })
 
-app.get('/market', (req, res) => {
+app.get('/api/market', (req, res) => {
     let filteredListing = market
     if (req.query.user) {
         filteredListing = market.filter(a => a.owner == req.query.user)
@@ -115,7 +115,7 @@ app.get('/market', (req, res) => {
     res.json(filteredListing)
 })
 
-app.post('/transaction', (req, res) => {
+app.post('/api/transaction', (req, res) => {
     const id = `TX${activities.length}}`
     console.log(`${id}: sending ${req.body.of}...`);
 
@@ -140,7 +140,7 @@ app.post('/transaction', (req, res) => {
         world.interval.minute)
 })
 
-app.post('/mint', (req, res) => {
+app.post('/api/mint', (req, res) => {
     const id = `MNT${activities.length}`
     console.log(`${id}: minting ${req.body.type}...`);
 
@@ -267,7 +267,7 @@ app.post('/mint', (req, res) => {
         world.interval.minute)
 })
 
-app.post('/collect', (req, res) => {
+app.post('/api/collect', (req, res) => {
     const id = `CLT${activities.length}`
     console.log(`${id}: collecting ${req.body.resource}...`);
 
@@ -314,7 +314,7 @@ app.post('/collect', (req, res) => {
         world.interval.minute)
 })
 
-app.post('/list', (req, res) => {
+app.post('/api/list', (req, res) => {
     const id = `LST${market.length}`
     console.log(`${id}: listing ${req.body.id} for sale...`)
 
@@ -339,7 +339,7 @@ app.post('/list', (req, res) => {
         world.interval.minute)
 })
 
-app.post('/edit', (req, res) => {
+app.post('/api/edit', (req, res) => {
     if (!req.session.username) {
         res.sendStatus(401)
         return
@@ -380,7 +380,7 @@ app.post('/edit', (req, res) => {
         world.interval.minute)
 })
 
-app.post('/comment', (req, res) => {
+app.post('/api/comment', (req, res) => {
     if (!req.session.username) {
         res.sendStatus(401)
         return
@@ -435,7 +435,7 @@ app.post('/comment', (req, res) => {
         world.interval.minute)
 })
 
-app.post('/like', (req, res) => {
+app.post('/api/like', (req, res) => {
     if (!req.session.username) {
         res.sendStatus(401)
         return
@@ -487,7 +487,7 @@ app.post('/like', (req, res) => {
         world.interval.minute)
 })
 
-app.post('/post', (req, res) => {
+app.post('/api/post', (req, res) => {
     if (!req.session.username) {
         res.sendStatus(401)
         return
@@ -542,7 +542,7 @@ app.post('/post', (req, res) => {
         world.interval.minute)
 })
 
-app.post('/trade', (req, res) => {
+app.post('/api/trade', (req, res) => {
     const listing = market.find(l => l.id == req.body.id)
     const item = assets.find(a => a.id == listing.item)
 

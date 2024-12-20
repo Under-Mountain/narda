@@ -1,34 +1,21 @@
 [
   {
-    "id": "sauron",
+    "id": "bilbo",
     "credits": {
-      "balance": 5184.723395514245
+      "balance": 2000
     },
     "times": {
-      "created": 21,
-      "updated": 21,
-      "lastActive": 21,
-      "edited": 3940
+      "created": 1560,
+      "updated": 1560,
+      "lastActive": 1560,
+      "edited": 19128
     },
-    "bio": "I am Sauron. I'm the beginning and the ending of the world. I may hurt, I may help."
-  },
-  {
-    "id": "saruman",
-    "credits": {
-      "balance": 4131.886664636074
-    },
-    "times": {
-      "created": 92,
-      "updated": 92,
-      "lastActive": 92,
-      "edited": 15705
-    },
-    "bio": "I born good but turn evil. I work for Sauron."
+    "bio": "I enjoyed all my past journeys. I always wish I can go on an adventure again."
   },
   {
     "id": "gandalf",
     "credits": {
-      "balance": 3408.469278056891
+      "balance": 1255.4397874807075
     },
     "times": {
       "created": 243,
@@ -37,6 +24,54 @@
       "edited": 5397
     },
     "bio": "I am good and I will save"
+  },
+  {
+    "id": "legolas",
+    "credits": {
+      "balance": 1000
+    },
+    "times": {
+      "created": 1580,
+      "updated": 1580,
+      "lastActive": 1580,
+      "edited": 7708
+    },
+    "bio": "I sell cheap to help others"
+  },
+  {
+    "id": "aragorn",
+    "credits": {
+      "balance": 1000
+    },
+    "times": {
+      "created": 1547,
+      "updated": 1547,
+      "lastActive": 1547
+    }
+  },
+  {
+    "id": "worldbank",
+    "credits": {
+      "balance": 974.1699999999983
+    },
+    "times": {
+      "created": 0,
+      "updated": 0,
+      "lastActive": 0
+    }
+  },
+  {
+    "id": "saruman",
+    "credits": {
+      "balance": 962.6676789650578
+    },
+    "times": {
+      "created": 92,
+      "updated": 92,
+      "lastActive": 92,
+      "edited": 15705
+    },
+    "bio": "I born good but turn evil. I work for Sauron."
   },
   {
     "id": "hobbit",
@@ -51,41 +86,17 @@
     "bio": "hey i'm hobbit, i'm short but fun"
   },
   {
-    "id": "legolas",
+    "id": "sauron",
     "credits": {
-      "balance": 0
+      "balance": 41.124936819502125
     },
     "times": {
-      "created": 1580,
-      "updated": 1580,
-      "lastActive": 1580,
-      "edited": 7708
+      "created": 21,
+      "updated": 21,
+      "lastActive": 21,
+      "edited": 3940
     },
-    "bio": "I sell cheap to help others"
-  },
-  {
-    "id": "bilbo",
-    "credits": {
-      "balance": 0
-    },
-    "times": {
-      "created": 1560,
-      "updated": 1560,
-      "lastActive": 1560,
-      "edited": 19128
-    },
-    "bio": "I enjoyed all my past journeys. I always wish I can go on an adventure again."
-  },
-  {
-    "id": "aragorn",
-    "credits": {
-      "balance": 0
-    },
-    "times": {
-      "created": 1547,
-      "updated": 1547,
-      "lastActive": 1547
-    }
+    "bio": "I am Sauron. I'm the beginning and the ending of the world. I may hurt, I may help."
   },
   {
     "id": "frodo",
@@ -325,17 +336,6 @@
     "times": {
       "created": 6112,
       "lastActive": 6112
-    }
-  },
-  {
-    "id": "worldbank",
-    "credits": {
-      "balance": -18000
-    },
-    "times": {
-      "created": 0,
-      "updated": 0,
-      "lastActive": 0
     }
   }
 ]

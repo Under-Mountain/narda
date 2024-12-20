@@ -1,13 +1,11 @@
+import { current, world } from "../service/model.js"
+
 export function FooterView() {
     return `
-        <footer class="absolute w-full bottom-0 bg-gray-900 pb-6">
-            Genesis ${new Date(new Date().getTime() - current.time * world.interval.minute).toLocaleString()}
-            <a href="https://undermountain-group.github.com" class="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3">
-                Company
-            </a>
-            <a href="/blog" class="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3">
-                Blog
-            </a>
+        <footer class="footer footer-center mt-4 bg-base-300 text-base-content p-4">
+            <aside class="">
+                Arda v.1
+            </aside>
         </footer>
         </main></body>
         <script>

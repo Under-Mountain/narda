@@ -31,25 +31,24 @@ export function AssetsView() {
 }
 
 export function ActivitiesView() {
-    const filtered = activities
-        //.filter(a => a.type == "transaction")
+    const filtered = activities.filter(a => true)
         .sort((a, b) => { return a.times.completed > b.times.completed ? -1 : 1 })
     
-    let activitieisHtml = `<p style="text-align:center">Empty<p>`
+    let entriesHtml = `<p style="text-align:center">Empty<p>`
     if (filtered.length > 0) {
-        activitieisHtml = `<ul style="font-weight:normal;padding:.3em">`
+        entriesHtml = `<ul style="font-weight:normal;padding:.3em">`
         filtered.slice(0, 1000).forEach((t, idx) => {
-            activitieisHtml += `<oi><div><small>
+            entriesHtml += `<oi><div><small>
                     ${t.id}: Transaction of
                     <strong>${t.amount.toFixed(2)}</strong>
                     <strong>${t.of}</strong>
                     from <strong>${t.from}</strong>
                     to <strong>${t.to}</strong>
-                    on ${getTimeHtml(t.times.completed)}
+                    on ${TimeView(t.times.completed)}
                     <strong>note:</strong> ${t.note}
                 </small></div></oi>`
         })
-        activitieisHtml += "</ul>"
+        entriesHtml += "</ul>"
     }
-    return activitieisHtml
+    return entriesHtml
 }
