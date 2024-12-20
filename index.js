@@ -9,7 +9,7 @@ import { FooterView } from './views/footer.js'
 import { ActivitiesView, AssetsView } from './views/world.js'
 
 console.log(`starting worldcore service..`)
-const port = 3000
+const port = 8080
 app.listen(port, () => {
     console.log(`app listening on port ${port}`)
 })
