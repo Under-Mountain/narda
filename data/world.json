@@ -1,12 +1,12 @@
 {
   "interval": {
-    "minute": 1500,
+    "minute": 3000,
     "hour": 60,
     "day": 24,
     "year": 365
   },
   "worldbank": {
-    "maxDeficit": 1000000000
+    "maxDeficit": 1000000
   },
   "resources": {
     "water": {

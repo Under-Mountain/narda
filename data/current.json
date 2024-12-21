@@ -16,6 +16,7 @@
   },
   "effects": {
     "pending": [],
+    "completed": [],
     "rejected": []
   },
   "activities": {
