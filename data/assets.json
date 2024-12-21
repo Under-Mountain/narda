@@ -26,7 +26,7 @@
   {
     "id": "WTR217",
     "type": "water",
-    "amount": 738,
+    "amount": 2070,
     "owner": "sauron"
   },
   {
@@ -50,8 +50,14 @@
   {
     "id": "MNR213",
     "type": "mineral",
-    "amount": 188,
+    "amount": 279,
     "owner": "sauron"
+  },
+  {
+    "id": "MNR192",
+    "type": "mineral",
+    "amount": 149,
+    "owner": "gandalf"
   },
   {
     "id": "WTR78",
@@ -162,19 +168,13 @@
     "owner": "saruman"
   },
   {
-    "id": "MNR192",
-    "type": "mineral",
-    "amount": 149,
-    "owner": "gandalf"
-  },
-  {
     "id": "BNK115",
     "type": "bankstone",
     "amount": 1,
     "properties": {
       "yield": 0.3,
       "cap": 9674,
-      "staked": 9020.954367012077
+      "staked": 8976.558780083371
     },
     "owner": "sauron"
   },
@@ -185,7 +185,7 @@
     "properties": {
       "yield": 0.28,
       "cap": 7912,
-      "staked": 7412.369003199768
+      "staked": 7378.317161295852
     },
     "owner": "sauron"
   },
@@ -196,7 +196,7 @@
     "properties": {
       "yield": 0.22,
       "cap": 9463,
-      "staked": 8990.254295439305
+      "staked": 8957.790547359471
     },
     "owner": "sauron"
   },
@@ -207,7 +207,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 7839,
-      "staked": 7373.033127935255
+      "staked": 7341.577050589426
     },
     "owner": "saruman"
   },
@@ -218,7 +218,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 7999,
-      "staked": 7999
+      "staked": 7933.7211160411
     },
     "owner": "sauron"
   },
@@ -229,7 +229,7 @@
     "properties": {
       "yield": 0.19,
       "cap": 9959,
-      "staked": 9602.551280357691
+      "staked": 9537.772201474316
     },
     "owner": "gandalf"
   },
@@ -240,7 +240,7 @@
     "properties": {
       "yield": 0.21,
       "cap": 8606,
-      "staked": 8190.42626144216
+      "staked": 8129.377387965588
     },
     "owner": "saruman"
   },
@@ -251,7 +251,18 @@
     "properties": {
       "yield": 0.24,
       "cap": 7561,
-      "staked": 7154.577868436594
+      "staked": 7093.66162478894
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK8",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.2,
+      "cap": 8851,
+      "staked": 8392.724460666821
     },
     "owner": "sauron"
   },
@@ -262,20 +273,20 @@
     "properties": {
       "yield": 0.29,
       "cap": 6161,
-      "staked": 5841.48512539776
+      "staked": 5781.436575623286
     },
     "owner": "gandalf"
   },
   {
-    "id": "BNK8",
+    "id": "BNK77",
     "type": "bankstone",
     "amount": 1,
     "properties": {
-      "yield": 0.2,
-      "cap": 8851,
-      "staked": 8452.7381886556
+      "yield": 0.17,
+      "cap": 9998,
+      "staked": 9551.809420747939
     },
-    "owner": "sauron"
+    "owner": "saruman"
   },
   {
     "id": "BNK38",
@@ -284,7 +295,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 6679,
-      "staked": 6286.4640301262925
+      "staked": 6237.380775447109
     },
     "owner": "saruman"
   },
@@ -295,20 +306,9 @@
     "properties": {
       "yield": 0.29,
       "cap": 6014,
-      "staked": 5630.051940594831
+      "staked": 5589.920921651399
     },
     "owner": "sauron"
-  },
-  {
-    "id": "BNK77",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.17,
-      "cap": 9998,
-      "staked": 9600.883119171342
-    },
-    "owner": "saruman"
   },
   {
     "id": "BNK181",
@@ -317,7 +317,7 @@
     "properties": {
       "yield": 0.29,
       "cap": 5882,
-      "staked": 5568.0958215321625
+      "staked": 5524.013993398498
     },
     "owner": "gandalf"
   },
@@ -328,7 +328,7 @@
     "properties": {
       "yield": 0.17,
       "cap": 9596,
-      "staked": 9206.268713908546
+      "staked": 9163.479959225326
     },
     "owner": "sauron"
   },
@@ -339,7 +339,7 @@
     "properties": {
       "yield": 0.27,
       "cap": 6186,
-      "staked": 5791.71643390364
+      "staked": 5749.0159328693935
     },
     "owner": "sauron"
   },
@@ -350,7 +350,7 @@
     "properties": {
       "yield": 0.2,
       "cap": 8158,
-      "staked": 7765.341666634104
+      "staked": 7722.896613483542
     },
     "owner": "sauron"
   },
@@ -361,7 +361,7 @@
     "properties": {
       "yield": 0.17,
       "cap": 9398,
-      "staked": 9016.310272333521
+      "staked": 8974.404403584782
     },
     "owner": "sauron"
   },
@@ -372,7 +372,7 @@
     "properties": {
       "yield": 0.21,
       "cap": 7462,
-      "staked": 7229.504736641284
+      "staked": 7179.749085952739
     },
     "owner": "sauron"
   },
@@ -383,7 +383,7 @@
     "properties": {
       "yield": 0.24,
       "cap": 6513,
-      "staked": 6150.7614341346
+      "staked": 6102.404527705763
     },
     "owner": "saruman"
   },
@@ -394,7 +394,7 @@
     "properties": {
       "yield": 0.24,
       "cap": 6491,
-      "staked": 6129.9850251754515
+      "staked": 6081.791461590379
     },
     "owner": "sauron"
   },
@@ -405,7 +405,7 @@
     "properties": {
       "yield": 0.17,
       "cap": 8981,
-      "staked": 8636.339579658177
+      "staked": 8588.19417868563
     },
     "owner": "saruman"
   },
@@ -416,7 +416,7 @@
     "properties": {
       "yield": 0.18,
       "cap": 8454,
-      "staked": 8114.869335829769
+      "staked": 8066.977133605224
     },
     "owner": "sauron"
   },
@@ -427,9 +427,20 @@
     "properties": {
       "yield": 0.28,
       "cap": 5468,
-      "staked": 5118.774211714996
+      "staked": 5071.851744314258
     },
     "owner": "saruman"
+  },
+  {
+    "id": "BNK223",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.19,
+      "cap": 7515,
+      "staked": 7472.0807281321295
+    },
+    "owner": "sauron"
   },
   {
     "id": "BNK129",
@@ -438,7 +449,7 @@
     "properties": {
       "yield": 0.24,
       "cap": 6246,
-      "staked": 5906.376115457354
+      "staked": 5856.087439711554
     },
     "owner": "sauron"
   },
@@ -449,7 +460,7 @@
     "properties": {
       "yield": 0.18,
       "cap": 8137,
-      "staked": 7799.036043364406
+      "staked": 7749.1844197475975
     },
     "owner": "saruman"
   },
@@ -460,7 +471,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 6261,
-      "staked": 5938.114898519749
+      "staked": 5889.654651814527
     },
     "owner": "saruman"
   },
@@ -471,7 +482,7 @@
     "properties": {
       "yield": 0.21,
       "cap": 6776,
-      "staked": 6433.96657575462
+      "staked": 6386.009802944781
     },
     "owner": "saruman"
   },
@@ -482,7 +493,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 5272,
-      "staked": 4948.032121635989
+      "staked": 4902.407311974162
     },
     "owner": "sauron"
   },
@@ -493,7 +504,7 @@
     "properties": {
       "yield": 0.14,
       "cap": 9434,
-      "staked": 9117.326827188039
+      "staked": 9071.969565214944
     },
     "owner": "saruman"
   },
@@ -504,7 +515,7 @@
     "properties": {
       "yield": 0.22,
       "cap": 6040,
-      "staked": 5776.441437876651
+      "staked": 5731.342784337938
     },
     "owner": "gandalf"
   },
@@ -515,7 +526,7 @@
     "properties": {
       "yield": 0.3,
       "cap": 4531,
-      "staked": 4207.79874098053
+      "staked": 4169.91158576479
     },
     "owner": "saruman"
   },
@@ -526,7 +537,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 8581,
-      "staked": 8265.95696720827
+      "staked": 8228.666998639
     },
     "owner": "saruman"
   },
@@ -537,7 +548,7 @@
     "properties": {
       "yield": 0.18,
       "cap": 6990,
-      "staked": 6746.102622944248
+      "staked": 6709.5974281346225
     },
     "owner": "gandalf"
   },
@@ -548,7 +559,7 @@
     "properties": {
       "yield": 0.16,
       "cap": 7810,
-      "staked": 7514.399882372956
+      "staked": 7478.245376004051
     },
     "owner": "sauron"
   },
@@ -559,7 +570,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 4796,
-      "staked": 4608.38565283073
+      "staked": 4572.404445338914
     },
     "owner": "sauron"
   },
@@ -570,7 +581,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 4760,
-      "staked": 4577.054301449753
+      "staked": 4541.317721890576
     },
     "owner": "sauron"
   },
@@ -581,7 +592,7 @@
     "properties": {
       "yield": 0.12,
       "cap": 9865,
-      "staked": 9580.483443490693
+      "staked": 9545.893113904885
     },
     "owner": "saruman"
   },
@@ -592,7 +603,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 4703,
-      "staked": 4417.144005795076
+      "staked": 4388.906430404036
     },
     "owner": "sauron"
   },
@@ -603,7 +614,7 @@
     "properties": {
       "yield": 0.16,
       "cap": 7321,
-      "staked": 7040.820267039065
+      "staked": 7013.091440279806
     },
     "owner": "sauron"
   },
@@ -614,7 +625,7 @@
     "properties": {
       "yield": 0.16,
       "cap": 7283,
-      "staked": 6995.067489688984
+      "staked": 6967.518850860789
     },
     "owner": "sauron"
   },
@@ -625,7 +636,7 @@
     "properties": {
       "yield": 0.13,
       "cap": 8729,
-      "staked": 8456.594399438696
+      "staked": 8429.52554659793
     },
     "owner": "sauron"
   },
@@ -636,7 +647,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 4955,
-      "staked": 4687.632391647322
+      "staked": 4661.114646181276
     },
     "owner": "sauron"
   },
@@ -647,7 +658,7 @@
     "properties": {
       "yield": 0.21,
       "cap": 5318,
-      "staked": 5052.469215601824
+      "staked": 5026.367242644127
     },
     "owner": "sauron"
   },
@@ -658,7 +669,7 @@
     "properties": {
       "yield": 0.13,
       "cap": 8262,
-      "staked": 8001.317252678025
+      "staked": 7975.7057039842175
     },
     "owner": "saruman"
   },
@@ -669,7 +680,7 @@
     "properties": {
       "yield": 0.25,
       "cap": 4223,
-      "staked": 3973.1768387298207
+      "staked": 3940.6433304170837
     },
     "owner": "sauron"
   },
@@ -680,7 +691,7 @@
     "properties": {
       "yield": 0.22,
       "cap": 4709,
-      "staked": 4462.97490401162
+      "staked": 4430.801552952019
     },
     "owner": "sauron"
   },
@@ -691,7 +702,7 @@
     "properties": {
       "yield": 0.21,
       "cap": 4849,
-      "staked": 4609.538717462181
+      "staked": 4577.81446986622
     },
     "owner": "saruman"
   },
@@ -702,7 +713,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 3893,
-      "staked": 3700.939493082911
+      "staked": 3669.4277128077824
     },
     "owner": "gandalf"
   },
@@ -713,7 +724,7 @@
     "properties": {
       "yield": 0.2,
       "cap": 4951,
-      "staked": 4764.644365637188
+      "staked": 4733.409441639466
     },
     "owner": "gandalf"
   },
@@ -724,7 +735,7 @@
     "properties": {
       "yield": 0.2,
       "cap": 4997,
-      "staked": 4764.31339865055
+      "staked": 4733.080644327602
     },
     "owner": "saruman"
   },
@@ -735,7 +746,7 @@
     "properties": {
       "yield": 0.11,
       "cap": 8830,
-      "staked": 8609.24073752987
+      "staked": 8578.15750427979
     },
     "owner": "saruman"
   },
@@ -746,7 +757,7 @@
     "properties": {
       "yield": 0.19,
       "cap": 5110,
-      "staked": 4937.377376167633
+      "staked": 4914.294206632543
     },
     "owner": "gandalf"
   },
@@ -757,7 +768,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 9423,
-      "staked": 9213.637078961367
+      "staked": 9190.94340291995
     },
     "owner": "sauron"
   },
@@ -768,7 +779,7 @@
     "properties": {
       "yield": 0.16,
       "cap": 5886,
-      "staked": 5675.650097073398
+      "staked": 5653.29771307282
     },
     "owner": "sauron"
   },
@@ -779,7 +790,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 8905,
-      "staked": 8776.611325365599
+      "staked": 8754.994066898356
     },
     "owner": "sauron"
   },
@@ -790,7 +801,7 @@
     "properties": {
       "yield": 0.2,
       "cap": 4565,
-      "staked": 4359.5921174119085
+      "staked": 4338.139820708407
     },
     "owner": "sauron"
   },
@@ -801,7 +812,7 @@
     "properties": {
       "yield": 0.12,
       "cap": 7280,
-      "staked": 7116.686236444188
+      "staked": 7095.656315235657
     },
     "owner": "gandalf"
   },
@@ -812,7 +823,7 @@
     "properties": {
       "yield": 0.27,
       "cap": 3296,
-      "staked": 3131.930628533452
+      "staked": 3111.1412826638134
     },
     "owner": "gandalf"
   },
@@ -823,7 +834,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 8592,
-      "staked": 8428.769781402529
+      "staked": 8398.798804327766
     },
     "owner": "gandalf"
   },
@@ -834,7 +845,18 @@
     "properties": {
       "yield": 0.1,
       "cap": 8544,
-      "staked": 8345.015463769481
+      "staked": 8315.34229987491
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK134",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.11,
+      "cap": 7762,
+      "staked": 7538.3456670627465
     },
     "owner": "sauron"
   },
@@ -845,20 +867,9 @@
     "properties": {
       "yield": 0.16,
       "cap": 5412,
-      "staked": 5209.445201047173
+      "staked": 5179.836454357742
     },
     "owner": "saruman"
-  },
-  {
-    "id": "BNK134",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.11,
-      "cap": 7762,
-      "staked": 7567.941857837688
-    },
-    "owner": "sauron"
   },
   {
     "id": "BNK138",
@@ -867,7 +878,7 @@
     "properties": {
       "yield": 0.09,
       "cap": 9272,
-      "staked": 9079.667904304531
+      "staked": 9050.606235491534
     },
     "owner": "sauron"
   },
@@ -878,7 +889,7 @@
     "properties": {
       "yield": 0.28,
       "cap": 3117,
-      "staked": 2913.45087175739
+      "staked": 2884.529539342329
     },
     "owner": "saruman"
   },
@@ -889,7 +900,7 @@
     "properties": {
       "yield": 0.11,
       "cap": 7503,
-      "staked": 7308.805183789777
+      "staked": 7280.2224070428465
     },
     "owner": "sauron"
   },
@@ -900,7 +911,7 @@
     "properties": {
       "yield": 0.18,
       "cap": 4547,
-      "staked": 4355.99467526483
+      "staked": 4326.016623188685
     },
     "owner": "sauron"
   },
@@ -911,7 +922,7 @@
     "properties": {
       "yield": 0.16,
       "cap": 5032,
-      "staked": 4879.905527021565
+      "staked": 4850.042795249748
     },
     "owner": "gandalf"
   },
@@ -922,7 +933,7 @@
     "properties": {
       "yield": 0.09,
       "cap": 8828,
-      "staked": 8647.010079419908
+      "staked": 8617.207921367477
     },
     "owner": "sauron"
   },
@@ -933,7 +944,7 @@
     "properties": {
       "yield": 0.11,
       "cap": 7178,
-      "staked": 6996.433320654861
+      "staked": 6966.971878163898
     },
     "owner": "saruman"
   },
@@ -944,7 +955,7 @@
     "properties": {
       "yield": 0.12,
       "cap": 6408,
-      "staked": 6231.377460395059
+      "staked": 6202.757263057419
     },
     "owner": "sauron"
   },
@@ -955,18 +966,7 @@
     "properties": {
       "yield": 0.13,
       "cap": 5808,
-      "staked": 5626.749945233122
-    },
-    "owner": "saruman"
-  },
-  {
-    "id": "BNK45",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.16,
-      "cap": 4723,
-      "staked": 4546.232388127457
+      "staked": 5598.758134942918
     },
     "owner": "saruman"
   },
@@ -977,9 +977,20 @@
     "properties": {
       "yield": 0.08,
       "cap": 9261,
-      "staked": 9086.060728273545
+      "staked": 9062.191930902656
     },
     "owner": "sauron"
+  },
+  {
+    "id": "BNK45",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.16,
+      "cap": 4723,
+      "staked": 4522.375532761476
+    },
+    "owner": "saruman"
   },
   {
     "id": "BNK32",
@@ -988,7 +999,7 @@
     "properties": {
       "yield": 0.16,
       "cap": 4719,
-      "staked": 4540.390914842252
+      "staked": 4520.52704639809
     },
     "owner": "saruman"
   },
@@ -999,7 +1010,7 @@
     "properties": {
       "yield": 0.27,
       "cap": 2836,
-      "staked": 2659.171557076224
+      "staked": 2639.5663227525124
     },
     "owner": "saruman"
   },
@@ -1010,7 +1021,7 @@
     "properties": {
       "yield": 0.14,
       "cap": 5172,
-      "staked": 4998.390327561638
+      "staked": 4979.251476870531
     },
     "owner": "saruman"
   },
@@ -1021,7 +1032,7 @@
     "properties": {
       "yield": 0.19,
       "cap": 3821,
-      "staked": 3653.674558045302
+      "staked": 3634.6999200774258
     },
     "owner": "sauron"
   },
@@ -1032,7 +1043,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 3158,
-      "staked": 2991.3657440882107
+      "staked": 2972.5694029464294
     },
     "owner": "sauron"
   },
@@ -1043,7 +1054,18 @@
     "properties": {
       "yield": 0.09,
       "cap": 7497,
-      "staked": 7399.650992492755
+      "staked": 7381.425509655709
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK222",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.26,
+      "cap": 2466,
+      "staked": 2445.003155738237
     },
     "owner": "sauron"
   },
@@ -1054,7 +1076,7 @@
     "properties": {
       "yield": 0.09,
       "cap": 7238,
-      "staked": 7086.112132884629
+      "staked": 7063.431320530249
     },
     "owner": "sauron"
   },
@@ -1065,7 +1087,7 @@
     "properties": {
       "yield": 0.12,
       "cap": 5453,
-      "staked": 5299.2138182020235
+      "staked": 5276.609746591317
     },
     "owner": "saruman"
   },
@@ -1076,7 +1098,7 @@
     "properties": {
       "yield": 0.12,
       "cap": 5354,
-      "staked": 5204.716968296422
+      "staked": 5182.515977904088
     },
     "owner": "sauron"
   },
@@ -1087,7 +1109,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 2834,
-      "staked": 2684.461848874602
+      "staked": 2662.5542762374243
     },
     "owner": "sauron"
   },
@@ -1098,7 +1120,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 6279,
-      "staked": 6132.765928957003
+      "staked": 6110.9590707999305
     },
     "owner": "sauron"
   },
@@ -1109,7 +1131,7 @@
     "properties": {
       "yield": 0.07,
       "cap": 8609,
-      "staked": 8494.188490661243
+      "staked": 8473.035550070888
     },
     "owner": "gandalf"
   },
@@ -1120,7 +1142,18 @@
     "properties": {
       "yield": 0.13,
       "cap": 4676,
-      "staked": 4533.30485840922
+      "staked": 4510.752690493573
+    },
+    "owner": "saruman"
+  },
+  {
+    "id": "BNK65",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.14,
+      "cap": 4326,
+      "staked": 4163.182497748337
     },
     "owner": "saruman"
   },
@@ -1131,18 +1164,18 @@
     "properties": {
       "yield": 0.28,
       "cap": 2215,
-      "staked": 2099.1513963535913
+      "staked": 2076.719153983858
     },
     "owner": "gandalf"
   },
   {
-    "id": "BNK65",
+    "id": "BNK30",
     "type": "bankstone",
     "amount": 1,
     "properties": {
-      "yield": 0.14,
-      "cap": 4326,
-      "staked": 4185.60266021007
+      "yield": 0.12,
+      "cap": 5000,
+      "staked": 4836.672447078874
     },
     "owner": "saruman"
   },
@@ -1153,20 +1186,9 @@
     "properties": {
       "yield": 0.18,
       "cap": 3329,
-      "staked": 3241.4969772343666
+      "staked": 3219.1889230624924
     },
     "owner": "sauron"
-  },
-  {
-    "id": "BNK30",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.12,
-      "cap": 5000,
-      "staked": 4858.989380342952
-    },
-    "owner": "saruman"
   },
   {
     "id": "BNK117",
@@ -1175,7 +1197,7 @@
     "properties": {
       "yield": 0.08,
       "cap": 7337,
-      "staked": 7203.1401500359525
+      "staked": 7181.068825132974
     },
     "owner": "sauron"
   },
@@ -1186,7 +1208,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 2089,
-      "staked": 2013.0101476368716
+      "staked": 1993.0278825692033
     },
     "owner": "sauron"
   },
@@ -1197,7 +1219,7 @@
     "properties": {
       "yield": 0.2,
       "cap": 2702,
-      "staked": 2581.83483572757
+      "staked": 2567.722627722699
     },
     "owner": "sauron"
   },
@@ -1208,7 +1230,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 5245,
-      "staked": 5127.060024289935
+      "staked": 5113.030589749453
     },
     "owner": "sauron"
   },
@@ -1219,7 +1241,7 @@
     "properties": {
       "yield": 0.17,
       "cap": 3068,
-      "staked": 2947.5129832617413
+      "staked": 2933.8135775757155
     },
     "owner": "sauron"
   },
@@ -1230,7 +1252,7 @@
     "properties": {
       "yield": 0.07,
       "cap": 7193,
-      "staked": 7132.552505053571
+      "staked": 7118.885436250708
     },
     "owner": "sauron"
   },
@@ -1241,7 +1263,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 5015,
-      "staked": 4900.8887667889485
+      "staked": 4887.478216138457
     },
     "owner": "sauron"
   },
@@ -1252,7 +1274,18 @@
     "properties": {
       "yield": 0.11,
       "cap": 4478,
-      "staked": 4362.099108757914
+      "staked": 4348.970870536843
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK150",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.08,
+      "cap": 5947,
+      "staked": 5824.439028702119
     },
     "owner": "sauron"
   },
@@ -1263,18 +1296,18 @@
     "properties": {
       "yield": 0.24,
       "cap": 2044,
-      "staked": 1952.0227373381779
+      "staked": 1937.9503238705015
     },
     "owner": "gandalf"
   },
   {
-    "id": "BNK150",
+    "id": "BNK122",
     "type": "bankstone",
     "amount": 1,
     "properties": {
-      "yield": 0.08,
-      "cap": 5947,
-      "staked": 5834.661823889726
+      "yield": 0.05,
+      "cap": 9335,
+      "staked": 9213.033729972032
     },
     "owner": "sauron"
   },
@@ -1285,18 +1318,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 2121,
-      "staked": 2007.817834524288
-    },
-    "owner": "sauron"
-  },
-  {
-    "id": "BNK122",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.05,
-      "cap": 9335,
-      "staked": 9224.400048435204
+      "staked": 1996.459690832608
     },
     "owner": "sauron"
   },
@@ -1307,7 +1329,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 3105,
-      "staked": 2995.9247308359795
+      "staked": 2984.8621109251117
     },
     "owner": "sauron"
   },
@@ -1318,7 +1340,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 3040,
-      "staked": 2932.0026820711973
+      "staked": 2921.176097906532
     },
     "owner": "sauron"
   },
@@ -1329,7 +1351,7 @@
     "properties": {
       "yield": 0.06,
       "cap": 7210,
-      "staked": 7107.61259298086
+      "staked": 7097.104132491358
     },
     "owner": "sauron"
   },
@@ -1340,7 +1362,7 @@
     "properties": {
       "yield": 0.06,
       "cap": 7181,
-      "staked": 7098.836191639822
+      "staked": 7088.340706880993
     },
     "owner": "gandalf"
   },
@@ -1351,7 +1373,7 @@
     "properties": {
       "yield": 0.06,
       "cap": 6681,
-      "staked": 6677.705801845347
+      "staked": 6664.54524391037
     },
     "owner": "sauron"
   },
@@ -1362,7 +1384,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 2722,
-      "staked": 2627.458881434276
+      "staked": 2614.5307970009967
     },
     "owner": "saruman"
   },
@@ -1373,7 +1395,7 @@
     "properties": {
       "yield": 0.13,
       "cap": 3111,
-      "staked": 3017.1377737713237
+      "staked": 3004.267840012162
     },
     "owner": "saruman"
   },
@@ -1384,7 +1406,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 2664,
-      "staked": 2572.5305548669726
+      "staked": 2559.8727384286217
     },
     "owner": "sauron"
   },
@@ -1395,7 +1417,7 @@
     "properties": {
       "yield": 0.17,
       "cap": 2231,
-      "staked": 2162.439898230002
+      "staked": 2150.3848446949896
     },
     "owner": "gandalf"
   },
@@ -1406,7 +1428,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 3647,
-      "staked": 3563.0397750429256
+      "staked": 3551.3433069515045
     },
     "owner": "saruman"
   },
@@ -1417,7 +1439,7 @@
     "properties": {
       "yield": 0.16,
       "cap": 2278,
-      "staked": 2196.5903705628925
+      "staked": 2185.0635205704293
     },
     "owner": "sauron"
   },
@@ -1428,7 +1450,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 3536,
-      "staked": 3486.9297723086197
+      "staked": 3477.388309412516
     },
     "owner": "sauron"
   },
@@ -1439,7 +1461,7 @@
     "properties": {
       "yield": 0.08,
       "cap": 4273,
-      "staked": 4211.626089751084
+      "staked": 4202.404227648929
     },
     "owner": "gandalf"
   },
@@ -1450,7 +1472,7 @@
     "properties": {
       "yield": 0.09,
       "cap": 3746,
-      "staked": 3699.1819881236947
+      "staked": 3690.070831678065
     },
     "owner": "sauron"
   },
@@ -1461,7 +1483,7 @@
     "properties": {
       "yield": 0.05,
       "cap": 6508,
-      "staked": 6434.41898734082
+      "staked": 6425.610146226777
     },
     "owner": "sauron"
   },
@@ -1472,7 +1494,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 1166,
-      "staked": 1163.5100484792877
+      "staked": 1155.248548360656
     },
     "owner": "sauron"
   },
@@ -1483,7 +1505,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 1197,
-      "staked": 1128.2571210457015
+      "staked": 1120.2459342480033
     },
     "owner": "sauron"
   },
@@ -1494,7 +1516,7 @@
     "properties": {
       "yield": 0.09,
       "cap": 3206,
-      "staked": 3141.0457226644835
+      "staked": 3133.3092665847466
     },
     "owner": "sauron"
   },
@@ -1505,20 +1527,9 @@
     "properties": {
       "yield": 0.09,
       "cap": 3123,
-      "staked": 3055.956914512319
+      "staked": 3048.430033805013
     },
     "owner": "saruman"
-  },
-  {
-    "id": "BNK141",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.26,
-      "cap": 1122,
-      "staked": 1054.5542032231692
-    },
-    "owner": "sauron"
   },
   {
     "id": "BNK152",
@@ -1527,7 +1538,18 @@
     "properties": {
       "yield": 0.05,
       "cap": 5547,
-      "staked": 5481.27981453348
+      "staked": 5473.775838947988
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK141",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.26,
+      "cap": 1122,
+      "staked": 1047.0663438046633
     },
     "owner": "sauron"
   },
@@ -1538,18 +1560,7 @@
     "properties": {
       "yield": 0.03,
       "cap": 8969,
-      "staked": 8904.359721676185
-    },
-    "owner": "sauron"
-  },
-  {
-    "id": "BNK140",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.15,
-      "cap": 1740,
-      "staked": 1680.2564434941935
+      "staked": 8897.043776155562
     },
     "owner": "sauron"
   },
@@ -1560,7 +1571,18 @@
     "properties": {
       "yield": 0.04,
       "cap": 6355,
-      "staked": 6296.07438504239
+      "staked": 6289.177979147764
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK140",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.15,
+      "cap": 1740,
+      "staked": 1673.3640358663606
     },
     "owner": "sauron"
   },
@@ -1571,7 +1593,7 @@
     "properties": {
       "yield": 0.22,
       "cap": 1198,
-      "staked": 1138.8376057940845
+      "staked": 1131.9919672751284
     },
     "owner": "sauron"
   },
@@ -1582,7 +1604,7 @@
     "properties": {
       "yield": 0.03,
       "cap": 8354,
-      "staked": 8296.519360893937
+      "staked": 8289.702825449247
     },
     "owner": "sauron"
   },
@@ -1593,7 +1615,7 @@
     "properties": {
       "yield": 0.11,
       "cap": 2191,
-      "staked": 2136.8666889119077
+      "staked": 2130.4355432090556
     },
     "owner": "saruman"
   },
@@ -1604,7 +1626,7 @@
     "properties": {
       "yield": 0.04,
       "cap": 5906,
-      "staked": 5851.8789600352075
+      "staked": 5845.469103657002
     },
     "owner": "saruman"
   },
@@ -1615,7 +1637,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 2304,
-      "staked": 2251.5748192785136
+      "staked": 2245.413720834101
     },
     "owner": "saruman"
   },
@@ -1626,7 +1648,7 @@
     "properties": {
       "yield": 0.07,
       "cap": 3242,
-      "staked": 3190.798147674505
+      "staked": 3184.684087134549
     },
     "owner": "sauron"
   },
@@ -1637,7 +1659,7 @@
     "properties": {
       "yield": 0.04,
       "cap": 5489,
-      "staked": 5437.50826044628
+      "staked": 5431.552285067637
     },
     "owner": "saruman"
   },
@@ -1648,7 +1670,18 @@
     "properties": {
       "yield": 0.03,
       "cap": 7055,
-      "staked": 7024.332844046288
+      "staked": 7018.561554699043
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK142",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.02,
+      "cap": 9983,
+      "staked": 9930.623129058815
     },
     "owner": "sauron"
   },
@@ -1659,20 +1692,9 @@
     "properties": {
       "yield": 0.16,
       "cap": 1293,
-      "staked": 1245.152739254312
+      "staked": 1239.7052897572698
     },
     "owner": "saruman"
-  },
-  {
-    "id": "BNK142",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.02,
-      "cap": 9983,
-      "staked": 9936.066206634523
-    },
-    "owner": "sauron"
   },
   {
     "id": "BNK180",
@@ -1681,7 +1703,7 @@
     "properties": {
       "yield": 0.05,
       "cap": 3999,
-      "staked": 3961.3767445467247
+      "staked": 3955.9535449689183
     },
     "owner": "gandalf"
   },
@@ -1692,7 +1714,7 @@
     "properties": {
       "yield": 0.03,
       "cap": 6447,
-      "staked": 6410.012655168475
+      "staked": 6404.746099813849
     },
     "owner": "gandalf"
   },
@@ -1703,7 +1725,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 1309,
-      "staked": 1262.4972075102628
+      "staked": 1257.3184471984941
     },
     "owner": "saruman"
   },
@@ -1714,7 +1736,7 @@
     "properties": {
       "yield": 0.19,
       "cap": 1034,
-      "staked": 987.6910131065996
+      "staked": 982.0501642559043
     },
     "owner": "saruman"
   },
@@ -1725,7 +1747,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 853,
-      "staked": 807.9908105469426
+      "staked": 802.4078291004296
     },
     "owner": "saruman"
   },
@@ -1736,7 +1758,7 @@
     "properties": {
       "yield": 0.13,
       "cap": 1401,
-      "staked": 1358.7303185643284
+      "staked": 1354.8636904124871
     },
     "owner": "sauron"
   },
@@ -1747,7 +1769,7 @@
     "properties": {
       "yield": 0.2,
       "cap": 855,
-      "staked": 815.6336257258034
+      "staked": 812.065094833072
     },
     "owner": "sauron"
   },
@@ -1758,7 +1780,7 @@
     "properties": {
       "yield": 0.06,
       "cap": 2583,
-      "staked": 2546.319462922268
+      "staked": 2542.972804372678
     },
     "owner": "saruman"
   },
@@ -1769,7 +1791,7 @@
     "properties": {
       "yield": 0.18,
       "cap": 746,
-      "staked": 715.7212138531072
+      "staked": 712.9024155214946
     },
     "owner": "saruman"
   },
@@ -1780,7 +1802,7 @@
     "properties": {
       "yield": 0.06,
       "cap": 2098,
-      "staked": 2069.5673025111546
+      "staked": 2066.8472451076136
     },
     "owner": "sauron"
   },
@@ -1791,7 +1813,7 @@
     "properties": {
       "yield": 0.03,
       "cap": 3646,
-      "staked": 3625.380362189272
+      "staked": 3622.9972360856195
     },
     "owner": "gandalf"
   },
@@ -1802,7 +1824,7 @@
     "properties": {
       "yield": 0.09,
       "cap": 1207,
-      "staked": 1181.9628085090117
+      "staked": 1179.6332765963157
     },
     "owner": "sauron"
   },
@@ -1813,7 +1835,7 @@
     "properties": {
       "yield": 0.27,
       "cap": 398,
-      "staked": 374.2904219051013
+      "staked": 370.981437667112
     },
     "owner": "saruman"
   },
@@ -1824,7 +1846,7 @@
     "properties": {
       "yield": 0.01,
       "cap": 9583,
-      "staked": 9565.163115723028
+      "staked": 9562.018878379009
     },
     "owner": "gandalf"
   },
@@ -1835,7 +1857,7 @@
     "properties": {
       "yield": 0.04,
       "cap": 2365,
-      "staked": 2347.440436904543
+      "staked": 2344.3552519515188
     },
     "owner": "gandalf"
   },
@@ -1846,7 +1868,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 360,
-      "staked": 359.4873059560893
+      "staked": 356.4264385687249
     },
     "owner": "sauron"
   },
@@ -1857,7 +1879,7 @@
     "properties": {
       "yield": 0.05,
       "cap": 1788,
-      "staked": 1771.4208597539732
+      "staked": 1768.5111279673986
     },
     "owner": "gandalf"
   },
@@ -1868,7 +1890,7 @@
     "properties": {
       "yield": 0.04,
       "cap": 2230,
-      "staked": 2209.8070336339106
+      "staked": 2206.9027369786813
     },
     "owner": "sauron"
   },
@@ -1879,7 +1901,7 @@
     "properties": {
       "yield": 0.04,
       "cap": 2167,
-      "staked": 2146.6715978114535
+      "staked": 2143.850278553026
     },
     "owner": "saruman"
   },
@@ -1890,7 +1912,7 @@
     "properties": {
       "yield": 0.01,
       "cap": 8100,
-      "staked": 8080.937273636208
+      "staked": 8078.944932109284
     },
     "owner": "saruman"
   },
@@ -1901,7 +1923,7 @@
     "properties": {
       "yield": 0.19,
       "cap": 429,
-      "staked": 413.86083045604994
+      "staked": 411.92595309393806
     },
     "owner": "gandalf"
   },
@@ -1912,7 +1934,7 @@
     "properties": {
       "yield": 0.06,
       "cap": 1307,
-      "staked": 1292.4704101056748
+      "staked": 1290.559518922346
     },
     "owner": "gandalf"
   },
@@ -1923,7 +1945,7 @@
     "properties": {
       "yield": 0.05,
       "cap": 1493,
-      "staked": 1479.5615640138399
+      "staked": 1477.7384462138584
     },
     "owner": "gandalf"
   },
@@ -1934,7 +1956,7 @@
     "properties": {
       "yield": 0.01,
       "cap": 6959,
-      "staked": 6943.002962595202
+      "staked": 6941.481354434837
     },
     "owner": "sauron"
   },
@@ -1945,7 +1967,7 @@
     "properties": {
       "yield": 0.05,
       "cap": 1357,
-      "staked": 1347.5519836777553
+      "staked": 1346.0759222266975
     },
     "owner": "sauron"
   },
@@ -1956,7 +1978,7 @@
     "properties": {
       "yield": 0.17,
       "cap": 406,
-      "staked": 390.0554990887437
+      "staked": 388.6045085788477
     },
     "owner": "sauron"
   },
@@ -1967,7 +1989,7 @@
     "properties": {
       "yield": 0.3,
       "cap": 229,
-      "staked": 219.59544329416826
+      "staked": 218.5147296362471
     },
     "owner": "sauron"
   },
@@ -1978,7 +2000,7 @@
     "properties": {
       "yield": 0.29,
       "cap": 221,
-      "staked": 206.39808917744534
+      "staked": 205.41611634269358
     },
     "owner": "sauron"
   },
@@ -1989,7 +2011,7 @@
     "properties": {
       "yield": 0.22,
       "cap": 286,
-      "staked": 271.54844726197894
+      "staked": 270.7310680064257
     },
     "owner": "saruman"
   },
@@ -2000,7 +2022,7 @@
     "properties": {
       "yield": 0.19,
       "cap": 242,
-      "staked": 232.24752742257735
+      "staked": 231.64367655068045
     },
     "owner": "sauron"
   },
@@ -2011,7 +2033,7 @@
     "properties": {
       "yield": 0.27,
       "cap": 155,
-      "staked": 146.30670473692066
+      "staked": 145.76637033992625
     },
     "owner": "saruman"
   },
@@ -2022,7 +2044,7 @@
     "properties": {
       "yield": 0.05,
       "cap": 693,
-      "staked": 685.5403367500521
+      "staked": 684.9770718687873
     },
     "owner": "sauron"
   },
@@ -2033,7 +2055,7 @@
     "properties": {
       "yield": 0.01,
       "cap": 3423,
-      "staked": 3418.5014175436063
+      "staked": 3417.9395105931135
     },
     "owner": "sauron"
   },
@@ -2044,7 +2066,7 @@
     "properties": {
       "yield": 0.01,
       "cap": 3164,
-      "staked": 3158.7165629584897
+      "staked": 3158.2838857684433
     },
     "owner": "gandalf"
   },
@@ -2055,7 +2077,7 @@
     "properties": {
       "yield": 0.01,
       "cap": 2466,
-      "staked": 2460.8705868664206
+      "staked": 2460.533499777607
     },
     "owner": "sauron"
   },
@@ -2066,7 +2088,7 @@
     "properties": {
       "yield": 0.02,
       "cap": 1101,
-      "staked": 1098.4088458138951
+      "staked": 1098.107944860789
     },
     "owner": "sauron"
   },
@@ -2077,7 +2099,7 @@
     "properties": {
       "yield": 0.06,
       "cap": 292,
-      "staked": 289.03887183126056
+      "staked": 288.84886573167756
     },
     "owner": "gandalf"
   },
@@ -2088,7 +2110,7 @@
     "properties": {
       "yield": 0.03,
       "cap": 576,
-      "staked": 572.7895603880312
+      "staked": 572.601269227582
     },
     "owner": "sauron"
   },
@@ -2099,7 +2121,7 @@
     "properties": {
       "yield": 0.02,
       "cap": 283,
-      "staked": 282.4268121075411
+      "staked": 282.3803883261249
     },
     "owner": "sauron"
   },
@@ -2242,24 +2264,145 @@
     "owner": "saruman"
   },
   {
-    "id": "BNK222",
+    "id": "BNK224",
     "type": "bankstone",
     "amount": 1,
     "properties": {
-      "yield": 0.26,
-      "cap": 2466,
-      "staked": 2466
+      "yield": 0.2,
+      "cap": 877,
+      "staked": 877
     },
     "owner": "sauron"
   },
   {
-    "id": "BNK223",
+    "id": "BNK225",
     "type": "bankstone",
     "amount": 1,
     "properties": {
-      "yield": 0.19,
-      "cap": 7515,
-      "staked": 7515
+      "yield": 0.25,
+      "cap": 1032,
+      "staked": 1032
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK226",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.07,
+      "cap": 8847,
+      "staked": 8847
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK227",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.16,
+      "cap": 9021,
+      "staked": 9021
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK228",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.27,
+      "cap": 8380,
+      "staked": 8380
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK229",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.13,
+      "cap": 3170,
+      "staked": 3170
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK230",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.05,
+      "cap": 7031,
+      "staked": 7031
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK231",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.04,
+      "cap": 8009,
+      "staked": 8009
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK232",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.2,
+      "cap": 815,
+      "staked": 815
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK233",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.29,
+      "cap": 9386,
+      "staked": 9386
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK234",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.08,
+      "cap": 8298,
+      "staked": 8298
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK235",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.14,
+      "cap": 6962,
+      "staked": 6962
+    },
+    "owner": "sauron"
+  },
+  {
+    "id": "BNK236",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.15,
+      "cap": 1636,
+      "staked": 1636
     },
     "owner": "sauron"
   }

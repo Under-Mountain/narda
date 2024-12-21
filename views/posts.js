@@ -1,11 +1,11 @@
-import { blog } from '../service/model.js'
+import { posts } from '../service/model.js'
 import { TimeView } from './world.js'
 
-export function PostsView(tag) {
-    const posts = blog.filter(p => !tag ? true : p.tags.indexOf(tag) >= 0).sort((a, b) => { return a.times.created > b.times.created ? -1 : 1 })
+export function PostsView(channel) {
+    const filteredPosts = posts.filter(p => !channel ? true : p.channels.indexOf(channel) >= 0).sort((a, b) => { return a.times.created > b.times.created ? -1 : 1 })
     let postsHtml = `<div class="p-4 sm:p-10">
         <h1 id="posts" class="text-bold text-2xl text-white mb-2">
-            ${tag ? tag : `All Posts`}
+            ${channel ? channel : `All Posts`}
         </h1>
         <div role="tablist" class="tabs bg-base-200 mb-2">
             <a role="tab" class="tab tab-active">News</a>
@@ -15,8 +15,8 @@ export function PostsView(tag) {
         </div>
         <div role="tabpanel" class="tab-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 justify-between">
     `
-    if (posts.length > 0) {
-        posts.slice(0, 10).forEach((p, idx) => {
+    if (filteredPosts.length > 0) {
+        filteredPosts.slice(0, 10).forEach((p, idx) => {
             postsHtml += `<div class="card bg-base-300 p-4">
                 <div class="text-xs">
                     <svg class="size-3 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -28,8 +28,8 @@ export function PostsView(tag) {
                     <a href="/post?id=${p.id}" class="link-hover">${p.title}</a>
                 </div>
                 <div class="p-2 card-body">
-                    ${p.tags ? `<div class="badge badge-xs p-1">${p.tags.map(t => {
-                        return `<a href="/posts?tag=${t}">#${t}</a>`
+                    ${p.channels ? `<div class="badge badge-xs p-1">${p.channels.map(t => {
+                        return `<a href="/posts?channel=${t}">#${t}</a>`
                     }).join(", ")}</div> ` : ''}
                     <p class="text-xs text-ellipsis">${p.content}</p>
                     <div class="inline text-right">
@@ -51,18 +51,21 @@ export function PostView(post, session, account) {
             <h1 class="card-title text-white-300 text-xl">${post.title}</h1>
             <div class="card-body p-0 my-1">
                 <small>
-                    ${post.tags ? `Tags: <span style="color:gray">${post.tags.map(t => {
-                        return `<a href="/posts?tag=${t}">#${t}</a>`}).join(", ")}</span>` : ''}
+                    ${post.channels ? `channels: <span style="color:gray">${post.channels.map(t => {
+                        return `<a href="/posts?channel=${t}">#${t}</a>`}).join(", ")}</span>` : ''}
                         posted on ${TimeView(post.times.created)} by ${post.author}
                 </small>
                 <p>${post.content}</p>
                 <div class="mt-3"><small>
-                    <form action="/api/like?return=/post?id=${post.id}" method="post">
+                    <form id="postLikeForm">
                         <input type="hidden" name="postId" value="${post.id}" />
                         <button class="btn btn-success btn-sm"
                             ${!session.username || (session.username && account.credits.balance < 1) ? `disabled` :``}>
                             ${post.likes} Like (-1.00 credit)</button>
-                        <button class="btn btn-warning btn-sm" name="dislike" value="true" ${!session.username || (session.username && account.credits.balance < 1) ? `disabled` :``}>
+                    </form>
+                    <form id="postDislikeForm">
+                        <input type="hidden" name="postId" value="${post.id}" />
+                        <button class="btn btn-warning btn-sm" ${!session.username || (session.username && account.credits.balance < 1) ? `disabled` :``}>
                             ${post.dislikes} Dislike (-1.00 credit)</button>
                     </form>
                 </small></div>
@@ -92,28 +95,28 @@ export function ChannelsView() {
         <a role="tab" class="tab">Yield</a>
     </div>
     <div role="tabpanel" class="tab-content">
-        ${TagsView()}
+        ${channelsView()}
     </div>
     `
 
     return channelsHtml
 }
 
-export function TagsView() {
-    const allTags = []
-    blog.forEach(p => {
-        p.tags.forEach(t => {
-            if (allTags.indexOf(t) < 0) allTags.push(t)
+export function channelsView() {
+    const allchannels = []
+    posts.forEach(p => {
+        p.channels.forEach(t => {
+            if (allchannels.indexOf(t) < 0) allchannels.push(t)
         })
     })
 
-    let tagsHtml = ``
-    if (allTags.length > 0) {
-        allTags.slice(0, 1000).forEach((tag, idx) => {
-            tagsHtml += `<div class="badge p-4 m-2"><a href="/posts?tag=${tag}">#${tag}</a></div>`
+    let channelsHtml = ``
+    if (allchannels.length > 0) {
+        allchannels.slice(0, 1000).forEach((channel, idx) => {
+            channelsHtml += `<div class="badge p-4 m-2"><a href="/posts?channel=${channel}">#${channel}</a></div>`
         })
     } else { `<p>Empty</p>`} 
-    return tagsHtml
+    return channelsHtml
 }
 
 export function CommentsView(post) {

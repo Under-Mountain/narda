@@ -1,7 +1,8 @@
 import * as util from './utility.js'
 import express from 'express'
+import cors from 'cors'
 import session from 'express-session'
-import { accounts, activities, assets, market, current, world, auth, blog } from './model.js'
+import { accounts, activities, assets, market, current, world, auth, posts } from './model.js'
 import * as bcrypt from 'bcrypt'
 import path from 'path'
 import { fileURLToPath } from 'url';
@@ -11,12 +12,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(session({
-    secret: 'secret',
-    resave: true,
-    saveUninitialized: true
+    secret: 'afdawdf@#%@#$%fadfn2&@#%4n2n%4*fadf',
+    resave: false,
+    saveUninitialized: false
 }))
 
-app.set('view engine', 'ejs')
+app.use(cors())
+app.use(express.json())
 app.use(express.static(path.join(__dirname, '../public')))
 app.use(express.urlencoded({ extended: true }))
 
@@ -102,8 +104,29 @@ app.get('/api/assets', (req, res) => {
     res.json(filteredAssets)
 })
 
+app.get('/api/world', (req, res) => {
+    res.json(world)
+})
+
 app.get('/api/current', (req, res) => {
-    res.json(current)
+    let account
+    let inventory
+    if (req.session && req.session.username) {
+        account = accounts.find(a => a.id == req.session.username)
+        if (!account) {
+            console.error(`invalid session user ${req.session.username}`)
+            res.sendStatus(403)
+        }
+
+        inventory = assets.filter(a => a.owner == req.session.username)
+    }
+
+    setTimeout(() => res.json({
+        global: current,
+        account: account,
+        inventory: inventory
+    }), world.interval.minute)
+    return
 })
 
 app.get('/api/market', (req, res) => {
@@ -116,14 +139,24 @@ app.get('/api/market', (req, res) => {
 })
 
 app.post('/api/transaction', (req, res) => {
-    const id = `TX${activities.length}}`
+    if (!req.session || !req.session.username) {
+        res.sendStatus(401)
+        return
+    }
+
+    if (!req.body.of || !req.body.to || !req.body.amount) {
+        res.sendStatus(400)
+        return
+    }
+
+    const id = `TX${activities.length}`
     console.log(`${id}: sending ${req.body.of}...`);
 
     const activity = {
         type: "transaction",
         id: id,
         of: "credit",
-        from: req.body.from,
+        from: req.session.username,
         to: req.body.to,
         amount: Number(req.body.amount),
         note: ``,
@@ -268,6 +301,17 @@ app.post('/api/mint', (req, res) => {
 })
 
 app.post('/api/collect', (req, res) => {
+    if (!req.session || !req.session.username) {
+        res.sendStatus(401)
+        return
+    }
+
+    if (!req.body.resource) {
+        res.sendStatus(400)
+        return
+    }
+
+    const collector = req.session.username
     const id = `CLT${activities.length}`
     console.log(`${id}: collecting ${req.body.resource}...`);
 
@@ -298,9 +342,9 @@ app.post('/api/collect', (req, res) => {
         "id": id,
         "of": req.body.resource,
         "from": "world",
-        "to": req.body.owner,
+        "to": collector,
         "amount": amount,
-        "note": `Collecting of ${req.body.resource} for ${req.body.owner}`,
+        "note": `Collecting of ${req.body.resource} for ${collector}`,
         "times": {
             "created": current.time
         }
@@ -398,7 +442,7 @@ app.post('/api/comment', (req, res) => {
         return
     }
 
-    const post = blog.find(p => p.id == req.body.postId)
+    const post = posts.find(p => p.id == req.body.postId)
     if (!post) {
         console.warn(`post ID ${req.body.postId} not found`)
         res.sendStatus(400)
@@ -453,7 +497,7 @@ app.post('/api/like', (req, res) => {
         return
     }
 
-    const post = blog.find(p => p.id == req.body.postId)
+    const post = posts.find(p => p.id == req.body.postId)
     if (!post) {
         console.warn(`post ID ${req.body.postId} not found`)
         res.sendStatus(400)
@@ -522,11 +566,11 @@ app.post('/api/post', (req, res) => {
 
     console.log(`${req.session.username}: creating a post...`)
     const post = {
-        id: `PST${blog.length}`,
+        id: `PST${posts.length}`,
         author: req.session.username,
         title: req.body.title,
         content: req.body.content,
-        tags: req.body.tags.replace(/\s+/g, '').split(','),
+        channels: req.body.channels.replace(/\s+/g, '').split(','),
         likes: 0,
         dislikes: 0,
         times: {
@@ -535,7 +579,7 @@ app.post('/api/post', (req, res) => {
         comments: []
     }
 
-    blog.push(post)
+    posts.push(post)
 
     setTimeout(() => req.query.return ?
         res.redirect(req.query.return) : res.json(post),

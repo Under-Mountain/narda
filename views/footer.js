@@ -8,6 +8,7 @@ export function FooterView() {
             </aside>
         </footer>
         </main></body>
+        <script src="/script.js"></script>
         <script>
             function toggleNavbar(collapseID) {
                 document.getElementById(collapseID).classList.toggle("hidden");

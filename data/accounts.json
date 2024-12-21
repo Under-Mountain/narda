@@ -1,8 +1,21 @@
 [
   {
+    "id": "saruman",
+    "credits": {
+      "balance": 2117.249019134857
+    },
+    "times": {
+      "created": 92,
+      "updated": 92,
+      "lastActive": 92,
+      "edited": 15705
+    },
+    "bio": "I born good but turn evil. I work for Sauron."
+  },
+  {
     "id": "bilbo",
     "credits": {
-      "balance": 2000
+      "balance": 2000.04
     },
     "times": {
       "created": 1560,
@@ -11,19 +24,6 @@
       "edited": 19128
     },
     "bio": "I enjoyed all my past journeys. I always wish I can go on an adventure again."
-  },
-  {
-    "id": "gandalf",
-    "credits": {
-      "balance": 1256.3630859767618
-    },
-    "times": {
-      "created": 243,
-      "updated": 243,
-      "lastActive": 243,
-      "edited": 5397
-    },
-    "bio": "I am good and I will save"
   },
   {
     "id": "legolas",
@@ -61,19 +61,6 @@
     }
   },
   {
-    "id": "saruman",
-    "credits": {
-      "balance": 966.300423547994
-    },
-    "times": {
-      "created": 92,
-      "updated": 92,
-      "lastActive": 92,
-      "edited": 15705
-    },
-    "bio": "I born good but turn evil. I work for Sauron."
-  },
-  {
     "id": "hobbit",
     "credits": {
       "balance": 873
@@ -86,17 +73,41 @@
     "bio": "hey i'm hobbit, i'm short but fun"
   },
   {
+    "id": "gollum",
+    "credits": {
+      "balance": 500
+    },
+    "times": {
+      "created": 1800,
+      "updated": 1800,
+      "lastActive": 1800
+    }
+  },
+  {
+    "id": "gandalf",
+    "credits": {
+      "balance": 279.29284242781074
+    },
+    "times": {
+      "created": 243,
+      "updated": 243,
+      "lastActive": 243,
+      "edited": 5397
+    },
+    "bio": "I am good and I will save"
+  },
+  {
     "id": "sauron",
     "credits": {
-      "balance": 52.84240344699584
+      "balance": 17.458211304517476
     },
     "times": {
       "created": 21,
       "updated": 21,
       "lastActive": 21,
-      "edited": 3940
+      "edited": 162573
     },
-    "bio": "I am Sauron. I'm the beginning and the ending of the world. I may hurt, I may help."
+    "bio": "I am Sauron. I'm the beginning and the ending of the world. I may hurt, I may help..."
   },
   {
     "id": "frodo",
@@ -305,17 +316,6 @@
       "created": 1825,
       "updated": 1825,
       "lastActive": 1825
-    }
-  },
-  {
-    "id": "gollum",
-    "credits": {
-      "balance": 0
-    },
-    "times": {
-      "created": 1800,
-      "updated": 1800,
-      "lastActive": 1800
     }
   },
   {

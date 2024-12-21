@@ -1,5 +1,5 @@
 import { onMinuteAsync } from './service/service.js'
-import { accounts, assets, world, market, current, blog } from './service/model.js'
+import { accounts, assets, world, market, current, posts } from './service/model.js'
 import { app } from './service/api.js'
 import { ChannelsView, PostsView, PostView } from './views/posts.js'
 import { MarketStatsView, MarketplaceView } from './views/market.js'
@@ -10,6 +10,7 @@ import { ActivitiesView, AssetsView } from './views/world.js'
 
 console.log(`starting worldcore service..`)
 const port = 9000
+
 app.listen(port, () => {
     console.log(`app listening on port ${port}`)
 })
@@ -141,7 +142,7 @@ app.get('/posts', (req, res) => {
     const username = req.query.user? req.query.user : req.session.username
 
     const headerHtml = HeaderView(session, username)
-    const postsView = PostsView(req.query.tag)
+    const postsView = PostsView(req.query.channel)
     res.send(`
         ${headerHtml}
         ${postsView}
@@ -158,7 +159,7 @@ app.get('/post', (req, res) => {
         res.sendStatus(400)
     }
 
-    const post = blog.find(p => p.id == req.query.id)
+    const post = posts.find(p => p.id == req.query.id)
     if (!post) {
         console.error(`post ${req.query.id} not found`)
         req.sendStatus(404)

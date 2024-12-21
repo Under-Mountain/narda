@@ -84,7 +84,7 @@ export function ProfileView(username, account, userWaterTotal, userMineralTotal,
             </div>
             <div class="card-body m-auto">
             ${session.username && session.username == username ? `
-                <form action="/api/edit?return=/" method="post" class="mb-2">
+                <form id="updateBioForm" class="mb-2">
                     <textarea name="bio" row="3" class="textarea textarea-lg w-full" placeholder="Write description of this account.">${account.bio? account.bio:''}</textarea>
                     <div class="text-right">
                         <button class="btn btn-md"
@@ -97,7 +97,7 @@ export function ProfileView(username, account, userWaterTotal, userMineralTotal,
 
                 <div style="text-align:right">
                     <h1 class="text-5xl" class="text-white-100">
-                        ${account.credits.balance.toFixed(2)}<small class="text-white-300"><small>sl</small></small>
+                        <span id="profileBalance">${account.credits.balance.toFixed(2)}</span><small class="text-white-300"><small>sl</small>
                     </h1>
                     <small>
                         holding ${(account.credits.balance/current.resources.credits.balance*100).toFixed(2)}% of
@@ -118,7 +118,7 @@ export function ProfileView(username, account, userWaterTotal, userMineralTotal,
 
 export function SendCreditView(account, session) {
     return `
-        <form action="/api/transaction?return=/?user=${session.username}" method="post" class="text-right">
+        <form id="sendCreditForm" class="text-right">
             <input type="hidden" name="from" value="${session.username}" />
             <div class="form-control">
                 <label for="to" class="label text-xs">Account</label>
@@ -128,16 +128,16 @@ export function SendCreditView(account, session) {
                 <label for="amount" class="label text-xs">Amount</label>
                 <input name="amount" type="number" min=".01" max="1000.00" value="0.01" step=".01" required class="input input-md m-1" />
             </div>
-            <button name="of" value="credit" ${(session.username && account.credits.balance < .01) ? `disabled` :``} class="btn btn-primary btn-md m-1">Send</button>
+            <button ${(session.username && account.credits.balance < .01) ? `disabled` :``} class="btn btn-primary btn-md m-1">Send</button>
         </form>
-        <form action="/api/post?return=/posts" method="post" class="text-right">
+        <form id="postForm" class="text-right">
             <div class="form-control">
                 <label for="title" class="label text-xs">Title</label>
                 <input name="title" class="input" placeholder="Title is required to post" required />
             </div>
             <div class="form-control">
-                <label for="tags" class="label text-xs">Channel</label>
-                <input name="tags" class="input" placeholder="general, question, issue, ..." />
+                <label for="channels" class="label text-xs">Channel</label>
+                <input name="channels" class="input" placeholder="general, question, issue, ..." />
             </div>
             <div class="form-control">
                 <label for="content" class="label text-xs">Content (optional)</label>

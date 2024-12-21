@@ -36,7 +36,7 @@ export async function onMinuteAsync() {
             model.worldDb.write(),
             model.marketDb.write(),
             model.authDb.write(),
-            model.blogDb.write(),
+            model.postDb.write(),
             model.activityDb.write()]
 
         await Promise.all(writePromises)
@@ -392,7 +392,7 @@ function processPendingMint(mint) {
 }
 
 function processPendingTransaction(transaction) {
-    // console.debug(`${transaction.id}: sending ${transaction.amount.toFixed(2)} ${transaction.of} from ${transaction.from} to ${transaction.to}...`)
+    console.debug(`${transaction.id}: sending ${transaction.amount.toFixed(2)} ${transaction.of} from ${transaction.from} to ${transaction.to}...`)
 
     const from = accounts.find(a => a.id == transaction.from)
     const to = accounts.find(a => a.id == transaction.to)
