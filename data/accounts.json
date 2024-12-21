@@ -2,7 +2,7 @@
   {
     "id": "saruman",
     "credits": {
-      "balance": 2117.249019134857
+      "balance": 0
     },
     "times": {
       "created": 92,
@@ -15,7 +15,7 @@
   {
     "id": "bilbo",
     "credits": {
-      "balance": 2000.04
+      "balance": 0
     },
     "times": {
       "created": 1560,
@@ -28,7 +28,7 @@
   {
     "id": "legolas",
     "credits": {
-      "balance": 1000
+      "balance": 0
     },
     "times": {
       "created": 1580,
@@ -41,7 +41,7 @@
   {
     "id": "aragorn",
     "credits": {
-      "balance": 1000
+      "balance": 0
     },
     "times": {
       "created": 1547,
@@ -52,7 +52,7 @@
   {
     "id": "worldbank",
     "credits": {
-      "balance": 974.1699999999983
+      "balance": 0
     },
     "times": {
       "created": 0,
@@ -61,21 +61,9 @@
     }
   },
   {
-    "id": "hobbit",
-    "credits": {
-      "balance": 873
-    },
-    "times": {
-      "created": 54955,
-      "lastActive": 54955,
-      "edited": 55114
-    },
-    "bio": "hey i'm hobbit, i'm short but fun"
-  },
-  {
     "id": "gollum",
     "credits": {
-      "balance": 500
+      "balance": 0
     },
     "times": {
       "created": 1800,
@@ -86,7 +74,7 @@
   {
     "id": "gandalf",
     "credits": {
-      "balance": 279.29284242781074
+      "balance": 0
     },
     "times": {
       "created": 243,
@@ -99,7 +87,7 @@
   {
     "id": "sauron",
     "credits": {
-      "balance": 17.458211304517476
+      "balance": 0
     },
     "times": {
       "created": 21,

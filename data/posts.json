@@ -244,38 +244,6 @@
     "comments": []
   },
   {
-    "id": "PST11",
-    "author": "sauron",
-    "title": "Another broadcast",
-    "content": "",
-    "channels": [
-      "test",
-      "general"
-    ],
-    "likes": 0,
-    "dislikes": 0,
-    "times": {
-      "created": 162379
-    },
-    "comments": []
-  },
-  {
-    "id": "PST12",
-    "author": "sauron",
-    "title": "Another broadcast",
-    "content": "",
-    "channels": [
-      "test",
-      "general"
-    ],
-    "likes": 0,
-    "dislikes": 0,
-    "times": {
-      "created": 162384
-    },
-    "comments": []
-  },
-  {
     "id": "PST13",
     "author": "sauron",
     "title": "Another broadcast",
