@@ -83,7 +83,7 @@ export function HeaderView(session, username) {
         </div>
         <div class="flex-none gap-1">
             ${session.username ? `
-                <div class="hidden md:block">
+                <div class="">
                     <div class="text-xs text-blue-400 text-bold leading-3">
                         wtr <strong id="userWater">${resources.water}</strong><small>/<span class="hidden lg:inline">${current.resources.water.supplied.toFixed(0)}</span>(${(resources.water/current.resources.water.supplied*100).toFixed(2)}%)</small>
                     </div>

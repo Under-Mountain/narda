@@ -318,7 +318,7 @@ app.post('/api/collect', (req, res) => {
     let amount = 0
     switch (req.body.resource) {
         case "water":
-            amount = util.getRandomNumber(5, 10)
+            amount = util.getRandomNumber(0, 100)
             if (world.resources.water.balance - amount < 0) {
                 console.log(`not enough water to collect`)
                 res.sendStatus(403)
@@ -326,7 +326,7 @@ app.post('/api/collect', (req, res) => {
             }
             break
         case "mineral":
-            amount = util.getRandomNumber(1, 3)
+            amount = util.getRandomNumber(0, 20)
             if (world.resources.water.balance - amount < 0) {
                 console.log(`not enough mineral to collect`)
                 res.sendStatus(403)
