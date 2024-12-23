@@ -88,6 +88,7 @@ app.get('/leaderboard', (req, res) => {
     res.send(`
         ${headerHtml}
         ${leaderboardHtml}
+        ${FooterView()}
     `)
 })
 
@@ -102,6 +103,7 @@ app.get('/explorer', (req, res) => {
     res.send(`
         ${headerHtml}
         ${html}
+        ${FooterView()}
     `)
 })
 
@@ -114,6 +116,7 @@ app.get('/mints', (req, res) => {
     res.send(`
         ${headerHtml}
         ${assetsHtml}
+        ${FooterView()}
     `)
 })
 
@@ -146,6 +149,7 @@ app.get('/posts', (req, res) => {
     res.send(`
         ${headerHtml}
         ${postsView}
+        ${FooterView()}
     `)
 })
 
@@ -171,6 +175,7 @@ app.get('/post', (req, res) => {
     res.send(`
         ${headerHtml}
         ${postHtml}
+        ${FooterView()}
     `)
 })
 
@@ -181,5 +186,6 @@ app.get('/channels', (req, res) => {
     res.send(`
         ${HeaderView(session, username)}
         ${ChannelsView()}
+        ${FooterView()}
     `)
 })

@@ -50,17 +50,6 @@
     }
   },
   {
-    "id": "worldbank",
-    "credits": {
-      "balance": 0
-    },
-    "times": {
-      "created": 0,
-      "updated": 0,
-      "lastActive": 0
-    }
-  },
-  {
     "id": "gollum",
     "credits": {
       "balance": 0
@@ -83,19 +72,6 @@
       "edited": 5397
     },
     "bio": "I am good and I will save"
-  },
-  {
-    "id": "sauron",
-    "credits": {
-      "balance": 0
-    },
-    "times": {
-      "created": 21,
-      "updated": 21,
-      "lastActive": 21,
-      "edited": 162573
-    },
-    "bio": "I am Sauron. I'm the beginning and the ending of the world. I may hurt, I may help..."
   },
   {
     "id": "frodo",
@@ -324,6 +300,30 @@
     "times": {
       "created": 6112,
       "lastActive": 6112
+    }
+  },
+  {
+    "id": "sauron",
+    "credits": {
+      "balance": -235.51976537635954
+    },
+    "times": {
+      "created": 21,
+      "updated": 21,
+      "lastActive": 21,
+      "edited": 5890
+    },
+    "bio": "I am Sauron. I'm the beginning and the ending of the world. I may hurt, I may help..."
+  },
+  {
+    "id": "worldbank",
+    "credits": {
+      "balance": -16801.39658329623
+    },
+    "times": {
+      "created": 0,
+      "updated": 0,
+      "lastActive": 0
     }
   }
 ]

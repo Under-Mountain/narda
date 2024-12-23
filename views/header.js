@@ -36,11 +36,10 @@ export function HeaderView(session, username) {
         <title>Arda v.1 - Open World Metaverse in tribute to JRR Toklien</title>
     </head>
     <body class="content-center">
-    <div class="text-center p-2"><small>
+    <div class="text-center p-1 text-sm text-white bg-black"><small>
         <a href="https://under-mountain.github.com" target="_blank">
             📢 Interested in joining this open project?
         </a>
-        <small class="pl-1">AD by <span>undermount</span></small>
     </small></div>
     <nav class="navbar bg-base-300 sticky top-0 z-50 class="">
         <div class="flex-1">

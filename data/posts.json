@@ -258,5 +258,37 @@
       "created": 162386
     },
     "comments": []
+  },
+  {
+    "id": "PST12",
+    "author": "sauron",
+    "title": "socio-economic platform vs trading game?",
+    "content": "game would be more appealing in the short-term, platform in the roadmap, to have its own chain, layer1, layer2, optimized for layer3 - the app, the world, own sustainable economy.",
+    "channels": [
+      "question",
+      "development"
+    ],
+    "likes": 0,
+    "dislikes": 0,
+    "times": {
+      "created": 3257
+    },
+    "comments": []
+  },
+  {
+    "id": "PST13",
+    "author": "sauron",
+    "title": "socio-economic platform vs trading game?",
+    "content": "game would be more appealing in the short-term, platform in the roadmap, to have its own chain, layer1, layer2, optimized for layer3 - the app, the world, own sustainable economy.",
+    "channels": [
+      "question",
+      "development"
+    ],
+    "likes": 0,
+    "dislikes": 0,
+    "times": {
+      "created": 3271
+    },
+    "comments": []
   }
 ]
