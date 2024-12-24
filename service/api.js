@@ -5,7 +5,7 @@ import session from 'express-session'
 import { accounts, activities, assets, market, current, world, auth, posts } from './model.js'
 import * as bcrypt from 'bcrypt'
 import path from 'path'
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'url'
 
 export const app = express()
 const __filename = fileURLToPath(import.meta.url);

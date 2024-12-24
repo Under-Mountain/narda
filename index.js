@@ -7,11 +7,24 @@ import { HeaderView } from './views/header.js'
 import { AuthView,  LeaderboardView, InventoryView, ProfileView } from './views/accounts.js'
 import { FooterView } from './views/footer.js'
 import { ActivitiesView, AssetsView } from './views/world.js'
+import 'dotenv/config'
+import * as fs from 'fs'
+import * as https from 'https'
+import * as path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 console.log(`starting worldcore service..`)
-const port = 9000
+const port = process.env.PORT || 443
 
-app.listen(port, () => {
+const server = https.createServer({
+    key: fs.readFileSync(path.join(__dirname, `./private/private.key`)),
+    cert: fs.readFileSync(path.join(__dirname, `./private/public.cert`))
+}, app)
+
+server.listen(port, () => {
     console.log(`app listening on port ${port}`)
 })
 
