@@ -17,9 +17,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log(`starting worldcore service..`)
-const port = process.env.PORT || 443
+const port = process.env.PORT || 9000
 
-const server = https.createServer({
+const server = port == 9000 ? app : https.createServer({
     key: fs.readFileSync(path.join(__dirname, `./private/private.key`)),
     cert: fs.readFileSync(path.join(__dirname, `./private/public.cert`))
 }, app)
