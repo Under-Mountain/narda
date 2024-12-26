@@ -58,22 +58,6 @@ app.get('/', (req, res) => {
     /**
      * Account Overview
      */
-    const items = assets.filter(a => a.owner == account.id && a.amount > 0)
-        .sort((a, b) => { return a.properties && b.properties &&
-            (a.properties.staked * a.properties.yield) > (b.properties.staked * b.properties.yield) ?
-            1 : -1})
-        .sort((a, b) => { return a.amount < b.amount ? 1 : -1})
-
-    const userActiveBankstones = items.filter((a) => a.type=="bankstone" && a.amount > 0)
-    const activeEffectsTotal = current.effects.pending.length+current.effects.completed.length+current.effects.rejected.length
-
-    const userWaters = assets.filter((a) => a.type=="water" && a.owner == account.id)
-    const userWaterTotal = userWaters.reduce((sum, c) => {return sum + c.amount}, 0)
-
-    const userMinerals = assets.filter((a) => a.type=="mineral" && a.owner == account.id)
-    const userMineralTotal = userMinerals.reduce((sum, c) => {return sum + c.amount}, 0)
-
-    const inventoryHtml = InventoryView(username, items, userMineralTotal, userWaterTotal, account)
 
     let listings = market.filter(l => !l.times.sold && !l.times.expired)
         .sort((a, b) => { return a.price / a.amount < b.price / b.amount ? 1 : -1 })
@@ -83,10 +67,14 @@ app.get('/', (req, res) => {
     const marketplaceHtml = MarketplaceView(listings, username, session, account)
 
     res.send(`${headerHtml}
-        ${ProfileView(username, account, userWaterTotal, userMineralTotal, userActiveBankstones, activeEffectsTotal, session)}
-        ${session && session.username == username ? inventoryHtml : ``}
-
-        ${marketplaceHtml}
+        <div class="lg:flex flex-row-reverse">
+            <div class="max-w-none lg:flex-none max-w-md">
+                ${ProfileView(username, account, session)}
+            </div>
+            <div class="lg:flex-auto">
+                ${marketplaceHtml}
+            </div>
+        </div>
         ${FooterView()}`)
         return
 })

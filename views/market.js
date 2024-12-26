@@ -2,7 +2,7 @@ import { assets, market } from '../service/model.js'
 import * as util from '../service/utility.js'
 
 export function MarketplaceView(listings, username, session, account) {
-    let marketplaceHtml = `<div class="p-4 sm:p-10">
+    let marketplaceHtml = `<div class="p-2 sm:p-4 lg:p-8 w-full">
         <h1 id="marketplace" class="text-bold text-2xl text-white mb-2">
             Marketplace (<a href="/market?expired=false&sold=false">${listings.length}</a>)
         </h1>
@@ -49,7 +49,7 @@ export function MarketplaceView(listings, username, session, account) {
         })
         marketplaceHtml += "</ul>"
     } else marketplaceHtml += `<p style="text-align:center">Nothing listed for sale at this time<p>`
-    marketplaceHtml += `</div>`
+    marketplaceHtml += `</div></div>`
     return marketplaceHtml
 }
 

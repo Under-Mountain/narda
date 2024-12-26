@@ -1,25 +1,22 @@
 {
-  "time": 23407,
+  "time": 36568,
   "resources": {
     "water": {
-      "balance": 29354.961051247214,
-      "supplied": 62199.9610512467
+      "balance": 54764.39707708048,
+      "supplied": 87609.39707708063
     },
     "mineral": {
-      "balance": 12194.08416461561,
-      "supplied": 25032.0841646157
+      "balance": 22361.511008270027,
+      "supplied": 35199.51100827003
     },
     "credits": {
-      "balance": -17013.466106678155,
-      "supplied": 24826.533893321837
+      "balance": -13947.588599564977,
+      "supplied": 27892.411400435027
     }
   },
   "effects": {
     "pending": [
-      "BNK74",
-      "BNK121",
-      "BNK57",
-      "BNK44",
+      "BNK60",
       "BNK150",
       "BNK92",
       "BNK97",
@@ -75,6 +72,7 @@
       "BNK62",
       "BNK163",
       "BNK152",
+      "BNK105",
       "BNK102",
       "BNK155",
       "BNK159",
@@ -118,7 +116,9 @@
       "BNK40",
       "BNK32",
       "BNK96",
-      "BNK109",
+      "BNK109"
+    ],
+    "completed": [
       "BNK132",
       "BNK49",
       "BNK94",
@@ -126,12 +126,9 @@
       "BNK8",
       "BNK157",
       "BNK17",
+      "BNK148",
       "BNK54",
       "BNK80",
-      "BNK105",
-      "BNK148"
-    ],
-    "completed": [
       "BNK85",
       "BNK69",
       "BNK48",
@@ -145,7 +142,6 @@
       "BNK90",
       "BNK61",
       "BNK79",
-      "BNK70",
       "BNK14",
       "BNK28",
       "BNK125",
@@ -153,7 +149,6 @@
       "BNK11",
       "BNK100",
       "BNK112",
-      "BNK60",
       "BNK142",
       "BNK29",
       "BNK6",
@@ -173,21 +168,17 @@
       "BNK111",
       "BNK127",
       "BNK145",
-      "BNK91"
+      "BNK91",
+      "BNK74",
+      "BNK121",
+      "BNK57",
+      "BNK44"
     ],
     "rejected": []
   },
   "activities": {
     "pending": [],
-    "completed": [
-      "TX3239",
-      "TX3240",
-      "TX3241",
-      "TX3242",
-      "TX3243",
-      "TX3244",
-      "TX3245"
-    ],
+    "completed": [],
     "rejected": []
   }
 }

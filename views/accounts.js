@@ -1,4 +1,4 @@
-import { accounts, current, market } from '../service/model.js'
+import { accounts, current, market, assets } from '../service/model.js'
 import { MarketStatsView } from './market.js'
 
 export function AuthView() {
@@ -70,10 +70,25 @@ export function AuthView() {
     `
 }
 
-export function ProfileView(username, account, userWaterTotal, userMineralTotal, userActiveBankstones, activeEffectsTotal, session) {
+export function ProfileView(username, account, session) {
+    const items = assets.filter(a => a.owner == account.id && a.amount > 0)
+        .sort((a, b) => { return a.properties && b.properties &&
+            (a.properties.staked * a.properties.yield) > (b.properties.staked * b.properties.yield) ?
+            1 : -1})
+        .sort((a, b) => { return a.amount < b.amount ? 1 : -1})
+
+    const userActiveBankstones = items.filter((a) => a.type=="bankstone" && a.amount > 0)
+    const activeEffectsTotal = current.effects.pending.length+current.effects.completed.length+current.effects.rejected.length
+
+    const userWaters = assets.filter((a) => a.type=="water" && a.owner == account.id)
+    const userWaterTotal = userWaters.reduce((sum, c) => {return sum + c.amount}, 0)
+
+    const userMinerals = assets.filter((a) => a.type=="mineral" && a.owner == account.id)
+    const userMineralTotal = userMinerals.reduce((sum, c) => {return sum + c.amount}, 0)
+    
     return `
-        <div class="card m-10 p-10 bg-base-200">
-            <div class="card-title m-auto">
+        <div class="card bg-base-200 m-2 sm:m-4 lg:m-8">
+            <div class="card-title m-auto pt-4 lg:pt-8">
                 <div class="btn-circle avatar">
                     <div class="w-15 rounded-full">
                     <img alt="Profile photo of ${username}"
@@ -82,10 +97,12 @@ export function ProfileView(username, account, userWaterTotal, userMineralTotal,
                 </div>
                 <h2 class="text-white-100 text-5xl">${username}</h2>
             </div>
-            <div class="card-body m-auto">
-            ${session.username && session.username == username ? `
+            <div class="card-body">
+                ${session.username && session.username == username ? `
                 <form id="updateBioForm" class="mb-2">
-                    <textarea name="bio" row="3" class="textarea textarea-lg w-full" placeholder="Write description of this account.">${account.bio? account.bio:''}</textarea>
+                    <div class="form-control">
+                        <textarea name="bio" row="3" class="textarea w-full" placeholder="Write description of this account.">${account.bio? account.bio:''}</textarea>
+                    </div>
                     <div class="text-right">
                         <button class="btn btn-md"
                             ${(session.username && account.credits.balance < 100) ? `disabled` :``}>
@@ -97,7 +114,7 @@ export function ProfileView(username, account, userWaterTotal, userMineralTotal,
 
                 <div style="text-align:right">
                     <h1 class="text-5xl" class="text-white-100">
-                        <span id="profileBalance">${account.credits.balance.toFixed(2)}</span><small class="text-white-300"><small>sl</small>
+                        <span id="profileBalance">${account.credits.balance.toFixed(2)}</span><small class="text-white-300">sl</small>
                     </h1>
                     <small>
                         holding ${(account.credits.balance/current.resources.credits.balance*100).toFixed(2)}% of
@@ -110,7 +127,10 @@ export function ProfileView(username, account, userWaterTotal, userMineralTotal,
                     </div>
                 </div>
 
-            ${session.username && session.username == username ? SendCreditView(account, session) : ``}
+            ${session.username && session.username == username ? `
+                ${SendCreditView(account, session)}
+                ${InventoryView(username, items, userMineralTotal, userWaterTotal, account)}
+                ` : ``}
             </div>
         </div>
     `
@@ -149,7 +169,7 @@ export function SendCreditView(account, session) {
 }
 
 export function InventoryView(username, items, userMineralTotal, userWaterTotal, account) {
-    let inventoryHtml = `<div class="card m-10 p-10 bg-base-300">
+    let inventoryHtml = `<div class="card bg-base-300 m-2 p-2 sm:m-4 p-4 lg:m-8 p-8">
         <div class="card-title">
             <h3>Inventory (<a href="/assets?user=${username}">${items.filter(i => i.owner == username).length}</a>)</h3>
         </div>
@@ -170,7 +190,7 @@ export function InventoryView(username, items, userMineralTotal, userWaterTotal,
                 Mint Bankstone (-200.00 credit)
             </button>
         </form>
-        <ul class="text-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-1 justify-between">`
+        <ul class="text-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 justify-between">`
         items.slice(0, 20).forEach(i => {
             inventoryHtml += ItemView(i)
         })
@@ -211,7 +231,7 @@ export function ItemView(i) {
 
 export function LeaderboardView() {
     const balanceLeaders = accounts.sort((a, b) => { return a.credits.balance > b.credits.balance ? -1 : 1 })
-    let LeaderHtml = `<div class="p-4 sm:p-10">
+    let LeaderHtml = `<div class="p-2 sm:p-4 lg:p-8">
         <h1 id="leaderboard" class="text-bold text-2xl text-white mb-2">
             Leaderboard
         </h1>

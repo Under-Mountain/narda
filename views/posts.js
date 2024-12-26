@@ -3,7 +3,7 @@ import { TimeView } from './world.js'
 
 export function PostsView(channel) {
     const filteredPosts = posts.filter(p => !channel ? true : p.channels.indexOf(channel) >= 0).sort((a, b) => { return a.times.created > b.times.created ? -1 : 1 })
-    let postsHtml = `<div class="p-4 sm:p-10">
+    let postsHtml = `<div class="p-2 sm:p-4 lg:p-8">
         <h1 id="posts" class="text-bold text-2xl text-white mb-2">
             ${channel ? channel : `All Posts`}
         </h1>
@@ -47,7 +47,7 @@ export function PostsView(channel) {
 
 export function PostView(post, session, account) {
     return `${post? `
-        <div class="card m-10 p-10 bg-base-200">
+        <div class="card bg-base-200 m-2 p-2 sm:m-4 p-4 lg:m-8 p-8">
             <h1 class="card-title text-white-300 text-xl">${post.title}</h1>
             <div class="card-body p-0 my-1">
                 <small>
@@ -85,7 +85,7 @@ export function PostView(post, session, account) {
 }
 
 export function ChannelsView() {
-    let channelsHtml = `<div class="p-4 sm:p-10">
+    let channelsHtml = `<div class="p-2 sm:p-4 lg:p-8">
     <h1 id="leaderboard" class="text-bold text-2xl text-white mb-2">
         Channels
     </h1>
@@ -96,6 +96,7 @@ export function ChannelsView() {
     </div>
     <div role="tabpanel" class="tab-content">
         ${channelsView()}
+    </div>
     </div>
     `
 

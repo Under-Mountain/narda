@@ -1,4 +1,7 @@
 {
+  "id": "arda",
+  "name": "",
+  "description": "",
   "interval": {
     "minute": 3000,
     "hour": 60,

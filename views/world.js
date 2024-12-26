@@ -34,9 +34,9 @@ export function ActivitiesView() {
     const filtered = activities.filter(a => true)
         .sort((a, b) => { return a.times.completed > b.times.completed ? -1 : 1 })
     
-    let entriesHtml = `<p style="text-align:center">Empty<p>`
+    let entriesHtml = `<div class="p-2 sm:p-4 lg:p-8">`
     if (filtered.length > 0) {
-        entriesHtml = `<ul style="font-weight:normal;padding:.3em">`
+        entriesHtml += `<ul style="font-weight:normal;padding:.3em">`
         filtered.slice(0, 1000).forEach((t, idx) => {
             entriesHtml += `<oi><div><small>
                     ${t.id}: Transaction of
@@ -49,6 +49,8 @@ export function ActivitiesView() {
                 </small></div></oi>`
         })
         entriesHtml += "</ul>"
-    }
+    } else entriesHtml += `<p style="text-align:center">Empty<p>`
+    entriesHtml += "</div>"
+
     return entriesHtml
 }

@@ -36,7 +36,7 @@
     "properties": {
       "yield": 0.3,
       "cap": 9795,
-      "staked": 9698.827308619544
+      "staked": 9635.23735318068
     },
     "owner": "worldbank"
   },
@@ -47,7 +47,7 @@
     "properties": {
       "yield": 0.29,
       "cap": 9880,
-      "staked": 9786.212189522563
+      "staked": 9724.182116397762
     },
     "owner": "sauron"
   },
@@ -58,7 +58,7 @@
     "properties": {
       "yield": 0.3,
       "cap": 9427,
-      "staked": 9334.440534799023
+      "staked": 9273.239665996352
     },
     "owner": "sauron"
   },
@@ -69,7 +69,7 @@
     "properties": {
       "yield": 0.28,
       "cap": 9152,
-      "staked": 9068.106004310806
+      "staked": 9012.604351657488
     },
     "owner": "worldbank"
   },
@@ -80,7 +80,7 @@
     "properties": {
       "yield": 0.25,
       "cap": 9860,
-      "staked": 9799.385435022874
+      "staked": 9739.143499405525
     },
     "owner": "worldbank"
   },
@@ -91,7 +91,7 @@
     "properties": {
       "yield": 0.29,
       "cap": 8186,
-      "staked": 8108.292812088223
+      "staked": 8050.496888378428
     },
     "owner": "worldbank"
   },
@@ -102,7 +102,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 8508,
-      "staked": 8441.571507160583
+      "staked": 8387.606883969764
     },
     "owner": "worldbank"
   },
@@ -113,7 +113,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 8452,
-      "staked": 8386.008742186323
+      "staked": 8332.399316327277
     },
     "owner": "worldbank"
   },
@@ -124,7 +124,7 @@
     "properties": {
       "yield": 0.28,
       "cap": 7710,
-      "staked": 7651.05854990296
+      "staked": 7598.396602708346
     },
     "owner": "worldbank"
   },
@@ -135,7 +135,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 8749,
-      "staked": 8694.025382143778
+      "staked": 8644.843634750394
     },
     "owner": "worldbank"
   },
@@ -146,7 +146,7 @@
     "properties": {
       "yield": 0.22,
       "cap": 9138,
-      "staked": 9072.124639213553
+      "staked": 9028.471772750217
     },
     "owner": "worldbank"
   },
@@ -157,7 +157,7 @@
     "properties": {
       "yield": 0.25,
       "cap": 7768,
-      "staked": 7704.393394296005
+      "staked": 7662.278603956142
     },
     "owner": "sauron"
   },
@@ -168,18 +168,18 @@
     "properties": {
       "yield": 0.22,
       "cap": 8779,
-      "staked": 8715.712651308359
+      "staked": 8673.774753006584
     },
     "owner": "sauron"
   },
   {
     "id": "BNK70",
     "type": "bankstone",
-    "amount": 1,
+    "amount": 0,
     "properties": {
       "yield": 0.23,
       "cap": 8171,
-      "staked": 8109.427494779243
+      "staked": 8099.210614406497
     },
     "owner": "sauron"
   },
@@ -190,7 +190,7 @@
     "properties": {
       "yield": 0.27,
       "cap": 6857,
-      "staked": 6776.291881113221
+      "staked": 6736.29475447327
     },
     "owner": "worldbank"
   },
@@ -201,7 +201,7 @@
     "properties": {
       "yield": 0.25,
       "cap": 7271,
-      "staked": 7211.462972441586
+      "staked": 7172.04270460416
     },
     "owner": "sauron"
   },
@@ -212,7 +212,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 7770,
-      "staked": 7721.176959567624
+      "staked": 7682.339502328784
     },
     "owner": "worldbank"
   },
@@ -223,7 +223,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 7702,
-      "staked": 7658.430099778427
+      "staked": 7619.908258733425
     },
     "owner": "worldbank"
   },
@@ -234,7 +234,7 @@
     "properties": {
       "yield": 0.22,
       "cap": 7962,
-      "staked": 7885.561913139155
+      "staked": 7847.618499124014
     },
     "owner": "worldbank"
   },
@@ -245,7 +245,7 @@
     "properties": {
       "yield": 0.19,
       "cap": 9184,
-      "staked": 9126.79541433226
+      "staked": 9088.85711199179
     },
     "owner": "worldbank"
   },
@@ -256,14 +256,14 @@
     "properties": {
       "yield": 0.29,
       "cap": 5861,
-      "staked": 5809.979472243041
+      "staked": 5773.152818116057
     },
     "owner": "worldbank"
   },
   {
     "id": "BNK60",
     "type": "bankstone",
-    "amount": 1,
+    "amount": 0,
     "properties": {
       "yield": 0.2,
       "cap": 7963,
@@ -278,7 +278,7 @@
     "properties": {
       "yield": 0.21,
       "cap": 7374,
-      "staked": 7331.683920239302
+      "staked": 7306.410921591318
     },
     "owner": "worldbank"
   },
@@ -289,7 +289,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 5950,
-      "staked": 5899.338514453571
+      "staked": 5874.169761597059
     },
     "owner": "sauron"
   },
@@ -300,7 +300,7 @@
     "properties": {
       "yield": 0.27,
       "cap": 5680,
-      "staked": 5613.145382050911
+      "staked": 5584.1444755842485
     },
     "owner": "worldbank"
   },
@@ -311,7 +311,7 @@
     "properties": {
       "yield": 0.19,
       "cap": 7944,
-      "staked": 7898.630645945658
+      "staked": 7869.894241460728
     },
     "owner": "worldbank"
   },
@@ -322,7 +322,7 @@
     "properties": {
       "yield": 0.16,
       "cap": 9197,
-      "staked": 9148.737729163622
+      "staked": 9120.70178085041
     },
     "owner": "sauron"
   },
@@ -333,7 +333,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 9432,
-      "staked": 9397.171811586137
+      "staked": 9370.172157068831
     },
     "owner": "worldbank"
   },
@@ -344,7 +344,7 @@
     "properties": {
       "yield": 0.27,
       "cap": 5186,
-      "staked": 5151.576010305685
+      "staked": 5124.9598505838085
     },
     "owner": "worldbank"
   },
@@ -355,7 +355,7 @@
     "properties": {
       "yield": 0.29,
       "cap": 4825,
-      "staked": 4790.607392534714
+      "staked": 4764.027163219338
     },
     "owner": "worldbank"
   },
@@ -366,7 +366,7 @@
     "properties": {
       "yield": 0.27,
       "cap": 5163,
-      "staked": 5117.355536180218
+      "staked": 5094.684851125788
     },
     "owner": "worldbank"
   },
@@ -377,7 +377,7 @@
     "properties": {
       "yield": 0.2,
       "cap": 6846,
-      "staked": 6804.849303576465
+      "staked": 6782.507820618263
     },
     "owner": "worldbank"
   },
@@ -388,7 +388,7 @@
     "properties": {
       "yield": 0.3,
       "cap": 4474,
-      "staked": 4437.363107845044
+      "staked": 4415.525136875038
     },
     "owner": "worldbank"
   },
@@ -399,7 +399,7 @@
     "properties": {
       "yield": 0.3,
       "cap": 4314,
-      "staked": 4257.616325542897
+      "staked": 4236.662957639727
     },
     "owner": "worldbank"
   },
@@ -410,7 +410,7 @@
     "properties": {
       "yield": 0.25,
       "cap": 5144,
-      "staked": 5105.376289854163
+      "staked": 5080.948697864301
     },
     "owner": "worldbank"
   },
@@ -421,7 +421,7 @@
     "properties": {
       "yield": 0.18,
       "cap": 7110,
-      "staked": 7081.997957095792
+      "staked": 7057.586651202814
     },
     "owner": "worldbank"
   },
@@ -432,7 +432,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 5505,
-      "staked": 5456.633757472494
+      "staked": 5429.186934101706
     },
     "owner": "worldbank"
   },
@@ -443,7 +443,7 @@
     "properties": {
       "yield": 0.13,
       "cap": 9653,
-      "staked": 9622.101552690141
+      "staked": 9594.719306018247
     },
     "owner": "worldbank"
   },
@@ -454,7 +454,7 @@
     "properties": {
       "yield": 0.22,
       "cap": 5559,
-      "staked": 5525.584432817055
+      "staked": 5498.996658842361
     },
     "owner": "worldbank"
   },
@@ -465,7 +465,7 @@
     "properties": {
       "yield": 0.27,
       "cap": 4474,
-      "staked": 4444.30217317926
+      "staked": 4418.069637750508
     },
     "owner": "worldbank"
   },
@@ -476,7 +476,7 @@
     "properties": {
       "yield": 0.3,
       "cap": 3970,
-      "staked": 3940.7292412235283
+      "staked": 3914.892014838095
     },
     "owner": "worldbank"
   },
@@ -487,7 +487,7 @@
     "properties": {
       "yield": 0.3,
       "cap": 3972,
-      "staked": 3936.2359842329697
+      "staked": 3910.4282176989923
     },
     "owner": "worldbank"
   },
@@ -498,7 +498,7 @@
     "properties": {
       "yield": 0.25,
       "cap": 4669,
-      "staked": 4633.942826074861
+      "staked": 4605.455561517924
     },
     "owner": "sauron"
   },
@@ -509,7 +509,7 @@
     "properties": {
       "yield": 0.19,
       "cap": 6109,
-      "staked": 6077.274113771159
+      "staked": 6048.861712208231
     },
     "owner": "worldbank"
   },
@@ -520,7 +520,7 @@
     "properties": {
       "yield": 0.18,
       "cap": 6407,
-      "staked": 6372.329791700798
+      "staked": 6344.102848809305
     },
     "owner": "sauron"
   },
@@ -531,7 +531,7 @@
     "properties": {
       "yield": 0.2,
       "cap": 5721,
-      "staked": 5686.611578405048
+      "staked": 5658.629401281115
     },
     "owner": "sauron"
   },
@@ -542,7 +542,7 @@
     "properties": {
       "yield": 0.13,
       "cap": 8754,
-      "staked": 8729.088166960915
+      "staked": 8704.247227162103
     },
     "owner": "worldbank"
   },
@@ -553,7 +553,7 @@
     "properties": {
       "yield": 0.3,
       "cap": 3816,
-      "staked": 3781.6406132510106
+      "staked": 3756.846444798428
     },
     "owner": "worldbank"
   },
@@ -564,7 +564,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 7530,
-      "staked": 7496.03013245284
+      "staked": 7471.421068249097
     },
     "owner": "worldbank"
   },
@@ -575,7 +575,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 4322,
-      "staked": 4291.311650071785
+      "staked": 4269.959549411836
     },
     "owner": "worldbank"
   },
@@ -586,7 +586,7 @@
     "properties": {
       "yield": 0.29,
       "cap": 3778,
-      "staked": 3751.070410154641
+      "staked": 3730.2579528793062
     },
     "owner": "worldbank"
   },
@@ -597,7 +597,7 @@
     "properties": {
       "yield": 0.14,
       "cap": 7564,
-      "staked": 7537.92868293873
+      "staked": 7517.71313434736
     },
     "owner": "worldbank"
   },
@@ -608,7 +608,7 @@
     "properties": {
       "yield": 0.17,
       "cap": 5906,
-      "staked": 5867.606013058709
+      "staked": 5845.778758576597
     },
     "owner": "worldbank"
   },
@@ -619,7 +619,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 3823,
-      "staked": 3782.3545623683217
+      "staked": 3760.8539841478373
     },
     "owner": "worldbank"
   },
@@ -630,7 +630,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 9764,
-      "staked": 9734.614522713866
+      "staked": 9713.298829401165
     },
     "owner": "worldbank"
   },
@@ -641,7 +641,7 @@
     "properties": {
       "yield": 0.19,
       "cap": 5108,
-      "staked": 5078.827459653881
+      "staked": 5057.715767876847
     },
     "owner": "sauron"
   },
@@ -652,7 +652,7 @@
     "properties": {
       "yield": 0.16,
       "cap": 6000,
-      "staked": 5971.131821355116
+      "staked": 5947.615743177953
     },
     "owner": "sauron"
   },
@@ -663,7 +663,7 @@
     "properties": {
       "yield": 0.29,
       "cap": 3248,
-      "staked": 3222.286042775257
+      "staked": 3199.3175828768026
     },
     "owner": "worldbank"
   },
@@ -674,7 +674,7 @@
     "properties": {
       "yield": 0.29,
       "cap": 3177,
-      "staked": 3154.3543390845143
+      "staked": 3134.3604102256622
     },
     "owner": "worldbank"
   },
@@ -685,7 +685,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 3984,
-      "staked": 3958.966410156681
+      "staked": 3939.0528413485035
     },
     "owner": "worldbank"
   },
@@ -696,7 +696,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 5996,
-      "staked": 5968.950421538808
+      "staked": 5949.354677984274
     },
     "owner": "sauron"
   },
@@ -707,7 +707,7 @@
     "properties": {
       "yield": 0.16,
       "cap": 5409,
-      "staked": 5382.975336951639
+      "staked": 5364.126990607796
     },
     "owner": "sauron"
   },
@@ -718,7 +718,7 @@
     "properties": {
       "yield": 0.22,
       "cap": 3835,
-      "staked": 3814.246524412303
+      "staked": 3795.893293960781
     },
     "owner": "worldbank"
   },
@@ -729,7 +729,7 @@
     "properties": {
       "yield": 0.12,
       "cap": 6910,
-      "staked": 6876.001599174046
+      "staked": 6860.192975219136
     },
     "owner": "worldbank"
   },
@@ -740,7 +740,7 @@
     "properties": {
       "yield": 0.21,
       "cap": 3839,
-      "staked": 3821.3656231669543
+      "staked": 3803.812249523877
     },
     "owner": "worldbank"
   },
@@ -751,7 +751,7 @@
     "properties": {
       "yield": 0.17,
       "cap": 4721,
-      "staked": 4696.869206261424
+      "staked": 4679.39704483714
     },
     "owner": "sauron"
   },
@@ -762,7 +762,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 5337,
-      "staked": 5317.292828502463
+      "staked": 5299.836441815835
     },
     "owner": "worldbank"
   },
@@ -773,7 +773,7 @@
     "properties": {
       "yield": 0.19,
       "cap": 4133,
-      "staked": 4109.395828259492
+      "staked": 4092.313874047574
     },
     "owner": "sauron"
   },
@@ -784,7 +784,7 @@
     "properties": {
       "yield": 0.14,
       "cap": 5571,
-      "staked": 5549.66862525477
+      "staked": 5532.662348571429
     },
     "owner": "worldbank"
   },
@@ -795,7 +795,7 @@
     "properties": {
       "yield": 0.28,
       "cap": 2780,
-      "staked": 2760.8653649366092
+      "staked": 2743.967394132735
     },
     "owner": "worldbank"
   },
@@ -806,7 +806,7 @@
     "properties": {
       "yield": 0.29,
       "cap": 2675,
-      "staked": 2651.7138864101908
+      "staked": 2632.8124657251014
     },
     "owner": "sauron"
   },
@@ -817,7 +817,7 @@
     "properties": {
       "yield": 0.25,
       "cap": 3054,
-      "staked": 3033.146546860071
+      "staked": 3014.5002123316945
     },
     "owner": "worldbank"
   },
@@ -828,7 +828,7 @@
     "properties": {
       "yield": 0.3,
       "cap": 2526,
-      "staked": 2503.2558147463446
+      "staked": 2484.7993419228583
     },
     "owner": "sauron"
   },
@@ -839,7 +839,7 @@
     "properties": {
       "yield": 0.21,
       "cap": 3475,
-      "staked": 3445.1307539080462
+      "staked": 3427.3325831648076
     },
     "owner": "worldbank"
   },
@@ -850,7 +850,7 @@
     "properties": {
       "yield": 0.12,
       "cap": 5986,
-      "staked": 5964.387550678215
+      "staked": 5946.762690444026
     },
     "owner": "sauron"
   },
@@ -861,7 +861,7 @@
     "properties": {
       "yield": 0.07,
       "cap": 9979,
-      "staked": 9957.968585804474
+      "staked": 9940.794038411168
     },
     "owner": "sauron"
   },
@@ -872,7 +872,7 @@
     "properties": {
       "yield": 0.11,
       "cap": 6154,
-      "staked": 6126.239158983367
+      "staked": 6109.642800897304
     },
     "owner": "worldbank"
   },
@@ -883,7 +883,7 @@
     "properties": {
       "yield": 0.28,
       "cap": 2406,
-      "staked": 2391.2739947878426
+      "staked": 2376.6381205937687
     },
     "owner": "worldbank"
   },
@@ -894,7 +894,7 @@
     "properties": {
       "yield": 0.17,
       "cap": 3649,
-      "staked": 3630.3485985274174
+      "staked": 3616.8438501611363
     },
     "owner": "worldbank"
   },
@@ -905,7 +905,7 @@
     "properties": {
       "yield": 0.06,
       "cap": 9975,
-      "staked": 9956.977831310362
+      "staked": 9943.891254597404
     },
     "owner": "worldbank"
   },
@@ -916,7 +916,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 3976,
-      "staked": 3961.318397250476
+      "staked": 3948.313601772486
     },
     "owner": "worldbank"
   },
@@ -927,7 +927,7 @@
     "properties": {
       "yield": 0.09,
       "cap": 6480,
-      "staked": 6465.633901154088
+      "staked": 6452.890775566617
     },
     "owner": "worldbank"
   },
@@ -938,7 +938,7 @@
     "properties": {
       "yield": 0.12,
       "cap": 4840,
-      "staked": 4824.111192133089
+      "staked": 4811.437709239314
     },
     "owner": "worldbank"
   },
@@ -949,7 +949,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 3877,
-      "staked": 3853.1693141025266
+      "staked": 3840.519566254246
     },
     "owner": "worldbank"
   },
@@ -960,7 +960,7 @@
     "properties": {
       "yield": 0.2,
       "cap": 2902,
-      "staked": 2886.137781757603
+      "staked": 2871.9359293012285
     },
     "owner": "worldbank"
   },
@@ -971,7 +971,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 5688,
-      "staked": 5670.881544981203
+      "staked": 5656.9138634295905
     },
     "owner": "sauron"
   },
@@ -982,7 +982,7 @@
     "properties": {
       "yield": 0.22,
       "cap": 2588,
-      "staked": 2570.8928235220073
+      "staked": 2556.9801868983964
     },
     "owner": "sauron"
   },
@@ -993,7 +993,7 @@
     "properties": {
       "yield": 0.18,
       "cap": 3152,
-      "staked": 3134.9435778743436
+      "staked": 3121.0569969481708
     },
     "owner": "sauron"
   },
@@ -1004,7 +1004,7 @@
     "properties": {
       "yield": 0.3,
       "cap": 1815,
-      "staked": 1800.1372464771478
+      "staked": 1786.864857785416
     },
     "owner": "worldbank"
   },
@@ -1015,7 +1015,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 5334,
-      "staked": 5317.946934059375
+      "staked": 5304.8485491444135
     },
     "owner": "sauron"
   },
@@ -1026,7 +1026,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 3430,
-      "staked": 3414.526341874268
+      "staked": 3401.9180120631045
     },
     "owner": "sauron"
   },
@@ -1037,7 +1037,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 3309,
-      "staked": 3294.07220561573
+      "staked": 3283.257943537352
     },
     "owner": "sauron"
   },
@@ -1048,7 +1048,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 4828,
-      "staked": 4813.469778334958
+      "staked": 4802.929818552727
     },
     "owner": "sauron"
   },
@@ -1059,7 +1059,7 @@
     "properties": {
       "yield": 0.07,
       "cap": 6711,
-      "staked": 6700.710579817005
+      "staked": 6690.436935549328
     },
     "owner": "worldbank"
   },
@@ -1070,7 +1070,7 @@
     "properties": {
       "yield": 0.05,
       "cap": 9161,
-      "staked": 9147.20520450353
+      "staked": 9137.185674904065
     },
     "owner": "sauron"
   },
@@ -1081,7 +1081,7 @@
     "properties": {
       "yield": 0.05,
       "cap": 8940,
-      "staked": 8926.537990204297
+      "staked": 8916.760171776259
     },
     "owner": "sauron"
   },
@@ -1092,7 +1092,7 @@
     "properties": {
       "yield": 0.09,
       "cap": 4393,
-      "staked": 4381.099418911688
+      "staked": 4372.464704827982
     },
     "owner": "sauron"
   },
@@ -1103,7 +1103,7 @@
     "properties": {
       "yield": 0.29,
       "cap": 1363,
-      "staked": 1346.8460602828613
+      "staked": 1338.3090535238373
     },
     "owner": "worldbank"
   },
@@ -1114,7 +1114,7 @@
     "properties": {
       "yield": 0.14,
       "cap": 2801,
-      "staked": 2789.204720631984
+      "staked": 2779.59099236382
     },
     "owner": "sauron"
   },
@@ -1125,7 +1125,7 @@
     "properties": {
       "yield": 0.12,
       "cap": 3251,
-      "staked": 3242.459257208903
+      "staked": 3232.8777384464506
     },
     "owner": "worldbank"
   },
@@ -1136,7 +1136,7 @@
     "properties": {
       "yield": 0.28,
       "cap": 1384,
-      "staked": 1375.529180709216
+      "staked": 1366.0614652804693
     },
     "owner": "worldbank"
   },
@@ -1147,7 +1147,7 @@
     "properties": {
       "yield": 0.22,
       "cap": 1713,
-      "staked": 1702.7030281373657
+      "staked": 1694.5100335666425
     },
     "owner": "worldbank"
   },
@@ -1158,7 +1158,7 @@
     "properties": {
       "yield": 0.07,
       "cap": 5360,
-      "staked": 5349.729414717741
+      "staked": 5340.502715458476
     },
     "owner": "worldbank"
   },
@@ -1169,7 +1169,7 @@
     "properties": {
       "yield": 0.09,
       "cap": 4036,
-      "staked": 4028.0454427737013
+      "staked": 4019.115304041183
     },
     "owner": "worldbank"
   },
@@ -1180,7 +1180,7 @@
     "properties": {
       "yield": 0.3,
       "cap": 1200,
-      "staked": 1192.1322502093817
+      "staked": 1183.3426745102556
     },
     "owner": "worldbank"
   },
@@ -1191,7 +1191,7 @@
     "properties": {
       "yield": 0.12,
       "cap": 2962,
-      "staked": 2952.2763122103743
+      "staked": 2944.5203501584406
     },
     "owner": "worldbank"
   },
@@ -1202,7 +1202,7 @@
     "properties": {
       "yield": 0.29,
       "cap": 1168,
-      "staked": 1157.8324558232155
+      "staked": 1151.4083326039918
     },
     "owner": "worldbank"
   },
@@ -1213,7 +1213,7 @@
     "properties": {
       "yield": 0.06,
       "cap": 5603,
-      "staked": 5594.71607859145
+      "staked": 5588.281497017622
     },
     "owner": "worldbank"
   },
@@ -1224,7 +1224,7 @@
     "properties": {
       "yield": 0.05,
       "cap": 6644,
-      "staked": 6635.813254035734
+      "staked": 6629.452759815165
     },
     "owner": "worldbank"
   },
@@ -1235,7 +1235,7 @@
     "properties": {
       "yield": 0.17,
       "cap": 1955,
-      "staked": 1945.007265037298
+      "staked": 1938.6748619857333
     },
     "owner": "sauron"
   },
@@ -1246,7 +1246,7 @@
     "properties": {
       "yield": 0.22,
       "cap": 1506,
-      "staked": 1496.9473207092074
+      "staked": 1490.6428424263197
     },
     "owner": "worldbank"
   },
@@ -1257,7 +1257,7 @@
     "properties": {
       "yield": 0.07,
       "cap": 4674,
-      "staked": 4664.149230388829
+      "staked": 4657.891371111099
     },
     "owner": "sauron"
   },
@@ -1268,7 +1268,7 @@
     "properties": {
       "yield": 0.09,
       "cap": 3330,
-      "staked": 3320.9790723824085
+      "staked": 3314.4337507573828
     },
     "owner": "worldbank"
   },
@@ -1279,7 +1279,7 @@
     "properties": {
       "yield": 0.03,
       "cap": 9579,
-      "staked": 9570.343092464649
+      "staked": 9563.265987626171
     },
     "owner": "worldbank"
   },
@@ -1290,7 +1290,7 @@
     "properties": {
       "yield": 0.16,
       "cap": 1471,
-      "staked": 1463.9224848688962
+      "staked": 1458.1571263691283
     },
     "owner": "sauron"
   },
@@ -1301,7 +1301,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 2332,
-      "staked": 2324.9816742081866
+      "staked": 2319.2551212232433
     },
     "owner": "sauron"
   },
@@ -1312,7 +1312,7 @@
     "properties": {
       "yield": 0.08,
       "cap": 2858,
-      "staked": 2851.117025744416
+      "staked": 2845.4978327037707
     },
     "owner": "sauron"
   },
@@ -1323,7 +1323,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 860,
-      "staked": 853.2853192475435
+      "staked": 847.8305030810998
     },
     "owner": "sauron"
   },
@@ -1334,7 +1334,7 @@
     "properties": {
       "yield": 0.08,
       "cap": 2700,
-      "staked": 2693.4975400664543
+      "staked": 2688.188995206502
     },
     "owner": "worldbank"
   },
@@ -1345,7 +1345,7 @@
     "properties": {
       "yield": 0.04,
       "cap": 5335,
-      "staked": 5329.74038819617
+      "staked": 5325.069530944916
     },
     "owner": "worldbank"
   },
@@ -1356,7 +1356,7 @@
     "properties": {
       "yield": 0.06,
       "cap": 3542,
-      "staked": 3535.600549223187
+      "staked": 3531.5341927134264
     },
     "owner": "sauron"
   },
@@ -1367,7 +1367,7 @@
     "properties": {
       "yield": 0.06,
       "cap": 3366,
-      "staked": 3360.4709405369617
+      "staked": 3356.6060036769654
     },
     "owner": "worldbank"
   },
@@ -1378,7 +1378,7 @@
     "properties": {
       "yield": 0.02,
       "cap": 9867,
-      "staked": 9858.893246880212
+      "staked": 9855.11237513861
     },
     "owner": "worldbank"
   },
@@ -1389,7 +1389,7 @@
     "properties": {
       "yield": 0.09,
       "cap": 2169,
-      "staked": 2160.9915032078893
+      "staked": 2157.2643306611985
     },
     "owner": "worldbank"
   },
@@ -1400,7 +1400,7 @@
     "properties": {
       "yield": 0.05,
       "cap": 3717,
-      "staked": 3712.4199074730313
+      "staked": 3708.861515387262
     },
     "owner": "worldbank"
   },
@@ -1411,7 +1411,7 @@
     "properties": {
       "yield": 0.02,
       "cap": 9205,
-      "staked": 9200.461542766407
+      "staked": 9196.93317866045
     },
     "owner": "worldbank"
   },
@@ -1422,7 +1422,7 @@
     "properties": {
       "yield": 0.02,
       "cap": 8850,
-      "staked": 8845.636572893283
+      "staked": 8841.759777129846
     },
     "owner": "worldbank"
   },
@@ -1433,7 +1433,7 @@
     "properties": {
       "yield": 0.06,
       "cap": 2784,
-      "staked": 2777.143235899786
+      "staked": 2773.037286175266
     },
     "owner": "worldbank"
   },
@@ -1444,7 +1444,7 @@
     "properties": {
       "yield": 0.04,
       "cap": 4105,
-      "staked": 4100.054217461153
+      "staked": 4096.012100580459
     },
     "owner": "worldbank"
   },
@@ -1455,7 +1455,7 @@
     "properties": {
       "yield": 0.05,
       "cap": 3276,
-      "staked": 3269.7228514301046
+      "staked": 3265.6938944225462
     },
     "owner": "worldbank"
   },
@@ -1466,7 +1466,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 709,
-      "staked": 704.1010162567342
+      "staked": 700.1179454927488
     },
     "owner": "sauron"
   },
@@ -1477,7 +1477,7 @@
     "properties": {
       "yield": 0.02,
       "cap": 7562,
-      "staked": 7557.443330731135
+      "staked": 7553.717189139407
     },
     "owner": "sauron"
   },
@@ -1488,7 +1488,7 @@
     "properties": {
       "yield": 0.23,
       "cap": 596,
-      "staked": 591.8818133836581
+      "staked": 588.5335620785307
     },
     "owner": "sauron"
   },
@@ -1499,7 +1499,7 @@
     "properties": {
       "yield": 0.04,
       "cap": 3076,
-      "staked": 3073.3042670264613
+      "staked": 3070.6108965289523
     },
     "owner": "worldbank"
   },
@@ -1510,7 +1510,7 @@
     "properties": {
       "yield": 0.07,
       "cap": 1750,
-      "staked": 1744.9725061150198
+      "staked": 1742.6312876317797
     },
     "owner": "worldbank"
   },
@@ -1521,7 +1521,7 @@
     "properties": {
       "yield": 0.06,
       "cap": 1940,
-      "staked": 1935.2219388094777
+      "staked": 1932.9962059476477
     },
     "owner": "worldbank"
   },
@@ -1532,7 +1532,7 @@
     "properties": {
       "yield": 0.11,
       "cap": 982,
-      "staked": 978.7495037005172
+      "staked": 977.2755643508201
     },
     "owner": "sauron"
   },
@@ -1543,7 +1543,7 @@
     "properties": {
       "yield": 0.16,
       "cap": 640,
-      "staked": 636.9207276112122
+      "staked": 635.5259603211746
     },
     "owner": "sauron"
   },
@@ -1554,7 +1554,7 @@
     "properties": {
       "yield": 0.07,
       "cap": 1433,
-      "staked": 1428.883200721613
+      "staked": 1427.513564189118
     },
     "owner": "worldbank"
   },
@@ -1565,7 +1565,7 @@
     "properties": {
       "yield": 0.01,
       "cap": 9635,
-      "staked": 9632.88842166652
+      "staked": 9631.568920213556
     },
     "owner": "worldbank"
   },
@@ -1576,7 +1576,7 @@
     "properties": {
       "yield": 0.02,
       "cap": 4668,
-      "staked": 4665.442822381112
+      "staked": 4663.9091882658295
     },
     "owner": "worldbank"
   },
@@ -1587,7 +1587,7 @@
     "properties": {
       "yield": 0.05,
       "cap": 1851,
-      "staked": 1848.465946042032
+      "staked": 1846.6941727089645
     },
     "owner": "worldbank"
   },
@@ -1598,7 +1598,7 @@
     "properties": {
       "yield": 0.01,
       "cap": 9204,
-      "staked": 9201.22657172332
+      "staked": 9199.462097959282
     },
     "owner": "sauron"
   },
@@ -1609,7 +1609,7 @@
     "properties": {
       "yield": 0.13,
       "cap": 687,
-      "staked": 684.313253778809
+      "staked": 682.608979591662
     },
     "owner": "sauron"
   },
@@ -1620,7 +1620,7 @@
     "properties": {
       "yield": 0.02,
       "cap": 4345,
-      "staked": 4342.381813280452
+      "staked": 4340.716515941495
     },
     "owner": "worldbank"
   },
@@ -1631,7 +1631,7 @@
     "properties": {
       "yield": 0.02,
       "cap": 3619,
-      "staked": 3617.0174751922114
+      "staked": 3615.6303540602157
     },
     "owner": "worldbank"
   },
@@ -1642,7 +1642,7 @@
     "properties": {
       "yield": 0.03,
       "cap": 2291,
-      "staked": 2289.3058447300896
+      "staked": 2287.989034589015
     },
     "owner": "worldbank"
   },
@@ -1653,7 +1653,7 @@
     "properties": {
       "yield": 0.08,
       "cap": 835,
-      "staked": 832.9890540575888
+      "staked": 831.8942164618883
     },
     "owner": "sauron"
   },
@@ -1664,7 +1664,7 @@
     "properties": {
       "yield": 0.13,
       "cap": 484,
-      "staked": 482.1071540450417
+      "staked": 481.4206833092275
     },
     "owner": "worldbank"
   },
@@ -1675,7 +1675,7 @@
     "properties": {
       "yield": 0.04,
       "cap": 1563,
-      "staked": 1561.1168676959278
+      "staked": 1560.4326549772459
     },
     "owner": "sauron"
   },
@@ -1686,7 +1686,7 @@
     "properties": {
       "yield": 0.26,
       "cap": 240,
-      "staked": 237.4483638421127
+      "staked": 236.7725212030753
     },
     "owner": "worldbank"
   },
@@ -1697,7 +1697,7 @@
     "properties": {
       "yield": 0.01,
       "cap": 4954,
-      "staked": 4952.914295893713
+      "staked": 4952.371533071227
     },
     "owner": "worldbank"
   },
@@ -1708,7 +1708,7 @@
     "properties": {
       "yield": 0.09,
       "cap": 423,
-      "staked": 421.43817697415267
+      "staked": 421.0226656367484
     },
     "owner": "worldbank"
   },
@@ -1719,7 +1719,7 @@
     "properties": {
       "yield": 0.04,
       "cap": 688,
-      "staked": 687.321722039169
+      "staked": 687.020479849185
     },
     "owner": "worldbank"
   },
@@ -1730,7 +1730,7 @@
     "properties": {
       "yield": 0.04,
       "cap": 572,
-      "staked": 571.310843456219
+      "staked": 571.1230358168758
     },
     "owner": "sauron"
   },
@@ -1741,7 +1741,7 @@
     "properties": {
       "yield": 0.01,
       "cap": 866,
-      "staked": 865.73904944724
+      "staked": 865.6678947625179
     },
     "owner": "sauron"
   },

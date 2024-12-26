@@ -41,7 +41,7 @@ export function HeaderView(session, username) {
             📢 Interested in joining this open project?
         </a>
     </small></div>
-    <nav class="navbar bg-base-300 sticky top-0 z-50 class="">
+    <nav class="navbar bg-base-300 sticky top-0 z-50">
         <div class="flex-1">
             <a href="/" class="btn btn-ghost btn-md p-1 no-animation">
                 <svg class="p-1" width="2em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="gray" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"/><rect fill="lightgray" x="11" y="6" rx="1" width="2" height="7"><animateTransform attributeName="transform" type="rotate" dur="2160s" values="0 12 12;360 12 12" repeatCount="indefinite"/></rect><rect fill="lightgray" x="11" y="4" rx="1" width="2" height="9"><animateTransform attributeName="transform" type="rotate" dur="3s" values="0 12 12;360 12 12" repeatCount="indefinite"/></rect></svg>

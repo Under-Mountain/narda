@@ -106,5 +106,27 @@
       "lastUpdated": 5987,
       "sold": 6000
     }
+  },
+  {
+    "id": "LST9",
+    "item": "BNK70",
+    "price": 614.73,
+    "owner": "sauron",
+    "amount": 1,
+    "times": {
+      "created": 26084,
+      "lastUpdated": 26084
+    }
+  },
+  {
+    "id": "LST10",
+    "item": "BNK60",
+    "price": 522.11,
+    "owner": "sauron",
+    "amount": 1,
+    "times": {
+      "created": 26086,
+      "lastUpdated": 26086
+    }
   }
 ]
