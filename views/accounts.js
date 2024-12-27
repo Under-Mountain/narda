@@ -128,8 +128,8 @@ export function ProfileView(username, account, session) {
                 </div>
 
             ${session.username && session.username == username ? `
-                ${SendCreditView(account, session)}
                 ${InventoryView(username, items, userMineralTotal, userWaterTotal, account)}
+                ${SendCreditView(account, session)}
                 ` : ``}
             </div>
         </div>
@@ -169,28 +169,28 @@ export function SendCreditView(account, session) {
 }
 
 export function InventoryView(username, items, userMineralTotal, userWaterTotal, account) {
-    let inventoryHtml = `<div class="card bg-base-300 m-2 p-2 sm:m-4 p-4 lg:m-8 p-8">
+    let inventoryHtml = `<div class="card bg-base-100 p-2 sm:p-4 lg:p-8">
         <div class="card-title">
             <h3>Inventory (<a href="/assets?user=${username}">${items.filter(i => i.owner == username).length}</a>)</h3>
         </div>
-        <div class="card-body p-0">`
+        <div class="card-body p-0">
+            <form action="/api/mint?return=/?user=${username}" method="post">
+                <div class="form-control">
+                    <input type="hidden" name="owner" value="${username}" />
+                    <label for="type" class="text-xs">
+                        consumes ${Math.ceil(current.resources.water.supplied * Math.log(accounts.length * accounts.length) / current.resources.mineral.supplied)}
+                        water + ${200} mineral
+                    </label>
+                </div>
+                <button name="type" value="bankstone" class="btn btn-xs"
+                    ${userMineralTotal < 200 || userWaterTotal < Math.ceil(current.resources.water.supplied / current.resources.mineral.supplied) ||
+                        account.credits.balance < 200 ? "disabled" : ""}>
+                    Mint Bankstone (-200.00 credit)
+                </button>
+            </form>
+        `
     if (items.length > 0) {
-        inventoryHtml += `
-        <form action="/api/mint?return=/?user=${username}" method="post">
-            <div class="form-control">
-                <input type="hidden" name="owner" value="${username}" />
-                <label for="type" class="text-xs">
-                    consumes ${Math.ceil(current.resources.water.supplied * Math.log(accounts.length * accounts.length) / current.resources.mineral.supplied)}
-                    water + ${200} mineral
-                </label>
-            </div>
-            <button name="type" value="bankstone" class="btn btn-xs"
-                ${userMineralTotal < 200 || userWaterTotal < Math.ceil(current.resources.water.supplied / current.resources.mineral.supplied) ||
-                    account.credits.balance < 200 ? "disabled" : ""}>
-                Mint Bankstone (-200.00 credit)
-            </button>
-        </form>
-        <ul class="text-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 justify-between">`
+        inventoryHtml += `<ul class="text-xs grid grid-cols-2 md:grid-cols-3 gap-1 justify-between">`
         items.slice(0, 20).forEach(i => {
             inventoryHtml += ItemView(i)
         })

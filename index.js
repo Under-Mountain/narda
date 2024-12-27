@@ -68,7 +68,7 @@ app.get('/', (req, res) => {
 
     res.send(`${headerHtml}
         <div class="lg:flex flex-row-reverse">
-            <div class="max-w-none lg:flex-none max-w-md">
+            <div class="lg:flex-auto">
                 ${ProfileView(username, account, session)}
             </div>
             <div class="lg:flex-auto">

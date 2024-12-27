@@ -290,5 +290,28 @@
       "created": 3271
     },
     "comments": []
+  },
+  {
+    "id": "PST14",
+    "author": "gandalf",
+    "title": "Test post",
+    "content": "1234",
+    "channels": [
+      "question"
+    ],
+    "likes": 0,
+    "dislikes": 0,
+    "times": {
+      "created": 40020
+    },
+    "comments": [
+      {
+        "comment": "hello",
+        "author": "gandalf",
+        "time": 40027,
+        "likes": 0,
+        "dislikes": 0
+      }
+    ]
   }
 ]

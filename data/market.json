@@ -128,5 +128,38 @@
       "created": 26086,
       "lastUpdated": 26086
     }
+  },
+  {
+    "id": "LST11",
+    "item": "BNK69",
+    "price": 929.13,
+    "owner": "sauron",
+    "amount": 1,
+    "times": {
+      "created": 40006,
+      "lastUpdated": 40006
+    }
+  },
+  {
+    "id": "LST12",
+    "item": "BNK48",
+    "price": 916.54,
+    "owner": "sauron",
+    "amount": 1,
+    "times": {
+      "created": 40006,
+      "lastUpdated": 40006
+    }
+  },
+  {
+    "id": "LST13",
+    "item": "BNK166",
+    "price": 788.04,
+    "owner": "sauron",
+    "amount": 1,
+    "times": {
+      "created": 40006,
+      "lastUpdated": 40006
+    }
   }
 ]
