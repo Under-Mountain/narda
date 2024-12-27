@@ -31,15 +31,15 @@ function refreshUserCreditResources(account, inventory) {
   Current.user.mithril = inventory?.filter(i => i.type == 'mineral').reduce((sum, c) => sum + c.amount, 0)
 
   const userBalance = document.getElementById("userBalance")
-  userBalance.innerHTML = Current.user.balance.toFixed(2)
+  if (userBalance) userBalance.innerHTML = Current.user.balance.toFixed(2)
   const profileBalance = document.getElementById('profileBalance')
-  profileBalance.innerHTML = Current.user.balance.toFixed(2)
+  if (profileBalance) profileBalance.innerHTML = Current.user.balance.toFixed(2)
 
   const userWater = document.getElementById("userWater")
-  userWater.innerHTML = Current.user.water
+  if (userWater) userWater.innerHTML = Current.user.water
 
   const userMineral = document.getElementById("userMineral")
-  userMineral.innerHTML = Current.user.mithril
+  if (userMineral) userMineral.innerHTML = Current.user.mithril
 }
 
 function refreshClockResources(world, time, resources) {
@@ -88,6 +88,7 @@ collectMineralForm.addEventListener('submit', (e) => {
 })
 
 const updateBioForm = document.getElementById('updateBioForm')
+if (updateBioForm) {
 updateBioForm.addEventListener('submit', (e) => {
   e.preventDefault()
   const formData = new FormData(e.target)
@@ -103,8 +104,10 @@ updateBioForm.addEventListener('submit', (e) => {
   }).then(res => res.json()).then(res => {
   })  
 })
+}
 
 const sendCreditForm = document.getElementById('sendCreditForm')
+if (sendCreditForm) {
 sendCreditForm.addEventListener('submit', (e) => {
   e.preventDefault()
   const formData = new FormData(e.target)
@@ -124,8 +127,10 @@ sendCreditForm.addEventListener('submit', (e) => {
   }).then(res => res.json()).then(res => {
   })  
 })
+}
 
 const postForm = document.getElementById('postForm')
+if (postForm) {
 postForm.addEventListener('submit', (e) => {
   e.preventDefault()
   const formData = new FormData(e.target)
@@ -145,8 +150,32 @@ postForm.addEventListener('submit', (e) => {
   }).then(res => res.json()).then(res => {
   })  
 })
+}
 
 function onCollect(resource) {
+  const collectWaterBtn = document.getElementById('collectWaterBtn')
+  const collectWaterIcon = document.getElementById('collectWaterIcon')
+  const collectingWaterIcon = document.getElementById('collectingWaterIcon')
+
+  const collectMineralBtn = document.getElementById('collectMineralBtn')
+  const collectMineralIcon = document.getElementById('collectMineralIcon')
+  const collectingMineralIcon = document.getElementById('collectingMineralIcon')
+
+  switch(resource) {
+    case 'water':
+      collectWaterBtn.disabled = true
+      collectWaterIcon.classList.add('hidden')
+      collectingWaterIcon.classList.remove('hidden')
+      break
+    case 'mineral':
+      collectMineralBtn.disabled = true
+      collectMineralIcon.classList.add('hidden')
+      collectingMineralIcon.classList.remove('hidden')
+      break
+    default:
+      break
+  }
+
   fetch('/api/collect', {
     method: 'POST',
     headers: {
@@ -156,5 +185,41 @@ function onCollect(resource) {
   }).catch(err => {
     console.error(err)
   }).then(res => res.json()).then(res => {
+    const topRight = document.getElementById("topRightStatus");
+    topRight.innerHTML = `+${res.amount} ${res.of}`;
+    topRight.classList.remove('text-blue-400')
+    topRight.classList.remove('text-white')
+
+    const topLeft = document.getElementById("topLeftStatus");
+    topLeft.innerHTML = `-${res.amount} ${res.of}`;
+    topLeft.classList.remove('text-blue-500')
+    topLeft.classList.remove('text-gray-300')
+
+    switch(res.of) {
+      case 'water':
+        topRight.classList.add('text-blue-400')
+        topLeft.classList.add('text-blue-500')
+        collectWaterBtn.disabled = false
+        collectWaterIcon.classList.remove('hidden')
+        collectingWaterIcon.classList.add('hidden')
+        break
+      case 'mineral':
+        topRight.classList.add('text-white')
+        topLeft.classList.add('text-gray-300')
+        collectMineralBtn.disabled = false
+        collectMineralIcon.classList.remove('hidden')
+        collectingMineralIcon.classList.add('hidden')
+        break
+      default:
+        break
+    }
+
+    topRight.classList.remove('hidden')
+    topLeft.classList.remove('hidden')
+
+    setTimeout(() => {
+      topRight.classList.add('hidden')
+      topLeft.classList.add('hidden')
+    }, 500)
   })
 }

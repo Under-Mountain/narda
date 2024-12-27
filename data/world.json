@@ -3,7 +3,7 @@
   "name": "",
   "description": "",
   "interval": {
-    "minute": 3000,
+    "minute": 1500,
     "hour": 60,
     "day": 24,
     "year": 365

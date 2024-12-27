@@ -1,18 +1,5 @@
 [
   {
-    "id": "sauron",
-    "credits": {
-      "balance": 603.760794416604
-    },
-    "times": {
-      "created": 21,
-      "updated": 21,
-      "lastActive": 21,
-      "edited": 5890
-    },
-    "bio": "I am Sauron. I'm the beginning and the ending of the world. I may hurt, I may help..."
-  },
-  {
     "id": "gandalf",
     "credits": {
       "balance": 185
@@ -24,6 +11,19 @@
       "edited": 5397
     },
     "bio": "I am good and I will save"
+  },
+  {
+    "id": "sauron",
+    "credits": {
+      "balance": 2.1639447364591433
+    },
+    "times": {
+      "created": 21,
+      "updated": 21,
+      "lastActive": 21,
+      "edited": 5890
+    },
+    "bio": "I am Sauron. I'm the beginning and the ending of the world. I may hurt, I may help..."
   },
   {
     "id": "saruman",
@@ -318,7 +318,7 @@
   {
     "id": "worldbank",
     "credits": {
-      "balance": -13467.13863240758
+      "balance": -13376.107279767126
     },
     "times": {
       "created": 0,

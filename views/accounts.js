@@ -87,7 +87,7 @@ export function ProfileView(username, account, session) {
     const userMineralTotal = userMinerals.reduce((sum, c) => {return sum + c.amount}, 0)
     
     return `
-        <div class="card bg-base-200 m-2 sm:m-4 lg:m-8">
+        <div class="card bg-base-200 m-2 sm:m-4 lg:mt-8">
             <div class="card-title m-auto pt-4 lg:pt-8">
                 <div class="btn-circle avatar">
                     <div class="w-15 rounded-full">
@@ -190,7 +190,7 @@ export function InventoryView(username, items, userMineralTotal, userWaterTotal,
             </form>
         `
     if (items.length > 0) {
-        inventoryHtml += `<ul class="text-xs grid grid-cols-2 md:grid-cols-3 gap-1 justify-between">`
+        inventoryHtml += `<ul class="text-xs grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1 justify-between">`
         items.slice(0, 20).forEach(i => {
             inventoryHtml += ItemView(i)
         })

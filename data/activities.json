@@ -69067,5 +69067,5790 @@
       "created": 45480,
       "completed": 45480
     }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5313",
+    "of": "credit",
+    "from": "BNK73",
+    "to": "sauron",
+    "amount": 1.5365544401644822,
+    "note": "BNK73: yield for day 5",
+    "times": {
+      "created": 45600,
+      "completed": 45600
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5314",
+    "of": "credit",
+    "from": "BNK38",
+    "to": "sauron",
+    "amount": 1.5353599692638409,
+    "note": "BNK38: yield for day 5",
+    "times": {
+      "created": 45600,
+      "completed": 45600
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5315",
+    "of": "credit",
+    "from": "BNK117",
+    "to": "worldbank",
+    "amount": 1.462630388035171,
+    "note": "BNK117: yield for day 5",
+    "times": {
+      "created": 45600,
+      "completed": 45600
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5316",
+    "of": "credit",
+    "from": "BNK55",
+    "to": "sauron",
+    "amount": 1.451393318932761,
+    "note": "BNK55: yield for day 5",
+    "times": {
+      "created": 45600,
+      "completed": 45600
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5317",
+    "of": "credit",
+    "from": "BNK31",
+    "to": "sauron",
+    "amount": 1.395178155869881,
+    "note": "BNK31: yield for day 5",
+    "times": {
+      "created": 45600,
+      "completed": 45600
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5318",
+    "of": "credit",
+    "from": "BNK58",
+    "to": "sauron",
+    "amount": 1.3465138626699533,
+    "note": "BNK58: yield for day 5",
+    "times": {
+      "created": 45600,
+      "completed": 45600
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5319",
+    "of": "credit",
+    "from": "BNK34",
+    "to": "sauron",
+    "amount": 1.3140696073358524,
+    "note": "BNK34: yield for day 4",
+    "times": {
+      "created": 45660,
+      "completed": 45660
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5320",
+    "of": "credit",
+    "from": "BNK164",
+    "to": "worldbank",
+    "amount": 1.2818675988597124,
+    "note": "BNK164: yield for day 4",
+    "times": {
+      "created": 45660,
+      "completed": 45660
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5321",
+    "of": "credit",
+    "from": "BNK75",
+    "to": "sauron",
+    "amount": 1.2506408535252476,
+    "note": "BNK75: yield for day 4",
+    "times": {
+      "created": 45660,
+      "completed": 45660
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5322",
+    "of": "credit",
+    "from": "BNK33",
+    "to": "sauron",
+    "amount": 1.2204703886601582,
+    "note": "BNK33: yield for day 4",
+    "times": {
+      "created": 45660,
+      "completed": 45660
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5323",
+    "of": "credit",
+    "from": "BNK77",
+    "to": "sauron",
+    "amount": 1.0765479055743048,
+    "note": "BNK77: yield for day 4",
+    "times": {
+      "created": 45660,
+      "completed": 45660
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5324",
+    "of": "credit",
+    "from": "BNK62",
+    "to": "sauron",
+    "amount": 1.0636932489796516,
+    "note": "BNK62: yield for day 4",
+    "times": {
+      "created": 45660,
+      "completed": 45660
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5325",
+    "of": "credit",
+    "from": "BNK163",
+    "to": "worldbank",
+    "amount": 1.0607690282255267,
+    "note": "BNK163: yield for day 3",
+    "times": {
+      "created": 45720,
+      "completed": 45720
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5326",
+    "of": "credit",
+    "from": "BNK16",
+    "to": "worldbank",
+    "amount": 1.0582551511923872,
+    "note": "BNK16: yield for day 3",
+    "times": {
+      "created": 45720,
+      "completed": 45720
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5327",
+    "of": "credit",
+    "from": "BNK152",
+    "to": "worldbank",
+    "amount": 1.0431234194271606,
+    "note": "BNK152: yield for day 3",
+    "times": {
+      "created": 45720,
+      "completed": 45720
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5328",
+    "of": "credit",
+    "from": "BNK102",
+    "to": "worldbank",
+    "amount": 1.0230280267218912,
+    "note": "BNK102: yield for day 3",
+    "times": {
+      "created": 45720,
+      "completed": 45720
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5329",
+    "of": "credit",
+    "from": "BNK105",
+    "to": "worldbank",
+    "amount": 1.0176604307377428,
+    "note": "BNK105: yield for day 3",
+    "times": {
+      "created": 45720,
+      "completed": 45720
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5330",
+    "of": "credit",
+    "from": "BNK155",
+    "to": "worldbank",
+    "amount": 0.9895494772203979,
+    "note": "BNK155: yield for day 3",
+    "times": {
+      "created": 45720,
+      "completed": 45720
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5331",
+    "of": "credit",
+    "from": "BNK159",
+    "to": "worldbank",
+    "amount": 0.9678238273646629,
+    "note": "BNK159: yield for day 2",
+    "times": {
+      "created": 45780,
+      "completed": 45780
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5332",
+    "of": "credit",
+    "from": "BNK118",
+    "to": "worldbank",
+    "amount": 0.9661534530931022,
+    "note": "BNK118: yield for day 2",
+    "times": {
+      "created": 45780,
+      "completed": 45780
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5333",
+    "of": "credit",
+    "from": "BNK141",
+    "to": "worldbank",
+    "amount": 0.9177159504525917,
+    "note": "BNK141: yield for day 2",
+    "times": {
+      "created": 45780,
+      "completed": 45780
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5334",
+    "of": "credit",
+    "from": "BNK98",
+    "to": "worldbank",
+    "amount": 0.9104651843277011,
+    "note": "BNK98: yield for day 2",
+    "times": {
+      "created": 45780,
+      "completed": 45780
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5335",
+    "of": "credit",
+    "from": "BNK140",
+    "to": "worldbank",
+    "amount": 0.9073980493482308,
+    "note": "BNK140: yield for day 2",
+    "times": {
+      "created": 45780,
+      "completed": 45780
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5336",
+    "of": "credit",
+    "from": "BNK72",
+    "to": "sauron",
+    "amount": 0.9004240956920662,
+    "note": "BNK72: yield for day 2",
+    "times": {
+      "created": 45780,
+      "completed": 45780
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5337",
+    "of": "credit",
+    "from": "BNK120",
+    "to": "worldbank",
+    "amount": 0.8952252905264617,
+    "note": "BNK120: yield for day 2",
+    "times": {
+      "created": 45840,
+      "completed": 45840
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5338",
+    "of": "credit",
+    "from": "BNK52",
+    "to": "sauron",
+    "amount": 0.8922668280421663,
+    "note": "BNK52: yield for day 2",
+    "times": {
+      "created": 45840,
+      "completed": 45840
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5339",
+    "of": "credit",
+    "from": "BNK88",
+    "to": "worldbank",
+    "amount": 0.8160492887690498,
+    "note": "BNK88: yield for day 2",
+    "times": {
+      "created": 45840,
+      "completed": 45840
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5340",
+    "of": "credit",
+    "from": "BNK89",
+    "to": "worldbank",
+    "amount": 0.7856343144177574,
+    "note": "BNK89: yield for day 2",
+    "times": {
+      "created": 45840,
+      "completed": 45840
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5341",
+    "of": "credit",
+    "from": "BNK63",
+    "to": "sauron",
+    "amount": 0.6375128433231454,
+    "note": "BNK63: yield for day 2",
+    "times": {
+      "created": 45840,
+      "completed": 45840
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5342",
+    "of": "credit",
+    "from": "BNK37",
+    "to": "sauron",
+    "amount": 0.6343685636661236,
+    "note": "BNK37: yield for day 2",
+    "times": {
+      "created": 45840,
+      "completed": 45840
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5343",
+    "of": "credit",
+    "from": "BNK86",
+    "to": "worldbank",
+    "amount": 0.4485829665889138,
+    "note": "BNK86: yield for day 14",
+    "times": {
+      "created": 46020,
+      "completed": 46020
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5344",
+    "of": "credit",
+    "from": "BNK23",
+    "to": "worldbank",
+    "amount": 0.44698776459040107,
+    "note": "BNK23: yield for day 14",
+    "times": {
+      "created": 46020,
+      "completed": 46020
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5345",
+    "of": "credit",
+    "from": "BNK41",
+    "to": "sauron",
+    "amount": 0.43950485166295905,
+    "note": "BNK41: yield for day 14",
+    "times": {
+      "created": 46020,
+      "completed": 46020
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5346",
+    "of": "credit",
+    "from": "BNK56",
+    "to": "sauron",
+    "amount": 0.4137662529007032,
+    "note": "BNK56: yield for day 14",
+    "times": {
+      "created": 46020,
+      "completed": 46020
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5347",
+    "of": "credit",
+    "from": "BNK82",
+    "to": "sauron",
+    "amount": 0.3694568287603999,
+    "note": "BNK82: yield for day 14",
+    "times": {
+      "created": 46020,
+      "completed": 46020
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5348",
+    "of": "credit",
+    "from": "BNK151",
+    "to": "worldbank",
+    "amount": 0.3362841005791956,
+    "note": "BNK151: yield for day 14",
+    "times": {
+      "created": 46020,
+      "completed": 46020
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS5349",
+    "of": "credits",
+    "from": "sauron",
+    "to": "world",
+    "amount": 10,
+    "note": "Consuming -10 credit to post",
+    "times": {
+      "created": 46048,
+      "completed": 46048
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS5350",
+    "of": "credits",
+    "from": "sauron",
+    "to": "world",
+    "amount": 10,
+    "note": "Consuming -10 credit to post",
+    "times": {
+      "created": 46076,
+      "completed": 46076
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5351",
+    "of": "credit",
+    "from": "BNK12",
+    "to": "worldbank",
+    "amount": 0.3338829146576429,
+    "note": "BNK12: yield for day 13",
+    "times": {
+      "created": 46080,
+      "completed": 46080
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5352",
+    "of": "credit",
+    "from": "BNK19",
+    "to": "worldbank",
+    "amount": 0.3174917201408671,
+    "note": "BNK19: yield for day 13",
+    "times": {
+      "created": 46080,
+      "completed": 46080
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5353",
+    "of": "credit",
+    "from": "BNK45",
+    "to": "sauron",
+    "amount": 0.2941665239206534,
+    "note": "BNK45: yield for day 13",
+    "times": {
+      "created": 46080,
+      "completed": 46080
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5354",
+    "of": "credit",
+    "from": "BNK53",
+    "to": "sauron",
+    "amount": 0.27809856260338917,
+    "note": "BNK53: yield for day 13",
+    "times": {
+      "created": 46080,
+      "completed": 46080
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5355",
+    "of": "credit",
+    "from": "BNK9",
+    "to": "worldbank",
+    "amount": 0.2736122434963113,
+    "note": "BNK9: yield for day 13",
+    "times": {
+      "created": 46080,
+      "completed": 46080
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5356",
+    "of": "credit",
+    "from": "BNK160",
+    "to": "worldbank",
+    "amount": 0.26385691249589993,
+    "note": "BNK160: yield for day 13",
+    "times": {
+      "created": 46080,
+      "completed": 46080
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5357",
+    "of": "credit",
+    "from": "BNK96",
+    "to": "worldbank",
+    "amount": 0.23780838425194636,
+    "note": "BNK96: yield for day 13",
+    "times": {
+      "created": 46140,
+      "completed": 46140
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5358",
+    "of": "credit",
+    "from": "BNK109",
+    "to": "worldbank",
+    "amount": 0.1980841663798119,
+    "note": "BNK109: yield for day 13",
+    "times": {
+      "created": 46140,
+      "completed": 46140
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5359",
+    "of": "credit",
+    "from": "BNK132",
+    "to": "worldbank",
+    "amount": 0.18800752761184406,
+    "note": "BNK132: yield for day 13",
+    "times": {
+      "created": 46140,
+      "completed": 46140
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5360",
+    "of": "credit",
+    "from": "BNK49",
+    "to": "sauron",
+    "amount": 0.18221311504799026,
+    "note": "BNK49: yield for day 13",
+    "times": {
+      "created": 46140,
+      "completed": 46140
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5361",
+    "of": "credit",
+    "from": "BNK94",
+    "to": "worldbank",
+    "amount": 0.17128175707725626,
+    "note": "BNK94: yield for day 13",
+    "times": {
+      "created": 46140,
+      "completed": 46140
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5362",
+    "of": "credit",
+    "from": "BNK51",
+    "to": "sauron",
+    "amount": 0.17095010325933002,
+    "note": "BNK51: yield for day 13",
+    "times": {
+      "created": 46140,
+      "completed": 46140
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5363",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 98,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46160,
+      "completed": 46160
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5364",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 75,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46161,
+      "completed": 46161
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5365",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46162,
+      "completed": 46162
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5366",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 4,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46163,
+      "completed": 46163
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5367",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 19,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46164,
+      "completed": 46164
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5368",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 14,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46166,
+      "completed": 46166
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5369",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 14,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46168,
+      "completed": 46168
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5370",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 87,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46169,
+      "completed": 46169
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5371",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 17,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46171,
+      "completed": 46171
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5372",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 50,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46172,
+      "completed": 46172
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5373",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 32,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46172,
+      "completed": 46172
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5374",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 72,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46172,
+      "completed": 46172
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5375",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 72,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46173,
+      "completed": 46173
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5376",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 37,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46173,
+      "completed": 46173
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5377",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 7,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46173,
+      "completed": 46173
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5378",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 5,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46174,
+      "completed": 46174
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5379",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 10,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46175,
+      "completed": 46175
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5380",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 2,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46175,
+      "completed": 46175
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5381",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46175,
+      "completed": 46175
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5382",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 9,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46175,
+      "completed": 46175
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5383",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 16,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46175,
+      "completed": 46175
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5384",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 20,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46176,
+      "completed": 46176
+    }
+  },
+  {
+    "type": "mint",
+    "id": "MNT5385",
+    "of": "bankstone",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Minting of bankstone for sauron",
+    "times": {
+      "created": 46182,
+      "completed": 46182
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS5386",
+    "of": "credits",
+    "from": "sauron",
+    "to": "world",
+    "amount": 200,
+    "note": "Consuming minting MNT5385 cost of 200 credit",
+    "times": {
+      "created": 46182,
+      "completed": 46182
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS5387",
+    "of": "water",
+    "from": "sauron",
+    "to": "world",
+    "amount": 17,
+    "note": "Consuming minting MNT5385 cost of 17 water",
+    "times": {
+      "created": 46182,
+      "completed": 46182
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS5388",
+    "of": "mineral",
+    "from": "sauron",
+    "to": "world",
+    "amount": 10,
+    "note": "Consuming minting MNT5385 cost of 1 resource",
+    "times": {
+      "created": 46182,
+      "completed": 46182
+    }
+  },
+  {
+    "type": "mint",
+    "id": "MNT5389",
+    "of": "bankstone",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Minting of bankstone for sauron",
+    "times": {
+      "created": 46184,
+      "completed": 46184
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS5390",
+    "of": "credits",
+    "from": "sauron",
+    "to": "world",
+    "amount": 200,
+    "note": "Consuming minting MNT5389 cost of 200 credit",
+    "times": {
+      "created": 46184,
+      "completed": 46184
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS5391",
+    "of": "water",
+    "from": "sauron",
+    "to": "world",
+    "amount": 17,
+    "note": "Consuming minting MNT5389 cost of 17 water",
+    "times": {
+      "created": 46184,
+      "completed": 46184
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS5392",
+    "of": "mineral",
+    "from": "sauron",
+    "to": "world",
+    "amount": 10,
+    "note": "Consuming minting MNT5389 cost of 1 resource",
+    "times": {
+      "created": 46184,
+      "completed": 46184
+    }
+  },
+  {
+    "type": "mint",
+    "id": "MNT5393",
+    "of": "bankstone",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Minting of bankstone for sauron",
+    "times": {
+      "created": 46186,
+      "completed": 46186
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS5394",
+    "of": "credits",
+    "from": "sauron",
+    "to": "world",
+    "amount": 200,
+    "note": "Consuming minting MNT5393 cost of 200 credit",
+    "times": {
+      "created": 46186,
+      "completed": 46186
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS5395",
+    "of": "water",
+    "from": "sauron",
+    "to": "world",
+    "amount": 17,
+    "note": "Consuming minting MNT5393 cost of 17 water",
+    "times": {
+      "created": 46186,
+      "completed": 46186
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS5396",
+    "of": "mineral",
+    "from": "sauron",
+    "to": "world",
+    "amount": 10,
+    "note": "Consuming minting MNT5393 cost of 1 resource",
+    "times": {
+      "created": 46186,
+      "completed": 46186
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5397",
+    "of": "credit",
+    "from": "BNK8",
+    "to": "worldbank",
+    "amount": 0.16829971094744675,
+    "note": "BNK8: yield for day 12",
+    "times": {
+      "created": 46200,
+      "completed": 46200
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5398",
+    "of": "credit",
+    "from": "BNK157",
+    "to": "worldbank",
+    "amount": 0.1356702602736281,
+    "note": "BNK157: yield for day 12",
+    "times": {
+      "created": 46200,
+      "completed": 46200
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5399",
+    "of": "credit",
+    "from": "BNK85",
+    "to": "worldbank",
+    "amount": 7.880398884948241,
+    "note": "BNK85: yield for day 12",
+    "times": {
+      "created": 46200,
+      "completed": 46200
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5400",
+    "of": "credit",
+    "from": "BNK95",
+    "to": "worldbank",
+    "amount": 6.882017323660376,
+    "note": "BNK95: yield for day 12",
+    "times": {
+      "created": 46200,
+      "completed": 46200
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5401",
+    "of": "credit",
+    "from": "BNK156",
+    "to": "worldbank",
+    "amount": 6.643279516089948,
+    "note": "BNK156: yield for day 12",
+    "times": {
+      "created": 46200,
+      "completed": 46200
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5402",
+    "of": "credit",
+    "from": "BNK84",
+    "to": "worldbank",
+    "amount": 6.3658538207991056,
+    "note": "BNK84: yield for day 12",
+    "times": {
+      "created": 46200,
+      "completed": 46200
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5403",
+    "of": "credit",
+    "from": "BNK122",
+    "to": "worldbank",
+    "amount": 5.957727953377155,
+    "note": "BNK122: yield for day 11",
+    "times": {
+      "created": 46260,
+      "completed": 46260
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5404",
+    "of": "credit",
+    "from": "BNK114",
+    "to": "worldbank",
+    "amount": 5.9185139471019905,
+    "note": "BNK114: yield for day 11",
+    "times": {
+      "created": 46260,
+      "completed": 46260
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5405",
+    "of": "credit",
+    "from": "BNK136",
+    "to": "worldbank",
+    "amount": 5.811041592329053,
+    "note": "BNK136: yield for day 11",
+    "times": {
+      "created": 46260,
+      "completed": 46260
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5406",
+    "of": "credit",
+    "from": "BNK135",
+    "to": "worldbank",
+    "amount": 5.433718164864314,
+    "note": "BNK135: yield for day 11",
+    "times": {
+      "created": 46260,
+      "completed": 46260
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5407",
+    "of": "credit",
+    "from": "BNK90",
+    "to": "worldbank",
+    "amount": 5.428710458891708,
+    "note": "BNK90: yield for day 11",
+    "times": {
+      "created": 46260,
+      "completed": 46260
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5408",
+    "of": "credit",
+    "from": "BNK162",
+    "to": "worldbank",
+    "amount": 3.841270416787014,
+    "note": "BNK162: yield for day 7",
+    "times": {
+      "created": 46560,
+      "completed": 46560
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5409",
+    "of": "credit",
+    "from": "BNK158",
+    "to": "worldbank",
+    "amount": 3.7742711749355884,
+    "note": "BNK158: yield for day 6",
+    "times": {
+      "created": 46620,
+      "completed": 46620
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5410",
+    "of": "credit",
+    "from": "BNK153",
+    "to": "worldbank",
+    "amount": 3.7671091536163774,
+    "note": "BNK153: yield for day 5",
+    "times": {
+      "created": 46680,
+      "completed": 46680
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5411",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 90,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46754,
+      "completed": 46754
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX5412",
+    "of": "credit",
+    "from": "BNK123",
+    "to": "worldbank",
+    "amount": 3.7042409252416104,
+    "note": "BNK123: yield for day 3",
+    "times": {
+      "created": 46800,
+      "completed": 46800
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5413",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 19,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46809,
+      "completed": 46809
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5414",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 72,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46810,
+      "completed": 46810
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5415",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46810,
+      "completed": 46810
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5416",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 15,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46811,
+      "completed": 46811
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5417",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 62,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46812,
+      "completed": 46812
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5418",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 58,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46813,
+      "completed": 46813
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5419",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 7,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46813,
+      "completed": 46813
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5420",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46814,
+      "completed": 46814
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5421",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 82,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46814,
+      "completed": 46814
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5422",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 24,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46815,
+      "completed": 46815
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5423",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46816,
+      "completed": 46816
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5424",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 15,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46819,
+      "completed": 46819
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5425",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 16,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46819,
+      "completed": 46819
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5426",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 44,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46821,
+      "completed": 46821
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5427",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 72,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46821,
+      "completed": 46821
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5428",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 7,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46822,
+      "completed": 46822
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5429",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 17,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46822,
+      "completed": 46822
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5430",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 20,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46824,
+      "completed": 46824
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5431",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 9,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46825,
+      "completed": 46825
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5432",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 41,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46885,
+      "completed": 46885
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5433",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 7,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46885,
+      "completed": 46885
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5434",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 17,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46886,
+      "completed": 46886
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5435",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 10,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46887,
+      "completed": 46887
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5436",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 39,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46887,
+      "completed": 46887
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5437",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 14,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46888,
+      "completed": 46888
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5438",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 4,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46888,
+      "completed": 46888
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5439",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46893,
+      "completed": 46893
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5440",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 8,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46893,
+      "completed": 46893
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5441",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 32,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46895,
+      "completed": 46895
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5442",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 95,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46896,
+      "completed": 46896
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5443",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 70,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46896,
+      "completed": 46896
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5444",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 8,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46897,
+      "completed": 46897
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5445",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 19,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46897,
+      "completed": 46897
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5446",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 0,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46898,
+      "completed": 46898
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5447",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 17,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46898,
+      "completed": 46898
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5448",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 14,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46899,
+      "completed": 46899
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5449",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 35,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46899,
+      "completed": 46899
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5450",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 14,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46900,
+      "completed": 46900
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5451",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46900,
+      "completed": 46900
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5452",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46900,
+      "completed": 46900
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5453",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 68,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46901,
+      "completed": 46901
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5454",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 67,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46901,
+      "completed": 46901
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5455",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 5,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46901,
+      "completed": 46901
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5456",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 93,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 46902,
+      "completed": 46902
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5457",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 2,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46902,
+      "completed": 46902
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5458",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46902,
+      "completed": 46902
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5459",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 4,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 46902,
+      "completed": 46902
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5460",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 94,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 47112,
+      "completed": 47112
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5461",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 16,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 47114,
+      "completed": 47114
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5462",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 99,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 47362,
+      "completed": 47362
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5463",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 47363,
+      "completed": 47363
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5464",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 9,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 47364,
+      "completed": 47364
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5465",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 20,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 47365,
+      "completed": 47365
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5466",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 92,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 47367,
+      "completed": 47367
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5467",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 20,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 47368,
+      "completed": 47368
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5468",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 11,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 47369,
+      "completed": 47369
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5469",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 97,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 47370,
+      "completed": 47370
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5470",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 25,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 47371,
+      "completed": 47371
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5471",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 16,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 47372,
+      "completed": 47372
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5472",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 16,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 54940,
+      "completed": 54940
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5473",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 14,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 54943,
+      "completed": 54943
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5474",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 80,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 54946,
+      "completed": 54946
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5475",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 59,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 54948,
+      "completed": 54948
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5476",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 73,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55034,
+      "completed": 55034
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5477",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 16,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55037,
+      "completed": 55037
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5478",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 36,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55142,
+      "completed": 55142
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5479",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 90,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55144,
+      "completed": 55144
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5480",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 14,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55146,
+      "completed": 55146
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5481",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 38,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55148,
+      "completed": 55148
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5482",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 90,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55150,
+      "completed": 55150
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5483",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 16,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55152,
+      "completed": 55152
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5484",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 7,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55154,
+      "completed": 55154
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5485",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 4,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55156,
+      "completed": 55156
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5486",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 19,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55158,
+      "completed": 55158
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5487",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 15,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55160,
+      "completed": 55160
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5488",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 34,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55486,
+      "completed": 55486
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5489",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 45,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55489,
+      "completed": 55489
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5490",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 49,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55491,
+      "completed": 55491
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5491",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 30,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55493,
+      "completed": 55493
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5492",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 65,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55495,
+      "completed": 55495
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5493",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 19,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55497,
+      "completed": 55497
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5494",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 19,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55498,
+      "completed": 55498
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5495",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 3,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55500,
+      "completed": 55500
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5496",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 63,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55502,
+      "completed": 55502
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5497",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 9,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55504,
+      "completed": 55504
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5498",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 31,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55506,
+      "completed": 55506
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5499",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 17,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55507,
+      "completed": 55507
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5500",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 28,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55735,
+      "completed": 55735
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5501",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 85,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55738,
+      "completed": 55738
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5502",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 96,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55740,
+      "completed": 55740
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5503",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 13,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55742,
+      "completed": 55742
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5504",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 30,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55744,
+      "completed": 55744
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5505",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 7,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55744,
+      "completed": 55744
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5506",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 24,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55746,
+      "completed": 55746
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5507",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 0,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55746,
+      "completed": 55746
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5508",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 46,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55747,
+      "completed": 55747
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5509",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 3,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55748,
+      "completed": 55748
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5510",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 5,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55749,
+      "completed": 55749
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5511",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 42,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55750,
+      "completed": 55750
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5512",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 5,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55751,
+      "completed": 55751
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5513",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 100,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55752,
+      "completed": 55752
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5514",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 3,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55752,
+      "completed": 55752
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5515",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 63,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55753,
+      "completed": 55753
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5516",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 15,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55754,
+      "completed": 55754
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5517",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 97,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55755,
+      "completed": 55755
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5518",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 4,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55757,
+      "completed": 55757
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5519",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 68,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55757,
+      "completed": 55757
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5520",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55758,
+      "completed": 55758
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5521",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 12,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55759,
+      "completed": 55759
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5522",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 23,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55760,
+      "completed": 55760
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5523",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 30,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55762,
+      "completed": 55762
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5524",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55763,
+      "completed": 55763
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5525",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 56,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55764,
+      "completed": 55764
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5526",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 5,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55764,
+      "completed": 55764
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5527",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 44,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55765,
+      "completed": 55765
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5528",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 12,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55765,
+      "completed": 55765
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5529",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 44,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55767,
+      "completed": 55767
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5530",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 0,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55767,
+      "completed": 55767
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5531",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 8,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55769,
+      "completed": 55769
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5532",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 73,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55770,
+      "completed": 55770
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5533",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 2,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55770,
+      "completed": 55770
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5534",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 28,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55771,
+      "completed": 55771
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5535",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 5,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55771,
+      "completed": 55771
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5536",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 8,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55772,
+      "completed": 55772
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5537",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 2,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55773,
+      "completed": 55773
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5538",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 7,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55774,
+      "completed": 55774
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5539",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 90,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55774,
+      "completed": 55774
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5540",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 99,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55776,
+      "completed": 55776
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5541",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 7,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55777,
+      "completed": 55777
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5542",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55778,
+      "completed": 55778
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5543",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 79,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55779,
+      "completed": 55779
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5544",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 10,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55779,
+      "completed": 55779
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5545",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 94,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55780,
+      "completed": 55780
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5546",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55781,
+      "completed": 55781
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5547",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 16,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55782,
+      "completed": 55782
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5548",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 23,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55783,
+      "completed": 55783
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5549",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 10,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55784,
+      "completed": 55784
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5550",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 97,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55785,
+      "completed": 55785
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5551",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 20,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55786,
+      "completed": 55786
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5552",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 13,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55788,
+      "completed": 55788
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5553",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 96,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55788,
+      "completed": 55788
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5554",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 2,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55790,
+      "completed": 55790
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5555",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 32,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55791,
+      "completed": 55791
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5556",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 0,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55792,
+      "completed": 55792
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5557",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 77,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55793,
+      "completed": 55793
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5558",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 5,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55814,
+      "completed": 55814
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5559",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 90,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55816,
+      "completed": 55816
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5560",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55816,
+      "completed": 55816
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5561",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 31,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55817,
+      "completed": 55817
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5562",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 15,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55818,
+      "completed": 55818
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5563",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 13,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55819,
+      "completed": 55819
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5564",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 4,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55820,
+      "completed": 55820
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5565",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 37,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55821,
+      "completed": 55821
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5566",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 17,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55821,
+      "completed": 55821
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5567",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 67,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55822,
+      "completed": 55822
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5568",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 7,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55823,
+      "completed": 55823
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5569",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 27,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55823,
+      "completed": 55823
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5570",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 8,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55824,
+      "completed": 55824
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5571",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 85,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55825,
+      "completed": 55825
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5572",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 16,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55826,
+      "completed": 55826
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5573",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 34,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55827,
+      "completed": 55827
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5574",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 13,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55827,
+      "completed": 55827
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5575",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55828,
+      "completed": 55828
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5576",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 14,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55829,
+      "completed": 55829
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5577",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 3,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55842,
+      "completed": 55842
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5578",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 87,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55844,
+      "completed": 55844
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5579",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55845,
+      "completed": 55845
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5580",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 67,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55846,
+      "completed": 55846
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5581",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 19,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55848,
+      "completed": 55848
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5582",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 5,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55848,
+      "completed": 55848
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5583",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 22,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55977,
+      "completed": 55977
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5584",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 76,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55979,
+      "completed": 55979
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5585",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55981,
+      "completed": 55981
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5586",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 9,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55982,
+      "completed": 55982
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5587",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 49,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55986,
+      "completed": 55986
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5588",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 9,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55988,
+      "completed": 55988
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5589",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 88,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55990,
+      "completed": 55990
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5590",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 20,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55991,
+      "completed": 55991
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5591",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 96,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 55997,
+      "completed": 55997
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5592",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 15,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 55999,
+      "completed": 55999
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5593",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 9,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 56001,
+      "completed": 56001
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5594",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 43,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 56002,
+      "completed": 56002
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5595",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 10,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 56004,
+      "completed": 56004
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5596",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 0,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 56005,
+      "completed": 56005
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5597",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 88,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 56006,
+      "completed": 56006
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5598",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 56007,
+      "completed": 56007
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5599",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 41,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 56008,
+      "completed": 56008
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5600",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 56009,
+      "completed": 56009
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5601",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 75,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57166,
+      "completed": 57166
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5602",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 53,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57168,
+      "completed": 57168
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5603",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 60,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57170,
+      "completed": 57170
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5604",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 17,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57172,
+      "completed": 57172
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5605",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57173,
+      "completed": 57173
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5606",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 2,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57175,
+      "completed": 57175
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5607",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 69,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57177,
+      "completed": 57177
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5608",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57178,
+      "completed": 57178
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5609",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 21,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57179,
+      "completed": 57179
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5610",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 2,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57180,
+      "completed": 57180
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5611",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 30,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57181,
+      "completed": 57181
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5612",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 15,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57182,
+      "completed": 57182
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5613",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 19,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57183,
+      "completed": 57183
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5614",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 12,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57184,
+      "completed": 57184
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5615",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57186,
+      "completed": 57186
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5616",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 19,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57186,
+      "completed": 57186
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5617",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 65,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57188,
+      "completed": 57188
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5618",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57188,
+      "completed": 57188
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5619",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 59,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57189,
+      "completed": 57189
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5620",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 4,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57190,
+      "completed": 57190
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5621",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 100,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57193,
+      "completed": 57193
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5622",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 16,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57193,
+      "completed": 57193
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5623",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 73,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57195,
+      "completed": 57195
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5624",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 10,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57195,
+      "completed": 57195
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5625",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 11,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57197,
+      "completed": 57197
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5626",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57198,
+      "completed": 57198
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5627",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 42,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57199,
+      "completed": 57199
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5628",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 8,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57441,
+      "completed": 57441
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5629",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 5,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57442,
+      "completed": 57442
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5630",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 15,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57444,
+      "completed": 57444
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5631",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 33,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57446,
+      "completed": 57446
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5632",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 20,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57447,
+      "completed": 57447
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5633",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 12,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57449,
+      "completed": 57449
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5634",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 83,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57450,
+      "completed": 57450
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5635",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57453,
+      "completed": 57453
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5636",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 12,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57508,
+      "completed": 57508
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5637",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 4,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57545,
+      "completed": 57545
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5638",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 57,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57547,
+      "completed": 57547
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5639",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 9,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57549,
+      "completed": 57549
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5640",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 58,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57550,
+      "completed": 57550
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5641",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 12,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57552,
+      "completed": 57552
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5642",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 73,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57554,
+      "completed": 57554
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5643",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57556,
+      "completed": 57556
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5644",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57558,
+      "completed": 57558
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5645",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57559,
+      "completed": 57559
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5646",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 75,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57561,
+      "completed": 57561
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5647",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 13,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57563,
+      "completed": 57563
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5648",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 75,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57565,
+      "completed": 57565
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5649",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57567,
+      "completed": 57567
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5650",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 54,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57569,
+      "completed": 57569
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5651",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 16,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57571,
+      "completed": 57571
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5652",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 63,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57574,
+      "completed": 57574
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5653",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 27,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57581,
+      "completed": 57581
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5654",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 0,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57583,
+      "completed": 57583
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5655",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 46,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57630,
+      "completed": 57630
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5656",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 3,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57633,
+      "completed": 57633
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5657",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 99,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57636,
+      "completed": 57636
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5658",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 49,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57639,
+      "completed": 57639
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5659",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 54,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57642,
+      "completed": 57642
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5660",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 12,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57645,
+      "completed": 57645
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5661",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 63,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57648,
+      "completed": 57648
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5662",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 50,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57694,
+      "completed": 57694
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5663",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 17,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57696,
+      "completed": 57696
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5664",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 98,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57698,
+      "completed": 57698
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5665",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 16,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57699,
+      "completed": 57699
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5666",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 87,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57700,
+      "completed": 57700
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5667",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57702,
+      "completed": 57702
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5668",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 0,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57702,
+      "completed": 57702
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5669",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 17,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 57705,
+      "completed": 57705
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5670",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 8,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 57707,
+      "completed": 57707
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5671",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 79,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58020,
+      "completed": 58020
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5672",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 62,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58022,
+      "completed": 58022
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5673",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 21,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58026,
+      "completed": 58026
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5674",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 100,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58030,
+      "completed": 58030
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5675",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58491,
+      "completed": 58491
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5676",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58494,
+      "completed": 58494
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5677",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 18,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58497,
+      "completed": 58497
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5678",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 88,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58548,
+      "completed": 58548
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5679",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58551,
+      "completed": 58551
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5680",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 90,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58554,
+      "completed": 58554
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5681",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 10,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58558,
+      "completed": 58558
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5682",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 73,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58677,
+      "completed": 58677
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5683",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 47,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58699,
+      "completed": 58699
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5684",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58702,
+      "completed": 58702
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5685",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 78,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58704,
+      "completed": 58704
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5686",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 9,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58707,
+      "completed": 58707
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5687",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 25,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58710,
+      "completed": 58710
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5688",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 14,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58712,
+      "completed": 58712
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5689",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 11,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58716,
+      "completed": 58716
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5690",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58718,
+      "completed": 58718
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5691",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58721,
+      "completed": 58721
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5692",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 85,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58724,
+      "completed": 58724
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5693",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 11,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58727,
+      "completed": 58727
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5694",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 35,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58728,
+      "completed": 58728
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5695",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 8,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58904,
+      "completed": 58904
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5696",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 19,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58907,
+      "completed": 58907
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5697",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58910,
+      "completed": 58910
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5698",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 9,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58932,
+      "completed": 58932
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5699",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 32,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58934,
+      "completed": 58934
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5700",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 0,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58936,
+      "completed": 58936
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5701",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 7,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58938,
+      "completed": 58938
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5702",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 88,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58940,
+      "completed": 58940
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5703",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 17,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58943,
+      "completed": 58943
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5704",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 50,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58945,
+      "completed": 58945
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5705",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58947,
+      "completed": 58947
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5706",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 89,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58951,
+      "completed": 58951
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5707",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 14,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58953,
+      "completed": 58953
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5708",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 7,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58954,
+      "completed": 58954
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5709",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 14,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58960,
+      "completed": 58960
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5710",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58962,
+      "completed": 58962
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5711",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 17,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58964,
+      "completed": 58964
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5712",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 38,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58965,
+      "completed": 58965
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5713",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58967,
+      "completed": 58967
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5714",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 47,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58971,
+      "completed": 58971
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5715",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 41,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58972,
+      "completed": 58972
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5716",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 15,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58974,
+      "completed": 58974
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5717",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 2,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58976,
+      "completed": 58976
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5718",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 93,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58978,
+      "completed": 58978
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5719",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58981,
+      "completed": 58981
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5720",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 22,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58982,
+      "completed": 58982
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5721",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 8,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58983,
+      "completed": 58983
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5722",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 70,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58985,
+      "completed": 58985
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5723",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 15,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58986,
+      "completed": 58986
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5724",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 77,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58987,
+      "completed": 58987
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5725",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 4,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58987,
+      "completed": 58987
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5726",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 75,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58988,
+      "completed": 58988
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5727",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 15,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58989,
+      "completed": 58989
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5728",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 41,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58989,
+      "completed": 58989
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5729",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 13,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58990,
+      "completed": 58990
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5730",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 80,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58991,
+      "completed": 58991
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5731",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 4,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58991,
+      "completed": 58991
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5732",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 60,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58992,
+      "completed": 58992
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5733",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 3,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58993,
+      "completed": 58993
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5734",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 39,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58993,
+      "completed": 58993
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5735",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 7,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58994,
+      "completed": 58994
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5736",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 6,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58995,
+      "completed": 58995
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5737",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 94,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58996,
+      "completed": 58996
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5738",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 3,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 58997,
+      "completed": 58997
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5739",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 90,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 58997,
+      "completed": 58997
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5740",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 71,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 59051,
+      "completed": 59051
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5741",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 83,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 59053,
+      "completed": 59053
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5742",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 22,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 59054,
+      "completed": 59054
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5743",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 3,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 59056,
+      "completed": 59056
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5744",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 2,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 59057,
+      "completed": 59057
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5745",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 95,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 59059,
+      "completed": 59059
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5746",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 80,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 59097,
+      "completed": 59097
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5747",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 0,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 59099,
+      "completed": 59099
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5748",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 4,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 59101,
+      "completed": 59101
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5749",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 38,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 59103,
+      "completed": 59103
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5750",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 14,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 59105,
+      "completed": 59105
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5751",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 59108,
+      "completed": 59108
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5752",
+    "of": "water",
+    "from": "world",
+    "to": "sauron",
+    "amount": 24,
+    "note": "Collecting of water for sauron",
+    "times": {
+      "created": 59110,
+      "completed": 59110
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5753",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 7,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 59112,
+      "completed": 59112
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5754",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 8,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 59115,
+      "completed": 59115
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5755",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 16,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 59118,
+      "completed": 59118
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5756",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 14,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 59121,
+      "completed": 59121
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT5757",
+    "of": "mineral",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Collecting of mineral for sauron",
+    "times": {
+      "created": 59125,
+      "completed": 59125
+    }
   }
 ]

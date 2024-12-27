@@ -17,7 +17,7 @@ export function MarketplaceView(listings, username, session, account) {
         <div role="tabpanel" class="tab-content">`
     if (listings.length > 0) {
         marketplaceHtml += `
-        <ul class="card-body p-0 mt-4 text-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-1 justify-between">`
+        <ul class="card-body p-0 mt-4 text-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1 justify-between">`
         listings.slice(0, 20).forEach(l => {
             const i = assets.find(a => a.id == l.item)
             marketplaceHtml += `<li>

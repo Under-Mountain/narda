@@ -313,5 +313,35 @@
         "dislikes": 0
       }
     ]
+  },
+  {
+    "id": "PST15",
+    "author": "sauron",
+    "title": "Posting something",
+    "content": "",
+    "channels": [
+      "test"
+    ],
+    "likes": 0,
+    "dislikes": 0,
+    "times": {
+      "created": 46048
+    },
+    "comments": []
+  },
+  {
+    "id": "PST16",
+    "author": "sauron",
+    "title": "Another post for test",
+    "content": "yeah, just remembered this is working..",
+    "channels": [
+      "general"
+    ],
+    "likes": 0,
+    "dislikes": 0,
+    "times": {
+      "created": 46076
+    },
+    "comments": []
   }
 ]
