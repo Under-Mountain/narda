@@ -177,13 +177,13 @@ app.post('/api/mint', (req, res) => {
     const id = `MNT${activities.length}`
     console.log(`${id}: minting ${req.body.type}...`);
 
-    const to = req.body.type == "account" ? req.body.username.toLowerCase() : req.body.owner
+    const to = req.body.type == "account" ? req.body.username.toLowerCase() : req.session.username
     const account = accounts.find(a => a.id == to)
     const userWaters = assets.filter(a => a.owner == to && a.type == "water")
     const userMinerals = assets.filter(a => a.owner == to && a.type == "mineral")
 
-    const waterCost = Math.ceil(current.resources.water.supplied*Math.log(accounts.length*accounts.length)/current.resources.mineral.supplied)
-    const mineralCost = 100
+    const waterCost = Math.ceil(Math.pow(current.resources.water.balance / current.resources.mineral.balance, 7))
+    const mineralCost = 200
 
     const activity = {
         "type": "mint",
@@ -207,7 +207,7 @@ app.post('/api/mint', (req, res) => {
                 return
             }
 
-            if (!req.body.invitation || req.body.invitation != '1234') {
+            if (!req.body.invitation || req.body.invitation != '1892') {
                 console.warn(`invalid invitation code ${req.body.invitation}`)
                 res.sendStatus(403)
                 return
@@ -277,7 +277,7 @@ app.post('/api/mint', (req, res) => {
                 "of": "mineral",
                 "from": to,
                 "to": "world",
-                "amount": 10,
+                "amount": mineralCost,
                 "note": `Consuming minting ${id} cost of ${1} resource`,
                 "times": {
                     "created": current.time
@@ -359,6 +359,16 @@ app.post('/api/collect', (req, res) => {
 })
 
 app.post('/api/list', (req, res) => {
+    if (!req.session || !req.session.username) {
+        res.sendStatus(401)
+        return
+    }
+
+    if (!req.body.id || !req.body.price) {
+        res.sendStatus(400)
+        return
+    }
+
     const id = `LST${market.length}`
     console.log(`${id}: listing ${req.body.id} for sale...`)
 
@@ -366,7 +376,7 @@ app.post('/api/list', (req, res) => {
         id: id,
         item: req.body.id,
         price: Number(req.body.price),
-        owner: req.body.owner,
+        owner: req.session.username,
         amount: Number(req.body.amount),
         times: {
             created: current.time,

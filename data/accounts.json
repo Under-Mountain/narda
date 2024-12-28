@@ -1,5 +1,50 @@
 [
   {
+    "id": "dev",
+    "credits": {
+      "balance": 8212.424630136986
+    },
+    "times": {
+      "created": 61644,
+      "lastActive": 61644,
+      "edited": 81326
+    },
+    "bio": "updated"
+  },
+  {
+    "id": "thorin",
+    "credits": {
+      "balance": 4000
+    },
+    "times": {
+      "created": 60751,
+      "lastActive": 60751
+    }
+  },
+  {
+    "id": "newuser3",
+    "credits": {
+      "balance": 4000
+    },
+    "times": {
+      "created": 88602,
+      "lastActive": 88602
+    }
+  },
+  {
+    "id": "sauron",
+    "credits": {
+      "balance": 1973.409042556662
+    },
+    "times": {
+      "created": 21,
+      "updated": 21,
+      "lastActive": 21,
+      "edited": 5890
+    },
+    "bio": "I am Sauron. I'm the beginning and the ending of the world. I may hurt, I may help..."
+  },
+  {
     "id": "gandalf",
     "credits": {
       "balance": 185
@@ -11,19 +56,6 @@
       "edited": 5397
     },
     "bio": "I am good and I will save"
-  },
-  {
-    "id": "sauron",
-    "credits": {
-      "balance": 2.1639447364591433
-    },
-    "times": {
-      "created": 21,
-      "updated": 21,
-      "lastActive": 21,
-      "edited": 5890
-    },
-    "bio": "I am Sauron. I'm the beginning and the ending of the world. I may hurt, I may help..."
   },
   {
     "id": "saruman",
@@ -316,9 +348,49 @@
     }
   },
   {
+    "id": "bibigo",
+    "credits": {
+      "balance": 0
+    },
+    "times": {
+      "created": 61421,
+      "lastActive": 61421
+    }
+  },
+  {
+    "id": "newuser",
+    "credits": {
+      "balance": 0
+    },
+    "times": {
+      "created": 87931,
+      "lastActive": 87931
+    }
+  },
+  {
+    "id": "newuser2",
+    "credits": {
+      "balance": 0
+    },
+    "times": {
+      "created": 88430,
+      "lastActive": 88430
+    }
+  },
+  {
+    "id": "newuser4",
+    "credits": {
+      "balance": 0
+    },
+    "times": {
+      "created": 89942,
+      "lastActive": 89942
+    }
+  },
+  {
     "id": "worldbank",
     "credits": {
-      "balance": -13376.107279767126
+      "balance": -63231.037889126615
     },
     "times": {
       "created": 0,

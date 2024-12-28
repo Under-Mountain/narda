@@ -4,7 +4,7 @@ import * as util from '../service/utility.js'
 export function MarketplaceView(listings, username, session, account) {
     let marketplaceHtml = `<div class="p-2 sm:p-4 lg:p-8 w-full">
         <h1 id="marketplace" class="text-bold text-2xl text-white mb-2">
-            Marketplace (<a href="/market?expired=false&sold=false">${listings.length}</a>)
+            Marketplace (<a id="marketTotal" href="/market?expired=false&sold=false">${listings.length}</a>)
         </h1>
         <div class="mb-2">
             ${MarketStatsView(listings)}
@@ -14,10 +14,9 @@ export function MarketplaceView(listings, username, session, account) {
             <a role="tab" class="tab">Items</a>
             <a role="tab" class="tab">Yield</a>
         </div>
-        <div role="tabpanel" class="tab-content">`
+        <div role="tabpanel" class="tab-content">
+        <ul id="market" class="card-body p-0 mt-4 text-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1 justify-between">`
     if (listings.length > 0) {
-        marketplaceHtml += `
-        <ul class="card-body p-0 mt-4 text-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1 justify-between">`
         listings.slice(0, 20).forEach(l => {
             const i = assets.find(a => a.id == l.item)
             marketplaceHtml += `<li>
@@ -47,9 +46,8 @@ export function MarketplaceView(listings, username, session, account) {
                 </form>
             </li>`
         })
-        marketplaceHtml += "</ul>"
-    } else marketplaceHtml += `<p style="text-align:center">Nothing listed for sale at this time<p>`
-    marketplaceHtml += `</div></div>`
+    } else marketplaceHtml += `<li style="text-align:center">Nothing listed for sale at this time</li>`
+    marketplaceHtml += `</ul></div></div>`
     return marketplaceHtml
 }
 

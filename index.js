@@ -59,11 +59,10 @@ app.get('/', (req, res) => {
      * Account Overview
      */
 
-    let listings = market.filter(l => !l.times.sold && !l.times.expired)
+    let listings = market.filter(l => !l.times.sold && !l.times.expired && l.owner == username)
         .sort((a, b) => { return a.price / a.amount < b.price / b.amount ? 1 : -1 })
         .sort((a, b) => { return a.amount < b.amount ? 1 : -1 })
-
-    if (session.username != username) listings = listings.filter(l => l.owner == username)
+    
     const marketplaceHtml = MarketplaceView(listings, username, session, account)
 
     res.send(`${headerHtml}

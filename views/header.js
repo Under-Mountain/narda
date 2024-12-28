@@ -31,6 +31,7 @@ export function HeaderView(session, username) {
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
         <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css" rel="stylesheet" type="text/css" />
         <script src="https://cdn.tailwindcss.com"></script>
         <title>Arda v.1 - Open World Metaverse in tribute to JRR Toklien</title>
@@ -46,7 +47,7 @@ export function HeaderView(session, username) {
             <div class="flex-1 p-0">
                 <a href="/" class="btn btn-ghost btn-md p-1 no-animation">
                     <svg class="p-1" width="2em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="gray" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"/><rect fill="lightgray" x="11" y="6" rx="1" width="2" height="7"><animateTransform attributeName="transform" type="rotate" dur="2160s" values="0 12 12;360 12 12" repeatCount="indefinite"/></rect><rect fill="lightgray" x="11" y="4" rx="1" width="2" height="9"><animateTransform attributeName="transform" type="rotate" dur="3s" values="0 12 12;360 12 12" repeatCount="indefinite"/></rect></svg>
-                    <div class="text-xs pl-1">
+                    <div class="text-xs pl-1 hidden sm:inline">
                         <div id="headerTime">
                             ${Math.floor(current.time % (world.interval.hour * world.interval.day) / (world.interval.hour))}:${current.time % (world.interval.hour) < 10 ? '0' : ''}${current.time % (world.interval.hour)}\
                             <small class="hidden md:inline">(${(current.time % (world.interval.hour) / world.interval.hour * 100).toFixed(0)}% to yield)</small>
@@ -111,12 +112,12 @@ export function HeaderView(session, username) {
                         </ul>
                     </div>
                     ` : `
-                    <a href="/#register"><small class="text-bold p-1">Get Invited</small></a>
+                    <a href="/#register"><small class="text-bold p-1">Arda v.1</small></a>
                     <div class="dropdown dropdown-end">
                         <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
                             <div class="w-10 rounded-full">
                             <img alt="Profile photo of ${session.username}"
-                                src="https://upload.wikimedia.org/wikipedia/en/f/f8/Sauron_Tolkien_illustration.jpg" />
+                                src="/images/logo.png" />
                             </div>
                         </div>
                         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow">
@@ -137,7 +138,7 @@ export function HeaderView(session, username) {
         </div>
     </div>
     
-    <main>
+    <main class="">
     <div class="bg-base-200 text-center text-xs overflow-x-auto">
         <ul class="menu menu-horizontal bg-base-200">
         <li>

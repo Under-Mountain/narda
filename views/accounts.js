@@ -12,7 +12,7 @@ export function AuthView() {
 <div class="hero bg-base-300 sm:p-10">
   <div class="hero-content flex-col lg:flex-row-reverse">
     <div class="lg:text-left lg:p-4 lg:mb-auto">
-      <h1 class="text-5xl font-bold">Arda v.1</h1>
+      <h1 class="text-5xl font-bold">Open Metaverse of Arda</h1>
       <p class="py-6">
         Lord of the Rings and Hobbit inspired open world socio-economic platform. \
         Here, user can collect resources, craft items, and trade them in marketplace. \
@@ -39,29 +39,31 @@ export function AuthView() {
             <div class="form-control">
                 <input name="password" class="input input-bordered" type="password" placeholder="password" required />
             </div>
+            <!--
             <div class="form-control">
                 <label class="cursor-pointer label">
                     <span class="label-text">Remember me</span>
                     <input type="checkbox" class="checkbox checkbox-accent" disabled />
                 </label>
             </div>
+            -->
             <div class="form-control mt-1">
                 <button class="btn btn-primary">Enter</button>
             </div>
         </form>
-        <form class="card-body m-0 pt-0">
+        <form action="/api/mint?return=/account" method="post" class="card-body m-0 pt-0">
             <div class="form-control">
-                <input name="invitation" class="input input-bordered" placeholder="invitation code" required />
+                <input id="invitationCode" name="invitation" class="input input-bordered" placeholder="invitation code (hint: JRR's)" required />
             </div>
-            <div class="form-control hidden">
+            <div id="usernameControl" class="form-control hidden">
                 <input name="username" class="input input-bordered" placeholder="username" style="text-transform:lowercase" type="text" pattern="[a-z0-9]+" required />
             </div>
-            <div class="form-control hidden">
+            <div id="passwordControl" class="form-control hidden">
                 <input name="password" class="input input-bordered" type="password" placeholder="password" required />
                 <input name="confirm" class="input input-bordered" type="password" placeholder="confirm" required />
             </div>
             <div class="form-control">
-                <button class="btn btn-primary" name="type" value="account" disabled>Register</button>
+                <button id="registerBtn" class="btn btn-primary" name="type" value="account" disabled>Register</button>
             </div>
         </form>
     </div>
@@ -104,7 +106,7 @@ export function ProfileView(username, account, session) {
                         <textarea name="bio" row="3" class="textarea w-full" placeholder="Write description of this account.">${account.bio? account.bio:''}</textarea>
                     </div>
                     <div class="text-right">
-                        <button class="btn btn-md"
+                        <button id="updateBioBtn" class="btn btn-sm mt-1"
                             ${(session.username && account.credits.balance < 100) ? `disabled` :``}>
                             Update Bio (-100.00 credit)
                         </button>
@@ -148,7 +150,7 @@ export function SendCreditView(account, session) {
                 <label for="amount" class="label text-xs">Amount</label>
                 <input name="amount" type="number" min=".01" max="1000.00" value="0.01" step=".01" required class="input input-md m-1" />
             </div>
-            <button ${(session.username && account.credits.balance < .01) ? `disabled` :``} class="btn btn-primary btn-md m-1">Send</button>
+            <button id="sendBtn" ${(session.username && account.credits.balance < .01) ? `disabled` :``} class="btn btn-primary btn-md m-1">Send</button>
         </form>
         <form id="postForm" class="text-right">
             <div class="form-control">
@@ -163,7 +165,7 @@ export function SendCreditView(account, session) {
                 <label for="content" class="label text-xs">Content (optional)</label>
                 <textarea class="textarea" name="content" rows="4" cols="60" placeholder="Each credit consumption on the post will be fully rewarded to content creator."></textarea>
             </div>
-            <button class="btn btn-secondary m-1" ${(session.username && account.credits.balance < 10) ? `disabled` :``}>Post (-10.00 credit)</button>
+            <button id="postBtn" class="btn btn-secondary m-1" ${(session.username && account.credits.balance < 10) ? `disabled` :``}>Post (-10.00 credit)</button>
         </form>
     `
 }
@@ -171,38 +173,37 @@ export function SendCreditView(account, session) {
 export function InventoryView(username, items, userMineralTotal, userWaterTotal, account) {
     let inventoryHtml = `<div class="card bg-base-100 p-2 sm:p-4 lg:p-8">
         <div class="card-title">
-            <h3>Inventory (<a href="/assets?user=${username}">${items.filter(i => i.owner == username).length}</a>)</h3>
+            <h3>Inventory (<a id="inventoryTotal" href="/assets?user=${username}" class="link link-hover">${items.filter(i => i.owner == username).length}</a>)</h3>
         </div>
         <div class="card-body p-0">
-            <form action="/api/mint?return=/?user=${username}" method="post">
+            <form id="mintBankForm">
                 <div class="form-control">
-                    <input type="hidden" name="owner" value="${username}" />
+                    <input type="hidden" name="type" value="bankstone" />
                     <label for="type" class="text-xs">
-                        consumes ${Math.ceil(current.resources.water.supplied * Math.log(accounts.length * accounts.length) / current.resources.mineral.supplied)}
+                        consumes ${Math.ceil(Math.pow(current.resources.water.balance / current.resources.mineral.balance, 7))}
                         water + ${200} mineral
                     </label>
                 </div>
-                <button name="type" value="bankstone" class="btn btn-xs"
-                    ${userMineralTotal < 200 || userWaterTotal < Math.ceil(current.resources.water.supplied / current.resources.mineral.supplied) ||
+                <button id="mintBankBtn" class="btn btn-xs"
+                    ${userMineralTotal < 200 || userWaterTotal < Math.ceil(Math.pow(current.resources.water.balance / current.resources.mineral.balance, 7)) ||
                         account.credits.balance < 200 ? "disabled" : ""}>
                     Mint Bankstone (-200.00 credit)
                 </button>
             </form>
+            <ul id="inventory" class="text-xs grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1 justify-between">
         `
     if (items.length > 0) {
-        inventoryHtml += `<ul class="text-xs grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1 justify-between">`
         items.slice(0, 20).forEach(i => {
             inventoryHtml += ItemView(i)
         })
-        inventoryHtml += "</ul>"
-    } else inventoryHtml += `<p class="text-center">Empty. Collect resources or buy items from Marketplace<p>`
-    inventoryHtml += `</div></div>`
+    } else inventoryHtml += `<li class="text-center">Empty. Collect resources or buy items from Marketplace</li>`
+    inventoryHtml += `</ul></div></div>`
     return inventoryHtml
 }
 
 export function ItemView(i) {
     return `<li class="">
-        <form action="/api/list?return=/?user=${i.owner}" method="post" class="p-2 bg-base-200">
+        <form class="itemForm p-2 bg-base-200">
             <div>
                 ${i.amount} unit(s) of ${i.owner}'s ${i.type}
                 <input name="id" type="hidden" value="${i.id}" class="input input-xs" />
@@ -215,7 +216,7 @@ export function ItemView(i) {
                     ` : ``}
             </div>
             <div class ="mt-4 text-right">
-                <button name="owner" value="${i.owner}" class="btn btn-xs"
+                <button class="btn btn-xs"
                     ${(i.type == "water" || i.type == "mineral") && i.amount < 100 ? "disabled" : ""}>
                     ${(i.type == "water" || i.type == "mineral") && i.amount < 100 ? "Sell (min.100)" : `Sell ${i.amount}`}
                 </button>
@@ -223,7 +224,7 @@ export function ItemView(i) {
                 <small for="id">${i.id}</small>
                 for <input name="price" type="number" class="input input-xs w-20" value="${i.type == "bankstone" ?
                     (i.properties.staked * i.properties.yield * .33).toFixed(2) :
-                    (i.amount * (i.type == 'water' ? .03 : .09)).toFixed(2)}" max="1000.00" step=".01" />
+                    (i.amount * (i.type == 'water' ? .03 : .09)).toFixed(2)}" max="1000" step=".01" />
             </div>
         </form>
     </li>`
