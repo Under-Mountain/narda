@@ -39,7 +39,7 @@ export function HeaderView(session, username) {
     <body class="content-center">
     <div id="statusMain" class="p-0.5 text-xs text-white bg-black text-center">
         <a href="https://under-mountain.github.com" target="_blank">
-            📢 Interested in joining this open project?
+            📢 Sponsored messages for ${832} connected users, starting from 100.00sl
         </a>
     </div>
     <div class="relative sticky top-0 z-40">

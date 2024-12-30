@@ -18,7 +18,7 @@ export function AssetsView() {
     let assetsHtml = `<p style="text-align:center">Empty<p>`
     if (filtered.length > 0) {
         assetsHtml = `<ul style="font-weight:normal;padding:.3em">`
-        filtered.slice(0, 1000).forEach((a, idx) => {
+        filtered.slice(0, 100000).forEach((a, idx) => {
             assetsHtml += `<oi><div><small>
                     ${a.id}: <strong>${a.amount}</strong> units of
                     <strong>${a.type}</strong>
@@ -37,7 +37,7 @@ export function ActivitiesView() {
     let entriesHtml = `<div class="p-2 sm:p-4 lg:p-8">`
     if (filtered.length > 0) {
         entriesHtml += `<ul style="font-weight:normal;padding:.3em">`
-        filtered.slice(0, 1000).forEach((t, idx) => {
+        filtered.slice(0, 100000).forEach((t, idx) => {
             entriesHtml += `<oi><div><small>
                     ${t.id}: Transaction of
                     <strong>${t.amount.toFixed(2)}</strong>

@@ -158,10 +158,10 @@ updateBioForm.addEventListener('submit', (e) => {
     alert.classList.replace('alert-warning', 'alert-success')
     alertContent.innerHTML = `User bio has been successfully updated. (-100.00sl)`
 
-    setTimeout(() => {
+    if (!alert.classList.contains('hidden')) setTimeout(() => {
       alert.classList.add('hidden')
       updateBioBtn.disabled = false
-    }, 1500);
+    }, 1500)
   })  
 })
 }
@@ -198,10 +198,10 @@ sendCreditForm.addEventListener('submit', (e) => {
     alert.classList.replace('alert-warning', 'alert-success')
     alertContent.innerHTML = `Credit successfully sent to ${formData.get('to')}. (-${formData.get('amount')}sl)`
 
-    setTimeout(() => {
+    if (!alert.classList.contains('hidden')) setTimeout(() => {
       alert.classList.add('hidden')
       sendBtn.disabled = false
-    }, 1500);
+    }, 1500)
   })  
 })
 }
@@ -237,9 +237,7 @@ if (mintBankForm) {
       alertContent.innerHTML = `Bank item successfully minted. (-200.00sl - wtr - mth)`
 
       refreshInventoryAsync()
-      setTimeout(() => {
-        alert.classList.add('hidden')
-      }, 1500);
+      if (!alert.classList.contains('hidden')) setTimeout(() => {alert.classList.add('hidden')}, 1500)
     })  
   })
 }
@@ -276,17 +274,22 @@ postForm.addEventListener('submit', (e) => {
     alert.classList.replace('alert-warning', 'alert-success')
     alertContent.innerHTML = `Post successfully created. (-10.00sl)`
 
-    setTimeout(() => {
+    if (!alert.classList.contains('hidden')) setTimeout(() => {
       alert.classList.add('hidden')
       postBtn.disabled = false
-    }, 1500);
-  })  
+    }, 1500)
+  })
 })
 }
 
 const itemForms = document.querySelectorAll('.itemForm')
 itemForms.forEach(f => {
   f.addEventListener('submit', onSubmitSell)
+})
+
+const listingForms = document.querySelectorAll('.listingForm')
+listingForms.forEach(f => {
+  f.addEventListener('submit', onSubmitDelistBuy)
 })
 
 // need common function between front and back
@@ -304,6 +307,9 @@ function getItemElement(i) {
                     APR ${(i.properties.yield*100).toFixed(0)}% ${Math.floor(i.properties.staked)}/${i.properties.cap} (${(i.properties.staked/i.properties.cap * 100).toFixed(0)}%)
                 </small>
                 ` : ``}
+        </div>
+        <div class="m-auto">
+          ${svg.village}
         </div>
         <div class ="mt-4 text-right">
             <button class="btn btn-xs"
@@ -335,6 +341,9 @@ function getListingElement(l, i) {
                   APR ${(i.properties.yield * 100).toFixed(0)}% ${Math.floor(i.properties.staked)}/${i.properties.cap} (${(i.properties.staked / i.properties.cap * 100).toFixed(0)}%)
               </small>` : ``}
       </div>
+      <div class="m-auto">
+        ${svg.village}
+      </div>
       <div class="text-right mt-4"><small>(${(l.price / l.amount).toFixed(2)}/unit)</small></div>
       <div class="text-right">
           <button name="buyer" value="${Current.user.id}" class="btn btn-xs"
@@ -348,6 +357,41 @@ function getListingElement(l, i) {
       </div>
     </form>`
     return element
+}
+
+function onSubmitDelistBuy(e) {
+  e.preventDefault()
+  const formData = new FormData(e.target)
+
+  const alert = document.getElementById('alert')
+  const alertContent = document.getElementById('alertContent')
+
+  alert.classList.add('alert-warning')
+  alertContent.innerHTML = `Delisting/Purchasing item from market... (+ units)`
+
+  alert.classList.remove('hidden')
+
+  fetch('/api/trade', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      id: formData.get('id')
+    })
+  }).catch(err => {
+    alert.classList.replace('alert-warning', 'alert-error')
+    alertContent.innerHTML = `Failed to delist/purchase item ${formData.get('id')} from market. (- units)`
+    console.error(err)
+  }).then(res => res.json()).then(async res => {
+    alert.classList.replace('alert-warning', 'alert-success')
+    alertContent.innerHTML = `Item ${formData.get('id')} successfully delisted/purchased. (+ units)`
+
+    await refreshInventoryAsync()
+    await refreshMarketListingAsync()
+
+    if (!alert.classList.contains('hidden')) setTimeout(() => {alert.classList.add('hidden')}, 1500)
+  })
 }
 
 function onSubmitSell(e) {
@@ -382,9 +426,7 @@ function onSubmitSell(e) {
 
     await refreshInventoryAsync()
     await refreshMarketListingAsync()
-    setTimeout(() => {
-      alert.classList.add('hidden')
-    }, 1500)
+    if (!alert.classList.contains('hidden')) setTimeout(() => {alert.classList.add('hidden')}, 1500)
   })
 }
 
@@ -399,15 +441,15 @@ async function refreshMarketListingAsync() {
       .sort((a, b) => { return a.price / a.amount < b.price / b.amount ? 1 : -1 })
       .sort((a, b) => { return a.amount < b.amount ? 1 : -1 })
 
-    activeListings.slice(0, 20).forEach(l => {
+    activeListings.slice(0, 100).forEach(l => {
       const item = Current.user.inventory.find(i => i.id == l.item)
       if (item) {
         const listingElement = getListingElement(l, item)
         marketElement.appendChild(listingElement)
 
-        listingElement.children[0].addEventListener('submit', onSubmitSell)
+        listingElement.children[0].addEventListener('submit', onSubmitDelistBuy)
       } else {
-        console.warn(`item ${l.item} not found in current user inventory.`)
+        console.warn(`item ${l.item} not found in current user inventory. user's inventory: ${Current.user.inventory.length} items`)
       }
     })
 
@@ -422,13 +464,11 @@ async function refreshInventoryAsync() {
     if (!inventoryElement) return
 
     inventoryElement.innerHTML = ''
-    Current.user.inventory = items.filter(a => a.amount > 0)
-    .sort((a, b) => { return a.properties && b.properties &&
-        (a.properties.staked * a.properties.yield) > (b.properties.staked * b.properties.yield) ?
-        1 : -1})
-    .sort((a, b) => { return a.amount < b.amount ? 1 : -1})
+    Current.user.inventory = items.sort((a, b) => { return a.properties && b.properties &&
+        (a.properties.staked * a.properties.yield) > (b.properties.staked * b.properties.yield) ? 1 : -1})
+        .sort((a, b) => { return a.amount < b.amount ? 1 : -1})
 
-    Current.user.inventory.slice(0, 20).forEach(i => {
+    Current.user.inventory.filter(i => i.amount > 0).slice(0, 100).forEach(i => {
       const itemElement = getItemElement(i)
       inventoryElement.appendChild(itemElement)
 

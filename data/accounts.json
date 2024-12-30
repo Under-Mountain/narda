@@ -2,14 +2,14 @@
   {
     "id": "dev",
     "credits": {
-      "balance": 8212.424630136986
+      "balance": 8000.583085420154
     },
     "times": {
       "created": 61644,
       "lastActive": 61644,
-      "edited": 81326
+      "edited": 116660
     },
-    "bio": "updated"
+    "bio": "Official Dev Account - fund will be used for service maintenance and development."
   },
   {
     "id": "thorin",
@@ -32,19 +32,6 @@
     }
   },
   {
-    "id": "sauron",
-    "credits": {
-      "balance": 1973.409042556662
-    },
-    "times": {
-      "created": 21,
-      "updated": 21,
-      "lastActive": 21,
-      "edited": 5890
-    },
-    "bio": "I am Sauron. I'm the beginning and the ending of the world. I may hurt, I may help..."
-  },
-  {
     "id": "gandalf",
     "credits": {
       "balance": 185
@@ -56,6 +43,41 @@
       "edited": 5397
     },
     "bio": "I am good and I will save"
+  },
+  {
+    "id": "newuser",
+    "credits": {
+      "balance": 172.84
+    },
+    "times": {
+      "created": 87931,
+      "lastActive": 87931,
+      "edited": 122751
+    },
+    "bio": "Updating bio as a new user."
+  },
+  {
+    "id": "sauron",
+    "credits": {
+      "balance": 115.72777214294402
+    },
+    "times": {
+      "created": 21,
+      "updated": 21,
+      "lastActive": 21,
+      "edited": 5890
+    },
+    "bio": "I am Sauron. I'm the beginning and the ending of the world. I may hurt, I may help..."
+  },
+  {
+    "id": "newuser2",
+    "credits": {
+      "balance": 97.16
+    },
+    "times": {
+      "created": 88430,
+      "lastActive": 88430
+    }
   },
   {
     "id": "saruman",
@@ -358,26 +380,6 @@
     }
   },
   {
-    "id": "newuser",
-    "credits": {
-      "balance": 0
-    },
-    "times": {
-      "created": 87931,
-      "lastActive": 87931
-    }
-  },
-  {
-    "id": "newuser2",
-    "credits": {
-      "balance": 0
-    },
-    "times": {
-      "created": 88430,
-      "lastActive": 88430
-    }
-  },
-  {
     "id": "newuser4",
     "credits": {
       "balance": 0
@@ -390,7 +392,7 @@
   {
     "id": "worldbank",
     "credits": {
-      "balance": -63231.037889126615
+      "balance": -69500.47739055054
     },
     "times": {
       "created": 0,

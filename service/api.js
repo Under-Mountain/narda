@@ -597,15 +597,26 @@ app.post('/api/post', (req, res) => {
 })
 
 app.post('/api/trade', (req, res) => {
+    if (!req.session.username) {
+        res.sendStatus(401)
+        return
+    }
+    if (!req.body.id) {
+        res.sendStatus(400)
+        return
+    }
+
     const listing = market.find(l => l.id == req.body.id)
     const item = assets.find(a => a.id == listing.item)
 
-    if (req.body.buyer == item.owner) {
+    if (req.session.username == item.owner) {
         // delist and restore amount
         item.amount += listing.amount
         listing.times.expired = current.time
 
-        req.query.return ? res.redirect(req.query.return) : res.json([item, listing])
+        setTimeout(() => req.query.return ?
+            res.redirect(req.query.return) : res.json([item, listing]),
+            world.interval.minute)
     } else {
         console.log(`TX${activities.length}: buying ${item.id} at ${listing.price}...`);
 
@@ -613,7 +624,7 @@ app.post('/api/trade', (req, res) => {
             type: "transaction",
             id: `TX${activities.length}`,
             of: "credit",
-            from: req.body.buyer,
+            from: req.session.username,
             to: item.owner,
             amount: listing.price,
             note: `Purchase of ${item.id} at ${listing.price} credit`,
@@ -629,7 +640,7 @@ app.post('/api/trade', (req, res) => {
             id: `TX${activities.length}`,
             of: item.id,
             from: item.owner,
-            to: req.body.buyer,
+            to: req.session.username,
             amount: listing.amount,
             note: `Sale of ${item.id} at ${listing.price} credit`,
             times: {

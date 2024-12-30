@@ -131,8 +131,7 @@ app.get('/marketplace', (req, res) => {
     .sort((a, b) => { return a.price / a.amount < b.price / b.amount ? 1 : -1 })
     .sort((a, b) => { return a.amount < b.amount ? 1 : -1 })
 
-    const marketStatsHtml = MarketStatsView(listings)
-    const marketplaceHtml = MarketplaceView(listings, marketStatsHtml, username, session, account)
+    const marketplaceHtml = MarketplaceView(listings, username, session, account)
     res.send(`
         ${headerHtml}
         ${marketplaceHtml}

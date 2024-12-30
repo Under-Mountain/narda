@@ -1,10 +1,11 @@
 import { assets, market } from '../service/model.js'
+import * as svg from './svg.js'
 import * as util from '../service/utility.js'
 
 export function MarketplaceView(listings, username, session, account) {
     let marketplaceHtml = `<div class="p-2 sm:p-4 lg:p-8 w-full">
         <h1 id="marketplace" class="text-bold text-2xl text-white mb-2">
-            Marketplace (<a id="marketTotal" href="/market?expired=false&sold=false">${listings.length}</a>)
+            ${username? `${username}'s Store`:`Global Marketplace`} (<a id="marketTotal" href="/market?expired=false&sold=false">${listings.length}</a>)
         </h1>
         <div class="mb-2">
             ${MarketStatsView(listings)}
@@ -15,12 +16,12 @@ export function MarketplaceView(listings, username, session, account) {
             <a role="tab" class="tab">Yield</a>
         </div>
         <div role="tabpanel" class="tab-content">
-        <ul id="market" class="card-body p-0 mt-4 text-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1 justify-between">`
+        <ul id="market" class="card-body p-0 mt-4 text-xs grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-1 justify-between">`
     if (listings.length > 0) {
-        listings.slice(0, 20).forEach(l => {
+        listings.slice(0, 100).forEach(l => {
             const i = assets.find(a => a.id == l.item)
             marketplaceHtml += `<li>
-                <form action="/api/trade?return=/?user=${session?.username}" method="post" class="p-2 bg-base-200">
+                <form class="listingForm p-2 bg-base-200">
                     <div>
                         ${l.amount}
                         unit of ${l.owner}'s ${i.type} 
@@ -32,9 +33,12 @@ export function MarketplaceView(listings, username, session, account) {
                                 APR ${(i.properties.yield * 100).toFixed(0)}% ${Math.floor(i.properties.staked)}/${i.properties.cap} (${(i.properties.staked / i.properties.cap * 100).toFixed(0)}%)
                             </small>` : ``}
                     </div>
+                    <div class="m-auto">
+                        ${svg.village}
+                    </div>
                     <div class="text-right mt-4"><small>(${(l.price / l.amount).toFixed(2)}/unit)</small></div>
                     <div class="text-right">
-                        <button name="buyer" value="${session?.username}" class="btn btn-xs"
+                        <button name="buyer" value="${session?.username}" class="delistBuyBtn btn btn-xs"
                             ${!session || !session.username || (session.username != username && account.credits.balance < l.price) ?
                                 `disabled` : ``}>
                             ${session?.username && l.owner == username ? 'Delist' : 'Buy'}

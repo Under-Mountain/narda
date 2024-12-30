@@ -16,7 +16,7 @@ export function PostsView(channel) {
         <div role="tabpanel" class="tab-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 justify-between">
     `
     if (filteredPosts.length > 0) {
-        filteredPosts.slice(0, 10).forEach((p, idx) => {
+        filteredPosts.slice(0, 100).forEach((p, idx) => {
             postsHtml += `<div class="card bg-base-300 p-4">
                 <div class="text-xs">
                     <svg class="size-3 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -113,7 +113,7 @@ export function channelsView() {
 
     let channelsHtml = ``
     if (allchannels.length > 0) {
-        allchannels.slice(0, 1000).forEach((channel, idx) => {
+        allchannels.slice(0, 100).forEach((channel, idx) => {
             channelsHtml += `<div class="badge p-4 m-2"><a href="/posts?channel=${channel}">#${channel}</a></div>`
         })
     } else { `<p>Empty</p>`} 

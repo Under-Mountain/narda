@@ -1,5 +1,6 @@
 import { accounts, current, market, assets } from '../service/model.js'
 import { MarketStatsView } from './market.js'
+import * as svg from './svg.js'
 
 export function AuthView() {
     const listings = market.filter(l => !l.times.sold && !l.times.expired)
@@ -10,17 +11,29 @@ export function AuthView() {
 
     return `
 <div class="hero bg-base-300 sm:p-10">
-  <div class="hero-content flex-col lg:flex-row-reverse">
+  <div class="hero-content flex-col lg:flex-row-reverse items-start">
     <div class="lg:text-left lg:p-4 lg:mb-auto">
-      <h1 class="text-5xl font-bold">Open Metaverse of Arda</h1>
-      <p class="py-6">
-        Lord of the Rings and Hobbit inspired open world socio-economic platform. \
-        Here, user can collect resources, craft items, and trade them in marketplace. \
-        Credits earned from the sales or yield can be spent for all activities in the platform. \
-        Consumped credits will be circulated back to the world. \
-      </p>
-      <h3 class="font-bold">Market Satistics</h3>
-      ${marketStatsHtml}
+        <div>
+            <h1 class="text-3xl font-bold">Project <span class="text-yellow-500">Arda</span></h1>
+            <p class="py-6">
+                Open Socio-Economic Metaverse & Trading Platform. \
+                Here, user can <span class="text-yellow-500">collect resources</span>, <span class="text-yellow-500">craft items</span>, and <span class="text-yellow-500">trade</span> in marketplace. \
+                Create a settlement for <span class="text-yellow-500">passive income</span>, join <span class="text-yellow-500">houses</span> and participate in activities to build friendship and receive <span class="text-yellow-500">greater benefits.</span> \
+                <small>(Explore infinite world of user minted lands and items. Trade and market your unique item for greater profit!, 2025 TBD)</small> \
+            </p>
+            <div class="carousel">
+                <div id="slide1" class="carousel-item relative">
+                    <img class="max-w-xs" src="/images/logo.png" />
+                </div>
+            </div>
+            <p>
+                Building sustainable virtual socio-economy for better future in real life. Value through openness and connection.
+            </p>
+        </div>
+        <div>
+            <h2 class="font-bold mt-4 text-xl">Market Satistics</h2>
+            ${marketStatsHtml}
+        </div>
     </div>
     <div class="card bg-base-100 w-full max-w-xl shadow-2xl sm:my-4">
         <form action="/api/auth" method="post" class="card-body">
@@ -190,10 +203,10 @@ export function InventoryView(username, items, userMineralTotal, userWaterTotal,
                     Mint Bankstone (-200.00 credit)
                 </button>
             </form>
-            <ul id="inventory" class="text-xs grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1 justify-between">
+            <ul id="inventory" class="text-xs grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-1 justify-between">
         `
     if (items.length > 0) {
-        items.slice(0, 20).forEach(i => {
+        items.slice(0, 100).forEach(i => {
             inventoryHtml += ItemView(i)
         })
     } else inventoryHtml += `<li class="text-center">Empty. Collect resources or buy items from Marketplace</li>`
@@ -215,8 +228,11 @@ export function ItemView(i) {
                     </small>
                     ` : ``}
             </div>
+            <div class="m-auto">
+                ${svg.village}
+            </div>
             <div class ="mt-4 text-right">
-                <button class="btn btn-xs"
+                <button class="sellBtn btn btn-xs"
                     ${(i.type == "water" || i.type == "mineral") && i.amount < 100 ? "disabled" : ""}>
                     ${(i.type == "water" || i.type == "mineral") && i.amount < 100 ? "Sell (min.100)" : `Sell ${i.amount}`}
                 </button>
@@ -244,7 +260,7 @@ export function LeaderboardView() {
         <div role="tabpanel" class="tab-content grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-1 justify-between">
     `
     if (balanceLeaders.length > 0) {
-        balanceLeaders.slice(0, 30).forEach((a, idx) => {
+        balanceLeaders.slice(0, 100).forEach((a, idx) => {
             LeaderHtml += `<div class="card bg-base-300 p-2">
                 <div class="p-2 card-title ${idx < 3 ? 'text-white text-2xl': idx < 10 ? 'text-gray-200 text-xl' : 'text-lg'}">
                     <small>${idx + 1}.</small> <a href="/?user=${a.id}">${a.id}</a>
