@@ -20,7 +20,7 @@
   {
     "id": "WTR403",
     "type": "water",
-    "amount": 797,
+    "amount": 282,
     "owner": "dev"
   },
   {
@@ -62,7 +62,7 @@
   {
     "id": "MNR427",
     "type": "mineral",
-    "amount": 230,
+    "amount": 63,
     "owner": "dev"
   },
   {
@@ -285,7 +285,8 @@
       "cap": 9912,
       "staked": 9904.939397260274
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 46
   },
   {
     "id": "BNK95",
@@ -373,7 +374,8 @@
       "cap": 8647,
       "staked": 8647
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 38
   },
   {
     "id": "BNK84",
@@ -417,7 +419,8 @@
       "cap": 7804,
       "staked": 7798.013369863013
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 52
   },
   {
     "id": "BNK122",
@@ -450,7 +453,8 @@
       "cap": 7053,
       "staked": 7047.2030136986305
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 55
   },
   {
     "id": "BNK136",
@@ -472,7 +476,8 @@
       "cap": 9964,
       "staked": 9964
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 10
   },
   {
     "id": "BNK357",
@@ -505,7 +510,8 @@
       "cap": 7508,
       "staked": 7508
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 36
   },
   {
     "id": "BNK345",
@@ -516,7 +522,8 @@
       "cap": 8064,
       "staked": 8064
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 41
   },
   {
     "id": "BNK270",
@@ -571,7 +578,8 @@
       "cap": 9322,
       "staked": 9316.636657534247
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 4
   },
   {
     "id": "BNK61",
@@ -670,7 +678,8 @@
       "cap": 9476,
       "staked": 9476
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 2
   },
   {
     "id": "BNK28",
@@ -758,7 +767,8 @@
       "cap": 8011,
       "staked": 8011
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 14
   },
   {
     "id": "BNK393",
@@ -769,7 +779,8 @@
       "cap": 7947,
       "staked": 7937.858137456934
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 26
   },
   {
     "id": "BNK112",
@@ -835,7 +846,8 @@
       "cap": 6099,
       "staked": 6099
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 18
   },
   {
     "id": "BNK60",
@@ -923,7 +935,8 @@
       "cap": 9134,
       "staked": 9125.993864743104
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 5
   },
   {
     "id": "BNK81",
@@ -989,7 +1002,8 @@
       "cap": 9541,
       "staked": 9537.07904109589
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 8
   },
   {
     "id": "BNK419",
@@ -1000,7 +1014,8 @@
       "cap": 9430,
       "staked": 9426.124657534247
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 27
   },
   {
     "id": "BNK162",
@@ -1088,7 +1103,8 @@
       "cap": 4907,
       "staked": 4903.370164383562
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 4
   },
   {
     "id": "BNK460",
@@ -1132,7 +1148,8 @@
       "cap": 8061,
       "staked": 8057.466410958904
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 7
   },
   {
     "id": "BNK187",
@@ -1154,7 +1171,8 @@
       "cap": 9884,
       "staked": 9876.960596281479
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 23
   },
   {
     "id": "BNK310",
@@ -1506,7 +1524,8 @@
       "cap": 7892,
       "staked": 7888.972931506849
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 18
   },
   {
     "id": "BNK107",
@@ -1539,7 +1558,8 @@
       "cap": 7701,
       "staked": 7698.046191780822
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 5
   },
   {
     "id": "BNK133",
@@ -1605,7 +1625,8 @@
       "cap": 4960,
       "staked": 4954.294244593732
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 4
   },
   {
     "id": "BNK253",
@@ -1627,7 +1648,8 @@
       "cap": 3545,
       "staked": 3542.183424657534
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 8
   },
   {
     "id": "BNK387",
@@ -1638,7 +1660,8 @@
       "cap": 4882,
       "staked": 4876.383972198912
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 7
   },
   {
     "id": "BNK255",
@@ -1660,7 +1683,8 @@
       "cap": 3914,
       "staked": 3911.2119452054794
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 9
   },
   {
     "id": "BNK328",
@@ -1803,7 +1827,8 @@
       "cap": 6726,
       "staked": 6723.420164383561
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 22
   },
   {
     "id": "BNK273",
@@ -1836,7 +1861,8 @@
       "cap": 7762,
       "staked": 7759.448109589041
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 19
   },
   {
     "id": "BNK278",
@@ -1946,7 +1972,8 @@
       "cap": 8623,
       "staked": 8618.275715744043
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 9
   },
   {
     "id": "BNK223",
@@ -1968,7 +1995,8 @@
       "cap": 7130,
       "staked": 7127.655890410959
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 12
   },
   {
     "id": "BNK50",
@@ -2133,7 +2161,8 @@
       "cap": 9702,
       "staked": 9702
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 17
   },
   {
     "id": "BNK42",
@@ -2177,7 +2206,8 @@
       "cap": 5139,
       "staked": 5139
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 12
   },
   {
     "id": "BNK238",
@@ -2364,7 +2394,8 @@
       "cap": 8494,
       "staked": 8492.138301369863
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 14
   },
   {
     "id": "BNK3",
@@ -2408,7 +2439,8 @@
       "cap": 5072,
       "staked": 5070.193534246575
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 8
   },
   {
     "id": "BNK448",
@@ -2631,39 +2663,6 @@
     "owner": "worldbank"
   },
   {
-    "id": "BNK43",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.1,
-      "cap": 5688,
-      "staked": 5647.621193818663
-    },
-    "owner": "sauron"
-  },
-  {
-    "id": "BNK73",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.22,
-      "cap": 2588,
-      "staked": 2546.2113202622368
-    },
-    "owner": "sauron"
-  },
-  {
-    "id": "BNK38",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.18,
-      "cap": 3152,
-      "staked": 3110.2988637880812
-    },
-    "owner": "sauron"
-  },
-  {
     "id": "BNK450",
     "type": "bankstone",
     "amount": 1,
@@ -2697,17 +2696,6 @@
     "owner": "worldbank"
   },
   {
-    "id": "BNK512",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.06,
-      "cap": 9004,
-      "staked": 9004
-    },
-    "owner": "sauron"
-  },
-  {
     "id": "BNK451",
     "type": "bankstone",
     "amount": 1,
@@ -2728,17 +2716,6 @@
       "staked": 1772.232498578853
     },
     "owner": "worldbank"
-  },
-  {
-    "id": "BNK55",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.1,
-      "cap": 5334,
-      "staked": 5294.683225108716
-    },
-    "owner": "sauron"
   },
   {
     "id": "BNK225",
@@ -2772,17 +2749,6 @@
       "staked": 3025.590164383562
     },
     "owner": "worldbank"
-  },
-  {
-    "id": "BNK31",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.15,
-      "cap": 3430,
-      "staked": 3392.143729665857
-    },
-    "owner": "sauron"
   },
   {
     "id": "BNK355",
@@ -2851,17 +2817,6 @@
     "owner": "worldbank"
   },
   {
-    "id": "BNK58",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.15,
-      "cap": 3309,
-      "staked": 3273.824591466742
-    },
-    "owner": "sauron"
-  },
-  {
     "id": "BNK188",
     "type": "bankstone",
     "amount": 1,
@@ -2871,17 +2826,6 @@
       "staked": 4441.981540053198
     },
     "owner": "worldbank"
-  },
-  {
-    "id": "BNK34",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.1,
-      "cap": 4828,
-      "staked": 4793.726287580259
-    },
-    "owner": "sauron"
   },
   {
     "id": "BNK457",
@@ -2959,28 +2903,6 @@
       "staked": 6553.228202902895
     },
     "owner": "worldbank"
-  },
-  {
-    "id": "BNK75",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.05,
-      "cap": 9161,
-      "staked": 9124.676695150323
-    },
-    "owner": "sauron"
-  },
-  {
-    "id": "BNK33",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.05,
-      "cap": 8940,
-      "staked": 8904.552958699252
-    },
-    "owner": "sauron"
   },
   {
     "id": "BNK198",
@@ -3071,28 +2993,6 @@
     "owner": "worldbank"
   },
   {
-    "id": "BNK77",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.09,
-      "cap": 4393,
-      "staked": 4361.695240090486
-    },
-    "owner": "sauron"
-  },
-  {
-    "id": "BNK62",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.14,
-      "cap": 2801,
-      "staked": 2768.947930598145
-    },
-    "owner": "sauron"
-  },
-  {
     "id": "BNK163",
     "type": "bankstone",
     "amount": 1,
@@ -3115,28 +3015,6 @@
     "owner": "worldbank"
   },
   {
-    "id": "BNK169",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.07,
-      "cap": 5489,
-      "staked": 5485.842550821106
-    },
-    "owner": "sauron"
-  },
-  {
-    "id": "BNK152",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.28,
-      "cap": 1384,
-      "staked": 1355.6181911319197
-    },
-    "owner": "worldbank"
-  },
-  {
     "id": "BNK296",
     "type": "bankstone",
     "amount": 1,
@@ -3148,15 +3026,15 @@
     "owner": "worldbank"
   },
   {
-    "id": "BNK514",
+    "id": "BNK152",
     "type": "bankstone",
-    "amount": 0,
+    "amount": 1,
     "properties": {
-      "yield": 0.29,
-      "cap": 1301,
-      "staked": 1301
+      "yield": 0.28,
+      "cap": 1384,
+      "staked": 1355.6181911319197
     },
-    "owner": "sauron"
+    "owner": "worldbank"
   },
   {
     "id": "BNK102",
@@ -3192,17 +3070,6 @@
     "owner": "worldbank"
   },
   {
-    "id": "BNK201",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.17,
-      "cap": 2160,
-      "staked": 2156.9833232721016
-    },
-    "owner": "sauron"
-  },
-  {
     "id": "BNK365",
     "type": "bankstone",
     "amount": 1,
@@ -3236,17 +3103,6 @@
     "owner": "worldbank"
   },
   {
-    "id": "BNK159",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.3,
-      "cap": 1200,
-      "staked": 1173.6524648660031
-    },
-    "owner": "worldbank"
-  },
-  {
     "id": "BNK118",
     "type": "bankstone",
     "amount": 1,
@@ -3254,6 +3110,17 @@
       "yield": 0.12,
       "cap": 2962,
       "staked": 2935.8192456129514
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK159",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.3,
+      "cap": 1200,
+      "staked": 1173.6524648660031
     },
     "owner": "worldbank"
   },
@@ -3313,17 +3180,6 @@
     "owner": "worldbank"
   },
   {
-    "id": "BNK72",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.17,
-      "cap": 1955,
-      "staked": 1930.5634852185588
-    },
-    "owner": "sauron"
-  },
-  {
     "id": "BNK120",
     "type": "bankstone",
     "amount": 1,
@@ -3333,17 +3189,6 @@
       "staked": 1481.6824761649646
     },
     "owner": "worldbank"
-  },
-  {
-    "id": "BNK52",
-    "type": "bankstone",
-    "amount": 0,
-    "properties": {
-      "yield": 0.07,
-      "cap": 4674,
-      "staked": 4649.857887633349
-    },
-    "owner": "sauron"
   },
   {
     "id": "BNK367",
@@ -4377,7 +4222,44 @@
       "cap": 2006,
       "staked": 2006
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 4
+  },
+  {
+    "id": "BNK43",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.1,
+      "cap": 5688,
+      "staked": 5647.621193818663
+    },
+    "owner": "sauron",
+    "visual": 0
+  },
+  {
+    "id": "BNK73",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.22,
+      "cap": 2588,
+      "staked": 2546.2113202622368
+    },
+    "owner": "sauron",
+    "visual": 8
+  },
+  {
+    "id": "BNK38",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.18,
+      "cap": 3152,
+      "staked": 3110.2988637880812
+    },
+    "owner": "sauron",
+    "visual": 12
   },
   {
     "id": "BNK347",
@@ -4388,7 +4270,8 @@
       "cap": 2404,
       "staked": 2404
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 5
   },
   {
     "id": "BNK408",
@@ -4399,7 +4282,32 @@
       "cap": 3674,
       "staked": 3674
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 6
+  },
+  {
+    "id": "BNK512",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.06,
+      "cap": 9004,
+      "staked": 9004
+    },
+    "owner": "sauron",
+    "visual": 13
+  },
+  {
+    "id": "BNK55",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.1,
+      "cap": 5334,
+      "staked": 5294.683225108716
+    },
+    "owner": "sauron",
+    "visual": 0
   },
   {
     "id": "BNK373",
@@ -4410,7 +4318,44 @@
       "cap": 8704,
       "staked": 8704
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 8
+  },
+  {
+    "id": "BNK31",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.15,
+      "cap": 3430,
+      "staked": 3392.143729665857
+    },
+    "owner": "sauron",
+    "visual": 2
+  },
+  {
+    "id": "BNK58",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.15,
+      "cap": 3309,
+      "staked": 3273.824591466742
+    },
+    "owner": "sauron",
+    "visual": 2
+  },
+  {
+    "id": "BNK34",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.1,
+      "cap": 4828,
+      "staked": 4793.726287580259
+    },
+    "owner": "sauron",
+    "visual": 0
   },
   {
     "id": "BNK375",
@@ -4421,7 +4366,8 @@
       "cap": 3420,
       "staked": 3418.6882191780824
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 8
   },
   {
     "id": "BNK343",
@@ -4432,7 +4378,20 @@
       "cap": 9170,
       "staked": 9170
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 7
+  },
+  {
+    "id": "BNK75",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.05,
+      "cap": 9161,
+      "staked": 9124.676695150323
+    },
+    "owner": "sauron",
+    "visual": 2
   },
   {
     "id": "BNK368",
@@ -4443,7 +4402,20 @@
       "cap": 4555,
       "staked": 4553.7520547945205
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 0
+  },
+  {
+    "id": "BNK33",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.05,
+      "cap": 8940,
+      "staked": 8904.552958699252
+    },
+    "owner": "sauron",
+    "visual": 7
   },
   {
     "id": "BNK392",
@@ -4454,7 +4426,56 @@
       "cap": 5682,
       "staked": 5680.910301369863
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 0
+  },
+  {
+    "id": "BNK77",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.09,
+      "cap": 4393,
+      "staked": 4361.695240090486
+    },
+    "owner": "sauron",
+    "visual": 0
+  },
+  {
+    "id": "BNK62",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.14,
+      "cap": 2801,
+      "staked": 2768.947930598145
+    },
+    "owner": "sauron",
+    "visual": 3
+  },
+  {
+    "id": "BNK169",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.07,
+      "cap": 5489,
+      "staked": 5485.842550821106
+    },
+    "owner": "sauron",
+    "visual": 0
+  },
+  {
+    "id": "BNK514",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.29,
+      "cap": 1301,
+      "staked": 1301
+    },
+    "owner": "sauron",
+    "visual": 10
   },
   {
     "id": "BNK386",
@@ -4465,7 +4486,8 @@
       "cap": 7418,
       "staked": 7416.983835616438
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 1
   },
   {
     "id": "BNK378",
@@ -4476,7 +4498,20 @@
       "cap": 4117,
       "staked": 4117
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 0
+  },
+  {
+    "id": "BNK201",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.17,
+      "cap": 2160,
+      "staked": 2156.9833232721016
+    },
+    "owner": "sauron",
+    "visual": 6
   },
   {
     "id": "BNK336",
@@ -4487,7 +4522,8 @@
       "cap": 2728,
       "staked": 2728
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 3
   },
   {
     "id": "BNK346",
@@ -4498,7 +4534,8 @@
       "cap": 1677,
       "staked": 1677
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 10
   },
   {
     "id": "BNK462",
@@ -4509,7 +4546,8 @@
       "cap": 8686,
       "staked": 8686
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 1
   },
   {
     "id": "BNK333",
@@ -4520,7 +4558,32 @@
       "cap": 5557,
       "staked": 5557
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 0
+  },
+  {
+    "id": "BNK72",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.17,
+      "cap": 1955,
+      "staked": 1930.5634852185588
+    },
+    "owner": "sauron",
+    "visual": 1
+  },
+  {
+    "id": "BNK52",
+    "type": "bankstone",
+    "amount": 0,
+    "properties": {
+      "yield": 0.07,
+      "cap": 4674,
+      "staked": 4649.857887633349
+    },
+    "owner": "sauron",
+    "visual": 0
   },
   {
     "id": "BNK206",
@@ -4531,7 +4594,8 @@
       "cap": 4337,
       "staked": 4334.861557042847
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 0
   },
   {
     "id": "BNK339",
@@ -4542,7 +4606,8 @@
       "cap": 6453,
       "staked": 6453
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 2
   },
   {
     "id": "BNK332",
@@ -4553,7 +4618,8 @@
       "cap": 1955,
       "staked": 1955
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 6
   },
   {
     "id": "BNK409",
@@ -4564,7 +4630,8 @@
       "cap": 1572,
       "staked": 1571.310904109589
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 5
   },
   {
     "id": "BNK463",
@@ -4575,7 +4642,8 @@
       "cap": 2250,
       "staked": 2250
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 10
   },
   {
     "id": "BNK351",
@@ -4586,7 +4654,8 @@
       "cap": 1867,
       "staked": 1867
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 7
   },
   {
     "id": "BNK63",
@@ -4597,7 +4666,8 @@
       "cap": 1471,
       "staked": 1451.7777987137872
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 7
   },
   {
     "id": "BNK37",
@@ -4608,7 +4678,8 @@
       "cap": 2332,
       "staked": 2313.542673041556
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 0
   },
   {
     "id": "BNK35",
@@ -4619,7 +4690,8 @@
       "cap": 2858,
       "staked": 2840.5122924225147
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 0
   },
   {
     "id": "BNK430",
@@ -4630,7 +4702,8 @@
       "cap": 1419,
       "staked": 1419
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 1
   },
   {
     "id": "BNK362",
@@ -4641,7 +4714,8 @@
       "cap": 1740,
       "staked": 1740
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 2
   },
   {
     "id": "BNK384",
@@ -4652,7 +4726,8 @@
       "cap": 973,
       "staked": 973
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 1
   },
   {
     "id": "BNK382",
@@ -4663,7 +4738,8 @@
       "cap": 916,
       "staked": 916
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 9
   },
   {
     "id": "BNK78",
@@ -4674,7 +4750,8 @@
       "cap": 860,
       "staked": 842.4105580401034
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 2
   },
   {
     "id": "BNK39",
@@ -4685,7 +4762,8 @@
       "cap": 3542,
       "staked": 3526.8926544966744
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 0
   },
   {
     "id": "BNK475",
@@ -4696,7 +4774,8 @@
       "cap": 3211,
       "staked": 3211
     },
-    "owner": "newuser"
+    "owner": "newuser",
+    "visual": 0
   },
   {
     "id": "BNK374",
@@ -4707,7 +4786,8 @@
       "cap": 3729,
       "staked": 3729
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 0
   },
   {
     "id": "BNK411",
@@ -4718,7 +4798,8 @@
       "cap": 850,
       "staked": 849.5109589041095
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 5
   },
   {
     "id": "BNK500",
@@ -4729,7 +4810,8 @@
       "cap": 5493,
       "staked": 5493
     },
-    "owner": "newuser"
+    "owner": "newuser",
+    "visual": 0
   },
   {
     "id": "BNK494",
@@ -4740,7 +4822,8 @@
       "cap": 1095,
       "staked": 1095
     },
-    "owner": "newuser"
+    "owner": "newuser",
+    "visual": 3
   },
   {
     "id": "BNK41",
@@ -4751,7 +4834,8 @@
       "cap": 709,
       "staked": 696.1574067978058
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 1
   },
   {
     "id": "BNK56",
@@ -4762,7 +4846,8 @@
       "cap": 7562,
       "staked": 7549.9928846942585
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 11
   },
   {
     "id": "BNK385",
@@ -4773,7 +4858,8 @@
       "cap": 534,
       "staked": 534
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 7
   },
   {
     "id": "BNK170",
@@ -4784,7 +4870,8 @@
       "cap": 7276,
       "staked": 7275.202651982736
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 5
   },
   {
     "id": "BNK380",
@@ -4795,7 +4882,8 @@
       "cap": 2300,
       "staked": 2300
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 0
   },
   {
     "id": "BNK207",
@@ -4806,7 +4894,8 @@
       "cap": 523,
       "staked": 522.2551694862075
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 2
   },
   {
     "id": "BNK82",
@@ -4817,7 +4906,8 @@
       "cap": 596,
       "staked": 585.2042516946294
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 9
   },
   {
     "id": "BNK487",
@@ -4828,7 +4918,8 @@
       "cap": 2220,
       "staked": 2220
     },
-    "owner": "newuser"
+    "owner": "newuser",
+    "visual": 0
   },
   {
     "id": "BNK388",
@@ -4839,7 +4930,8 @@
       "cap": 2685,
       "staked": 2685
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 0
   },
   {
     "id": "BNK45",
@@ -4850,7 +4942,8 @@
       "cap": 982,
       "staked": 975.2157775515547
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 6
   },
   {
     "id": "BNK53",
@@ -4861,7 +4954,8 @@
       "cap": 640,
       "staked": 633.5784159163907
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 3
   },
   {
     "id": "BNK363",
@@ -4872,7 +4966,8 @@
       "cap": 4892,
       "staked": 4892
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 0
   },
   {
     "id": "BNK40",
@@ -4883,7 +4978,8 @@
       "cap": 9204,
       "staked": 9198.453979159854
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 11
   },
   {
     "id": "BNK32",
@@ -4894,7 +4990,8 @@
       "cap": 687,
       "staked": 681.6370149888511
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 7
   },
   {
     "id": "BNK377",
@@ -4905,7 +5002,8 @@
       "cap": 4274,
       "staked": 4274
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 0
   },
   {
     "id": "BNK410",
@@ -4916,7 +5014,8 @@
       "cap": 424,
       "staked": 423.79090410958906
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 4
   },
   {
     "id": "BNK497",
@@ -4927,7 +5026,8 @@
       "cap": 3543,
       "staked": 3543
     },
-    "owner": "newuser"
+    "owner": "newuser",
+    "visual": 0
   },
   {
     "id": "BNK49",
@@ -4938,7 +5038,8 @@
       "cap": 835,
       "staked": 830.8008178639216
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 5
   },
   {
     "id": "BNK415",
@@ -4949,7 +5050,8 @@
       "cap": 231,
       "staked": 231
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 9
   },
   {
     "id": "BNK51",
@@ -4960,7 +5062,8 @@
       "cap": 1563,
       "staked": 1559.406898132329
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 1
   },
   {
     "id": "BNK337",
@@ -4971,7 +5074,8 @@
       "cap": 670,
       "staked": 670
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 8
   },
   {
     "id": "BNK204",
@@ -4982,7 +5086,8 @@
       "cap": 2664,
       "staked": 2663.8540273972603
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 0
   },
   {
     "id": "BNK481",
@@ -4993,7 +5098,8 @@
       "cap": 4554,
       "staked": 4554
     },
-    "owner": "newuser"
+    "owner": "newuser",
+    "visual": 0
   },
   {
     "id": "BNK488",
@@ -5004,7 +5110,8 @@
       "cap": 3216,
       "staked": 3216
     },
-    "owner": "newuser"
+    "owner": "newuser",
+    "visual": 0
   },
   {
     "id": "BNK429",
@@ -5015,7 +5122,8 @@
       "cap": 1410,
       "staked": 1410
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 4
   },
   {
     "id": "BNK54",
@@ -5026,7 +5134,8 @@
       "cap": 572,
       "staked": 570.8727216647939
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 4
   },
   {
     "id": "BNK407",
@@ -5037,7 +5146,8 @@
       "cap": 734,
       "staked": 734
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 5
   },
   {
     "id": "BNK477",
@@ -5048,7 +5158,8 @@
       "cap": 273,
       "staked": 273
     },
-    "owner": "newuser"
+    "owner": "newuser",
+    "visual": 6
   },
   {
     "id": "BNK479",
@@ -5059,7 +5170,8 @@
       "cap": 1758,
       "staked": 1758
     },
-    "owner": "newuser"
+    "owner": "newuser",
+    "visual": 6
   },
   {
     "id": "BNK389",
@@ -5070,7 +5182,8 @@
       "cap": 764,
       "staked": 764
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 8
   },
   {
     "id": "WTR195",
@@ -5117,7 +5230,8 @@
       "cap": 3965,
       "staked": 3965
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 0
   },
   {
     "id": "BNK480",
@@ -5128,7 +5242,8 @@
       "cap": 1525,
       "staked": 1525
     },
-    "owner": "newuser"
+    "owner": "newuser",
+    "visual": 5
   },
   {
     "id": "BNK511",
@@ -5139,7 +5254,8 @@
       "cap": 1268,
       "staked": 1268
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 8
   },
   {
     "id": "BNK381",
@@ -5150,7 +5266,8 @@
       "cap": 567,
       "staked": 567
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 2
   },
   {
     "id": "BNK372",
@@ -5161,7 +5278,8 @@
       "cap": 148,
       "staked": 148
     },
-    "owner": "dev"
+    "owner": "dev",
+    "visual": 1
   },
   {
     "id": "BNK80",
@@ -5172,7 +5290,8 @@
       "cap": 866,
       "staked": 865.5730309466254
     },
-    "owner": "sauron"
+    "owner": "sauron",
+    "visual": 5
   },
   {
     "id": "WTR174",
@@ -5329,5 +5448,17 @@
     "type": "water",
     "amount": -15,
     "owner": "worldbank"
+  },
+  {
+    "id": "BNK516",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.1,
+      "cap": 4168,
+      "staked": 4168
+    },
+    "owner": "dev",
+    "visual": 0
   }
 ]

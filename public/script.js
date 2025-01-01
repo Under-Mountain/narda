@@ -309,7 +309,6 @@ function getItemElement(i) {
                 ` : ``}
         </div>
         <div class="m-auto">
-          ${svg.village}
         </div>
         <div class ="mt-4 text-right">
             <button class="btn btn-xs"
@@ -342,7 +341,6 @@ function getListingElement(l, i) {
               </small>` : ``}
       </div>
       <div class="m-auto">
-        ${svg.village}
       </div>
       <div class="text-right mt-4"><small>(${(l.price / l.amount).toFixed(2)}/unit)</small></div>
       <div class="text-right">

@@ -1,4 +1,7 @@
 import { activities, assets, world } from '../service/model.js'
+import { getRandomNumber } from '../service/utility.js'
+import * as svg from './svg.js'
+import * as fs from 'fs'
 
 export function TimeView(time) {
     return `
@@ -53,4 +56,49 @@ export function ActivitiesView() {
     entriesHtml += "</div>"
 
     return entriesHtml
+}
+
+export function AssetImageUrl(item) {
+    let asset
+    let place
+    let tier
+
+    switch (item.type) {
+        case 'water':
+            break
+        case 'mineral':
+            break
+        case 'bankstone':
+            asset = 'places'
+            if (item.properties.cap > 6000) place = 'house'
+            else if (item.properties.cap > 2000) place = 'settlement'
+            else place = 'camp'
+
+            if (item.properties.yield > .20) tier = 'h'
+            else if (item.properties.yield > .10) tier = 'm'
+            else tier = 'l'
+            break
+        default:
+            break
+    }
+
+    if (asset && place) {
+        if (!item.visual) {
+            const dir = `./public/assets/${asset}/${place}/${tier}`
+            fs.readdir(dir, (err, files) => {
+                if (err) {
+                    console.error('Error reading directory:', err)
+                    return;
+                }
+            
+                const number = getRandomNumber(0, files.length-1)
+                item['visual'] = number
+                
+            })
+        }
+
+        return `/assets/${asset}/${place}/${tier}/${item.visual}.png`
+    }
+
+    return `/assets/places/camp/l/0.png`
 }

@@ -1,38 +1,29 @@
 export const village = `
-<svg width="75" height="75" xmlns="http://www.w3.org/2000/svg">
-  <!-- Central building with more details -->
-  <rect x="30" y="17.5" width="15" height="30" fill="sandybrown" stroke="black" stroke-width="0.5"/>
-  <polygon points="30,17.5 37.5,10 45,17.5" fill="peru" stroke="black" stroke-width="0.5"/>
-  <rect x="35" y="35" width="5" height="12.5" fill="sienna" stroke="black" stroke-width="0.5"/>
-  <rect x="32.5" y="25" width="2.5" height="2.5" fill="white" stroke="black" stroke-width="0.25"/>
-  <rect x="40" y="25" width="2.5" height="2.5" fill="white" stroke="black" stroke-width="0.25"/>
+<svg class="inline mt-6" width="150" height="100" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#d8eff0" />
 
-  <!-- House 1 with more details -->
-  <rect x="20" y="37.5" width="15" height="15" fill="lightblue" stroke="black" stroke-width="0.5"/>
-  <polygon points="20,37.5 27.5,30 35,37.5" fill="deepskyblue" stroke="black" stroke-width="0.5"/>
-  <rect x="25" y="42.5" width="5" height="10" fill="saddlebrown" stroke="black" stroke-width="0.5"/>
-  <rect x="22.5" y="40" width="2.5" height="2.5" fill="white" stroke="black" stroke-width="0.25"/>
-  <rect x="30" y="40" width="2.5" height="2.5" fill="white" stroke="black" stroke-width="0.25"/>
+  <!-- Mountains -->
+  <polygon points="50,150 125,50 200,150" fill="#82c4c3" stroke="#688787" stroke-width="2" />
+  <polygon points="125,150 200,50 275,150" fill="#7fa7a8" stroke="#536a6a" stroke-width="2" />
 
-  <!-- House 2 with more details -->
-  <rect x="37.5" y="40" width="15" height="15" fill="lightgreen" stroke="black" stroke-width="0.5"/>
-  <polygon points="37.5,40 45,32.5 52.5,40" fill="limegreen" stroke="black" stroke-width="0.5"/>
-  <rect x="42.5" y="45" width="5" height="10" fill="saddlebrown" stroke="black" stroke-width="0.5"/>
-  <rect x="40" y="42.5" width="2.5" height="2.5" fill="white" stroke="black" stroke-width="0.25"/>
-  <rect x="47.5" y="42.5" width="2.5" height="2.5" fill="white" stroke="black" stroke-width="0.25"/>
+  <!-- Hanok House -->
+  <rect x="100" y="120" width="100" height="50" fill="#f9f3e8" stroke="#ccae92" stroke-width="2" />
+  <polygon points="95,120 150,90 205,120" fill="#d6b58a" stroke="#aa906b" stroke-width="2" />
+  <line x1="100" y1="120" x2="200" y2="120" stroke="#aa906b" stroke-width="2" />
+  <line x1="110" y1="120" x2="110" y2="170" stroke="#aa906b" stroke-width="2" />
+  <line x1="190" y1="120" x2="190" y2="170" stroke="#aa906b" stroke-width="2" />
+  <rect x="130" y="140" width="40" height="30" fill="#8c6240" stroke="#704c32" stroke-width="2" />
 
-  <!-- House 3 with more details -->
-  <rect x="22.5" y="50" width="15" height="15" fill="lightcoral" stroke="black" stroke-width="0.5"/>
-  <polygon points="22.5,50 30,42.5 37.5,50" fill="indianred" stroke="black" stroke-width="0.5"/>
-  <rect x="27.5" y="55" width="5" height="10" fill="saddlebrown" stroke="black" stroke-width="0.5"/>
-  <rect x="25" y="52.5" width="2.5" height="2.5" fill="white" stroke="black" stroke-width="0.25"/>
-  <rect x="32.5" y="52.5" width="2.5" height="2.5" fill="white" stroke="black" stroke-width="0.25"/>
+  <!-- Cherry Blossom Tree -->
+  <circle cx="60" cy="90" r="20" fill="#f4b3c2" />
+  <circle cx="50" cy="100" r="18" fill="#f4b3c2" />
+  <circle cx="70" cy="100" r="18" fill="#f4b3c2" />
+  <circle cx="60" cy="110" r="16" fill="#f4b3c2" />
+  <rect x="58" y="110" width="4" height="40" fill="#8b5a2b" />
 
-  <!-- House 4 with more details -->
-  <rect x="35" y="50" width="15" height="15" fill="lightyellow" stroke="black" stroke-width="0.5"/>
-  <polygon points="35,50 42.5,42.5 50,50" fill="gold" stroke="black" stroke-width="0.5"/>
-  <rect x="40" y="55" width="5" height="10" fill="saddlebrown" stroke="black" stroke-width="0.5"/>
-  <rect x="37.5" y="52.5" width="2.5" height="2.5" fill="white" stroke="black" stroke-width="0.25"/>
-  <rect x="45" y="52.5" width="2.5" height="2.5" fill="white" stroke="black" stroke-width="0.25"/>
 </svg>
+`
+
+export const fortress = `
 `

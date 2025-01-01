@@ -121951,5 +121951,135 @@
       "created": 126600,
       "completed": 126600
     }
+  },
+  {
+    "type": "mint",
+    "id": "MNT9381",
+    "of": "bankstone",
+    "from": "world",
+    "to": "dev",
+    "amount": 1,
+    "note": "Minting of bankstone for dev",
+    "times": {
+      "created": 174655,
+      "completed": 174655
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS9382",
+    "of": "credits",
+    "from": "dev",
+    "to": "world",
+    "amount": 200,
+    "note": "Consuming minting MNT9381 cost of 200 credit",
+    "times": {
+      "created": 174655,
+      "completed": 174655
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS9383",
+    "of": "water",
+    "from": "dev",
+    "to": "world",
+    "amount": 515,
+    "note": "Consuming minting MNT9381 cost of 515 water",
+    "times": {
+      "created": 174655,
+      "completed": 174655
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS9384",
+    "of": "mineral",
+    "from": "dev",
+    "to": "world",
+    "amount": 200,
+    "note": "Consuming minting MNT9381 cost of 1 resource",
+    "times": {
+      "created": 174655,
+      "completed": 174655
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT9385",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 17,
+    "note": "Collecting of mineral for dev",
+    "times": {
+      "created": 174675,
+      "completed": 174675
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT9386",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 12,
+    "note": "Collecting of mineral for dev",
+    "times": {
+      "created": 174677,
+      "completed": 174677
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT9387",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 0,
+    "note": "Collecting of mineral for dev",
+    "times": {
+      "created": 174678,
+      "completed": 174678
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT9388",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 1,
+    "note": "Collecting of mineral for dev",
+    "times": {
+      "created": 174679,
+      "completed": 174679
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT9389",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 0,
+    "note": "Collecting of mineral for dev",
+    "times": {
+      "created": 174681,
+      "completed": 174681
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT9390",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 3,
+    "note": "Collecting of mineral for dev",
+    "times": {
+      "created": 174682,
+      "completed": 174682
+    }
   }
 ]

@@ -1,6 +1,7 @@
 import { assets, market } from '../service/model.js'
 import * as svg from './svg.js'
 import * as util from '../service/utility.js'
+import * as world from './world.js'
 
 export function MarketplaceView(listings, username, session, account) {
     let marketplaceHtml = `<div class="p-2 sm:p-4 lg:p-8 w-full">
@@ -16,7 +17,7 @@ export function MarketplaceView(listings, username, session, account) {
             <a role="tab" class="tab">Yield</a>
         </div>
         <div role="tabpanel" class="tab-content">
-        <ul id="market" class="card-body p-0 mt-4 text-xs grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-1 justify-between">`
+        <ul id="market" class="card-body p-0 mt-4 text-xs grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 justify-between">`
     if (listings.length > 0) {
         listings.slice(0, 100).forEach(l => {
             const i = assets.find(a => a.id == l.item)
@@ -33,8 +34,8 @@ export function MarketplaceView(listings, username, session, account) {
                                 APR ${(i.properties.yield * 100).toFixed(0)}% ${Math.floor(i.properties.staked)}/${i.properties.cap} (${(i.properties.staked / i.properties.cap * 100).toFixed(0)}%)
                             </small>` : ``}
                     </div>
-                    <div class="m-auto">
-                        ${svg.village}
+                    <div class="text-center">
+                        <img class="m-auto" src="${world.AssetImageUrl(i)}" />
                     </div>
                     <div class="text-right mt-4"><small>(${(l.price / l.amount).toFixed(2)}/unit)</small></div>
                     <div class="text-right">

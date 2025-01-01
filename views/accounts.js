@@ -1,6 +1,6 @@
 import { accounts, current, market, assets } from '../service/model.js'
 import { MarketStatsView } from './market.js'
-import * as svg from './svg.js'
+import * as world from './world.js'
 
 export function AuthView() {
     const listings = market.filter(l => !l.times.sold && !l.times.expired)
@@ -15,23 +15,26 @@ export function AuthView() {
     <div class="lg:text-left lg:p-4 lg:mb-auto">
         <div>
             <h1 class="text-3xl font-bold">Project <span class="text-yellow-500">Arda</span></h1>
-            <p class="py-6">
+            <p>
+                Building sustainable virtual socio-economy for better future in real life. Value through openness and connection.
+            </p>
+            <div class="carousel py-2 max-w-xs md:max-w-full">
+                <div id="slide1" class="carousel-item relative">
+                    <img class="max-w-xs" src="/assets/profiles/gandalf.png" />
+                </div>
+                <div id="slide2" class="carousel-item relative">
+                    <img class="max-w-xs" src="/assets/profiles/sauron.png" />
+                </div>
+            </div>
+            <p class="py-2">
                 Open Socio-Economic Metaverse & Trading Platform. \
                 Here, user can <span class="text-yellow-500">collect resources</span>, <span class="text-yellow-500">craft items</span>, and <span class="text-yellow-500">trade</span> in marketplace. \
                 Create a settlement for <span class="text-yellow-500">passive income</span>, join <span class="text-yellow-500">houses</span> and participate in activities to build friendship and receive <span class="text-yellow-500">greater benefits.</span> \
                 <small>(Explore infinite world of user minted lands and items. Trade and market your unique item for greater profit!, 2025 TBD)</small> \
             </p>
-            <div class="carousel">
-                <div id="slide1" class="carousel-item relative">
-                    <img class="max-w-xs" src="/images/logo.png" />
-                </div>
-            </div>
-            <p>
-                Building sustainable virtual socio-economy for better future in real life. Value through openness and connection.
-            </p>
         </div>
         <div>
-            <h2 class="font-bold mt-4 text-xl">Market Satistics</h2>
+            <h2 class="font-bold mt-2 text-xl">Market Satistics</h2>
             ${marketStatsHtml}
         </div>
     </div>
@@ -203,7 +206,7 @@ export function InventoryView(username, items, userMineralTotal, userWaterTotal,
                     Mint Bankstone (-200.00 credit)
                 </button>
             </form>
-            <ul id="inventory" class="text-xs grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-1 justify-between">
+            <ul id="inventory" class="text-xs grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 justify-between">
         `
     if (items.length > 0) {
         items.slice(0, 100).forEach(i => {
@@ -228,8 +231,8 @@ export function ItemView(i) {
                     </small>
                     ` : ``}
             </div>
-            <div class="m-auto">
-                ${svg.village}
+            <div class="">
+                <img class="m-auto" src="${world.AssetImageUrl(i)}" />
             </div>
             <div class ="mt-4 text-right">
                 <button class="sellBtn btn btn-xs"
