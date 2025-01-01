@@ -20,10 +20,10 @@ export function AuthView() {
             </p>
             <div class="carousel py-2 max-w-xs md:max-w-full">
                 <div id="slide1" class="carousel-item relative">
-                    <img class="max-w-xs" src="/assets/profiles/gandalf.png" />
+                    <img class="max-w-xs" src="/images/profiles/gandalf.png" />
                 </div>
                 <div id="slide2" class="carousel-item relative">
-                    <img class="max-w-xs" src="/assets/profiles/sauron.png" />
+                    <img class="max-w-xs" src="/images/profiles/sauron.png" />
                 </div>
             </div>
             <p class="py-2">
