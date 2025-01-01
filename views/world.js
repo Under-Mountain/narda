@@ -84,7 +84,7 @@ export function AssetImageUrl(item) {
 
     if (asset && place) {
         if (!item.visual) {
-            const dir = `./public/assets/${asset}/${place}/${tier}`
+            const dir = `./public/images/${asset}/${place}/${tier}`
             fs.readdir(dir, (err, files) => {
                 if (err) {
                     console.error('Error reading directory:', err)
@@ -97,8 +97,8 @@ export function AssetImageUrl(item) {
             })
         }
 
-        return `/assets/${asset}/${place}/${tier}/${item.visual}.png`
+        return `/images/${asset}/${place}/${tier}/${item.visual}.png`
     }
 
-    return `/assets/places/camp/l/0.png`
+    return `/images/places/camp/l/0.png`
 }
