@@ -6,6 +6,7 @@ import { accounts, activities, assets, market, current, world, auth, posts } fro
 import bcrypt from 'bcrypt'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { ActivityType } from '../interfaces/Activity.js';
 
 export const app = express()
 const __filename = fileURLToPath(import.meta.url);
@@ -145,104 +146,154 @@ app.get('/api/market', (req, res) => {
     res.json(filteredListing)
 })
 
-app.post('/api/transaction', (req, res) => {
-    if (!req.session || !req.session.username) {
-        res.sendStatus(401)
-        return
-    }
-
-    if (!req.body.of || !req.body.to || !req.body.amount) {
-        res.sendStatus(400)
-        return
-    }
-
-    const id = `TX${activities.length}`
-    console.log(`${id}: sending ${req.body.of}...`);
-
+/**
+ * Creates a new activity.
+ * @param type - The type of the activity.
+ * @param of - The entity that the activity is related to.
+ * @param from - The origin of the activity.
+ * @param to - The destination of the activity.
+ * @param amount - The amount involved in the activity.
+ * @param note - The note or description of the activity.
+ * @returns The created activity.
+ */
+function createActivity(type: ActivityType, of: string, from: string, to: string, amount: number, note: string) {
+    const id = `${type.toUpperCase()}${activities.length}`;
     const activity = {
-        type: "transaction",
-        id: id,
-        of: "credit",
-        from: req.session.username,
-        to: req.body.to,
-        amount: Number(req.body.amount),
-        note: ``,
+        type,
+        id,
+        of,
+        from,
+        to,
+        amount,
+        note,
         times: {
             created: current.time
         }
+    };
+    activities.push(activity);
+    current.activities.pending.push(activity.id);
+    return activity;
+}
+
+/**
+ * Creates a new consumption activity.
+ * @param user - The user who is consuming the resource.
+ * @param type - The type of resource being consumed.
+ * @param cost - The cost of the resource being consumed.
+ * @returns The created consumption activity.
+ */
+function consume(user: string, type: string, cost: number) {
+    return createActivity(
+        "consume" as ActivityType,
+        type,
+        user,
+        "world",
+        cost,
+        `Consuming ${cost} ${type} for ${user}`
+    );
+}
+
+/**
+ * Creates a new collection activity.
+ * @param user - The user who is collecting the resource.
+ * @param resource - The type of resource being collected.
+ * @param amount - The amount of the resource being collected.
+ * @returns The created collection activity.
+ */
+function collect(user: string, resource: string, amount: number) {
+    return createActivity(
+        "collect" as ActivityType,
+        resource,
+        "world",
+        user,
+        amount,
+        `Collecting ${amount} ${resource} for ${user}`
+    );
+}
+
+app.post('/api/transaction', (req, res) => {
+    if (!req.session || !req.session.username) {
+        res.sendStatus(401);
+        return;
     }
 
-    activities.push(activity)
-    current.activities.pending.push(activity.id)
+    if (!req.body.of || !req.body.to || !req.body.amount) {
+        res.sendStatus(400);
+        return;
+    }
+
+    const activity = createActivity(
+        "transaction" as ActivityType,
+        "credit",
+        req.session.username,
+        req.body.to,
+        Number(req.body.amount),
+        ""
+    );
 
     setTimeout(() => req.query.return ?
         res.redirect(req.query.return as string) : res.json(activity),
-        world.interval.minute)
-})
+        world.interval.minute);
+});
 
 app.post('/api/mint', (req, res) => {
     if (!req.session || !req.session.username) {
-        res.sendStatus(401)
-        return
+        res.sendStatus(401);
+        return;
     }
-    const id = `MNT${activities.length}`
+    const id = `MNT${activities.length}`;
     console.log(`${id}: minting ${req.body.type}...`);
 
-    const to = req.body.type == "account" ? req.body.username.toLowerCase() : req.session.username
-    const account = accounts.find(a => a.id == to)
-    const userWaters = assets.filter(a => a.owner == to && a.type == "water")
-    const userMinerals = assets.filter(a => a.owner == to && a.type == "mineral")
+    const to = req.body.type == "account" ? req.body.username.toLowerCase() : req.session.username;
+    const account = accounts.find(a => a.id == to);
+    const userWaters = assets.filter(a => a.owner == to && a.type == "water");
+    const userMinerals = assets.filter(a => a.owner == to && a.type == "mineral");
 
-    const waterCost = Math.ceil(Math.pow(current.resources.water.balance / current.resources.mineral.balance, 7))
-    const mineralCost = 200
+    const waterCost = Math.ceil(Math.pow(current.resources.water.balance / current.resources.mineral.balance, 7));
+    const mineralCost = 200;
 
-    const activity = {
-        "type": "mint",
-        "id": id,
-        "of": req.body.type,
-        "from": "world",
-        "to": to,
-        "amount": 1,
-        "note": `Minting of ${req.body.type} for ${to}`,
-        "times": {
-            "created": current.time
-        }
-    }
+    const activity = createActivity(
+        "mint" as ActivityType,
+        req.body.type,
+        "world",
+        to,
+        1,
+        `Minting of ${req.body.type} for ${to}`
+    );
 
-    const consumptions: any[] = []
+    const consumptions: any[] = [];
     switch (req.body.type) {
         case "account":
             if (account) {
-                console.warn(`account ${account.id} already exists`)
-                res.sendStatus(403)
-                return
+                console.warn(`account ${account.id} already exists`);
+                res.sendStatus(403);
+                return;
             }
 
             if (!req.body.invitation || req.body.invitation != '1892') {
-                console.warn(`invalid invitation code ${req.body.invitation}`)
-                res.sendStatus(403)
-                return
+                console.warn(`invalid invitation code ${req.body.invitation}`);
+                res.sendStatus(403);
+                return;
             }
 
-            activities.push(activity)
             bcrypt.hash(req.body.password, 2, (err, hash) => {
                 if (err) {
-                    throw err
+                    throw err;
                 }
                 
                 auth.push({
                     username: to,
                     password: hash
-                })
+                });
     
                 console.log(`${id}: granting access to ${to}...`);
-                req.session.username = to
-            })
-            break
+                req.session.username = to;
+            });
+            break;
         case "bankstone":
             if (!account) {
-                res.send(403)
-                return
+                res.send(403);
+                return;
             }
 
             if (account.credits.balance < 200 ||
@@ -251,128 +302,70 @@ app.post('/api/mint', (req, res) => {
                 console.error(`not enough balance to consume ${account.id}'s \
                     credit ${account.credits.balance}, \
                     water ${userWaters.reduce((sum, c) => sum + c.amount, 0)}, \
-                    mineral ${userMinerals.reduce((sum, c) => sum + c.amount, 0)}`)
+                    mineral ${userMinerals.reduce((sum, c) => sum + c.amount, 0)}`);
 
-                res.sendStatus(403)
-                return
+                res.sendStatus(403);
+                return;
             }
 
-            activities.push(activity)
-            const creditConsumption = {
-                "type": "consume",
-                "id": `CNS${activities.length}`,
-                "of": "credits",
-                "from": to,
-                "to": "world",
-                "amount": 200,
-                "note": `Consuming minting ${id} cost of ${200.00} credit`,
-                "times": {
-                    "created": current.time
-                }
-            }
-        
-            activities.push(creditConsumption)
-            const waterConsumption = {
-                "type": "consume",
-                "id": `CNS${activities.length}`,
-                "of": 'water',
-                "from": to,
-                "to": "world",
-                "amount": waterCost,
-                "note": `Consuming minting ${id} cost of ${waterCost} water`,
-                "times": {
-                    "created": current.time
-                }
-            }
-            
-            activities.push(waterConsumption)
-        
-            const mineralConsumption = {
-                "type": "consume",
-                "id": `CNS${activities.length}`,
-                "of": "mineral",
-                "from": to,
-                "to": "world",
-                "amount": mineralCost,
-                "note": `Consuming minting ${id} cost of ${1} resource`,
-                "times": {
-                    "created": current.time
-                }
-            }
-        
-            activities.push(mineralConsumption)
+            const creditConsumption = consume(to, "credits", 200);
+            const waterConsumption = consume(to, 'water', waterCost);
+            const mineralConsumption = consume(to, "mineral", mineralCost);
 
-            consumptions.push(... [creditConsumption, mineralConsumption, waterConsumption])
-            current.activities.pending.push(... [creditConsumption.id, mineralConsumption.id, waterConsumption.id])
-            break
+            consumptions.push(... [creditConsumption, mineralConsumption, waterConsumption]);
+            break;
         default:
-            break
+            break;
     }
-
-    current.activities.pending.push(activity.id)
 
     setTimeout(() => req.query.return ?
         res.redirect(`/?user=${req.session.username}`) : res.json([activity,... consumptions]),
-        world.interval.minute)
-})
+        world.interval.minute);
+});
 
 app.post('/api/collect', (req, res) => {
     if (!req.session || !req.session.username) {
-        res.sendStatus(401)
-        return
+        res.sendStatus(401);
+        return;
     }
 
     if (!req.body.resource) {
-        res.sendStatus(400)
-        return
+        res.sendStatus(400);
+        return;
     }
 
-    const collector = req.session.username
-    const id = `CLT${activities.length}`
+    const collector = req.session.username;
+    const id = `CLT${activities.length}`;
     console.log(`${id}: collecting ${req.body.resource}...`);
 
-    let amount = 0
+    let amount = 0;
     switch (req.body.resource) {
         case "water":
-            amount = util.getRandomNumber(0, 100)
+            amount = util.getRandomNumber(0, 100);
             if (world.resources.water.balance - amount < 0) {
-                console.log(`not enough water to collect`)
-                res.sendStatus(403)
-                return
+                console.log(`not enough water to collect`);
+                res.sendStatus(403);
+                return;
             }
-            break
+            break;
         case "mineral":
-            amount = util.getRandomNumber(0, 20)
+            amount = util.getRandomNumber(0, 20);
             if (world.resources.water.balance - amount < 0) {
-                console.log(`not enough mineral to collect`)
-                res.sendStatus(403)
-                return
+                console.log(`not enough mineral to collect`);
+                res.sendStatus(403);
+                return;
             }
-            break
+            break;
         default:
-            break
+            break;
     }
 
-    const activity = {
-        "type": "collect",
-        "id": id,
-        "of": req.body.resource,
-        "from": "world",
-        "to": collector,
-        "amount": amount,
-        "note": `Collecting of ${req.body.resource} for ${collector}`,
-        "times": {
-            "created": current.time
-        }
-    }
-
-    activities.push(activity)
-    current.activities.pending.push(activity.id)
+    const activity = collect(collector, req.body.resource, amount);
 
     setTimeout(() => req.query.return ?
         res.redirect(req.query.return as string) : res.json(activity),
-        world.interval.minute)
-})
+        world.interval.minute);
+});
 
 app.post('/api/list', (req, res) => {
     if (!req.session || !req.session.username) {
@@ -416,187 +409,143 @@ app.post('/api/list', (req, res) => {
 
 app.post('/api/edit', (req, res) => {
     if (!req.session || !req.session.username) {
-        res.sendStatus(401)
-        return
+        res.sendStatus(401);
+        return;
     }
     if (!req.body.bio) {
-        res.sendStatus(400)
-        return
+        res.sendStatus(400);
+        return;
     }
 
-    const account = accounts.find(a => a.id == req.session.username)
+    const account = accounts.find(a => a.id == req.session.username);
     if (!account || account.credits.balance < 100) {
-        console.warn(`not enough balance to edit`)
-        res.sendStatus(403)
-        return
+        console.warn(`not enough balance to edit`);
+        res.sendStatus(403);
+        return;
     }
 
-    const creditConsumption = {
-        "type": "consume",
-        "id": `CNS${activities.length}`,
-        "of": "credits",
-        "from": req.session.username,
-        "to": "world",
-        "amount": 100,
-        "note": `Consuming -100 credit for edit bio`,
-        "times": {
-            "created": current.time
-        }
-    }
+    const creditConsumption = consume(req.session.username, "credits", 100);
 
-    activities.push(creditConsumption)
-    current.activities.pending.push(creditConsumption.id)
+    activities.push(creditConsumption);
+    current.activities.pending.push(creditConsumption.id);
 
-    console.log(`${req.session.username}: editing bio...`)
-    account.bio = req.body.bio
-    account.times.edited = current.time
+    console.log(`${req.session.username}: editing bio...`);
+    account.bio = req.body.bio;
+    account.times.edited = current.time;
 
     setTimeout(() => req.query.return ?
         res.redirect(req.query.return as string) : res.json(account),
-        world.interval.minute)
-})
+        world.interval.minute);
+});
 
 app.post('/api/comment', (req, res) => {
     if (!req.session || !req.session.username) {
-        res.sendStatus(401)
-        return
+        res.sendStatus(401);
+        return;
     }
     if (!req.body.postId || !req.body.comment) {
-        console.warn(`post ID ${req.body.postId} or comment ${req.body.comment} not found`)
-        res.sendStatus(400)
-        return
+        console.warn(`post ID ${req.body.postId} or comment ${req.body.comment} not found`);
+        res.sendStatus(400);
+        return;
     }
 
-    const account = accounts.find(a => a.id == req.session.username)
+    const account = accounts.find(a => a.id == req.session.username);
     if (!account || account.credits.balance < 5) {
-        console.warn(`not enough balance to comment`)
-        res.sendStatus(403)
-        return
+        console.warn(`not enough balance to comment`);
+        res.sendStatus(403);
+        return;
     }
 
-    const post = posts.find(p => p.id == req.body.postId)
+    const post = posts.find(p => p.id == req.body.postId);
     if (!post) {
-        console.warn(`post ID ${req.body.postId} not found`)
-        res.sendStatus(400)
-        return
+        console.warn(`post ID ${req.body.postId} not found`);
+        res.sendStatus(400);
+        return;
     }
 
-    const creditConsumption = {
-        "type": "consume",
-        "id": `CNS${activities.length}`,
-        "of": "credits",
-        "from": req.session.username,
-        "to": "world",
-        "amount": 5,
-        "note": `Consuming -5 credit to comment`,
-        "times": {
-            "created": current.time
-        }
-    }
+    const creditConsumption = consume(req.session.username, "credits", 5);
 
-    activities.push(creditConsumption)
-    current.activities.pending.push(creditConsumption.id)
+    activities.push(creditConsumption);
+    current.activities.pending.push(creditConsumption.id);
 
-    console.log(`${req.session.username}: creating a comment...`)
+    console.log(`${req.session.username}: creating a comment...`);
     post.comments.push({
-        comment:req.body.comment,
+        comment: req.body.comment,
         author: account.id,
         time: current.time,
         likes: 0,
         dislikes: 0
-    })
+    });
 
     setTimeout(() => req.query.return ?
         res.redirect(req.query.return as string) : res.json(post),
-        world.interval.minute)
-})
+        world.interval.minute);
+});
 
 app.post('/api/like', (req, res) => {
     if (!req.session || !req.session.username) {
-        res.sendStatus(401)
-        return
+        res.sendStatus(401);
+        return;
     }
     if (!req.body.postId) {
-        console.warn(`post ID ${req.body.postId} or comment ${req.body.comment} not found`)
-        res.sendStatus(400)
-        return
+        console.warn(`post ID ${req.body.postId} or comment ${req.body.comment} not found`);
+        res.sendStatus(400);
+        return;
     }
 
-    const account = accounts.find(a => a.id == req.session.username)
+    const account = accounts.find(a => a.id == req.session.username);
     if (!account || account.credits.balance < 1) {
-        console.warn(`not enough balance to comment`)
-        res.sendStatus(403)
-        return
+        console.warn(`not enough balance to comment`);
+        res.sendStatus(403);
+        return;
     }
 
-    const post = posts.find(p => p.id == req.body.postId)
+    const post = posts.find(p => p.id == req.body.postId);
     if (!post) {
-        console.warn(`post ID ${req.body.postId} not found`)
-        res.sendStatus(400)
-        return
+        console.warn(`post ID ${req.body.postId} not found`);
+        res.sendStatus(400);
+        return;
     }
 
-    const dislike = req.body.dislike? true: false
+    const dislike = req.body.dislike ? true : false;
 
-    const creditConsumption = {
-        "type": "consume",
-        "id": `CNS${activities.length}`,
-        "of": "credits",
-        "from": req.session.username,
-        "to": "world",
-        "amount": 1,
-        "note": `Consuming -1.00 credit to ${dislike ? 'dislike': 'like'}`,
-        "times": {
-            "created": current.time
-        }
-    }
+    const creditConsumption = consume(req.session.username, "credits", 1);
 
-    activities.push(creditConsumption)
-    current.activities.pending.push(creditConsumption.id)
+    activities.push(creditConsumption);
+    current.activities.pending.push(creditConsumption.id);
 
-    console.log(`${req.session.username}: creating a ${dislike ? 'dislike' : 'like'}`)
-    if (dislike) post.dislikes += 1
-    else post.likes += 1
+    console.log(`${req.session.username}: creating a ${dislike ? 'dislike' : 'like'}`);
+    if (dislike) post.dislikes += 1;
+    else post.likes += 1;
 
     setTimeout(() => req.query.return ?
         res.redirect(req.query.return as string) : res.json(post),
-        world.interval.minute)
-})
+        world.interval.minute);
+});
 
 app.post('/api/post', (req, res) => {
     if (!req.session || !req.session.username) {
-        res.sendStatus(401)
-        return
+        res.sendStatus(401);
+        return;
     }
     if (!req.body.title && !req.body.content) {
-        res.sendStatus(400)
-        return
+        res.sendStatus(400);
+        return;
     }
 
-    const account = accounts.find(a => a.id == req.session.username)
+    const account = accounts.find(a => a.id == req.session.username);
     if (!account || account.credits.balance < 10) {
-        console.warn(`not enough balance to post`)
-        res.sendStatus(403)
-        return
+        console.warn(`not enough balance to post`);
+        res.sendStatus(403);
+        return;
     }
 
-    const creditConsumption = {
-        "type": "consume",
-        "id": `CNS${activities.length}`,
-        "of": "credits",
-        "from": req.session.username,
-        "to": "world",
-        "amount": 10,
-        "note": `Consuming -10 credit to post`,
-        "times": {
-            "created": current.time
-        }
-    }
+    const creditConsumption = consume(req.session.username, "credits", 10);
 
-    activities.push(creditConsumption)
-    current.activities.pending.push(creditConsumption.id)
+    activities.push(creditConsumption);
+    current.activities.pending.push(creditConsumption.id);
 
-    console.log(`${req.session.username}: creating a post...`)
+    console.log(`${req.session.username}: creating a post...`);
     const post = {
         id: `PST${posts.length}`,
         author: req.session.username,
@@ -609,14 +558,14 @@ app.post('/api/post', (req, res) => {
             created: current.time
         },
         comments: []
-    }
+    };
 
-    posts.push(post)
+    posts.push(post);
 
     setTimeout(() => req.query.return ?
         res.redirect(req.query.return as string) : res.json(post),
-        world.interval.minute)
-})
+        world.interval.minute);
+});
 
 app.post('/api/trade', (req, res) => {
     if (!req.session || !req.session.username) {
@@ -652,7 +601,7 @@ app.post('/api/trade', (req, res) => {
         console.log(`TX${activities.length}: buying ${item.id} at ${listing.price}...`);
 
         const creditTx = {
-            type: "transaction",
+            type: "transaction" as ActivityType,
             id: `TX${activities.length}`,
             of: "credit",
             from: req.session.username,
@@ -667,7 +616,7 @@ app.post('/api/trade', (req, res) => {
         activities.push(creditTx)
     
         const itemTx = {
-            type: "transaction",
+            type: "transaction" as ActivityType,
             id: `TX${activities.length}`,
             of: item.id,
             from: item.owner,
