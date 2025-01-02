@@ -7,17 +7,12 @@ WORKDIR /usr/src/app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install copyfiles globally
-RUN npm install -g copyfiles
-
-# Install typescript globally
-RUN npm install -g typescript
-
 # Install dependencies and build the project
-RUN npm install && npm run build
+RUN npm install
 
 # Copy the rest of the project files
 COPY . .
+RUN npm run build
 
 # Expose the port the app runs on
 EXPOSE 443
