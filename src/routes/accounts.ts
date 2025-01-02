@@ -29,12 +29,16 @@ router.post('/edit', async (req, res) => {
             return;
         }
         const creditConsumption = consume(req.session.username, "credits", 100);
-        activities.push(creditConsumption);
-        current.activities.pending.push(creditConsumption.id);
         console.log(`${req.session.username}: editing bio...`);
         account.bio = req.body.bio;
         account.times.edited = current.time;
-        setTimeout(() => req.query.return ? res.redirect(req.query.return as string) : res.json(account), world.interval.minute);
+        setTimeout(
+            () =>
+                req.query.return
+                    ? res.redirect(req.query.return as string)
+                    : res.json(account),
+            world.interval.minute
+        );
     } catch (error) {
         res.sendStatus(500);
     }

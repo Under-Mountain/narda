@@ -20,7 +20,7 @@
   {
     "id": "WTR403",
     "type": "water",
-    "amount": 282,
+    "amount": 475,
     "owner": "dev"
   },
   {
@@ -62,7 +62,7 @@
   {
     "id": "MNR427",
     "type": "mineral",
-    "amount": 63,
+    "amount": 100,
     "owner": "dev"
   },
   {
@@ -5248,13 +5248,13 @@
   {
     "id": "BNK511",
     "type": "bankstone",
-    "amount": 0,
+    "amount": 2,
     "properties": {
       "yield": 0.01,
       "cap": 1268,
       "staked": 1268
     },
-    "owner": "sauron",
+    "owner": "dev",
     "visual": 8
   },
   {
@@ -5284,13 +5284,13 @@
   {
     "id": "BNK80",
     "type": "bankstone",
-    "amount": 0,
+    "amount": 2,
     "properties": {
       "yield": 0.01,
       "cap": 866,
       "staked": 865.5730309466254
     },
-    "owner": "sauron",
+    "owner": "dev",
     "visual": 5
   },
   {

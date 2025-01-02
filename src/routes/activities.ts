@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { activities, world } from "../service/model.js";
-import { createActivity } from '../service/activity.js';
+import { createActivity, createTransaction } from '../service/activity.js';
 import { ActivityType } from '../interfaces/Activity.js';
 
 const router = Router();
@@ -12,7 +12,9 @@ router.get('/activities', async (req, res) => {
             filteredActivities = activities.filter(a => a.type == req.query.type);
         }
         if (req.query.user) {
-            filteredActivities = activities.filter(a => a.from == req.query.user || a.to == req.query.user);
+            filteredActivities = activities.filter(
+                a => a.from == req.query.user || a.to == req.query.user
+            );
         }
         res.json(filteredActivities);
     } catch (error) {
@@ -43,15 +45,18 @@ router.post('/transaction', async (req, res) => {
             res.sendStatus(400);
             return;
         }
-        const activity = createActivity(
-            "transaction" as ActivityType,
-            "credit",
+        const activity = createTransaction(
             req.session.username,
             req.body.to,
-            Number(req.body.amount),
-            ""
+            Number(req.body.amount)
         );
-        setTimeout(() => req.query.return ? res.redirect(req.query.return as string) : res.json(activity), world.interval.minute);
+        setTimeout(
+            () =>
+                req.query.return
+                    ? res.redirect(req.query.return as string)
+                    : res.json(activity),
+            world.interval.minute
+        );
     } catch (error) {
         res.sendStatus(500);
     }

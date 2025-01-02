@@ -1,6 +1,6 @@
 import express from 'express';
 import { assets, activities, accounts, current, auth, world } from "../service/model.js";
-import { createActivity, consume, collect } from '../service/activity.js';
+import { createActivity, consume, collect, mintAsset } from '../service/activity.js';
 import { ActivityType } from "../interfaces/Activity.js";
 import bcrypt from 'bcrypt';
 import { getRandomNumber, getStats } from '../common/utility.js';
@@ -38,64 +38,19 @@ router.post('/mint', async (req, res) => {
             res.sendStatus(401);
             return;
         }
-        const id = `MNT${activities.length}`;
-        console.log(`${id}: minting ${req.body.type}...`);
-        const to = req.body.type == "account" ? req.body.username.toLowerCase() : req.session.username;
-        const account = accounts.find(a => a.id == to);
-        const userWaters = assets.filter(a => a.owner == to && a.type == "water");
-        const userMinerals = assets.filter(a => a.owner == to && a.type == "mineral");
-        const waterCost = Math.ceil(Math.pow(current.resources.water.balance / current.resources.mineral.balance, 7));
-        const mineralCost = 200;
-        const activity = createActivity(
-            "mint" as ActivityType,
+        const { activity, consumptions } = await mintAsset(
             req.body.type,
-            "world",
-            to,
-            1,
-            `Minting of ${req.body.type} for ${to}`
+            req.session.username,
+            req.body.password,
+            req.body.invitation
         );
-        const consumptions: any[] = [];
-        switch (req.body.type) {
-            case "account":
-                if (account) {
-                    console.warn(`account ${account.id} already exists`);
-                    res.sendStatus(403);
-                    return;
-                }
-                if (!req.body.invitation || req.body.invitation != '1892') {
-                    console.warn(`invalid invitation code ${req.body.invitation}`);
-                    res.sendStatus(403);
-                    return;
-                }
-                const hash = await bcrypt.hash(req.body.password, 2);
-                auth.push({ username: to, password: hash });
-                console.log(`${id}: granting access to ${to}...`);
-                req.session.username = to;
-                break;
-            case "bankstone":
-                if (!account) {
-                    res.send(403);
-                    return;
-                }
-                if (account.credits.balance < 200 ||
-                    userWaters.reduce((sum, c) => sum + c.amount, 0) < waterCost ||
-                    userMinerals.reduce((sum, c) => sum + c.amount, 0) < mineralCost) {
-                    console.error(`not enough balance to consume ${account.id}'s \
-                        credit ${account.credits.balance}, \
-                        water ${userWaters.reduce((sum, c) => sum + c.amount, 0)}, \
-                        mineral ${userMinerals.reduce((sum, c) => sum + c.amount, 0)}`);
-                    res.sendStatus(403);
-                    return;
-                }
-                const creditConsumption = consume(to, "credits", 200);
-                const waterConsumption = consume(to, 'water', waterCost);
-                const mineralConsumption = consume(to, "mineral", mineralCost);
-                consumptions.push(... [creditConsumption, mineralConsumption, waterConsumption]);
-                break;
-            default:
-                break;
-        }
-        setTimeout(() => req.query.return ? res.redirect(`/?user=${req.session.username}`) : res.json([activity, ...consumptions]), world.interval.minute);
+        setTimeout(
+            () =>
+                req.query.return
+                    ? res.redirect(`/?user=${req.session.username}`)
+                    : res.json([activity, ...consumptions]),
+            world.interval.minute
+        );
     } catch (error) {
         res.sendStatus(500);
     }
@@ -136,7 +91,13 @@ router.post('/collect', async (req, res) => {
                 break;
         }
         const activity = collect(collector, req.body.resource, amount);
-        setTimeout(() => req.query.return ? res.redirect(req.query.return as string) : res.json(activity), world.interval.minute);
+        setTimeout(
+            () =>
+                req.query.return
+                    ? res.redirect(req.query.return as string)
+                    : res.json(activity),
+            world.interval.minute
+        );
     } catch (error) {
         res.sendStatus(500);
     }

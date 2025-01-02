@@ -2263,7 +2263,8 @@
     "amount": 1,
     "times": {
       "created": 123683,
-      "lastUpdated": 123683
+      "lastUpdated": 123683,
+      "sold": 178919
     }
   },
   {
@@ -2519,7 +2520,8 @@
     "amount": 1,
     "times": {
       "created": 124018,
-      "lastUpdated": 124018
+      "lastUpdated": 124018,
+      "sold": 178925
     }
   },
   {

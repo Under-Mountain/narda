@@ -51,7 +51,10 @@ app.get('/api/current', async (req, res) => {
                 return;
             }
             const inventory = assets.filter(a => a.owner == req.session.username);
-            setTimeout(() => res.json({ global: current, account, inventory }), world.interval.minute);
+            setTimeout(
+                () => res.json({ global: current, account, inventory }),
+                world.interval.minute
+            );
         } else {
             res.sendStatus(401);
         }
