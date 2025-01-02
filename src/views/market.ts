@@ -1,7 +1,7 @@
 import { assets, world, market, accounts } from "../service/model.js"
 import { Listing, Account } from "../types.js"
 import { AssetImageUrl } from "./world.js"
-import { getStats } from "../service/utility.js"
+import { getStats } from "../common/utility.js"
 
 export function MarketplaceView(listings: Listing[], username: string, session: any): string {
     const account = accounts.find(a => a.id == session.username)

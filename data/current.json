@@ -1,13 +1,13 @@
 {
-  "time": 178855,
+  "time": 178897,
   "resources": {
     "water": {
-      "balance": 535309.7267750786,
-      "supplied": 690586.726775093
+      "balance": 535342.5178104021,
+      "supplied": 690885.5178104165
     },
     "mineral": {
-      "balance": 218949.61041679035,
-      "supplied": 270841.6104167882
+      "balance": 218975.77472906956,
+      "supplied": 270947.7747290675
     },
     "credits": {
       "balance": -71411.10702729976,
@@ -461,7 +461,14 @@
       "CLT9392",
       "CLT9393",
       "CLT9394",
-      "CLT9395"
+      "CLT9395",
+      "TX9391",
+      "TX9392",
+      "COLLECT9393",
+      "COLLECT9394",
+      "COLLECT9395",
+      "COLLECT9396",
+      "COLLECT9397"
     ],
     "rejected": []
   }

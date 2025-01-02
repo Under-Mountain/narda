@@ -3,7 +3,7 @@ import { assets, activities, accounts, current, auth, world } from "../service/m
 import { createActivity, consume, collect } from '../service/activity.js';
 import { ActivityType } from "../interfaces/Activity.js";
 import bcrypt from 'bcrypt';
-import { getRandomNumber, getStats } from '../service/utility.js';
+import { getRandomNumber, getStats } from '../common/utility.js';
 
 const router = express.Router();
 

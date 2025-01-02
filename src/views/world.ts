@@ -1,5 +1,5 @@
 import { activities, assets, world } from '../service/model.js'
-import { getRandomNumber } from '../service/utility.js'
+import { getRandomNumber } from '../common/utility.js'
 import * as fs from 'fs'
 import { Asset, Activity } from '../types.js'
 

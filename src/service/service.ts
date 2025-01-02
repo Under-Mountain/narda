@@ -1,4 +1,4 @@
-import * as util from './utility.js'
+import * as util from '../common/utility.js'
 import * as model from './model.js'
 import { accounts, activities, assets, world, market, current } from './model.js'
 import { Activity, Asset } from '../types.js'
