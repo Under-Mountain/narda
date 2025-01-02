@@ -10,6 +10,9 @@ COPY package*.json ./
 # Install copyfiles globally
 RUN npm install -g copyfiles
 
+# Install typescript globally
+RUN npm install -g typescript
+
 # Install dependencies and build the project
 RUN npm install && npm run build
 
