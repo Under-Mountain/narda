@@ -20,7 +20,7 @@
   {
     "id": "WTR403",
     "type": "water",
-    "amount": 475,
+    "amount": 901,
     "owner": "dev"
   },
   {
@@ -62,7 +62,7 @@
   {
     "id": "MNR427",
     "type": "mineral",
-    "amount": 100,
+    "amount": 180,
     "owner": "dev"
   },
   {

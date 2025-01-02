@@ -56,7 +56,10 @@ app.get('/api/current', async (req, res) => {
                 world.interval.minute
             );
         } else {
-            res.sendStatus(401);
+            setTimeout(
+                () => res.json({ global: current }),
+                world.interval.minute
+            );
         }
     } catch (error) {
         res.sendStatus(500);
