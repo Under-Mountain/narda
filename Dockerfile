@@ -7,6 +7,9 @@ WORKDIR /usr/src/app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
+# Install copyfiles globally
+RUN npm install -g copyfiles
+
 # Install dependencies and build the project
 RUN npm install && npm run build
 
