@@ -1,6 +1,6 @@
 import { onMinuteAsync } from './service/service.js'
 import { accounts, assets, world, market, current, posts } from './service/model.js'
-import { app } from './service/api.js'
+import { app } from './routes/app.js'
 import { ChannelsView, PostsView, PostView } from './views/posts.js'
 import { MarketStatsView, MarketplaceView } from './views/market.js'
 import { HeaderView } from './views/header.js'
