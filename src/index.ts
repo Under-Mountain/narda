@@ -4,7 +4,7 @@ import { app } from './service/api.js'
 import { ChannelsView, PostsView, PostView } from './views/posts.js'
 import { MarketStatsView, MarketplaceView } from './views/market.js'
 import { HeaderView } from './views/header.js'
-import { AuthView,  LeaderboardView, InventoryView, ProfileView } from './views/accounts.js'
+import { AuthView, LeaderboardView, InventoryView, ProfileView } from './views/accounts.js'
 import { FooterView } from './views/footer.js'
 import { ActivitiesView, AssetsView } from './views/world.js'
 import 'dotenv/config'
@@ -12,6 +12,8 @@ import * as fs from 'fs'
 import * as https from 'https'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
+import { Request, Response } from 'express'
+import { Account, Listing, Post } from './types.js'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,12 +30,12 @@ server.listen(port, () => {
     console.log(`app listening on port ${port}`)
 })
 
-setInterval(await onMinuteAsync, world.interval.minute)
+setInterval(async () => await onMinuteAsync(), world.interval.minute)
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
     const session = req.session
-    const username = req.query.user? req.query.user : req.session.username
-    const account = accounts.find(a => a.id == username)
+    const username = req.query.user ? req.query.user as string : req.session.username as string
+    const account: Account | undefined = accounts.find(a => a.id == username)
 
     const headerHtml = HeaderView(session, username)
 
@@ -46,7 +48,7 @@ app.get('/', (req, res) => {
 
         res.send(`
         ${headerHtml}
-        ${!session.username? AuthView() : ``}
+        ${!session.username ? AuthView() : ``}
 
         ${leaderboardHtml}
         ${blogHtml}
@@ -58,12 +60,16 @@ app.get('/', (req, res) => {
     /**
      * Account Overview
      */
+    if (!account) {
+        res.send(404)
+        return
+    }
 
-    let listings = market.filter(l => !l.times.sold && !l.times.expired && l.owner == username)
-        .sort((a, b) => { return a.price / a.amount < b.price / b.amount ? 1 : -1 })
-        .sort((a, b) => { return a.amount < b.amount ? 1 : -1 })
+    let listings: Listing[] = market.filter(l => !l.times.sold && !l.times.expired && l.owner == username)
+        .sort((a, b) => a.price / a.amount < b.price / b.amount ? 1 : -1)
+        .sort((a, b) => a.amount < b.amount ? 1 : -1)
     
-    const marketplaceHtml = MarketplaceView(listings, username, session, account)
+    const marketplaceHtml = MarketplaceView(listings, username, session)
 
     res.send(`${headerHtml}
         <div class="lg:flex flex-row-reverse">
@@ -78,12 +84,12 @@ app.get('/', (req, res) => {
         return
 })
 
-app.get('/leaderboard', (req, res) => {
+app.get('/leaderboard', (req: Request, res: Response) => {
     const session = req.session
-    const username = req.query.user? req.query.user : req.session.username
-    const account = accounts.find(a => a.id == username)
+    const username = req.query.user ? req.query.user as string : req.session.username
+    const account: Account | undefined = accounts.find(a => a.id == username)
 
-    const headerHtml = HeaderView(session, req.session.username)
+    const headerHtml = HeaderView(session, req.session.username as string)
     const leaderboardHtml = LeaderboardView()
     res.send(`
         ${headerHtml}
@@ -92,10 +98,10 @@ app.get('/leaderboard', (req, res) => {
     `)
 })
 
-app.get('/explorer', (req, res) => {
+app.get('/explorer', (req: Request, res: Response) => {
     const session = req.session
-    const username = req.query.user? req.query.user : req.session.username
-    const account = accounts.find(a => a.id == username)
+    const username = req.query.user ? req.query.user as string : req.session.username as string
+    const account: Account | undefined = accounts.find(a => a.id == username)
     
     const headerHtml = HeaderView(session, username)
 
@@ -107,9 +113,9 @@ app.get('/explorer', (req, res) => {
     `)
 })
 
-app.get('/mints', (req, res) => {
+app.get('/mints', (req: Request, res: Response) => {
     const session = req.session
-    const username = req.query.user? req.query.user : req.session.username
+    const username = req.query.user ? req.query.user as string : req.session.username as string
     
     const headerHtml = HeaderView(session, username)
     const assetsHtml = AssetsView()
@@ -120,18 +126,17 @@ app.get('/mints', (req, res) => {
     `)
 })
 
-app.get('/marketplace', (req, res) => {
+app.get('/marketplace', (req: Request, res: Response) => {
     const session = req.session
-    const username = req.query.user? req.query.user : req.session.username
-    const account = accounts.find(a => a.id == username)
+    const username = req.query.user ? req.query.user as string : req.session.username as string
 
     const headerHtml = HeaderView(session, username)
 
-    const listings = market.filter(l => !l.times.sold && !l.times.expired)
-    .sort((a, b) => { return a.price / a.amount < b.price / b.amount ? 1 : -1 })
-    .sort((a, b) => { return a.amount < b.amount ? 1 : -1 })
+    const listings: Listing[] = market.filter(l => !l.times.sold && !l.times.expired)
+    .sort((a, b) => a.price / a.amount < b.price / b.amount ? 1 : -1)
+    .sort((a, b) => a.amount < b.amount ? 1 : -1)
 
-    const marketplaceHtml = MarketplaceView(listings, username, session, account)
+    const marketplaceHtml = MarketplaceView(listings, username, session)
     res.send(`
         ${headerHtml}
         ${marketplaceHtml}
@@ -139,12 +144,12 @@ app.get('/marketplace', (req, res) => {
     `)
 })
 
-app.get('/posts', (req, res) => {
+app.get('/posts', (req: Request, res: Response) => {
     const session = req.session
-    const username = req.query.user? req.query.user : req.session.username
+    const username = req.query.user ? req.query.user as string : req.session.username as string
 
     const headerHtml = HeaderView(session, username)
-    const postsView = PostsView(req.query.channel)
+    const postsView = PostsView(req.query.channel as string)
     res.send(`
         ${headerHtml}
         ${postsView}
@@ -152,24 +157,25 @@ app.get('/posts', (req, res) => {
     `)
 })
 
-app.get('/post', (req, res) => {
+app.get('/post', (req: Request, res: Response) => {
     const session = req.session
-    const username = req.query.user? req.query.user : req.session.username
-    const account = accounts.find(a => a.id == username)
+    const username = req.query.user ? req.query.user as string : req.session.username as string
 
     if (!req.query.id) {
         console.error(`invalid request`)
         res.sendStatus(400)
+        return
     }
 
-    const post = posts.find(p => p.id == req.query.id)
+    const post: Post | undefined = posts.find(p => p.id == req.query.id)
     if (!post) {
         console.error(`post ${req.query.id} not found`)
-        req.sendStatus(404)
+        res.sendStatus(404)
+        return
     }
 
     const headerHtml = HeaderView(session, username)
-    const postHtml = PostView(post, session, account)
+    const postHtml = PostView(post, session)
     
     res.send(`
         ${headerHtml}
@@ -178,9 +184,9 @@ app.get('/post', (req, res) => {
     `)
 })
 
-app.get('/channels', (req, res) => {
+app.get('/channels', (req: Request, res: Response) => {
     const session = req.session
-    const username = req.query.user? req.query.user : req.session.username
+    const username = req.query.user ? req.query.user as string : req.session.username as string
 
     res.send(`
         ${HeaderView(session, username)}

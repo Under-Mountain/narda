@@ -1,13 +1,13 @@
 {
-  "time": 176301,
+  "time": 176528,
   "resources": {
     "water": {
-      "balance": 525628.9738060771,
-      "supplied": 680373.9738060916
+      "balance": 526483.115081782,
+      "supplied": 681348.1150817964
     },
     "mineral": {
-      "balance": 215196.8080390573,
-      "supplied": 266882.80803905625
+      "balance": 215518.13768483707,
+      "supplied": 267296.1376848364
     },
     "credits": {
       "balance": -71411.10702729976,
@@ -444,7 +444,14 @@
   },
   "activities": {
     "pending": [],
-    "completed": [],
+    "completed": [
+      "CLT9391",
+      "CLT9392",
+      "CLT9393",
+      "CLT9394",
+      "CLT9395",
+      "CLT9396"
+    ],
     "rejected": []
   }
 }

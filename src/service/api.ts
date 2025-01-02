@@ -3,7 +3,7 @@ import express from 'express'
 import cors from 'cors'
 import session from 'express-session'
 import { accounts, activities, assets, market, current, world, auth, posts } from './model.js'
-import * as bcrypt from 'bcrypt'
+import bcrypt from 'bcrypt'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -52,10 +52,13 @@ app.post('/api/auth', function(req, res) {
 
 	if (username && password) {
         const user = auth.find(a => a.username == username)
-        if (!user) res.sendStatus(401)
+        if (!user) {
+            res.sendStatus(401)
+            return
+        }
 
         bcrypt.compare(password, user.password, (err, result) => {
-            if (result && auth.findIndex(a => a.username == username && a.password == password > 0)) {
+            if (result) {
                 req.session.username = username;
                 res.redirect(`/?user=${req.session.username}`);
             } else {
@@ -116,9 +119,13 @@ app.get('/api/current', (req, res) => {
         if (!account) {
             console.error(`invalid session user ${req.session.username}`)
             res.sendStatus(403)
+            return
         }
 
         inventory = assets.filter(a => a.owner == req.session.username)
+    } else {
+        res.sendStatus(401)
+        return
     }
 
     setTimeout(() => res.json({
@@ -169,11 +176,15 @@ app.post('/api/transaction', (req, res) => {
     current.activities.pending.push(activity.id)
 
     setTimeout(() => req.query.return ?
-        res.redirect(req.query.return) : res.json(activity),
+        res.redirect(req.query.return as string) : res.json(activity),
         world.interval.minute)
 })
 
 app.post('/api/mint', (req, res) => {
+    if (!req.session || !req.session.username) {
+        res.sendStatus(401)
+        return
+    }
     const id = `MNT${activities.length}`
     console.log(`${id}: minting ${req.body.type}...`);
 
@@ -198,7 +209,7 @@ app.post('/api/mint', (req, res) => {
         }
     }
 
-    const consumptions = []
+    const consumptions: any[] = []
     switch (req.body.type) {
         case "account":
             if (account) {
@@ -229,6 +240,11 @@ app.post('/api/mint', (req, res) => {
             })
             break
         case "bankstone":
+            if (!account) {
+                res.send(403)
+                return
+            }
+
             if (account.credits.balance < 200 ||
                 userWaters.reduce((sum, c) => sum + c.amount, 0) < waterCost ||
                 userMinerals.reduce((sum, c) => sum + c.amount, 0) < mineralCost) {
@@ -354,7 +370,7 @@ app.post('/api/collect', (req, res) => {
     current.activities.pending.push(activity.id)
 
     setTimeout(() => req.query.return ?
-        res.redirect(req.query.return) : res.json(activity),
+        res.redirect(req.query.return as string) : res.json(activity),
         world.interval.minute)
 })
 
@@ -385,16 +401,21 @@ app.post('/api/list', (req, res) => {
     }
 
     const item = assets.find(a => a.id == listing.item)
+    if (!item) {
+        res.send(403)
+        return
+    }
+
     item.amount -= listing.amount
     market.push(listing)
 
     setTimeout(() => req.query.return ?
-        res.redirect(req.query.return) : res.json(listing),
+        res.redirect(req.query.return as string) : res.json(listing),
         world.interval.minute)
 })
 
 app.post('/api/edit', (req, res) => {
-    if (!req.session.username) {
+    if (!req.session || !req.session.username) {
         res.sendStatus(401)
         return
     }
@@ -404,9 +425,10 @@ app.post('/api/edit', (req, res) => {
     }
 
     const account = accounts.find(a => a.id == req.session.username)
-    if (account.credits.balance < 100) {
+    if (!account || account.credits.balance < 100) {
         console.warn(`not enough balance to edit`)
         res.sendStatus(403)
+        return
     }
 
     const creditConsumption = {
@@ -430,12 +452,12 @@ app.post('/api/edit', (req, res) => {
     account.times.edited = current.time
 
     setTimeout(() => req.query.return ?
-        res.redirect(req.query.return) : res.json(account),
+        res.redirect(req.query.return as string) : res.json(account),
         world.interval.minute)
 })
 
 app.post('/api/comment', (req, res) => {
-    if (!req.session.username) {
+    if (!req.session || !req.session.username) {
         res.sendStatus(401)
         return
     }
@@ -446,7 +468,7 @@ app.post('/api/comment', (req, res) => {
     }
 
     const account = accounts.find(a => a.id == req.session.username)
-    if (account.credits.balance < 5) {
+    if (!account || account.credits.balance < 5) {
         console.warn(`not enough balance to comment`)
         res.sendStatus(403)
         return
@@ -485,12 +507,12 @@ app.post('/api/comment', (req, res) => {
     })
 
     setTimeout(() => req.query.return ?
-        res.redirect(req.query.return) : res.json(post),
+        res.redirect(req.query.return as string) : res.json(post),
         world.interval.minute)
 })
 
 app.post('/api/like', (req, res) => {
-    if (!req.session.username) {
+    if (!req.session || !req.session.username) {
         res.sendStatus(401)
         return
     }
@@ -501,7 +523,7 @@ app.post('/api/like', (req, res) => {
     }
 
     const account = accounts.find(a => a.id == req.session.username)
-    if (account.credits.balance < 1) {
+    if (!account || account.credits.balance < 1) {
         console.warn(`not enough balance to comment`)
         res.sendStatus(403)
         return
@@ -537,12 +559,12 @@ app.post('/api/like', (req, res) => {
     else post.likes += 1
 
     setTimeout(() => req.query.return ?
-        res.redirect(req.query.return) : res.json(post),
+        res.redirect(req.query.return as string) : res.json(post),
         world.interval.minute)
 })
 
 app.post('/api/post', (req, res) => {
-    if (!req.session.username) {
+    if (!req.session || !req.session.username) {
         res.sendStatus(401)
         return
     }
@@ -552,7 +574,7 @@ app.post('/api/post', (req, res) => {
     }
 
     const account = accounts.find(a => a.id == req.session.username)
-    if (account.credits.balance < 10) {
+    if (!account || account.credits.balance < 10) {
         console.warn(`not enough balance to post`)
         res.sendStatus(403)
         return
@@ -592,12 +614,12 @@ app.post('/api/post', (req, res) => {
     posts.push(post)
 
     setTimeout(() => req.query.return ?
-        res.redirect(req.query.return) : res.json(post),
+        res.redirect(req.query.return as string) : res.json(post),
         world.interval.minute)
 })
 
 app.post('/api/trade', (req, res) => {
-    if (!req.session.username) {
+    if (!req.session || !req.session.username) {
         res.sendStatus(401)
         return
     }
@@ -607,7 +629,16 @@ app.post('/api/trade', (req, res) => {
     }
 
     const listing = market.find(l => l.id == req.body.id)
+    if (!listing) {
+        res.sendStatus(403)
+        return
+    }
+
     const item = assets.find(a => a.id == listing.item)
+    if (!item) {
+        res.sendStatus(403)
+        return
+    }
 
     if (req.session.username == item.owner) {
         // delist and restore amount
@@ -615,7 +646,7 @@ app.post('/api/trade', (req, res) => {
         listing.times.expired = current.time
 
         setTimeout(() => req.query.return ?
-            res.redirect(req.query.return) : res.json([item, listing]),
+            res.redirect(req.query.return as string) : res.json([item, listing]),
             world.interval.minute)
     } else {
         console.log(`TX${activities.length}: buying ${item.id} at ${listing.price}...`);
@@ -655,7 +686,7 @@ app.post('/api/trade', (req, res) => {
         listing.times.sold = current.time
 
         setTimeout(() => req.query.return ?
-            res.redirect(req.query.return) : res.json([creditTx, itemTx]),
+            res.redirect(req.query.return as string) : res.json([creditTx, itemTx]),
             world.interval.minute)
     }
 })

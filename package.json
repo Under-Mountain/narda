@@ -5,7 +5,11 @@
   "description": "data interface for the world core",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run build && tsc --watch & nodemon --ignore data --ignore dist dist/index.js",
+    "start": "npm run build && node dist/index.js > output.log 2>&1",
+    "build": "tsc && npm run copy-assets",
+    "copy-assets": "cpx \"public/**/*\" dist/public --no-overwrite && cpx \"private/**/*\" dist/private --no-overwrite"
   },
   "author": "",
   "license": "ISC",
@@ -13,9 +17,18 @@
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "ejs": "^3.1.10",
     "express": "^4.21.2",
     "express-session": "^1.18.1",
     "lowdb": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/express-session": "^1.18.1",
+    "@types/lowdb": "^1.0.15",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "cpx": "^1.5.0"
   }
 }

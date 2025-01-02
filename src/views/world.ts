@@ -1,9 +1,9 @@
 import { activities, assets, world } from '../service/model.js'
 import { getRandomNumber } from '../service/utility.js'
-import * as svg from './svg.js'
 import * as fs from 'fs'
+import { Asset, Activity } from '../types.js'
 
-export function TimeView(time) {
+export function TimeView(time: number): string {
     return `
         Year ${Math.floor(time / (world.interval.hour * world.interval.day * world.interval.year))}
         Day ${Math.floor(time / (world.interval.hour * world.interval.day))}
@@ -11,9 +11,9 @@ export function TimeView(time) {
     `
 }
 
-export function AssetsView() {
+export function AssetsView(): string {
     const filtered = assets
-        .sort((a, b) => { return a.properties && b.properties &&
+        .sort((a, b) => { return a.properties && b.properties && a.properties.staked && b.properties.staked && a.properties.yield && b.properties.yield &&
             (a.properties.staked * a.properties.yield) > (b.properties.staked * b.properties.yield) ?
             1 : -1})
         .sort((a, b) => { return a.amount < b.amount ? 1 : -1})
@@ -33,9 +33,9 @@ export function AssetsView() {
     return assetsHtml
 }
 
-export function ActivitiesView() {
+export function ActivitiesView(): string {
     const filtered = activities.filter(a => true)
-        .sort((a, b) => { return a.times.completed > b.times.completed ? -1 : 1 })
+        .sort((a, b) => { return (a.times.completed && b.times.completed) && a.times.completed > b.times.completed ? -1 : 1 })
     
     let entriesHtml = `<div class="p-2 sm:p-4 lg:p-8">`
     if (filtered.length > 0) {
@@ -47,7 +47,7 @@ export function ActivitiesView() {
                     <strong>${t.of}</strong>
                     from <strong>${t.from}</strong>
                     to <strong>${t.to}</strong>
-                    on ${TimeView(t.times.completed)}
+                    on ${TimeView(t.times.completed as number)}
                     <strong>note:</strong> ${t.note}
                 </small></div></oi>`
         })
@@ -58,10 +58,12 @@ export function ActivitiesView() {
     return entriesHtml
 }
 
-export function AssetImageUrl(item) {
-    let asset
-    let place
-    let tier
+export function AssetImageUrl(item: Asset): string {
+    if (!item.properties || !item.properties.cap || !item.properties.yield) return ``
+
+    let asset: string | undefined
+    let place: string | undefined
+    let tier: string | undefined
 
     switch (item.type) {
         case 'water':

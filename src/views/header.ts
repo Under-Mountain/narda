@@ -1,6 +1,6 @@
-import { accounts, activities, assets, world, market, current, posts } from '../service/model.js'
+import { accounts, assets, posts, current, world, market, activities } from "../service/model.js"
 
-export function HeaderView(session, username) {
+export function HeaderView(session: any, username: string): string {
     const resources = {
         water: 0,
         mithril: 0
@@ -9,17 +9,19 @@ export function HeaderView(session, username) {
     if (session.username) {
         const account = accounts.find(a => a.id == username)
 
-        const userWaters = assets.filter((a) => a.type=="water" && a.owner == account.id)
-        const userWaterTotal = userWaters.reduce((sum, c) => {return sum + c.amount}, 0)
-    
-        const userMinerals = assets.filter((a) => a.type=="mineral" && a.owner == account.id)
-        const userMineralTotal = userMinerals.reduce((sum, c) => {return sum + c.amount}, 0)
+        if (account) {
+            const userWaters = assets.filter((a) => a.type == "water" && a.owner == account.id)
+            const userWaterTotal = userWaters.reduce((sum, c) => { return sum + c.amount }, 0)
 
-        resources.water = userWaterTotal
-        resources.mithril = userMineralTotal
+            const userMinerals = assets.filter((a) => a.type == "mineral" && a.owner == account.id)
+            const userMineralTotal = userMinerals.reduce((sum, c) => { return sum + c.amount }, 0)
+
+            resources.water = userWaterTotal
+            resources.mithril = userMineralTotal
+        }
     }
 
-    const channels = []
+    const channels: string[] = []
     posts.forEach(p => {
         p.channels.forEach(t => {
             if (channels.indexOf(t) < 0) channels.push(t)
@@ -88,16 +90,16 @@ export function HeaderView(session, username) {
                 ${session.username ? `
                     <div class="">
                         <div class="text-xs text-blue-400 text-bold leading-3">
-                            wtr <strong id="userWater">${resources.water}</strong><span class="hidden md:inline"><small>/${current.resources.water.supplied.toFixed(0)}(${(resources.water/current.resources.water.supplied*100).toFixed(2)}%)</small></span>
+                            wtr <strong id="userWater">${resources.water}</strong><span class="hidden md:inline"><small>/${current.resources.water.supplied.toFixed(0)}(${(resources.water / current.resources.water.supplied * 100).toFixed(2)}%)</small></span>
                         </div>
                         <div class="text-xs text-white text-bold leading-3">
-                            mth <strong id="userMineral">${resources.mithril}</strong><span class="hidden md:inline"><small>/${current.resources.mineral.supplied.toFixed(0)}(${(resources.mithril/current.resources.mineral.supplied*100).toFixed(2)}%)</small></span>
+                            mth <strong id="userMineral">${resources.mithril}</strong><span class="hidden md:inline"><small>/${current.resources.mineral.supplied.toFixed(0)}(${(resources.mithril / current.resources.mineral.supplied * 100).toFixed(2)}%)</small></span>
                         </div>
                     </div>
                     <a href="/?user=${session.username}" class="btn btn-ghost btn-md p-1">
                         <div>
                             <div class="text-xs">${session.username}</div>
-                            <div><span id="userBalance">${accounts.find(a=>a.id==session.username)?.credits.balance.toFixed(2)}</span><small class="lowercase">sl</small></div>
+                            <div><span id="userBalance">${accounts.find(a => a.id == session.username)?.credits.balance.toFixed(2)}</span><small class="lowercase">sl</small></div>
                         </div>
                     </a>
                     <div class="dropdown dropdown-end">

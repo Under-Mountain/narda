@@ -1,6 +1,4 @@
-import { current, world } from "../service/model.js"
-
-export function FooterView() {
+export function FooterView(): string {
     return `
         <footer class="footer footer-center mt-4 bg-base-300 text-base-content p-4">
             <aside class="">

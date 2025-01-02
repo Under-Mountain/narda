@@ -1,7 +1,8 @@
-import { posts } from '../service/model.js'
-import { TimeView } from './world.js'
+import { accounts, posts } from "../service/model.js"
+import { Post, Account } from "../types.js"
+import { TimeView } from "./world.js"
 
-export function PostsView(channel) {
+export function PostsView(channel?: string): string {
     const filteredPosts = posts.filter(p => !channel ? true : p.channels.indexOf(channel) >= 0).sort((a, b) => { return a.times.created > b.times.created ? -1 : 1 })
     let postsHtml = `<div class="p-2 sm:p-4 lg:p-8">
         <h1 id="posts" class="text-bold text-2xl text-white mb-2">
@@ -45,8 +46,10 @@ export function PostsView(channel) {
     return postsHtml
 }
 
-export function PostView(post, session, account) {
-    return `${post? `
+export function PostView(post: Post, session: any): string {
+    const account = accounts.find(a => a.id == session.username)
+
+    return `${post ? `
         <div class="card bg-base-200 m-2 p-2 sm:m-4 p-4 lg:m-8 p-8">
             <h1 class="card-title text-white-300 text-xl">${post.title}</h1>
             <div class="card-body p-0 my-1">
@@ -60,12 +63,12 @@ export function PostView(post, session, account) {
                     <form id="postLikeForm">
                         <input type="hidden" name="postId" value="${post.id}" />
                         <button class="btn btn-success btn-sm"
-                            ${!session.username || (session.username && account.credits.balance < 1) ? `disabled` :``}>
+                            ${!session.username || (account && account.credits.balance < 1) ? `disabled` :``}>
                             ${post.likes} Like (-1.00 credit)</button>
                     </form>
                     <form id="postDislikeForm">
                         <input type="hidden" name="postId" value="${post.id}" />
-                        <button class="btn btn-warning btn-sm" ${!session.username || (session.username && account.credits.balance < 1) ? `disabled` :``}>
+                        <button class="btn btn-warning btn-sm" ${!session.username || (account && account.credits.balance < 1) ? `disabled` :``}>
                             ${post.dislikes} Dislike (-1.00 credit)</button>
                     </form>
                 </small></div>
@@ -74,17 +77,17 @@ export function PostView(post, session, account) {
                         <textarea class="textarea textarea-md" name="comment" rows="2" cols="60" placeholder="Leave your comment"></textarea>
                         <div>
                             <button name="postId" value="${post.id}" class="btn btn-primary btn-sm"
-                                ${!session.username || (session.username && account.credits.balance < 5) ? `disabled` :``}>Comment (-5.00 credit)</button></div>
+                                ${!session.username || (account && account.credits.balance < 5) ? `disabled` :``}>Comment (-5.00 credit)</button></div>
                     </form>
                     <h3 class="mb-2"><small>${post.comments.length}</small> comments</h3>
                     ${CommentsView(post)}
                 </div>
             </div>
         </div>
-        ` : `<h3>Post id ${id} not found</h3>`}`
+        ` : `<h3>Post ${post} not found</h3>`}`
 }
 
-export function ChannelsView() {
+export function ChannelsView(): string {
     let channelsHtml = `<div class="p-2 sm:p-4 lg:p-8">
     <h1 id="leaderboard" class="text-bold text-2xl text-white mb-2">
         Channels
@@ -103,8 +106,8 @@ export function ChannelsView() {
     return channelsHtml
 }
 
-export function channelsView() {
-    const allchannels = []
+export function channelsView(): string {
+    const allchannels: string[] = []
     posts.forEach(p => {
         p.channels.forEach(t => {
             if (allchannels.indexOf(t) < 0) allchannels.push(t)
@@ -120,7 +123,7 @@ export function channelsView() {
     return channelsHtml
 }
 
-export function CommentsView(post) {
+export function CommentsView(post: Post): string {
     let commentsHtml = `<p style="text-align:center">No comments left yet</p>`
     if (post.comments.length > 0) {
         commentsHtml = `<ul>`
