@@ -7,8 +7,9 @@ WORKDIR /usr/src/app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies
+# Install dependencies and build the project
 RUN npm install
+RUN npm run build
 
 # Copy the rest of the project files
 COPY . .
@@ -17,4 +18,4 @@ COPY . .
 EXPOSE 443
 
 # Define the command to run the app
-CMD ["node", "index.js"]
+CMD ["npm", "start"]

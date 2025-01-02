@@ -9,7 +9,8 @@
     "dev": "tsc-watch --onSuccess \"node dist/index.js\"",
     "start": "node dist/index.js",
     "build": "tsc && npm run copy-assets",
-    "copy-assets": "copyfiles -u 1 \"public/**/*\" dist/public && copyfiles -u 1 \"private/**/*\" dist/private"
+    "copy-assets": "copyfiles -u 1 \"public/**/*\" dist/public && copyfiles -u 1 \"private/**/*\" dist/private",
+    "docker:build-run": "docker rmi -f narda && docker build -t narda . && docker run -p 443:443 narda"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
