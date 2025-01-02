@@ -1,18 +1,16 @@
 {
-  "name": "worldcore",
-  "version": "1.0.0",
+  "name": "narda",
+  "version": "0.0.1",
   "type": "module",
-  "description": "data interface for the world core",
+  "description": "Arda Metaverse implementation in Node.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npm run build && tsc --watch & nodemon --ignore data --ignore dist dist/index.js",
-    "start": "npm run build && node dist/index.js > output.log 2>&1",
+    "dev": "tsc-watch --onSuccess \"node dist/index.js\"",
+    "start": "node dist/index.js",
     "build": "tsc && npm run copy-assets",
-    "copy-assets": "cpx \"public/**/*\" dist/public --no-overwrite && cpx \"private/**/*\" dist/private --no-overwrite"
+    "copy-assets": "copyfiles -u 1 \"public/**/*\" dist/public && copyfiles -u 1 \"private/**/*\" dist/private"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
@@ -27,8 +25,8 @@
     "@types/express": "^5.0.0",
     "@types/express-session": "^1.18.1",
     "@types/lowdb": "^1.0.15",
-    "ts-loader": "^9.5.1",
+    "copyfiles": "^2.4.1",
     "typescript": "^5.7.2",
-    "cpx": "^1.5.0"
+    "tsc-watch": "^5.0.3"
   }
 }
