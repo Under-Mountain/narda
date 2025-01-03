@@ -15,31 +15,32 @@ const Current = {
 }
 
 function onSync(world, current) {
-  refreshClockResources(world, current.global.time, current.global.resources)
-  refreshUserCreditResources(current.account, current.inventory)
+  updateClockAndResources(world, current.global.time, current.global.resources)
+  updateUserResources(current.account, current.inventory)
 }
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const queryUser = urlParams.get('user');
 
-function refreshUserCreditResources(account, inventory) {
+function updateUserResources(account, inventory) {
   Current.user.balance = account?.credits.balance
   Current.user.id = account?.id
-  Current.user.water = inventory?.filter(i => i.type == 'water').reduce((sum, c) => sum + c.amount, 0)
-  Current.user.mithril = inventory?.filter(i => i.type == 'mineral').reduce((sum, c) => sum + c.amount, 0)
+  Current.user.water = getResourceAmount(inventory, 'water')
+  Current.user.mithril = getResourceAmount(inventory, 'mineral')
 
-  const userBalance = document.getElementById("userBalance")
-  if (userBalance) userBalance.innerHTML = Current.user?.balance?.toFixed(2)
-  
-  const profileBalance = document.getElementById('profileBalance')
-  if (profileBalance && queryUser == Current.user.id) profileBalance.innerHTML = Current.user?.balance?.toFixed(2)
+  updateUserInterface()
+}
 
-  const userWater = document.getElementById("userWater")
-  if (userWater) userWater.innerHTML = Current.user?.water
+function getResourceAmount(inventory, type) {
+  return inventory?.filter(i => i.type == type).reduce((sum, c) => sum + c.amount, 0)
+}
 
-  const userMineral = document.getElementById("userMineral")
-  if (userMineral) userMineral.innerHTML = Current.user?.mithril
+function updateUserInterface() {
+  updateElementContent("userBalance", Current.user?.balance?.toFixed(2))
+  if (queryUser == Current.user.id) updateElementContent('profileBalance', Current.user?.balance?.toFixed(2))
+  updateElementContent("userWater", Current.user?.water)
+  updateElementContent("userMineral", Current.user?.mithril)
 
   const mintBankBtn = document.getElementById('mintBankBtn')
   const alert = document.getElementById('alert')
@@ -48,7 +49,12 @@ function refreshUserCreditResources(account, inventory) {
       Current.user.water < Math.ceil(Math.pow(Current.resources.water / Current.resources.mithril, 7)) || Current.user.balance < 200
 }
 
-function refreshClockResources(world, time, resources) {
+function updateElementContent(elementId, content) {
+  const element = document.getElementById(elementId)
+  if (element) element.innerHTML = content
+}
+
+function updateClockAndResources(world, time, resources) {
   Current.time = `${Math.floor(time % (world.interval.hour * world.interval.day) / (world.interval.hour))}:${time % (world.interval.hour) < 10 ? '0' : ''}${time % (world.interval.hour)}\
                 <small class="hidden md:inline">(${(time % (world.interval.hour) / world.interval.hour * 100).toFixed(0)}% to yield)</small>
   `
@@ -61,17 +67,14 @@ function refreshClockResources(world, time, resources) {
   Current.resources.water = resources.water.balance.toFixed(0).toLocaleString()
   Current.resources.mithril = resources.mineral.balance.toFixed(0).toLocaleString()
 
-  const headerTime = document.getElementById("headerTime");
-  headerTime.innerHTML = Current.time;
+  updateHeader()
+}
 
-  const headerDate = document.getElementById("headerDate");
-  headerDate.innerHTML = Current.date;
-
-  const headerWater = document.getElementById("headerWater");
-  headerWater.innerHTML = Current.resources.water;
-
-  const headerMithril = document.getElementById("headerMithril");
-  headerMithril.innerHTML = Current.resources.mithril;
+function updateHeader() {
+  updateElementContent("headerTime", Current.time)
+  updateElementContent("headerDate", Current.date)
+  updateElementContent("headerWater", Current.resources.water)
+  updateElementContent("headerMithril", Current.resources.mithril)
 }
 
 let inProgress = false
@@ -96,43 +99,76 @@ fetch('/api/world').then(async (res) => {
 })
 
 const invitationCode = document.getElementById('invitationCode')
-if (invitationCode) { invitationCode.addEventListener('input', (e) => {
-  if (e.target.value == '1892') {
-    const usernameControl = document.getElementById('usernameControl')
-    const passwordControl = document.getElementById('passwordControl')
-    const registerBtn = document.getElementById('registerBtn')
+if (invitationCode) { invitationCode.addEventListener('input', handleInvitationCodeInput) }
 
-    usernameControl.classList.remove('hidden')
-    passwordControl.classList.remove('hidden')
+function handleInvitationCodeInput(e) {
+  const usernameControl = document.getElementById('usernameControl')
+  const passwordControl = document.getElementById('passwordControl')
+  const registerBtn = document.getElementById('registerBtn')
+
+  if (e.target.value == '1892') {
+    toggleElementVisibility(usernameControl, false)
+    toggleElementVisibility(passwordControl, false)
     registerBtn.disabled = false
 
-    invitationCode.classList.add('hidden')
+    toggleElementVisibility(invitationCode, true)
     usernameControl.firstElementChild.focus()
   } else {
-    usernameControl.classList.add('hidden')
-    passwordControl.classList.add('hidden')
+    toggleElementVisibility(usernameControl, true)
+    toggleElementVisibility(passwordControl, true)
     registerBtn.disabled = true
 
-    invitationCode.classList.remove('hidden')
+    toggleElementVisibility(invitationCode, false)
   }
-})
+}
+
+function toggleElementVisibility(element, hidden) {
+  if (hidden) element.classList.add('hidden')
+  else element.classList.remove('hidden')
 }
 
 const collectWaterForm = document.getElementById('collectWaterForm')
-collectWaterForm.addEventListener('submit', (e) => {
-  e.preventDefault()
-  onCollect('water')
-})
+collectWaterForm.addEventListener('submit', (e) => handleCollectFormSubmit(e, 'water'))
 
 const collectMineralForm = document.getElementById('collectMineralForm')
-collectMineralForm.addEventListener('submit', (e) => {
-  e.preventDefault()
-  onCollect('mineral')
-})
+collectMineralForm.addEventListener('submit', (e) => handleCollectFormSubmit(e, 'mineral'))
 
 const updateBioForm = document.getElementById('updateBioForm')
 if (updateBioForm) {
-updateBioForm.addEventListener('submit', (e) => {
+  updateBioForm.addEventListener('submit', handleUpdateBioFormSubmit)
+}
+
+const sendCreditForm = document.getElementById('sendCreditForm')
+if (sendCreditForm) {
+  sendCreditForm.addEventListener('submit', handleSendCreditFormSubmit)
+}
+
+const mintBankForm = document.getElementById('mintBankForm')
+if (mintBankForm) {
+  mintBankForm.addEventListener('submit', handleMintBankFormSubmit)
+}
+
+const postForm = document.getElementById('postForm')
+if (postForm) {
+  postForm.addEventListener('submit', handlePostFormSubmit)
+}
+
+const itemForms = document.querySelectorAll('.itemForm')
+itemForms.forEach(f => {
+  f.addEventListener('submit', handleItemFormSubmit)
+})
+
+const listingForms = document.querySelectorAll('.listingForm')
+listingForms.forEach(f => {
+  f.addEventListener('submit', handleListingFormSubmit)
+})
+
+function handleCollectFormSubmit(e, resource) {
+  e.preventDefault()
+  collectResource(resource)
+}
+
+function handleUpdateBioFormSubmit(e) {
   e.preventDefault()
   const formData = new FormData(e.target)
 
@@ -140,11 +176,8 @@ updateBioForm.addEventListener('submit', (e) => {
   const alertContent = document.getElementById('alertContent')
   const updateBioBtn = document.getElementById('updateBioBtn')
 
-  alert.classList.add('alert-warning')
-  alertContent.innerHTML = `Updating bio... (-100.00sl)`
+  showAlert(alert, alertContent, 'alert-warning', `Updating bio... (-100.00sl)`)
   updateBioBtn.disabled = true
-
-  alert.classList.remove('hidden')
 
   fetch('/api/edit', {
     method: 'POST',
@@ -155,20 +188,12 @@ updateBioForm.addEventListener('submit', (e) => {
   }).catch(err => {
     console.error(err)
   }).then(res => res.json()).then(res => {
-    alert.classList.replace('alert-warning', 'alert-success')
-    alertContent.innerHTML = `User bio has been successfully updated. (-100.00sl)`
-
-    if (!alert.classList.contains('hidden')) setTimeout(() => {
-      alert.classList.add('hidden')
-      updateBioBtn.disabled = false
-    }, 1500)
+    showAlert(alert, alertContent, 'alert-success', `User bio has been successfully updated. (-100.00sl)`)
+    hideAlert(alert, updateBioBtn)
   })  
-})
 }
 
-const sendCreditForm = document.getElementById('sendCreditForm')
-if (sendCreditForm) {
-sendCreditForm.addEventListener('submit', (e) => {
+function handleSendCreditFormSubmit(e) {
   e.preventDefault()
   const formData = new FormData(e.target)
 
@@ -176,12 +201,9 @@ sendCreditForm.addEventListener('submit', (e) => {
   const alertContent = document.getElementById('alertContent')
   const sendBtn = document.getElementById('sendBtn')
 
-  alert.classList.add('alert-warning')
-  alertContent.innerHTML = `Sending credit to ${formData.get('to')} ... (-${formData.get('amount')}sl)`
+  showAlert(alert, alertContent, 'alert-warning', `Sending credit to ${formData.get('to')} ... (-${formData.get('amount')}sl)`)
   sendBtn.disabled = true
 
-  alert.classList.remove('hidden')
-  
   fetch('/api/transaction', {
     method: 'POST',
     headers: {
@@ -195,56 +217,40 @@ sendCreditForm.addEventListener('submit', (e) => {
   }).catch(err => {
     console.error(err)
   }).then(res => res.json()).then(res => {
-    alert.classList.replace('alert-warning', 'alert-success')
-    alertContent.innerHTML = `Credit successfully sent to ${formData.get('to')}. (-${formData.get('amount')}sl)`
-
-    if (!alert.classList.contains('hidden')) setTimeout(() => {
-      alert.classList.add('hidden')
-      sendBtn.disabled = false
-    }, 1500)
+    showAlert(alert, alertContent, 'alert-success', `Credit successfully sent to ${formData.get('to')}. (-${formData.get('amount')}sl)`)
+    hideAlert(alert, sendBtn)
   })  
-})
 }
 
-const mintBankForm = document.getElementById('mintBankForm')
-if (mintBankForm) {
-  mintBankForm.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const formData = new FormData(e.target)
+function handleMintBankFormSubmit(e) {
+  e.preventDefault()
+  const formData = new FormData(e.target)
 
-    const alert = document.getElementById('alert')
-    const alertContent = document.getElementById('alertContent')
-    const mintBankBtn = document.getElementById('mintBankBtn')
+  const alert = document.getElementById('alert')
+  const alertContent = document.getElementById('alertContent')
+  const mintBankBtn = document.getElementById('mintBankBtn')
 
-    alert.classList.add('alert-warning')
-    alertContent.innerHTML = `Minting bank item... (-200.00sl - wtr - mth)`
-    mintBankBtn.disabled = true
+  showAlert(alert, alertContent, 'alert-warning', `Minting bank item... (-200.00sl - wtr - mth)`)
+  mintBankBtn.disabled = true
 
-    alert.classList.remove('hidden')
-    
-    fetch('/api/mint', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        type: formData.get('type')
-      })
-    }).catch(err => {
-      console.error(err)
-    }).then(res => res.json()).then(res => {
-      alert.classList.replace('alert-warning', 'alert-success')
-      alertContent.innerHTML = `Bank item successfully minted. (-200.00sl - wtr - mth)`
-
-      refreshInventoryAsync()
-      if (!alert.classList.contains('hidden')) setTimeout(() => {alert.classList.add('hidden')}, 1500)
-    })  
-  })
+  fetch('/api/mint', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      type: formData.get('type')
+    })
+  }).catch(err => {
+    console.error(err)
+  }).then(res => res.json()).then(res => {
+    showAlert(alert, alertContent, 'alert-success', `Bank item successfully minted. (-200.00sl - wtr - mth)`)
+    refreshInventoryAsync()
+    hideAlert(alert)
+  })  
 }
 
-const postForm = document.getElementById('postForm')
-if (postForm) {
-postForm.addEventListener('submit', (e) => {
+function handlePostFormSubmit(e) {
   e.preventDefault()
   const formData = new FormData(e.target)
 
@@ -252,12 +258,9 @@ postForm.addEventListener('submit', (e) => {
   const alertContent = document.getElementById('alertContent')
   const postBtn = document.getElementById('postBtn')
 
-  alert.classList.add('alert-warning')
-  alertContent.innerHTML = `Creating a post... (-10.00sl)`
+  showAlert(alert, alertContent, 'alert-warning', `Creating a post... (-10.00sl)`)
   postBtn.disabled = true
 
-  alert.classList.remove('hidden')
-  
   fetch('/api/post', {
     method: 'POST',
     headers: {
@@ -271,28 +274,83 @@ postForm.addEventListener('submit', (e) => {
   }).catch(err => {
     console.error(err)
   }).then(res => res.json()).then(res => {
-    alert.classList.replace('alert-warning', 'alert-success')
-    alertContent.innerHTML = `Post successfully created. (-10.00sl)`
-
-    if (!alert.classList.contains('hidden')) setTimeout(() => {
-      alert.classList.add('hidden')
-      postBtn.disabled = false
-    }, 1500)
+    showAlert(alert, alertContent, 'alert-success', `Post successfully created. (-10.00sl)`)
+    hideAlert(alert, postBtn)
   })
-})
 }
 
-const itemForms = document.querySelectorAll('.itemForm')
-itemForms.forEach(f => {
-  f.addEventListener('submit', onSubmitSell)
-})
+function handleItemFormSubmit(e) {
+  e.preventDefault()
+  const formData = new FormData(e.target)
 
-const listingForms = document.querySelectorAll('.listingForm')
-listingForms.forEach(f => {
-  f.addEventListener('submit', onSubmitDelistBuy)
-})
+  const alert = document.getElementById('alert')
+  const alertContent = document.getElementById('alertContent')
 
-// need common function between front and back
+  showAlert(alert, alertContent, 'alert-warning', `Listing item for sale... (- units)`)
+
+  fetch('/api/list', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      id: formData.get('id'),
+      price: formData.get('price'),
+      amount: formData.get('amount')
+    })
+  }).catch(err => {
+    showAlert(alert, alertContent, 'alert-error', `Failed to list item ${formData.get('id')} for sale. (- units)`)
+    console.error(err)
+  }).then(res => res.json()).then(async res => {
+    showAlert(alert, alertContent, 'alert-success', `Item ${formData.get('id')} successfully listed. (- units)`)
+    await refreshInventoryAsync()
+    await refreshMarketListingAsync()
+    hideAlert(alert)
+  })
+}
+
+function handleListingFormSubmit(e) {
+  e.preventDefault()
+  const formData = new FormData(e.target)
+
+  const alert = document.getElementById('alert')
+  const alertContent = document.getElementById('alertContent')
+
+  showAlert(alert, alertContent, 'alert-warning', `Delisting/Purchasing item from market... (+ units)`)
+
+  fetch('/api/trade', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      id: formData.get('id')
+    })
+  }).catch(err => {
+    showAlert(alert, alertContent, 'alert-error', `Failed to delist/purchase item ${formData.get('id')} from market. (- units)`)
+    console.error(err)
+  }).then(res => res.json()).then(async res => {
+    showAlert(alert, alertContent, 'alert-success', `Item ${formData.get('id')} successfully delisted/purchased. (+ units)`)
+    await refreshInventoryAsync()
+    await refreshMarketListingAsync()
+    hideAlert(alert)
+  })
+}
+
+function showAlert(alert, alertContent, alertClass, message) {
+  alert.classList.remove('alert-warning', 'alert-error', 'alert-success')
+  alert.classList.add(alertClass)
+  alertContent.innerHTML = message
+  alert.classList.remove('hidden')
+}
+
+function hideAlert(alert, button) {
+  if (button) button.disabled = false
+  setTimeout(() => {
+    alert.classList.add('hidden')
+  }, 1500)
+}
+
 function getItemElement(i) {
   const element = document.createElement('li')
   element.innerHTML = `
@@ -357,77 +415,6 @@ function getListingElement(l, i) {
     return element
 }
 
-function onSubmitDelistBuy(e) {
-  e.preventDefault()
-  const formData = new FormData(e.target)
-
-  const alert = document.getElementById('alert')
-  const alertContent = document.getElementById('alertContent')
-
-  alert.classList.add('alert-warning')
-  alertContent.innerHTML = `Delisting/Purchasing item from market... (+ units)`
-
-  alert.classList.remove('hidden')
-
-  fetch('/api/trade', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      id: formData.get('id')
-    })
-  }).catch(err => {
-    alert.classList.replace('alert-warning', 'alert-error')
-    alertContent.innerHTML = `Failed to delist/purchase item ${formData.get('id')} from market. (- units)`
-    console.error(err)
-  }).then(res => res.json()).then(async res => {
-    alert.classList.replace('alert-warning', 'alert-success')
-    alertContent.innerHTML = `Item ${formData.get('id')} successfully delisted/purchased. (+ units)`
-
-    await refreshInventoryAsync()
-    await refreshMarketListingAsync()
-
-    if (!alert.classList.contains('hidden')) setTimeout(() => {alert.classList.add('hidden')}, 1500)
-  })
-}
-
-function onSubmitSell(e) {
-  e.preventDefault()
-  const formData = new FormData(e.target)
-
-  const alert = document.getElementById('alert')
-  const alertContent = document.getElementById('alertContent')
-
-  alert.classList.add('alert-warning')
-  alertContent.innerHTML = `Listing item for sale... (- units)`
-
-  alert.classList.remove('hidden')
-
-  fetch('/api/list', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      id: formData.get('id'),
-      price: formData.get('price'),
-      amount: formData.get('amount')
-    })
-  }).catch(err => {
-    alert.classList.replace('alert-warning', 'alert-error')
-    alertContent.innerHTML = `Failed to list item ${formData.get('id')} for sale. (- units)`
-    console.error(err)
-  }).then(res => res.json()).then(async res => {
-    alert.classList.replace('alert-warning', 'alert-success')
-    alertContent.innerHTML = `Item ${formData.get('id')} successfully listed. (- units)`
-
-    await refreshInventoryAsync()
-    await refreshMarketListingAsync()
-    if (!alert.classList.contains('hidden')) setTimeout(() => {alert.classList.add('hidden')}, 1500)
-  })
-}
-
 async function refreshMarketListingAsync() {
   fetch(`/api/market?user=${Current.user.id}`).then(async (res) => {
     let listings = await res.json()
@@ -445,7 +432,7 @@ async function refreshMarketListingAsync() {
         const listingElement = getListingElement(l, item)
         marketElement.appendChild(listingElement)
 
-        listingElement.children[0].addEventListener('submit', onSubmitDelistBuy)
+        listingElement.children[0].addEventListener('submit', handleListingFormSubmit)
       } else {
         console.warn(`item ${l.item} not found in current user inventory. user's inventory: ${Current.user.inventory.length} items`)
       }
@@ -470,14 +457,14 @@ async function refreshInventoryAsync() {
       const itemElement = getItemElement(i)
       inventoryElement.appendChild(itemElement)
 
-      itemElement.children[0].addEventListener('submit', onSubmitSell)
+      itemElement.children[0].addEventListener('submit', handleItemFormSubmit)
     })
 
     inventoryTotal.innerHTML = items.filter(a => a.amount > 0).length
   })
 }
 
-function onCollect(resource) {
+function collectResource(resource) {
   const collectWaterBtn = document.getElementById('collectWaterBtn')
   const collectWaterIcon = document.getElementById('collectWaterIcon')
   const collectingWaterIcon = document.getElementById('collectingWaterIcon')

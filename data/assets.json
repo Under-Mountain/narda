@@ -20,7 +20,7 @@
   {
     "id": "WTR403",
     "type": "water",
-    "amount": 901,
+    "amount": 0,
     "owner": "dev"
   },
   {
@@ -62,7 +62,7 @@
   {
     "id": "MNR427",
     "type": "mineral",
-    "amount": 180,
+    "amount": 0,
     "owner": "dev"
   },
   {
@@ -5248,7 +5248,7 @@
   {
     "id": "BNK511",
     "type": "bankstone",
-    "amount": 2,
+    "amount": 0,
     "properties": {
       "yield": 0.01,
       "cap": 1268,
@@ -5284,7 +5284,7 @@
   {
     "id": "BNK80",
     "type": "bankstone",
-    "amount": 2,
+    "amount": 0,
     "properties": {
       "yield": 0.01,
       "cap": 866,
@@ -5460,5 +5460,17 @@
     },
     "owner": "dev",
     "visual": 0
+  },
+  {
+    "id": "MNR517",
+    "type": "mineral",
+    "amount": 244,
+    "owner": "dev"
+  },
+  {
+    "id": "WTR518",
+    "type": "water",
+    "amount": 388,
+    "owner": "dev"
   }
 ]
