@@ -1,5 +1,5 @@
 import { initializeFormHandlers } from './events.js';
-import { updateElementContent, toggleElementVisibility, buildTimeString, buildDateString, updateHeader } from './dom.js';
+import { buildTimeString, buildDateString, updateHeader, updateUserBalance } from './dom.js';
 
 export const Current = {
   time: '..:.. (..% to yield)',
@@ -17,42 +17,44 @@ export const Current = {
   }
 }
 
-function onSync(world, current) {
-  updateClockAndResources(world, current.global.time, current.global.resources)
-  updateUserResources(current.account, current.inventory)
-}
-
-function updateUserResources(account, inventory) {
-  Current.user.balance = account?.credits.balance
-  Current.user.id = account?.id
-  Current.user.water = getResourceAmount(inventory, 'water')
-  Current.user.mithril = getResourceAmount(inventory, 'mineral')
-
-  updateUserInterface()
-}
-
-function getResourceAmount(inventory, type) {
-  return inventory?.filter(i => i.type == type).reduce((sum, c) => sum + c.amount, 0)
-}
-
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 export const queryUser = urlParams.get('user');
 
-function updateUserInterface() {
-  updateElementContent("userBalance", Current.user?.balance?.toFixed(2))
-  if (queryUser == Current.user.id) updateElementContent('profileBalance', Current.user?.balance?.toFixed(2))
-  updateElementContent("userWater", Current.user?.water)
-  updateElementContent("userMineral", Current.user.mithril)
+let inProgress = false
 
-  const mintBankBtn = document.getElementById('mintBankBtn')
-  const alert = document.getElementById('alert')
-  if (mintBankBtn && alert.classList.contains('hidden'))
-    mintBankBtn.disabled = Current.user.mithril < 200 ||
-      Current.user.water < Math.ceil(Math.pow(Current.resources.water / Current.resources.mithril, 7)) || Current.user.balance < 200
+fetch('/api/world').then(async (res) => {
+  const world = await res.json()
+  setInterval(async () => {
+    await syncCurrentAsync(world)
+  }, world.interval.minute);
+})
+
+initializeFormHandlers();
+
+async function syncCurrentAsync(world) {
+  if (!inProgress) {
+    inProgress = true
+    return fetch('/api/current').then(async (res) => {
+      const current = await res.json()
+      console.debug(`T${current.global.time}: ...`)
+      onSyncCurrent(world, current)
+      inProgress = false
+    })
+  } else console.log(`skipping sync as in progress...`)
 }
 
-function updateClockAndResources(world, time, resources) {
+/**
+ * Main entry every minute
+ * @param {*} world 
+ * @param {*} current 
+ */
+function onSyncCurrent(world, current) {
+  updateWorld(world, current.global.time, current.global.resources)
+  updateCurrent(current.account, current.inventory)
+}
+
+function updateWorld(world, time, resources) {
   Current.time = buildTimeString(world, time);
   Current.date = buildDateString(world, time);
   Current.resources.water = resources.water.balance.toFixed(0).toLocaleString();
@@ -61,49 +63,15 @@ function updateClockAndResources(world, time, resources) {
   updateHeader(Current);
 }
 
-let inProgress = false
+function updateCurrent(account, inventory) {
+  Current.user.balance = account?.credits.balance
+  Current.user.id = account?.id
+  Current.user.water = getResourceAmount(inventory, 'water')
+  Current.user.mithril = getResourceAmount(inventory, 'mineral')
 
-async function sync(world) {
-  if (!inProgress) {
-    inProgress = true
-    return fetch('/api/current').then(async (res) => {
-      const current = await res.json()
-      console.debug(`T${current.global.time}: ...`)
-      onSync(world, current)
-      inProgress = false
-    })
-  } else console.log(`skipping sync as in progress...`)
+  updateUserBalance(Current, queryUser)
 }
 
-fetch('/api/world').then(async (res) => {
-  const world = await res.json()
-  setInterval(async () => {
-    await sync(world)
-  }, world.interval.minute);
-})
-
-const invitationCode = document.getElementById('invitationCode')
-if (invitationCode) { invitationCode.addEventListener('input', handleInvitationCodeInput) }
-
-function handleInvitationCodeInput(e) {
-  const usernameControl = document.getElementById('usernameControl')
-  const passwordControl = document.getElementById('passwordControl')
-  const registerBtn = document.getElementById('registerBtn')
-
-  if (e.target.value == '1892') {
-    toggleElementVisibility(usernameControl, false)
-    toggleElementVisibility(passwordControl, false)
-    registerBtn.disabled = false
-
-    toggleElementVisibility(invitationCode, true)
-    usernameControl.firstElementChild.focus()
-  } else {
-    toggleElementVisibility(usernameControl, true)
-    toggleElementVisibility(passwordControl, true)
-    registerBtn.disabled = true
-
-    toggleElementVisibility(invitationCode, false)
-  }
+function getResourceAmount(inventory, type) {
+  return inventory?.filter(i => i.type == type).reduce((sum, c) => sum + c.amount, 0)
 }
-
-initializeFormHandlers();

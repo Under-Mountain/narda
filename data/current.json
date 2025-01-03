@@ -1,17 +1,17 @@
 {
-  "time": 183370,
+  "time": 183538,
   "resources": {
     "water": {
-      "balance": 547864.5640468571,
-      "supplied": 716179.5640468715
+      "balance": 547907.0342926887,
+      "supplied": 717474.0342927031
     },
     "mineral": {
-      "balance": 224588.35378129748,
-      "supplied": 280242.35378129664
+      "balance": 224733.0041111995,
+      "supplied": 280627.00411119877
     },
     "credits": {
-      "balance": -75806.63982440029,
-      "supplied": 99723.36017559974
+      "balance": -76206.63982440029,
+      "supplied": 100123.36017559974
     }
   },
   "effects": {
@@ -467,16 +467,6 @@
   "activities": {
     "pending": [],
     "completed": [
-      "COLLECT9551",
-      "COLLECT9551",
-      "COLLECT9552",
-      "COLLECT9552",
-      "COLLECT9553",
-      "COLLECT9553",
-      "COLLECT9554",
-      "COLLECT9554",
-      "COLLECT9555",
-      "COLLECT9555",
       "CONSUME9556",
       "CONSUME9556"
     ],

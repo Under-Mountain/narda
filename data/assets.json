@@ -5464,13 +5464,13 @@
   {
     "id": "MNR517",
     "type": "mineral",
-    "amount": 492,
+    "amount": 562,
     "owner": "dev"
   },
   {
     "id": "WTR518",
     "type": "water",
-    "amount": 1412,
+    "amount": 1644,
     "owner": "dev"
   },
   {
