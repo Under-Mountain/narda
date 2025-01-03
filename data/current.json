@@ -1,17 +1,17 @@
 {
-  "time": 180093,
+  "time": 183370,
   "resources": {
     "water": {
-      "balance": 537495.9655387561,
-      "supplied": 699942.9655387705
+      "balance": 547864.5640468571,
+      "supplied": 716179.5640468715
     },
     "mineral": {
-      "balance": 220247.3143250924,
-      "supplied": 274137.31432509015
+      "balance": 224588.35378129748,
+      "supplied": 280242.35378129664
     },
     "credits": {
-      "balance": -72611.10702729976,
-      "supplied": 96518.89297270027
+      "balance": -75806.63982440029,
+      "supplied": 99723.36017559974
     }
   },
   "effects": {
@@ -34,15 +34,6 @@
       "BNK35",
       "BNK78",
       "BNK39",
-      "BNK101",
-      "BNK5",
-      "BNK4",
-      "BNK147",
-      "BNK129",
-      "BNK144",
-      "BNK7",
-      "BNK86",
-      "BNK23",
       "BNK41",
       "BNK56",
       "BNK82",
@@ -438,7 +429,37 @@
       "BNK137",
       "BNK337",
       "BNK516",
-      "BNK511"
+      "BNK511",
+      "BNK519",
+      "BNK520",
+      "BNK521",
+      "BNK522",
+      "BNK523",
+      "BNK524",
+      "BNK525",
+      "BNK526",
+      "BNK527",
+      "BNK528",
+      "BNK529",
+      "BNK530",
+      "BNK531",
+      "BNK532",
+      "BNK533",
+      "BNK534",
+      "BNK535",
+      "BNK536",
+      "BNK537",
+      "BNK538",
+      "BNK539",
+      "BNK101",
+      "BNK5",
+      "BNK4",
+      "BNK147",
+      "BNK129",
+      "BNK144",
+      "BNK7",
+      "BNK86",
+      "BNK23"
     ],
     "completed": [],
     "rejected": []
@@ -446,27 +467,18 @@
   "activities": {
     "pending": [],
     "completed": [
-      "COLLECT9437",
-      "COLLECT9437",
-      "COLLECT9438",
-      "COLLECT9438",
-      "TX9439",
-      "TX9440",
-      "TX9441",
-      "TX9442",
-      "MINT9443",
-      "CONSUME9444",
-      "CONSUME9444",
-      "CONSUME9445",
-      "CONSUME9445",
-      "CONSUME9446",
-      "CONSUME9446",
-      "COLLECT9447",
-      "COLLECT9447",
-      "COLLECT9448",
-      "COLLECT9448",
-      "CONSUME9449",
-      "CONSUME9449"
+      "COLLECT9551",
+      "COLLECT9551",
+      "COLLECT9552",
+      "COLLECT9552",
+      "COLLECT9553",
+      "COLLECT9553",
+      "COLLECT9554",
+      "COLLECT9554",
+      "COLLECT9555",
+      "COLLECT9555",
+      "CONSUME9556",
+      "CONSUME9556"
     ],
     "rejected": []
   }

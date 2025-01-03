@@ -20,8 +20,8 @@
   {
     "id": "WTR403",
     "type": "water",
-    "amount": 0,
-    "owner": "dev"
+    "amount": 681,
+    "owner": "worldbank"
   },
   {
     "id": "WTR177",
@@ -62,8 +62,8 @@
   {
     "id": "MNR427",
     "type": "mineral",
-    "amount": 0,
-    "owner": "dev"
+    "amount": 4,
+    "owner": "worldbank"
   },
   {
     "id": "WTR464",
@@ -5464,13 +5464,255 @@
   {
     "id": "MNR517",
     "type": "mineral",
-    "amount": 244,
+    "amount": 492,
     "owner": "dev"
   },
   {
     "id": "WTR518",
     "type": "water",
-    "amount": 388,
+    "amount": 1412,
     "owner": "dev"
+  },
+  {
+    "id": "BNK519",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.16,
+      "cap": 5910,
+      "staked": 5910
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK520",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.23,
+      "cap": 7780,
+      "staked": 7780
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK521",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.2,
+      "cap": 1204,
+      "staked": 1204
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK522",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.21,
+      "cap": 9799,
+      "staked": 9799
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK523",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.02,
+      "cap": 6270,
+      "staked": 6270
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK524",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.24,
+      "cap": 485,
+      "staked": 485
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK525",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.18,
+      "cap": 7794,
+      "staked": 7794
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK526",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.08,
+      "cap": 5929,
+      "staked": 5929
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK527",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.2,
+      "cap": 4222,
+      "staked": 4222
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK528",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.29,
+      "cap": 3283,
+      "staked": 3283
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK529",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.03,
+      "cap": 7520,
+      "staked": 7520
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK530",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.24,
+      "cap": 9463,
+      "staked": 9463
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK531",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.04,
+      "cap": 2104,
+      "staked": 2104
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK532",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.1,
+      "cap": 5575,
+      "staked": 5575
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK533",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.26,
+      "cap": 4139,
+      "staked": 4139
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK534",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.07,
+      "cap": 4627,
+      "staked": 4627
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK535",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.21,
+      "cap": 3792,
+      "staked": 3792
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK536",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.24,
+      "cap": 1376,
+      "staked": 1376
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK537",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.18,
+      "cap": 784,
+      "staked": 784
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK538",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.21,
+      "cap": 8021,
+      "staked": 8021
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK539",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.17,
+      "cap": 6537,
+      "staked": 6537
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK540",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.02,
+      "cap": 3047,
+      "staked": 3047
+    },
+    "owner": "worldbank"
   }
 ]
