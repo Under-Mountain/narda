@@ -13,7 +13,7 @@ export const Current = {
     balance: 0,
     water: 0,
     mithril: 0,
-    inventory: []
+    inventory: [] as any[]
   }
 }
 
@@ -32,7 +32,7 @@ fetch('/api/world').then(async (res) => {
 
 initializeFormHandlers();
 
-async function syncCurrentAsync(world) {
+async function syncCurrentAsync(world: any) {
   if (!inProgress) {
     inProgress = true
     return fetch('/api/current').then(async (res) => {
@@ -49,12 +49,12 @@ async function syncCurrentAsync(world) {
  * @param {*} world 
  * @param {*} current 
  */
-function onSyncCurrent(world, current) {
+function onSyncCurrent(world: any, current: any) {
   updateWorld(world, current.global.time, current.global.resources)
   updateCurrent(current.account, current.inventory)
 }
 
-function updateWorld(world, time, resources) {
+function updateWorld(world: any, time: number, resources: any) {
   Current.time = buildTimeString(world, time);
   Current.date = buildDateString(world, time);
   Current.resources.water = resources.water.balance.toFixed(0).toLocaleString();
@@ -63,7 +63,7 @@ function updateWorld(world, time, resources) {
   updateHeader(Current);
 }
 
-function updateCurrent(account, inventory) {
+function updateCurrent(account: any, inventory: any) {
   Current.user.balance = account?.credits.balance
   Current.user.id = account?.id
   Current.user.water = getResourceAmount(inventory, 'water')
@@ -72,6 +72,6 @@ function updateCurrent(account, inventory) {
   updateUserBalance(Current, queryUser)
 }
 
-function getResourceAmount(inventory, type) {
+function getResourceAmount(inventory: any[], type: string) {
   return inventory?.filter(i => i.type == type).reduce((sum, c) => sum + c.amount, 0)
 }

@@ -1,14 +1,14 @@
-import { updateStatus, toggleButtonState, toggleElementVisibility } from './dom.js'
+import { updateStatus, toggleButtonState, toggleElementVisibility, getElementById, getElementByIdAsButton } from './dom.js'
 import { refreshInventoryAsync } from './refresh.js'
 
-export function collectResource(resource) {
-  const collectWaterBtn = document.getElementById('collectWaterBtn')
-  const collectWaterIcon = document.getElementById('collectWaterIcon')
-  const collectingWaterIcon = document.getElementById('collectingWaterIcon')
+export function collectResource(resource: string) {
+  const collectWaterBtn = getElementByIdAsButton('collectWaterBtn')
+  const collectWaterIcon = getElementById('collectWaterIcon')
+  const collectingWaterIcon = getElementById('collectingWaterIcon')
 
-  const collectMineralBtn = document.getElementById('collectMineralBtn')
-  const collectMineralIcon = document.getElementById('collectMineralIcon')
-  const collectingMineralIcon = document.getElementById('collectingMineralIcon')
+  const collectMineralBtn = getElementByIdAsButton('collectMineralBtn')
+  const collectMineralIcon = getElementById('collectMineralIcon')
+  const collectingMineralIcon = getElementById('collectingMineralIcon')
 
   switch(resource) {
     case 'water':
@@ -29,7 +29,12 @@ export function collectResource(resource) {
     body: JSON.stringify({ resource: resource })
   }).catch(err => {
     console.error(err)
-  }).then(res => res.json()).then(res => {
+  }).then(res => {
+    if (!res || !res.json) {
+      throw new Error('Invalid response');
+    }
+    return res.json();
+  }).then(res => {
     updateStatus(res)
 
     switch(res.of) {
@@ -44,8 +49,8 @@ export function collectResource(resource) {
     }
 
     setTimeout(async () => {
-      toggleElementVisibility(document.getElementById("topRightStatus"), true)
-      toggleElementVisibility(document.getElementById("topLeftStatus"), true)
+      toggleElementVisibility(getElementById("topRightStatus"), true)
+      toggleElementVisibility(getElementById("topLeftStatus"), true)
       await refreshInventoryAsync()
     }, 500)
   })

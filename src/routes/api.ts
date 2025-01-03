@@ -24,6 +24,7 @@ app.use(session({
 app.use(cors())
 app.use(express.json())
 app.use(express.static(path.join(__dirname, '../public')))
+app.use('/scripts', express.static(path.join(__dirname, '../client')))
 app.use(express.urlencoded({ extended: true }))
 
 app.use('/api', authRouter)

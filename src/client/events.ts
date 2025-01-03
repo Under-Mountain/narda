@@ -1,5 +1,4 @@
-import { Current, queryUser } from './app.js'
-import { showAlert, hideAlert, toggleElementVisibility, updateStatus, toggleButtonState, getItemElement, getListingElement } from './dom.js'
+import { showAlert, hideAlert, toggleElementVisibility, getElementById, getElementByIdAsButton } from './dom.js'
 import { refreshInventoryAsync, refreshMarketListingAsync } from './refresh.js'
 import { collectResource } from './collect.js'
 
@@ -36,7 +35,7 @@ export function initializeFormHandlers() {
 
   const invitationCode = document.getElementById('invitationCode')
   if (invitationCode) {
-      invitationCode.addEventListener('input', onInvitationCodeInput)
+    invitationCode.addEventListener('input', onInvitationCodeInput)
   }
 
   const itemForms = document.querySelectorAll('.itemForm')
@@ -50,21 +49,20 @@ export function initializeFormHandlers() {
   })
 }
 
-function onCollectForm(e, resource) {
+function onCollectForm(e: Event, resource: string) {
   e.preventDefault()
   collectResource(resource)
 }
 
-function onUpdateBioForm(e) {
+function onUpdateBioForm(e: Event) {
   e.preventDefault()
-  const formData = new FormData(e.target)
+  const formData = new FormData(e.target as HTMLFormElement)
 
-  const alert = document.getElementById('alert')
-  const alertContent = document.getElementById('alertContent')
-  const updateBioBtn = document.getElementById('updateBioBtn')
+  const alert = getElementById('alert')
+  const alertContent = getElementById('alertContent')
+  const updateBioBtn = getElementByIdAsButton('updateBioBtn')
 
-  showAlert(alert, alertContent, 'alert-warning', `Updating bio... (-100.00sl)`)
-  updateBioBtn.disabled = true
+  showAlert(alert, alertContent, 'alert-warning', `Updating bio... (-100.00sl)`, updateBioBtn)
 
   fetch('/api/edit', {
     method: 'POST',
@@ -72,24 +70,24 @@ function onUpdateBioForm(e) {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({ bio: formData.get('bio') })
-  }).catch(err => {
-    console.error(err)
-  }).then(res => res.json()).then(res => {
+  }).then(res => {
+    if (!res) throw new Error('No response received')
+    return res.json()
+  }).then(res => {
     showAlert(alert, alertContent, 'alert-success', `User bio has been successfully updated. (-100.00sl)`)
     hideAlert(alert, updateBioBtn)
-  })  
+  })
 }
 
-function onSendCreditForm(e) {
+function onSendCreditForm(e: Event) {
   e.preventDefault()
-  const formData = new FormData(e.target)
+  const formData = new FormData(e.target as HTMLFormElement)
 
-  const alert = document.getElementById('alert')
-  const alertContent = document.getElementById('alertContent')
-  const sendBtn = document.getElementById('sendBtn')
+  const alert = getElementById('alert')
+  const alertContent = getElementById('alertContent')
+  const sendBtn = getElementByIdAsButton('sendBtn')
 
-  showAlert(alert, alertContent, 'alert-warning', `Sending credit to ${formData.get('to')} ... (-${formData.get('amount')}sl)`)
-  sendBtn.disabled = true
+  showAlert(alert, alertContent, 'alert-warning', `Sending credit to ${formData.get('to')} ... (-${formData.get('amount')}sl)`, sendBtn)
 
   fetch('/api/transaction', {
     method: 'POST',
@@ -103,22 +101,24 @@ function onSendCreditForm(e) {
     })
   }).catch(err => {
     console.error(err)
-  }).then(res => res.json()).then(res => {
+  }).then(res => {
+    if (!res) throw new Error('No response received')
+    return res.json()
+  }).then(res => {
     showAlert(alert, alertContent, 'alert-success', `Credit successfully sent to ${formData.get('to')}. (-${formData.get('amount')}sl)`)
     hideAlert(alert, sendBtn)
-  })  
+  })
 }
 
-function onExploreForm(e) {
+function onExploreForm(e: Event) {
   e.preventDefault()
-  const formData = new FormData(e.target)
+  const formData = new FormData(e.target as HTMLFormElement)
 
-  const alert = document.getElementById('alert')
-  const alertContent = document.getElementById('alertContent')
-  const mintBankBtn = document.getElementById('mintBankBtn')
+  const alert = getElementById('alert')
+  const alertContent = getElementById('alertContent')
+  const mintBankBtn = getElementByIdAsButton('mintBankBtn')
 
-  showAlert(alert, alertContent, 'alert-warning', `Minting bank item... (-200.00sl - wtr - mth)`)
-  mintBankBtn.disabled = true
+  showAlert(alert, alertContent, 'alert-warning', `Minting bank item... (-200.00sl - wtr - mth)`, mintBankBtn)
 
   fetch('/api/mint', {
     method: 'POST',
@@ -130,23 +130,25 @@ function onExploreForm(e) {
     })
   }).catch(err => {
     console.error(err)
-  }).then(res => res.json()).then(async res => {
+  }).then(res => {
+    if (!res) throw new Error('No response received')
+    return res.json()
+  }).then(async res => {
     showAlert(alert, alertContent, 'alert-success', `Bank item successfully minted. (-200.00sl - wtr - mth)`)
     await refreshInventoryAsync()
     hideAlert(alert)
-  })  
+  })
 }
 
-function onPostForm(e) {
+function onPostForm(e: Event) {
   e.preventDefault()
-  const formData = new FormData(e.target)
+  const formData = new FormData(e.target as HTMLFormElement)
 
-  const alert = document.getElementById('alert')
-  const alertContent = document.getElementById('alertContent')
-  const postBtn = document.getElementById('postBtn')
+  const alert = getElementById('alert')
+  const alertContent = getElementById('alertContent')
+  const postBtn = getElementByIdAsButton('postBtn')
 
-  showAlert(alert, alertContent, 'alert-warning', `Creating a post... (-10.00sl)`)
-  postBtn.disabled = true
+  showAlert(alert, alertContent, 'alert-warning', `Creating a post... (-10.00sl)`, postBtn)
 
   fetch('/api/post', {
     method: 'POST',
@@ -160,18 +162,21 @@ function onPostForm(e) {
     })
   }).catch(err => {
     console.error(err)
-  }).then(res => res.json()).then(res => {
+  }).then(res => {
+    if (!res) throw new Error('No response received')
+    return res.json()
+  }).then(res => {
     showAlert(alert, alertContent, 'alert-success', `Post successfully created. (-10.00sl)`)
     hideAlert(alert, postBtn)
   })
 }
 
-export function onSellItemForm(e) {
+export function onSellItemForm(e: Event) {
   e.preventDefault()
-  const formData = new FormData(e.target)
+  const formData = new FormData(e.target as HTMLFormElement)
 
-  const alert = document.getElementById('alert')
-  const alertContent = document.getElementById('alertContent')
+  const alert = getElementById('alert')
+  const alertContent = getElementById('alertContent')
 
   showAlert(alert, alertContent, 'alert-warning', `Listing item for sale... (- units)`)
 
@@ -188,7 +193,10 @@ export function onSellItemForm(e) {
   }).catch(err => {
     showAlert(alert, alertContent, 'alert-error', `Failed to list item ${formData.get('id')} for sale. (- units)`)
     console.error(err)
-  }).then(res => res.json()).then(async res => {
+  }).then(res => {
+    if (!res) throw new Error('No response received')
+    return res.json()
+  }).then(async res => {
     showAlert(alert, alertContent, 'alert-success', `Item ${formData.get('id')} successfully listed. (- units)`)
     await refreshInventoryAsync()
     await refreshMarketListingAsync()
@@ -196,12 +204,12 @@ export function onSellItemForm(e) {
   })
 }
 
-export function onBuyDelistForm(e) {
+export function onBuyDelistForm(e: Event) {
   e.preventDefault()
-  const formData = new FormData(e.target)
+  const formData = new FormData(e.target as HTMLFormElement)
 
-  const alert = document.getElementById('alert')
-  const alertContent = document.getElementById('alertContent')
+  const alert = getElementById('alert')
+  const alertContent = getElementById('alertContent')
 
   showAlert(alert, alertContent, 'alert-warning', `Delisting/Purchasing item from market... (+ units)`)
 
@@ -216,7 +224,10 @@ export function onBuyDelistForm(e) {
   }).catch(err => {
     showAlert(alert, alertContent, 'alert-error', `Failed to delist/purchase item ${formData.get('id')} from market. (- units)`)
     console.error(err)
-  }).then(res => res.json()).then(async res => {
+  }).then(res => {
+    if (!res) throw new Error('No response received')
+    return res.json()
+  }).then(async res => {
     showAlert(alert, alertContent, 'alert-success', `Item ${formData.get('id')} successfully delisted/purchased. (+ units)`)
     await refreshInventoryAsync()
     await refreshMarketListingAsync()
@@ -224,23 +235,24 @@ export function onBuyDelistForm(e) {
   })
 }
 
-export function onInvitationCodeInput(e) {
-  const usernameControl = document.getElementById('usernameControl')
-  const passwordControl = document.getElementById('passwordControl')
-  const registerBtn = document.getElementById('registerBtn')
+export function onInvitationCodeInput(e: Event) {
+  const usernameControl = getElementById('usernameControl')
+  const passwordControl = getElementById('passwordControl')
+  const registerBtn = getElementByIdAsButton('registerBtn')
 
-  if (e.target.value == '1892') {
+  if ((e.target as HTMLInputElement).value == '1892') {
     toggleElementVisibility(usernameControl, false)
     toggleElementVisibility(passwordControl, false)
     registerBtn.disabled = false
 
-    toggleElementVisibility(invitationCode, true)
-    usernameControl.firstElementChild.focus()
+    toggleElementVisibility(getElementById('invitationCode'), true)
+    const usernameInput = usernameControl.firstElementChild as HTMLElement
+    usernameInput.focus()
   } else {
     toggleElementVisibility(usernameControl, true)
     toggleElementVisibility(passwordControl, true)
     registerBtn.disabled = true
 
-    toggleElementVisibility(invitationCode, false)
+    toggleElementVisibility(getElementById('invitationCode'), false)
   }
 }
