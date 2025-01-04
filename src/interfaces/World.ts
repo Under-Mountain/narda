@@ -80,7 +80,7 @@ export interface World {
   /**
    * World bank information.
    */
-  worldbank: {
+  bank: {
     /**
      * Maximum deficit allowed in the world bank.
      */

@@ -1,11 +1,27 @@
+import { Account } from "../types.js";
 import { createTransaction, consume } from "./activity.js";
 import { activities, accounts, world, assets, current, market } from "./model.js";
 
 export function queueBankActivities(): void {
-    console.log(`TX${activities.length}: processing worldbank activities...`);
-    const account = accounts.find(a => a.id == 'worldbank')
-    if (account && account.credits.balance <= -1 * world.worldbank.maxDeficit) {
-        console.warn(`TX${activities.length}: worldbank's max deficit reached`);
+    console.log(`TX${activities.length}: processing banking activities...`);
+    let worldBank = accounts.find(a => a.id == 'world') as Account
+    if (!worldBank) {
+        worldBank = {
+            id: 'world',
+            credits: {
+                balance: 0
+            },
+            times: {
+                created: current.time
+            }
+        }
+
+        accounts.push(worldBank)
+    }
+
+    const creditCost = 200
+    if (worldBank && worldBank.credits.balance - creditCost < world.bank.maxDeficit) {
+        console.warn(`TX${activities.length}: world's max deficit reached`);
         return
     }
 
@@ -13,11 +29,14 @@ export function queueBankActivities(): void {
     buyFloorListing('mineral')
     buyFloorListing('bankstone')
 
-    const userWaters = assets.filter(a => a.owner == account?.id && a.type == "water")
-    const userMinerals = assets.filter(a => a.owner == account?.id && a.type == "mineral")
+    const userWaters = assets.filter(a => a.owner == worldBank?.id && a.type == "water")
+    const userMinerals = assets.filter(a => a.owner == worldBank?.id && a.type == "mineral")
 
-    if (userWaters.reduce((sum, c) => sum + c.amount, 0) < 6 ||
-        userMinerals.reduce((sum, c) => sum + c.amount, 0) < 1) {
+    const mineralCost = 200
+    const waterCost = Math.ceil(Math.pow(current.resources.water.balance / current.resources.mineral.balance, 7))
+
+    if (userWaters.reduce((sum, c) => sum + c.amount, 0) < waterCost ||
+        userMinerals.reduce((sum, c) => sum + c.amount, 0) < mineralCost) {
         console.warn(`not enough balance to consume`)
         return
     }
@@ -25,29 +44,28 @@ export function queueBankActivities(): void {
     // mint a bankstone
     const mintActivity = createTransaction(
         "world",
-        account?.id || '',
+        worldBank?.id || '',
         1,
         'bankstone',
-        `Minting of a bankstone for ${account?.id}`
+        `Minting of a bankstone for ${worldBank?.id}`
     );
 
     const creditConsumption = consume(
-        account?.id || '',
+        worldBank?.id || '',
         "credits",
-        100
+        creditCost
     );
 
-    const waterCost = Math.ceil(current.resources.water.supplied * Math.log(accounts.length * accounts.length) / current.resources.mineral.supplied);
     const waterConsumption = consume(
-        account?.id || '',
+        worldBank?.id || '',
         'water',
         waterCost
     );
 
     const mineralConsumption = consume(
-        account?.id || '',
+        worldBank?.id || '',
         "mineral",
-        10
+        mineralCost
     );
 
     current.activities.pending.push(...[creditConsumption.id, mineralConsumption.id, waterConsumption.id, mintActivity.id]);
@@ -73,7 +91,7 @@ export function buyFloorListing(type: string): void {
     }
 
     const creditTx = createTransaction(
-        'worldbank',
+        'world',
         floorListing.owner,
         floorListing.price,
         "credit",
@@ -82,7 +100,7 @@ export function buyFloorListing(type: string): void {
 
     const itemTx = createTransaction(
         floorListing.owner,
-        'worldbank',
+        'world',
         floorListing.amount,
         floorListing.item,
         `Sale of ${floorListing.item} at ${floorListing.price} credit`
