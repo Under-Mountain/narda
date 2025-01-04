@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "id": "dev",
+    "credits": {
+      "balance": 4300
+    },
+    "times": {
+      "created": 31,
+      "lastActive": 31
+    }
+  },
+  {
+    "id": "world",
+    "credits": {
+      "balance": -4700
+    },
+    "times": {
+      "created": 60
+    }
+  }
+]

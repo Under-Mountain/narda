@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "id": "WTR0",
+    "type": "water",
+    "amount": 68,
+    "owner": "world"
+  },
+  {
+    "id": "MNR1",
+    "type": "mineral",
+    "amount": -87,
+    "owner": "world"
+  },
+  {
+    "id": "WTR2",
+    "type": "water",
+    "amount": 0,
+    "owner": "dev"
+  },
+  {
+    "id": "MNR3",
+    "type": "mineral",
+    "amount": 125,
+    "owner": "world"
+  },
+  {
+    "id": "WTR4",
+    "type": "water",
+    "amount": 0,
+    "owner": "dev"
+  },
+  {
+    "id": "WTR5",
+    "type": "water",
+    "amount": 0,
+    "owner": "dev"
+  },
+  {
+    "id": "WTR6",
+    "type": "water",
+    "amount": 876,
+    "owner": "dev"
+  },
+  {
+    "id": "MNR7",
+    "type": "mineral",
+    "amount": 113,
+    "owner": "world"
+  },
+  {
+    "id": "MNR8",
+    "type": "mineral",
+    "amount": 75,
+    "owner": "dev"
+  },
+  {
+    "id": "BNK9",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.23,
+      "cap": 2099,
+      "staked": 2099
+    },
+    "owner": "world"
+  }
+]

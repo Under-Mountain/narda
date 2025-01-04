@@ -1,6 +1,7 @@
 import { activities, current, accounts, posts, auth, assets } from './model.js';
 import { ActivityType } from '../interfaces/Activity.js';
 import bcrypt from 'bcrypt';
+import { exploreCost } from "../common/pricing.js";
 
 /**
  * Creates a new activity.
@@ -188,8 +189,8 @@ export async function mint(type: string, username: string, password?: string, in
     const account = accounts.find(a => a.id == to);
     const userWaters = assets.filter(a => a.owner == to && a.type == "water");
     const userMinerals = assets.filter(a => a.owner == to && a.type == "mineral");
-    const waterCost = Math.ceil(Math.pow(current.resources.water.balance / current.resources.mineral.balance, 7));
-    const mineralCost = 200;
+
+    const { creditCost, mineralCost, waterCost } = exploreCost();
     const activity = createActivity(
         "mint" as ActivityType,
         type,
@@ -214,12 +215,12 @@ export async function mint(type: string, username: string, password?: string, in
             if (!account) {
                 throw new Error('Account not found');
             }
-            if (account.credits.balance < 200 ||
+            if (account.credits.balance < creditCost ||
                 userWaters.reduce((sum, c) => sum + c.amount, 0) < waterCost ||
                 userMinerals.reduce((sum, c) => sum + c.amount, 0) < mineralCost) {
                 throw new Error(`Not enough balance to mint bankstone`);
             }
-            const creditConsumption = consume(to, "credits", 200);
+            const creditConsumption = consume(to, "credits", creditCost);
             const waterConsumption = consume(to, 'water', waterCost);
             const mineralConsumption = consume(to, "mineral", mineralCost);
             consumptions.push(... [creditConsumption, mineralConsumption, waterConsumption]);

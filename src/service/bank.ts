@@ -1,6 +1,7 @@
 import { Account } from "../types.js";
 import { createTransaction, consume } from "./activity.js";
 import { activities, accounts, world, assets, current, market } from "./model.js";
+import { exploreCost } from "../common/pricing.js";
 
 export function queueBankActivities(): void {
     console.log(`TX${activities.length}: processing banking activities...`);
@@ -19,7 +20,8 @@ export function queueBankActivities(): void {
         accounts.push(worldBank)
     }
 
-    const creditCost = 200
+    const { creditCost, mineralCost, waterCost } = exploreCost();
+
     if (worldBank && worldBank.credits.balance - creditCost < -1 * world.bank.maxDeficit) {
         console.warn(`TX${activities.length}: world's max deficit reached`);
         return
@@ -31,9 +33,6 @@ export function queueBankActivities(): void {
 
     const userWaters = assets.filter(a => a.owner == worldBank?.id && a.type == "water")
     const userMinerals = assets.filter(a => a.owner == worldBank?.id && a.type == "mineral")
-
-    const mineralCost = 200
-    const waterCost = Math.ceil(Math.pow(current.resources.water.balance / current.resources.mineral.balance, 7))
 
     if (userWaters.reduce((sum, c) => sum + c.amount, 0) < waterCost ||
         userMinerals.reduce((sum, c) => sum + c.amount, 0) < mineralCost) {

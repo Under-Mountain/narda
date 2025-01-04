@@ -1,6 +1,7 @@
-import { accounts, current, market, assets } from '../service/model.js'
-import { Account, Asset } from '../types.js'
-import { createItemElement } from "../common/html.js"
+import { accounts, current, market, assets } from '../service/model.js';
+import { Account, Asset } from '../types.js';
+import { createItemElement } from "../common/html.js";
+import { exploreCost } from "../common/pricing.js";
 
 export function ProfileView(account: Account, session: any): string {
     const items = assets.filter(a => a.owner == account.id && a.amount > 0)
@@ -16,7 +17,6 @@ export function ProfileView(account: Account, session: any): string {
     const userWaterTotal = userWaters.reduce((sum, c) => { return sum + c.amount }, 0)
 
     const userMinerals = assets.filter((a) => a.type == "mineral" && a.owner == account.id)
-    console.log(userMinerals)
     const userMineralTotal = userMinerals.reduce((sum, c) => { return sum + c.amount }, 0)
     
     return `
@@ -102,6 +102,8 @@ export function SendCreditView(account: Account, session: any): string {
 }
 
 export function InventoryView(account: Account, items: Asset[], userMineralTotal: number, userWaterTotal: number): string {
+    const { creditCost, mineralCost, waterCost } = exploreCost();
+
     let inventoryHtml = `<div class="card bg-base-100 p-2 sm:p-4 lg:p-8">
         <div class="card-title">
             <h3>Inventory (<a id="inventoryTotal" href="/assets?user=${account.id}" class="link link-hover">${items.filter(i => i.owner == account.id).length}</a>)</h3>
@@ -111,14 +113,14 @@ export function InventoryView(account: Account, items: Asset[], userMineralTotal
                 <div class="form-control">
                     <input type="hidden" name="type" value="bankstone" />
                     <label for="type" class="text-xs">
-                        consumes ${Math.ceil(Math.pow(current.resources.water.balance / current.resources.mineral.balance, 7))}
-                        water + ${200} mineral
+                        consumes ${waterCost}
+                        water + ${mineralCost} mineral
                     </label>
                 </div>
                 <button id="mintBankBtn" class="btn btn-xs"
-                    ${userMineralTotal < 200 || userWaterTotal < Math.ceil(Math.pow(current.resources.water.balance / current.resources.mineral.balance, 7)) ||
-                        account.credits.balance < 200 ? "disabled" : ""}>
-                    Mint Bankstone (-200.00 credit)
+                    ${userMineralTotal < mineralCost || userWaterTotal < waterCost ||
+                        account.credits.balance < creditCost ? "disabled" : ""}>
+                    Mint Bankstone (-${creditCost.toFixed(2)} credit)
                 </button>
             </form>
             <ul id="inventory" class="text-xs grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 max-w-screen-md gap-1 justify-between">

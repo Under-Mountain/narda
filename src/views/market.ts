@@ -11,7 +11,7 @@ export function MarketplaceView(listings: Listing[], username: string, session: 
             ${username ? `${username}'s Store` : `Global Marketplace`} (<a id="marketTotal" href="/market?expired=false&sold=false">${listings.length}</a>)
         </h1>
         <div class="mb-2">
-            ${MarketStatsView(listings)}
+            ${MarketStatsView()}
         </div>
         <div role="tablist" class="tabs bg-base-200 mb-2">
             <a role="tab" class="tab tab-active">Balance</a>
@@ -32,23 +32,32 @@ export function MarketplaceView(listings: Listing[], username: string, session: 
     return marketplaceHtml
 }
 
-export function MarketStatsView(listings: Listing[]): string {
-    const marketSoldStats = getStats(market.filter(l => l.times.sold).map(l => l.price))
-    const activeListingStats = getStats(listings.map(l => l.price))
+export function MarketStatsView(): string {
+    const itemPrefix = ['WTR', 'MNR', 'BNK'];
+    let marketStatsHtml = '';
 
-    const marketStatsHtml = `
-        <div class="leading-4">
-            <small>total ${activeListingStats.count} (${activeListingStats.sum.toFixed(0)} credit) selling at
-            avg. ${activeListingStats.mean.toFixed(2)}
-            mdn. ${activeListingStats.median.toFixed(2)}
-            </small>
-        </div>
-        <div class="leading-4">
-            <small>total ${marketSoldStats.count} (${marketSoldStats.sum.toFixed(2)} credit) sold at
-            avg. ${marketSoldStats.mean.toFixed(2)}
-            mdn. ${marketSoldStats.median.toFixed(2)}
-            </small>
-        </div>
-    `
-    return marketStatsHtml
+    itemPrefix.forEach(prefix => {
+        const activeListings = market.filter(l => l.item.startsWith(prefix) && !l.times.sold && !l.times.expired);
+        const soldListings = market.filter(l => l.item.startsWith(prefix) && l.times.sold);
+
+        const activeListingStats = getStats(activeListings.map(l => l.price / l.amount));
+        const marketSoldStats = getStats(soldListings.map(l => l.price / l.amount));
+
+        marketStatsHtml += `
+            <div class="leading-4">
+                <small>${prefix} - total ${activeListingStats.count} (${activeListingStats.sum.toFixed(0)} credit) selling at
+                avg. ${activeListingStats.mean.toFixed(2)}/unit
+                mdn. ${activeListingStats.median.toFixed(2)}/unit
+                </small>
+            </div>
+            <div class="leading-4">
+                <small>${prefix} - total ${marketSoldStats.count} (${marketSoldStats.sum.toFixed(2)} credit) sold at
+                avg. ${marketSoldStats.mean.toFixed(2)}/unit
+                mdn. ${marketSoldStats.median.toFixed(2)}/unit
+                </small>
+            </div>
+        `;
+    });
+
+    return marketStatsHtml;
 }

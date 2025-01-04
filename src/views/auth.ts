@@ -6,7 +6,7 @@ export function AuthView(): string {
         .sort((a, b) => { return a.price / a.amount < b.price / b.amount ? 1 : -1 })
         .sort((a, b) => { return a.amount < b.amount ? 1 : -1 })
 
-    const marketStatsHtml = MarketStatsView(listings)
+    const marketStatsHtml = MarketStatsView()
 
     return `
 <div class="hero bg-base-300 sm:p-10">

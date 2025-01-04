@@ -1,1 +1,95 @@
-[]
+[
+  {
+    "id": "LST0",
+    "item": "WTR0",
+    "price": 1000,
+    "owner": "dev",
+    "amount": 207,
+    "times": {
+      "created": 69,
+      "lastUpdated": 69,
+      "sold": 120
+    }
+  },
+  {
+    "id": "LST1",
+    "item": "MNR1",
+    "price": 1000,
+    "owner": "dev",
+    "amount": 113,
+    "times": {
+      "created": 74,
+      "lastUpdated": 74,
+      "sold": 120
+    }
+  },
+  {
+    "id": "LST2",
+    "item": "WTR2",
+    "price": 1000,
+    "owner": "dev",
+    "amount": 104,
+    "times": {
+      "created": 144,
+      "lastUpdated": 144
+    }
+  },
+  {
+    "id": "LST3",
+    "item": "WTR4",
+    "price": 1000,
+    "owner": "dev",
+    "amount": 202,
+    "times": {
+      "created": 160,
+      "lastUpdated": 160
+    }
+  },
+  {
+    "id": "LST4",
+    "item": "WTR5",
+    "price": 1000,
+    "owner": "dev",
+    "amount": 148,
+    "times": {
+      "created": 181,
+      "lastUpdated": 181
+    }
+  },
+  {
+    "id": "LST5",
+    "item": "MNR3",
+    "price": 1000,
+    "owner": "dev",
+    "amount": 125,
+    "times": {
+      "created": 198,
+      "lastUpdated": 198,
+      "sold": 240
+    }
+  },
+  {
+    "id": "LST6",
+    "item": "MNR7",
+    "price": 1000,
+    "owner": "dev",
+    "amount": 113,
+    "times": {
+      "created": 443,
+      "lastUpdated": 443,
+      "sold": 480
+    }
+  },
+  {
+    "id": "LST7",
+    "item": "BNK9",
+    "price": 500,
+    "owner": "dev",
+    "amount": 1,
+    "times": {
+      "created": 532,
+      "lastUpdated": 532,
+      "sold": 540
+    }
+  }
+]

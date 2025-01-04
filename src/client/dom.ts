@@ -78,6 +78,10 @@ export function toggleButtonState(button: HTMLButtonElement, icon: HTMLElement, 
 }
 
 export function updateUserBalance(Current: any, queryUser: string) {
+  const creditCost = 200
+  const mineralCost = creditCost / 2
+  const waterCost = creditCost / 2 + Math.ceil(Math.pow(Current.resources.water.balance / Current.resources.mithril.balance, 2))
+
   updateElementContent("userBalance", Current.user?.balance?.toFixed(2))
   if (queryUser == Current.user.id) updateElementContent('profileBalance', Current.user?.balance?.toFixed(2))
   updateElementContent("userWater", Current.user?.water)
@@ -86,8 +90,8 @@ export function updateUserBalance(Current: any, queryUser: string) {
   const mintBankBtn = getElementById('mintBankBtn')
   const alert = getElementById('alert')
   if (mintBankBtn && alert.classList.contains('hidden'))
-    (mintBankBtn as HTMLButtonElement).disabled = Current.user.mithril < 200 ||
-      Current.user.water < Math.ceil(Math.pow(Current.resources.water / Current.resources.mithril, 7)) || Current.user.balance < 200
+    (mintBankBtn as HTMLButtonElement).disabled = Current.user.mithril < mineralCost ||
+      Current.user.water < waterCost || Current.user.balance < creditCost
 }
 
 export function updateUserInventory(Current: any, inventory: any[]) {
