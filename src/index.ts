@@ -1,10 +1,10 @@
 import { onMinuteAsync } from './service/service.js'
-import { accounts, assets, world, market, current, posts } from './service/model.js'
+import { accounts, world, market, posts } from './service/model.js'
 import { app } from './routes/api.js'
 import { ChannelsView, PostsView, PostView } from './views/posts.js'
-import { MarketStatsView, MarketplaceView } from './views/market.js'
+import { MarketplaceView } from './views/market.js'
 import { HeaderView } from './views/header.js'
-import { LeaderboardView, InventoryView, ProfileView } from './views/accounts.js'
+import { LeaderboardView, ProfileView } from './views/accounts.js'
 import { FooterView } from './views/footer.js'
 import { ActivitiesView, AssetsView } from './views/world.js'
 import 'dotenv/config'
@@ -36,8 +36,6 @@ setInterval(async () => await onMinuteAsync(), world.interval.minute)
 app.get('/', (req: Request, res: Response) => {
     const session = req.session
     const username = req.query.user ? req.query.user as string : req.session.username as string
-    const account: Account | undefined = accounts.find(a => a.id == username)
-
     const headerHtml = HeaderView(session, username)
 
     /**
@@ -61,12 +59,13 @@ app.get('/', (req: Request, res: Response) => {
     /**
      * Account Overview
      */
+    const account = accounts.find(a => a.id == username)
     if (!account) {
         res.send(404)
         return
     }
 
-    let listings: Listing[] = market.filter(l => !l.times.sold && !l.times.expired && l.owner == username)
+    let listings: Listing[] = market.filter(l => !l.times.sold && !l.times.expired && l.owner == account.id)
         .sort((a, b) => a.price / a.amount < b.price / b.amount ? 1 : -1)
         .sort((a, b) => a.amount < b.amount ? 1 : -1)
     
@@ -75,7 +74,7 @@ app.get('/', (req: Request, res: Response) => {
     res.send(`${headerHtml}
         <div class="lg:flex flex-row-reverse">
             <div class="lg:flex-auto">
-                ${ProfileView(username, account, session)}
+                ${ProfileView(account, session)}
             </div>
             <div class="lg:flex-auto">
                 ${marketplaceHtml}

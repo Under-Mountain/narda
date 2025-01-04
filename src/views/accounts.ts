@@ -2,7 +2,7 @@ import { accounts, current, market, assets } from '../service/model.js'
 import { Account, Asset } from '../types.js'
 import { createItemElement } from "../common/html.js"
 
-export function ProfileView(username: string, account: Account, session: any): string {
+export function ProfileView(account: Account, session: any): string {
     const items = assets.filter(a => a.owner == account.id && a.amount > 0)
         .sort((a, b) => { return a.properties?.staked && a.properties?.yield && b.properties?.staked && b.properties?.yield &&
             (a.properties.staked * a.properties.yield) > (b.properties.staked * b.properties.yield) ?
@@ -16,6 +16,7 @@ export function ProfileView(username: string, account: Account, session: any): s
     const userWaterTotal = userWaters.reduce((sum, c) => { return sum + c.amount }, 0)
 
     const userMinerals = assets.filter((a) => a.type == "mineral" && a.owner == account.id)
+    console.log(userMinerals)
     const userMineralTotal = userMinerals.reduce((sum, c) => { return sum + c.amount }, 0)
     
     return `
@@ -23,14 +24,14 @@ export function ProfileView(username: string, account: Account, session: any): s
             <div class="card-title m-auto pt-4 lg:pt-8">
                 <div class="btn-circle avatar">
                     <div class="w-15 rounded-full">
-                    <img alt="Profile photo of ${username}"
+                    <img alt="Profile photo of ${account.id}"
                         src="https://upload.wikimedia.org/wikipedia/en/f/f8/Sauron_Tolkien_illustration.jpg" />
                     </div>
                 </div>
-                <h2 class="text-white-100 text-5xl">${username}</h2>
+                <h2 class="text-white-100 text-5xl">${account.id}</h2>
             </div>
             <div class="card-body">
-                ${session.username && session.username == username ? `
+                ${session.username && session.username == account.id ? `
                 <form id="updateBioForm" class="mb-2">
                     <div class="form-control">
                         <textarea name="bio" row="3" class="textarea w-full" placeholder="Write description of this account.">${account.bio ? account.bio : ''}</textarea>
@@ -59,8 +60,8 @@ export function ProfileView(username: string, account: Account, session: any): s
                     </div>
                 </div>
 
-            ${session.username && session.username == username ? `
-                ${InventoryView(username, items, userMineralTotal, userWaterTotal, account)}
+            ${session.username && session.username == account.id ? `
+                ${InventoryView(account, items, userMineralTotal, userWaterTotal)}
                 ${SendCreditView(account, session)}
                 ` : ``}
             </div>
@@ -100,10 +101,10 @@ export function SendCreditView(account: Account, session: any): string {
     `
 }
 
-export function InventoryView(username: string, items: Asset[], userMineralTotal: number, userWaterTotal: number, account: Account): string {
+export function InventoryView(account: Account, items: Asset[], userMineralTotal: number, userWaterTotal: number): string {
     let inventoryHtml = `<div class="card bg-base-100 p-2 sm:p-4 lg:p-8">
         <div class="card-title">
-            <h3>Inventory (<a id="inventoryTotal" href="/assets?user=${username}" class="link link-hover">${items.filter(i => i.owner == username).length}</a>)</h3>
+            <h3>Inventory (<a id="inventoryTotal" href="/assets?user=${account.id}" class="link link-hover">${items.filter(i => i.owner == account.id).length}</a>)</h3>
         </div>
         <div class="card-body p-0">
             <form id="mintBankForm">
