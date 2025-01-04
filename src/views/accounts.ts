@@ -1,7 +1,7 @@
 import { accounts, current, market, assets } from '../service/model.js'
 import { MarketStatsView } from './market.js'
-import * as world from './world.js'
 import { Account, Listing, Asset } from '../types.js'
+import { createItemElement } from "../common/html.js"
 
 export function AuthView(): string {
     const listings = market.filter(l => !l.times.sold && !l.times.expired)
@@ -211,44 +211,11 @@ export function InventoryView(username: string, items: Asset[], userMineralTotal
         `
     if (items.length > 0) {
         items.slice(0, 100).forEach(i => {
-            inventoryHtml += ItemView(i)
+            inventoryHtml += createItemElement(i)
         })
     } else inventoryHtml += `<li class="text-center">Empty. Collect resources or buy items from Marketplace</li>`
     inventoryHtml += `</ul></div></div>`
     return inventoryHtml
-}
-
-export function ItemView(i: Asset): string {
-    return `<li class="">
-        <form class="itemForm p-2 bg-base-200">
-            <div>
-                ${i.amount} unit(s) of ${i.owner}'s ${i.type}
-                <input name="id" type="hidden" value="${i.id}" class="input input-xs" />
-            </div>
-            <div>
-                ${i.type == "bankstone" && i.properties?.yield && i.properties.staked && i.properties.cap ? `
-                    <small>
-                        APR ${(i.properties.yield * 100).toFixed(0)}% ${Math.floor(i.properties.staked)}/${i.properties.cap} (${(i.properties.staked / i.properties.cap * 100).toFixed(0)}%)
-                    </small>
-                    ` : ``}
-            </div>
-            <div class="">
-                <img class="m-auto" src="${world.AssetImageUrl(i)}" />
-            </div>
-            <div class ="mt-4 text-right">
-                <button class="sellBtn btn btn-xs"
-                    ${(i.type == "water" || i.type == "mineral") && i.amount < 100 ? "disabled" : ""}>
-                    ${(i.type == "water" || i.type == "mineral") && i.amount < 100 ? "Sell (min.100)" : `Sell ${i.amount}`}
-                </button>
-                <input name="amount" type="hidden" value="${i.amount}" />
-                <small for="id">${i.id}</small>
-                for <input name="price" type="number" class="input input-xs w-20" value="${
-                    i.type == "bankstone" && i.properties?.yield && i.properties.staked && i.properties.cap ?
-                    (i.properties.staked * i.properties.yield * .33).toFixed(2) :
-                    (i.amount * (i.type == 'water' ? .03 : .09)).toFixed(2)}" max="1000" step=".01" />
-            </div>
-        </form>
-    </li>`
 }
 
 export function LeaderboardView(): string {

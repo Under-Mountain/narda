@@ -1,17 +1,17 @@
 {
-  "time": 198702,
+  "time": 199363,
   "resources": {
     "water": {
-      "balance": 600069.8226811829,
-      "supplied": 783842.8226811973
+      "balance": 602345.1517073436,
+      "supplied": 787330.1517073581
     },
     "mineral": {
-      "balance": 245940.86462435147,
-      "supplied": 306486.8646243484
+      "balance": 246888.76718497038,
+      "supplied": 307874.7671849672
     },
     "credits": {
-      "balance": -81306.63982440029,
-      "supplied": 105223.36017559974
+      "balance": -82806.63982440029,
+      "supplied": 106723.36017559974
     }
   },
   "effects": {
@@ -493,21 +493,40 @@
   "activities": {
     "pending": [],
     "completed": [
-      "COLLECT9803",
-      "COLLECT9804",
-      "COLLECT9805",
-      "CNS9807",
-      "CNS9809",
       "CNS9808",
-      "MNT9806",
-      "CNS9811",
-      "CNS9813",
+      "CNS9810",
+      "CNS9809",
+      "MNT9807",
       "CNS9812",
-      "MNT9810",
-      "CNS9815",
-      "CNS9817",
-      "CNS9816",
-      "MNT9814"
+      "CNS9814",
+      "CNS9813",
+      "MNT9811",
+      "CNS9808",
+      "CNS9810",
+      "CNS9809",
+      "MNT9807",
+      "COLLECT9811",
+      "COLLECT9812",
+      "COLLECT9813",
+      "COLLECT9814",
+      "COLLECT9815",
+      "COLLECT9816",
+      "COLLECT9817",
+      "COLLECT9818",
+      "MINT9819",
+      "CONSUME9820",
+      "CONSUME9821",
+      "CONSUME9822",
+      "CNS9824",
+      "CNS9826",
+      "CNS9825",
+      "MNT9823",
+      "CONSUME9827",
+      "CONSUME9828",
+      "COLLECT9829",
+      "COLLECT9830",
+      "COLLECT9831",
+      "COLLECT9832"
     ],
     "rejected": []
   }

@@ -20,7 +20,7 @@
   {
     "id": "WTR403",
     "type": "water",
-    "amount": 320,
+    "amount": 301,
     "owner": "worldbank"
   },
   {
@@ -5736,7 +5736,7 @@
   {
     "id": "MNR544",
     "type": "mineral",
-    "amount": 80,
+    "amount": 70,
     "owner": "worldbank"
   },
   {
@@ -5999,6 +5999,17 @@
       "yield": 0.12,
       "cap": 8201,
       "staked": 8201
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK570",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.03,
+      "cap": 3232,
+      "staked": 3232
     },
     "owner": "worldbank"
   }

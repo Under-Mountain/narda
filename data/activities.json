@@ -127437,5 +127437,57 @@
       "created": 191603,
       "completed": 191603
     }
+  },
+  {
+    "type": "mint",
+    "id": "MNT9803",
+    "of": "bankstone",
+    "from": "world",
+    "to": "worldbank",
+    "amount": 1,
+    "note": "Minting of a bankstone for worldbank",
+    "times": {
+      "created": 199080,
+      "completed": 199080
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS9804",
+    "of": "credits",
+    "from": "worldbank",
+    "to": "world",
+    "amount": 100,
+    "note": "Consuming minting MNT9803 cost of 100 credit",
+    "times": {
+      "created": 199080,
+      "completed": 199080
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS9805",
+    "of": "water",
+    "from": "worldbank",
+    "to": "world",
+    "amount": 19,
+    "note": "Consuming minting MNT9803 cost of 19 water",
+    "times": {
+      "created": 199080,
+      "completed": 199080
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CNS9806",
+    "of": "mineral",
+    "from": "worldbank",
+    "to": "world",
+    "amount": 10,
+    "note": "Consuming minting MNT9803 cost of 1 resource",
+    "times": {
+      "created": 199080,
+      "completed": 199080
+    }
   }
 ]

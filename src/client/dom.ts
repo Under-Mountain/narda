@@ -1,5 +1,6 @@
 import { Current, queryUser } from './app.js'
 import { onSellItemForm, onBuyDelistForm } from './events.js'
+import { createItemElement, createListingElement } from "../common/html.js"
 
 export function showAlert(alert: HTMLElement, alertContent: HTMLElement, alertClass: string, message: string, button?: HTMLButtonElement) {
   alert.classList.remove('alert-warning', 'alert-error', 'alert-success')
@@ -76,59 +77,6 @@ export function toggleButtonState(button: HTMLButtonElement, icon: HTMLElement, 
   toggleElementVisibility(loadingIcon, !isLoading)
 }
 
-export function getItemElement(i: any): HTMLElement {
-  const element = document.createElement('li')
-  element.innerHTML = `
-    <form class="itemForm p-2 bg-base-200">
-        <div>
-            ${i.amount} unit(s) of ${i.owner}'s ${i.type}
-            <input name="id" type="hidden" value="${i.id}" class="input input-xs" />
-        </div>
-        <div>
-            ${i.type=="bankstone" ? `
-                <small>
-                    APR ${(i.properties.yield*100).toFixed(0)}% ${Math.floor(i.properties.staked)}/${i.properties.cap} (${(i.properties.staked/i.properties.cap * 100).toFixed(0)}%)
-                </small>
-                ` : ``}
-        </div>
-        <div class="m-auto">
-        </div>
-        <div class ="mt-4 text-right">
-            <button class="btn btn-xs"
-                ${(i.type == "water" || i.type == "mineral") && i.amount < 100 ? "disabled" : ""}>
-                ${(i.type == "water" || i.type == "mineral") && i.amount < 100 ? "Sell (min.100)" : `Sell ${i.amount}`}
-            </button>
-            <input name="amount" type="hidden" value="${i.amount}" />
-            <small for="id">${i.id}</small>
-            for <input name="price" type="number" class="input input-xs w-20" value="${i.type == "bankstone" ?
-                (i.properties.staked * i.properties.yield * .33).toFixed(2) :
-                (i.amount * (i.type == 'water' ? .03 : .09)).toFixed(2)}" max="1000.00" step=".01" />
-        </div>
-    </form>`
-    return element
-}
-
-export function getListingElement(l: any, i: any): HTMLElement {
-  const element = document.createElement('li')
-  element.innerHTML = `
-    <form class="p-2 bg-base-200">
-      <div>
-          ${l.amount}
-          unit of ${l.owner}'s ${i.type} 
-          <input name="id" type="hidden" value="${l.id}" />
-      </div>
-      <div>
-          ${i.type == "bankstone" ?
-              `<small>
-                  APR ${(i.properties.yield * 100).toFixed(0)}% ${Math.floor(i.properties.staked)}/${i.properties.cap} (${(i.properties.staked / i.properties.cap * 100).toFixed(0)}%)
-              </small>` : ``}
-      </div>
-      <div class="m-auto">
-      </div>
-    </form>`
-    return element
-}
-
 export function updateUserBalance(Current: any, queryUser: string) {
   updateElementContent("userBalance", Current.user?.balance?.toFixed(2))
   if (queryUser == Current.user.id) updateElementContent('profileBalance', Current.user?.balance?.toFixed(2))
@@ -155,10 +103,11 @@ export function updateUserInventory(Current: any, inventory: any[]) {
   })
 
   Current.user.inventory.filter(i => i.amount > 0).slice(0, 100).forEach(i => {
-    const itemElement = getItemElement(i)
-    inventoryElement.appendChild(itemElement)
-
-    itemElement.children[0].addEventListener('submit', onSellItemForm)
+    const itemElement = createItemElement(i)
+    if (itemElement instanceof HTMLElement) {
+      inventoryElement.appendChild(itemElement)
+      itemElement.children[0].addEventListener('submit', onSellItemForm)
+    }
   })
 
   const inventoryTotal = getElementById('inventoryTotal')
@@ -177,10 +126,11 @@ export function updateMarketListings(Current: any, listings: any[]) {
   activeListings.slice(0, 100).forEach(l => {
     const item = Current.user.inventory.find(i => i.id == l.item)
     if (item) {
-      const listingElement = getListingElement(l, item)
-      marketElement.appendChild(listingElement)
-
-      listingElement.children[0].addEventListener('submit', onBuyDelistForm)
+      const listingElement = createListingElement(l, item)
+      if (listingElement instanceof HTMLElement) {
+        marketElement.appendChild(listingElement)
+        listingElement.children[0].addEventListener('submit', onBuyDelistForm)
+      }
     } else {
       console.warn(`item ${l.item} not found in current user inventory. user's inventory: ${Current.user.inventory.length} items`)
     }

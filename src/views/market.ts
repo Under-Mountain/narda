@@ -1,7 +1,7 @@
 import { assets, world, market, accounts } from "../service/model.js"
 import { Listing, Account } from "../types.js"
-import { AssetImageUrl } from "./world.js"
 import { getStats } from "../common/utility.js"
+import { createListingElement } from "../common/html.js"
 
 export function MarketplaceView(listings: Listing[], username: string, session: any): string {
     const account = accounts.find(a => a.id == session.username)
@@ -24,35 +24,7 @@ export function MarketplaceView(listings: Listing[], username: string, session: 
         listings.slice(0, 100).forEach(l => {
             const i = assets.find(a => a.id == l.item)
             if (i) {
-                marketplaceHtml += `<li>
-                    <form class="listingForm p-2 bg-base-200">
-                        <div>
-                            ${l.amount}
-                            unit of ${l.owner}'s ${i.type} 
-                            <input name="id" type="hidden" value="${l.id}" />
-                        </div>
-                        <div>
-                            ${i.type == "bankstone" && i.properties?.yield && i.properties.staked && i.properties.cap ?
-                                `<small>
-                                    APR ${(i.properties.yield * 100).toFixed(0)}% ${Math.floor(i.properties.staked)}/${i.properties.cap} (${(i.properties.staked / i.properties.cap * 100).toFixed(0)}%)
-                                </small>` : ``}
-                        </div>
-                        <div class="text-center">
-                            <img class="m-auto" src="${AssetImageUrl(i)}" />
-                        </div>
-                        <div class="text-right mt-4"><small>(${(l.price / l.amount).toFixed(2)}/unit)</small></div>
-                        <div class="text-right">
-                            <button name="buyer" value="${session?.username}" class="delistBuyBtn btn btn-xs"
-                                ${!session || !session.username || (session.username != username && account && account.credits.balance < l.price) ?
-                                    `disabled` : ``}>
-                                ${session?.username && l.owner == username ? 'Delist' : 'Buy'}
-                            </button>
-                            ${l.amount}
-                            <small for="id">${l.id}</small> for
-                            <input name="price" type="number" value="${l.price.toFixed(2)}" class="input input-xs w-20" readonly />
-                        </div>
-                    </form>
-                </li>`
+                marketplaceHtml += createListingElement(l, i, session, username, account)
             }
         })
     } else marketplaceHtml += `<li style="text-align:center">Nothing listed for sale at this time</li>`
