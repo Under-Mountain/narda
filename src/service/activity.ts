@@ -1,7 +1,6 @@
-import { activities, current, accounts, posts, world, auth, assets } from './model.js';
+import { activities, current, accounts, posts, auth, assets } from './model.js';
 import { ActivityType } from '../interfaces/Activity.js';
 import bcrypt from 'bcrypt';
-import { getRandomNumber } from '../common/utility.js';
 
 /**
  * Creates a new activity.
@@ -101,7 +100,7 @@ export function collect(user: string, resource: string, amount: number) {
  * @param comment - The comment text.
  * @returns The updated post.
  */
-export function createComment(username: string, postId: string, comment: string) {
+export function comment(username: string, postId: string, comment: string) {
     const account = accounts.find(a => a.id == username);
     if (!account || account.credits.balance < 5) {
         throw new Error('Not enough balance to comment');
@@ -128,7 +127,7 @@ export function createComment(username: string, postId: string, comment: string)
  * @param dislike - Whether the action is a dislike.
  * @returns The updated post.
  */
-export function createLike(username: string, postId: string, dislike: boolean) {
+export function like(username: string, postId: string, dislike: boolean) {
     const account = accounts.find(a => a.id == username);
     if (!account || account.credits.balance < 1) {
         throw new Error('Not enough balance to like/dislike');
@@ -151,7 +150,7 @@ export function createLike(username: string, postId: string, dislike: boolean) {
  * @param channels - The channels of the post.
  * @returns The created post.
  */
-export function createPost(username: string, title: string, content: string, channels: string) {
+export function postContent(username: string, title: string, content: string, channels: string) {
     const account = accounts.find(a => a.id == username);
     if (!account || account.credits.balance < 10) {
         throw new Error('Not enough balance to post');
@@ -182,7 +181,7 @@ export function createPost(username: string, title: string, content: string, cha
  * @param invitation - The invitation code for account creation.
  * @returns The created activity and any consumptions.
  */
-export async function mintAsset(type: string, username: string, password?: string, invitation?: string) {
+export async function mint(type: string, username: string, password?: string, invitation?: string) {
     const id = `MNT${activities.length}`;
     console.log(`${id}: minting ${type}...`);
     const to = type == "account" ? username.toLowerCase() : username;

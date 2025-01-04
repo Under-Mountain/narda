@@ -1,7 +1,7 @@
 import * as util from '../common/utility.js'
 import * as model from './model.js'
 import { accounts, activities, assets, world, market, current } from './model.js'
-import { Activity, Asset } from '../types.js'
+import { Activity } from '../types.js'
 
 let inProgress = false
 export async function onMinuteAsync(): Promise<void> {

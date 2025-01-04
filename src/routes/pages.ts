@@ -1,7 +1,6 @@
 import express from 'express';
-import { createComment, createLike, createPost } from "../service/activity.js";
-import { accounts, current, world } from "../service/model.js";
-import { app } from "./api.js";
+import { comment, like, postContent } from "../service/activity.js";
+import { world } from "../service/model.js";
 
 const router = express.Router();
 
@@ -16,7 +15,7 @@ router.post('/comment', async (req, res) => {
             res.sendStatus(400);
             return;
         }
-        const post = createComment(req.session.username, req.body.postId, req.body.comment);
+        const post = comment(req.session.username, req.body.postId, req.body.comment);
         setTimeout(
             () =>
                 req.query.return
@@ -39,7 +38,7 @@ router.post('/like', async (req, res) => {
             res.sendStatus(400);
             return;
         }
-        const post = createLike(req.session.username, req.body.postId, !!req.body.dislike);
+        const post = like(req.session.username, req.body.postId, !!req.body.dislike);
         setTimeout(
             () =>
                 req.query.return
@@ -62,7 +61,7 @@ router.post('/post', async (req, res) => {
             res.sendStatus(400);
             return;
         }
-        const post = createPost(
+        const post = postContent(
             req.session.username,
             req.body.title,
             req.body.content,

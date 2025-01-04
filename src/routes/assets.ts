@@ -1,6 +1,6 @@
 import express from 'express';
 import { assets, activities, accounts, current, auth, world } from "../service/model.js";
-import { createActivity, consume, collect, mintAsset } from '../service/activity.js';
+import { createActivity, consume, collect, mint } from '../service/activity.js';
 import { ActivityType } from "../interfaces/Activity.js";
 import bcrypt from 'bcrypt';
 import { getRandomNumber, getStats } from '../common/utility.js';
@@ -40,7 +40,7 @@ router.post('/mint', async (req, res) => {
         }
         
         const username = req.body.username ? req.body.username : req.session.username;
-        const { activity, consumptions } = await mintAsset(
+        const { activity, consumptions } = await mint(
             req.body.type,
             username,
             req.body.password,

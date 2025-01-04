@@ -29,14 +29,6 @@ router.post('/auth', async (req, res) => {
     }
 });
 
-router.get('/auths', async (req, res) => {
-    try {
-        res.json(auth);
-    } catch (error) {
-        res.sendStatus(500);
-    }
-});
-
 router.get('/exit', async (req, res) => {
     try {
         req.session.destroy(err => {
