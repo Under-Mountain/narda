@@ -190,7 +190,7 @@ export async function mint(type: string, username: string, password?: string, in
     const userWaters = assets.filter(a => a.owner == to && a.type == "water");
     const userMinerals = assets.filter(a => a.owner == to && a.type == "mineral");
 
-    const { creditCost, mineralCost, waterCost } = exploreCost();
+    const { creditCost, mineralCost, waterCost } = exploreCost(current.resources.water.balance, current.resources.mineral.balance);
     const activity = createActivity(
         "mint" as ActivityType,
         type,

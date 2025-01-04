@@ -1,6 +1,7 @@
 import { Current, queryUser } from './app.js'
 import { onSellItemForm, onBuyDelistForm } from './events.js'
 import { createItemElement, createListingElement } from "../common/html.js"
+import { exploreCost } from '../common/pricing.js'
 
 export function showAlert(alert: HTMLElement, alertContent: HTMLElement, alertClass: string, message: string, button?: HTMLButtonElement) {
   alert.classList.remove('alert-warning', 'alert-error', 'alert-success')
@@ -78,9 +79,7 @@ export function toggleButtonState(button: HTMLButtonElement, icon: HTMLElement, 
 }
 
 export function updateUserBalance(Current: any, queryUser: string) {
-  const creditCost = 200
-  const mineralCost = creditCost / 2
-  const waterCost = creditCost / 2 + Math.ceil(Math.pow(Current.resources.water.balance / Current.resources.mithril.balance, 2))
+  const { creditCost, mineralCost, waterCost } = exploreCost(Current.water, Current.mithril);
 
   updateElementContent("userBalance", Current.user?.balance?.toFixed(2))
   if (queryUser == Current.user.id) updateElementContent('profileBalance', Current.user?.balance?.toFixed(2))

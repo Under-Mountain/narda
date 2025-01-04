@@ -20,7 +20,7 @@ export function queueBankActivities(): void {
         accounts.push(worldBank)
     }
 
-    const { creditCost, mineralCost, waterCost } = exploreCost();
+    const { creditCost, mineralCost, waterCost } = exploreCost(current.resources.water.balance, current.resources.mineral.balance);
 
     if (worldBank && worldBank.credits.balance - creditCost < -1 * world.bank.maxDeficit) {
         console.warn(`TX${activities.length}: world's max deficit reached`);

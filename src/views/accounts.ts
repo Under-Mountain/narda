@@ -102,7 +102,7 @@ export function SendCreditView(account: Account, session: any): string {
 }
 
 export function InventoryView(account: Account, items: Asset[], userMineralTotal: number, userWaterTotal: number): string {
-    const { creditCost, mineralCost, waterCost } = exploreCost();
+    const { creditCost, mineralCost, waterCost } = exploreCost(current.resources.water.balance, current.resources.mineral.balance);
 
     let inventoryHtml = `<div class="card bg-base-100 p-2 sm:p-4 lg:p-8">
         <div class="card-title">

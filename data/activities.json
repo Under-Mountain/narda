@@ -1428,5 +1428,1331 @@
       "created": 564,
       "completed": 564
     }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT110",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 15,
+    "note": "Collecting 15 mineral for dev",
+    "times": {
+      "created": 582,
+      "completed": 582
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT111",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 13,
+    "note": "Collecting 13 mineral for dev",
+    "times": {
+      "created": 584,
+      "completed": 584
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT112",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 4,
+    "note": "Collecting 4 mineral for dev",
+    "times": {
+      "created": 585,
+      "completed": 585
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT113",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 16,
+    "note": "Collecting 16 mineral for dev",
+    "times": {
+      "created": 588,
+      "completed": 588
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT114",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 0,
+    "note": "Collecting 0 mineral for dev",
+    "times": {
+      "created": 589,
+      "completed": 589
+    }
+  },
+  {
+    "type": "mint",
+    "id": "MINT115",
+    "of": "bankstone",
+    "from": "world",
+    "to": "dev",
+    "amount": 1,
+    "note": "Minting of bankstone for dev",
+    "times": {
+      "created": 593,
+      "completed": 593
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CONSUME116",
+    "of": "credits",
+    "from": "dev",
+    "to": "world",
+    "amount": 200,
+    "note": "Consuming 200 credits for dev",
+    "times": {
+      "created": 593,
+      "completed": 593
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CONSUME117",
+    "of": "water",
+    "from": "dev",
+    "to": "world",
+    "amount": 107,
+    "note": "Consuming 107 water for dev",
+    "times": {
+      "created": 593,
+      "completed": 593
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CONSUME118",
+    "of": "mineral",
+    "from": "dev",
+    "to": "world",
+    "amount": 100,
+    "note": "Consuming 100 mineral for dev",
+    "times": {
+      "created": 593,
+      "completed": 593
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT119",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 11,
+    "note": "Collecting 11 mineral for dev",
+    "times": {
+      "created": 619,
+      "completed": 619
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT120",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 16,
+    "note": "Collecting 16 mineral for dev",
+    "times": {
+      "created": 620,
+      "completed": 620
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT121",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 16,
+    "note": "Collecting 16 mineral for dev",
+    "times": {
+      "created": 622,
+      "completed": 622
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT122",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 3,
+    "note": "Collecting 3 mineral for dev",
+    "times": {
+      "created": 623,
+      "completed": 623
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT123",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 6,
+    "note": "Collecting 6 mineral for dev",
+    "times": {
+      "created": 625,
+      "completed": 625
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT124",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 16,
+    "note": "Collecting 16 mineral for dev",
+    "times": {
+      "created": 626,
+      "completed": 626
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT125",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 4,
+    "note": "Collecting 4 mineral for dev",
+    "times": {
+      "created": 627,
+      "completed": 627
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT126",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 4,
+    "note": "Collecting 4 mineral for dev",
+    "times": {
+      "created": 629,
+      "completed": 629
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT127",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 12,
+    "note": "Collecting 12 mineral for dev",
+    "times": {
+      "created": 630,
+      "completed": 630
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT128",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 4,
+    "note": "Collecting 4 mineral for dev",
+    "times": {
+      "created": 632,
+      "completed": 632
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TRANSACTION129",
+    "of": "credit",
+    "from": "world",
+    "to": "dev",
+    "amount": 1000,
+    "note": "Purchase of MNR8 at 1000 credit",
+    "times": {
+      "created": 660,
+      "completed": 660
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TRANSACTION130",
+    "of": "MNR8",
+    "from": "dev",
+    "to": "world",
+    "amount": 115,
+    "note": "Sale of MNR8 at 1000 credit",
+    "times": {
+      "created": 660,
+      "completed": 660
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TRANSACTION131",
+    "of": "credit",
+    "from": "world",
+    "to": "dev",
+    "amount": 200,
+    "note": "Purchase of BNK10 at 200 credit",
+    "times": {
+      "created": 660,
+      "completed": 660
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TRANSACTION132",
+    "of": "BNK10",
+    "from": "dev",
+    "to": "world",
+    "amount": 1,
+    "note": "Sale of BNK10 at 200 credit",
+    "times": {
+      "created": 660,
+      "completed": 660
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT133",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 18,
+    "note": "Collecting 18 mineral for dev",
+    "times": {
+      "created": 668,
+      "completed": 668
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT134",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 11,
+    "note": "Collecting 11 mineral for dev",
+    "times": {
+      "created": 670,
+      "completed": 670
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT135",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 4,
+    "note": "Collecting 4 mineral for dev",
+    "times": {
+      "created": 671,
+      "completed": 671
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT136",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 9,
+    "note": "Collecting 9 mineral for dev",
+    "times": {
+      "created": 673,
+      "completed": 673
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT137",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 6,
+    "note": "Collecting 6 mineral for dev",
+    "times": {
+      "created": 674,
+      "completed": 674
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT138",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 19,
+    "note": "Collecting 19 mineral for dev",
+    "times": {
+      "created": 675,
+      "completed": 676
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT139",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 15,
+    "note": "Collecting 15 mineral for dev",
+    "times": {
+      "created": 677,
+      "completed": 677
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT140",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 0,
+    "note": "Collecting 0 mineral for dev",
+    "times": {
+      "created": 678,
+      "completed": 678
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT141",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 1,
+    "note": "Collecting 1 mineral for dev",
+    "times": {
+      "created": 680,
+      "completed": 680
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT142",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 20,
+    "note": "Collecting 20 mineral for dev",
+    "times": {
+      "created": 681,
+      "completed": 681
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT143",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 2,
+    "note": "Collecting 2 mineral for dev",
+    "times": {
+      "created": 683,
+      "completed": 683
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT144",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 0,
+    "note": "Collecting 0 mineral for dev",
+    "times": {
+      "created": 684,
+      "completed": 684
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT145",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 17,
+    "note": "Collecting 17 mineral for dev",
+    "times": {
+      "created": 686,
+      "completed": 686
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT146",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 14,
+    "note": "Collecting 14 mineral for dev",
+    "times": {
+      "created": 697,
+      "completed": 697
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT147",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 18,
+    "note": "Collecting 18 mineral for dev",
+    "times": {
+      "created": 698,
+      "completed": 698
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT148",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 4,
+    "note": "Collecting 4 mineral for dev",
+    "times": {
+      "created": 700,
+      "completed": 700
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT149",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 3,
+    "note": "Collecting 3 mineral for dev",
+    "times": {
+      "created": 701,
+      "completed": 701
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT150",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 5,
+    "note": "Collecting 5 mineral for dev",
+    "times": {
+      "created": 702,
+      "completed": 702
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT151",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 3,
+    "note": "Collecting 3 mineral for dev",
+    "times": {
+      "created": 704,
+      "completed": 704
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT152",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 11,
+    "note": "Collecting 11 mineral for dev",
+    "times": {
+      "created": 705,
+      "completed": 705
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT153",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 16,
+    "note": "Collecting 16 mineral for dev",
+    "times": {
+      "created": 707,
+      "completed": 707
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT154",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 1,
+    "note": "Collecting 1 mineral for dev",
+    "times": {
+      "created": 708,
+      "completed": 708
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT155",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 16,
+    "note": "Collecting 16 mineral for dev",
+    "times": {
+      "created": 709,
+      "completed": 709
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT156",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 7,
+    "note": "Collecting 7 mineral for dev",
+    "times": {
+      "created": 710,
+      "completed": 710
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT157",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 16,
+    "note": "Collecting 16 mineral for dev",
+    "times": {
+      "created": 712,
+      "completed": 712
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TRANSACTION158",
+    "of": "credit",
+    "from": "world",
+    "to": "dev",
+    "amount": 1000,
+    "note": "Purchase of MNR11 at 1000 credit",
+    "times": {
+      "created": 720,
+      "completed": 720
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TRANSACTION159",
+    "of": "MNR11",
+    "from": "dev",
+    "to": "world",
+    "amount": 122,
+    "note": "Sale of MNR11 at 1000 credit",
+    "times": {
+      "created": 720,
+      "completed": 720
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT160",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 19,
+    "note": "Collecting 19 mineral for dev",
+    "times": {
+      "created": 722,
+      "completed": 722
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT161",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 5,
+    "note": "Collecting 5 mineral for dev",
+    "times": {
+      "created": 723,
+      "completed": 723
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT162",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 19,
+    "note": "Collecting 19 mineral for dev",
+    "times": {
+      "created": 724,
+      "completed": 724
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT163",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 11,
+    "note": "Collecting 11 mineral for dev",
+    "times": {
+      "created": 725,
+      "completed": 725
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT164",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 12,
+    "note": "Collecting 12 mineral for dev",
+    "times": {
+      "created": 727,
+      "completed": 727
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT165",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 3,
+    "note": "Collecting 3 mineral for dev",
+    "times": {
+      "created": 728,
+      "completed": 728
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT166",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 8,
+    "note": "Collecting 8 mineral for dev",
+    "times": {
+      "created": 729,
+      "completed": 729
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT167",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 7,
+    "note": "Collecting 7 mineral for dev",
+    "times": {
+      "created": 731,
+      "completed": 731
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT168",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 10,
+    "note": "Collecting 10 mineral for dev",
+    "times": {
+      "created": 732,
+      "completed": 732
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT169",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 19,
+    "note": "Collecting 19 mineral for dev",
+    "times": {
+      "created": 734,
+      "completed": 734
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT170",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 15,
+    "note": "Collecting 15 mineral for dev",
+    "times": {
+      "created": 737,
+      "completed": 737
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT171",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 10,
+    "note": "Collecting 10 mineral for dev",
+    "times": {
+      "created": 739,
+      "completed": 739
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT172",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 14,
+    "note": "Collecting 14 mineral for dev",
+    "times": {
+      "created": 742,
+      "completed": 742
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT173",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 17,
+    "note": "Collecting 17 mineral for dev",
+    "times": {
+      "created": 743,
+      "completed": 743
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT174",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 14,
+    "note": "Collecting 14 mineral for dev",
+    "times": {
+      "created": 745,
+      "completed": 745
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT175",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 57,
+    "note": "Collecting 57 water for dev",
+    "times": {
+      "created": 753,
+      "completed": 753
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT176",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 7,
+    "note": "Collecting 7 water for dev",
+    "times": {
+      "created": 754,
+      "completed": 754
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT177",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 14,
+    "note": "Collecting 14 water for dev",
+    "times": {
+      "created": 755,
+      "completed": 755
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT178",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 64,
+    "note": "Collecting 64 water for dev",
+    "times": {
+      "created": 759,
+      "completed": 759
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT179",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 68,
+    "note": "Collecting 68 water for dev",
+    "times": {
+      "created": 761,
+      "completed": 761
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT180",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 33,
+    "note": "Collecting 33 water for dev",
+    "times": {
+      "created": 763,
+      "completed": 763
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT181",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 39,
+    "note": "Collecting 39 water for dev",
+    "times": {
+      "created": 765,
+      "completed": 765
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT182",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 13,
+    "note": "Collecting 13 water for dev",
+    "times": {
+      "created": 766,
+      "completed": 766
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT183",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 94,
+    "note": "Collecting 94 water for dev",
+    "times": {
+      "created": 768,
+      "completed": 768
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT184",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 54,
+    "note": "Collecting 54 water for dev",
+    "times": {
+      "created": 769,
+      "completed": 769
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT185",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 10,
+    "note": "Collecting 10 water for dev",
+    "times": {
+      "created": 773,
+      "completed": 773
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT186",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 21,
+    "note": "Collecting 21 water for dev",
+    "times": {
+      "created": 774,
+      "completed": 774
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT187",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 42,
+    "note": "Collecting 42 water for dev",
+    "times": {
+      "created": 776,
+      "completed": 776
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT188",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 85,
+    "note": "Collecting 85 water for dev",
+    "times": {
+      "created": 778,
+      "completed": 778
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT189",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 6,
+    "note": "Collecting 6 water for dev",
+    "times": {
+      "created": 780,
+      "completed": 780
+    }
+  },
+  {
+    "type": "mint",
+    "id": "MINT190",
+    "of": "bankstone",
+    "from": "world",
+    "to": "dev",
+    "amount": 1,
+    "note": "Minting of bankstone for dev",
+    "times": {
+      "created": 784,
+      "completed": 784
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CONSUME191",
+    "of": "credits",
+    "from": "dev",
+    "to": "world",
+    "amount": 200,
+    "note": "Consuming 200 credits for dev",
+    "times": {
+      "created": 784,
+      "completed": 784
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CONSUME192",
+    "of": "water",
+    "from": "dev",
+    "to": "world",
+    "amount": 417,
+    "note": "Consuming 417 water for dev",
+    "times": {
+      "created": 784,
+      "completed": 784
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CONSUME193",
+    "of": "mineral",
+    "from": "dev",
+    "to": "world",
+    "amount": 100,
+    "note": "Consuming 100 mineral for dev",
+    "times": {
+      "created": 784,
+      "completed": 784
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TRANSACTION194",
+    "of": "credit",
+    "from": "world",
+    "to": "dev",
+    "amount": 360,
+    "note": "Purchase of BNK14 at 360 credit",
+    "times": {
+      "created": 840,
+      "completed": 840
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TRANSACTION195",
+    "of": "BNK14",
+    "from": "dev",
+    "to": "world",
+    "amount": 1,
+    "note": "Sale of BNK14 at 360 credit",
+    "times": {
+      "created": 840,
+      "completed": 840
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT196",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 4,
+    "note": "Collecting 4 mineral for dev",
+    "times": {
+      "created": 917,
+      "completed": 917
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT197",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 20,
+    "note": "Collecting 20 mineral for dev",
+    "times": {
+      "created": 919,
+      "completed": 919
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT198",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 0,
+    "note": "Collecting 0 mineral for dev",
+    "times": {
+      "created": 921,
+      "completed": 921
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT199",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 1,
+    "note": "Collecting 1 mineral for dev",
+    "times": {
+      "created": 922,
+      "completed": 922
+    }
+  },
+  {
+    "type": "mint",
+    "id": "MINT200",
+    "of": "bankstone",
+    "from": "world",
+    "to": "dev",
+    "amount": 1,
+    "note": "Minting of bankstone for dev",
+    "times": {
+      "created": 925,
+      "completed": 925
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CONSUME201",
+    "of": "credits",
+    "from": "dev",
+    "to": "world",
+    "amount": 200,
+    "note": "Consuming 200 credits for dev",
+    "times": {
+      "created": 925,
+      "completed": 925
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CONSUME202",
+    "of": "water",
+    "from": "dev",
+    "to": "world",
+    "amount": 131,
+    "note": "Consuming 131 water for dev",
+    "times": {
+      "created": 925,
+      "completed": 925
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CONSUME203",
+    "of": "mineral",
+    "from": "dev",
+    "to": "world",
+    "amount": 100,
+    "note": "Consuming 100 mineral for dev",
+    "times": {
+      "created": 925,
+      "completed": 925
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TRANSACTION204",
+    "of": "credit",
+    "from": "BNK9",
+    "to": "world",
+    "amount": 1.3226575342465754,
+    "note": "BNK9: yield for day 9",
+    "times": {
+      "created": 1500,
+      "completed": 1500
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TRANSACTION205",
+    "of": "credit",
+    "from": "BNK10",
+    "to": "world",
+    "amount": 0.5937534246575343,
+    "note": "BNK10: yield for day 8",
+    "times": {
+      "created": 1560,
+      "completed": 1560
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TRANSACTION206",
+    "of": "credit",
+    "from": "BNK14",
+    "to": "world",
+    "amount": 1.0601643835616439,
+    "note": "BNK14: yield for day 7",
+    "times": {
+      "created": 1620,
+      "completed": 1620
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT207",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 66,
+    "note": "Collecting 66 water for dev",
+    "times": {
+      "created": 2789,
+      "completed": 2789
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT208",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 52,
+    "note": "Collecting 52 water for dev",
+    "times": {
+      "created": 2806,
+      "completed": 2806
+    }
+  },
+  {
+    "type": "collect",
+    "id": "COLLECT209",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 6,
+    "note": "Collecting 6 mineral for dev",
+    "times": {
+      "created": 2807,
+      "completed": 2807
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TRANSACTION210",
+    "of": "credit",
+    "from": "BNK9",
+    "to": "world",
+    "amount": 1.3218240788140365,
+    "note": "BNK9: yield for day 4",
+    "times": {
+      "created": 2940,
+      "completed": 2940
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TRANSACTION211",
+    "of": "credit",
+    "from": "BNK10",
+    "to": "world",
+    "amount": 0.593297942578345,
+    "note": "BNK10: yield for day 3",
+    "times": {
+      "created": 3000,
+      "completed": 3000
+    }
   }
 ]
