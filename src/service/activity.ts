@@ -209,7 +209,6 @@ export async function mint(type: string, username: string, password?: string, in
             }
             const hash = await bcrypt.hash(password, 2);
             auth.push({ username: to, password: hash });
-            console.log(`${id}: granting access to ${to}...`);
             break;
         case "bankstone":
             if (!account) {

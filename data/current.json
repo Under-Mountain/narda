@@ -1,13 +1,13 @@
 {
-  "time": 199900,
+  "time": 200645,
   "resources": {
     "water": {
-      "balance": 603693.2324796319,
-      "supplied": 790298.2324796463
+      "balance": 606413.4370162862,
+      "supplied": 793220.4370163006
     },
     "mineral": {
-      "balance": 247600.37043789666,
-      "supplied": 308914.3704378934
+      "balance": 248700.21699641438,
+      "supplied": 310088.21699641075
     },
     "credits": {
       "balance": -83406.63982440029,
@@ -485,7 +485,8 @@
       "BNK569",
       "BNK570",
       "BNK571",
-      "BNK572"
+      "BNK572",
+      "BNK574"
     ],
     "completed": [],
     "rejected": []
@@ -495,7 +496,14 @@
     "completed": [
       "COLLECT9827",
       "COLLECT9828",
-      "COLLECT9829"
+      "COLLECT9829",
+      "MINT9827",
+      "MINT9827",
+      "COLLECT9828",
+      "COLLECT9829",
+      "COLLECT9830",
+      "COLLECT9831",
+      "COLLECT9832"
     ],
     "rejected": []
   }

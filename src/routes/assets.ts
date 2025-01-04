@@ -46,6 +46,12 @@ router.post('/mint', async (req, res) => {
             req.body.password,
             req.body.invitation
         );
+
+        if (req.body.type == 'account') {
+            req.session.username = req.body.username;
+            console.log(`Granting access to ${req.session.username}...`);
+        }
+
         setTimeout(
             () =>
                 req.query.return
