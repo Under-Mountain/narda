@@ -20,7 +20,7 @@
   {
     "id": "WTR403",
     "type": "water",
-    "amount": 301,
+    "amount": 263,
     "owner": "worldbank"
   },
   {
@@ -5464,13 +5464,13 @@
   {
     "id": "MNR517",
     "type": "mineral",
-    "amount": 688,
+    "amount": 697,
     "owner": "dev"
   },
   {
     "id": "WTR518",
     "type": "water",
-    "amount": 2492,
+    "amount": 2640,
     "owner": "dev"
   },
   {
@@ -5736,7 +5736,7 @@
   {
     "id": "MNR544",
     "type": "mineral",
-    "amount": 70,
+    "amount": 50,
     "owner": "worldbank"
   },
   {
@@ -6010,6 +6010,40 @@
       "yield": 0.03,
       "cap": 3232,
       "staked": 3232
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "BNK571",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.02,
+      "cap": 2173,
+      "staked": 2173
+    },
+    "owner": "worldbank"
+  },
+  {
+    "id": "WTR572",
+    "type": "water",
+    "amount": 215,
+    "owner": "gandalf2"
+  },
+  {
+    "id": "MNR573",
+    "type": "mineral",
+    "amount": 45,
+    "owner": "gandalf2"
+  },
+  {
+    "id": "BNK574",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.03,
+      "cap": 2175,
+      "staked": 2175
     },
     "owner": "worldbank"
   }

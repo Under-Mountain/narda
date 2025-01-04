@@ -4,7 +4,7 @@ import { app } from './routes/api.js'
 import { ChannelsView, PostsView, PostView } from './views/posts.js'
 import { MarketStatsView, MarketplaceView } from './views/market.js'
 import { HeaderView } from './views/header.js'
-import { AuthView, LeaderboardView, InventoryView, ProfileView } from './views/accounts.js'
+import { LeaderboardView, InventoryView, ProfileView } from './views/accounts.js'
 import { FooterView } from './views/footer.js'
 import { ActivitiesView, AssetsView } from './views/world.js'
 import 'dotenv/config'
@@ -14,6 +14,7 @@ import * as path from 'path'
 import { fileURLToPath } from 'url'
 import { Request, Response } from 'express'
 import { Account, Listing, Post } from './types.js'
+import { AuthView } from './views/auth.js'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
