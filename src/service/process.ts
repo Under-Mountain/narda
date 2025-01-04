@@ -1,11 +1,65 @@
 import { accounts, assets, current, world, market, activities } from './model.js'
 import { Activity } from '../types.js'
 import * as util from '../common/utility.js'
-import { createTransaction, consume } from './activity.js'
+
+export function processResources(): void {
+    const waterRate = util.getRandomNumber(world.resources.water.rateLo, world.resources.water.rateHi) / 100 / world.interval.year / world.interval.day / world.interval.minute
+    const mineralRate = util.getRandomNumber(world.resources.mineral.rateLo, world.resources.mineral.rateHi) / 100 / world.interval.year / world.interval.day / world.interval.minute
+
+    const remainingWater = (world.resources.water.total - current.resources.water.supplied)
+    const water = remainingWater * waterRate
+
+    const remainingMineral = (world.resources.water.total - current.resources.water.supplied)
+    const mineral = remainingMineral * mineralRate
+
+    current.resources.water.balance += water
+    current.resources.water.supplied += water
+
+    current.resources.mineral.balance += mineral
+    current.resources.mineral.supplied += mineral
+}
+
+export function processCurrentActivities(): void {
+    const notFoundActivities: string[] = []
+    current.activities.pending.forEach((id) => {
+        const activity = activities.find(a => a.id == id)
+        if (!activity) {
+            console.error(`pending activity ${id} not found`)
+            notFoundActivities.push(id)
+            return
+        } else {
+            // console.debug(`processing activity ${activity.id}..`)
+            switch (activity.type) {
+                case "system":
+                    processPendingSystemActivity(activity)
+                    break
+                case "transaction":
+                    processPendingTransaction(activity)
+                    break
+                case "mint":
+                    processPendingMint(activity)
+                    break
+                case "collect":
+                    processPendingCollect(activity)
+                    break
+                case "consume":
+                    processPendingConsume(activity)
+                    break
+                default:
+                    break
+            }
+
+            activity.times.completed = current.time
+            current.activities.completed.push(activity.id)
+            current.activities.pending = current.activities.pending.filter(id => id != activity.id)
+        }
+    })
+
+    //console.debug(`cleaning ${notFoundActivities.length} invalid activities...`)
+}
 
 type ResourceType = 'water' | 'mineral' | 'credits'
-
-export function processPendingConsume(consume: Activity): void {
+function processPendingConsume(consume: Activity): void {
     console.debug(`${consume.id}: consuming ${consume.of} from ${consume.from} to ${consume.to}...`)
     current.resources[consume.of as ResourceType].supplied += consume.amount
 
@@ -26,7 +80,7 @@ export function processPendingConsume(consume: Activity): void {
     }
 }
 
-export function processPendingCollect(collect: Activity): void {
+function processPendingCollect(collect: Activity): void {
     console.log(`${collect.id}: collecting ${collect.amount} ${collect.of} from ${collect.from} to ${collect.to}...`)
 
     current.resources[collect.of as ResourceType].balance -= collect.amount
@@ -58,7 +112,7 @@ export function processPendingCollect(collect: Activity): void {
     }
 }
 
-export function processPendingMint(mint: Activity): void {
+function processPendingMint(mint: Activity): void {
     console.log(`${mint.id}: minting an ${mint.of} from ${mint.from} to ${mint.to}...`)
 
     switch (mint.of) {
@@ -97,7 +151,7 @@ export function processPendingMint(mint: Activity): void {
     }
 }
 
-export function processPendingTransaction(transaction: Activity): void {
+function processPendingTransaction(transaction: Activity): void {
     console.debug(`${transaction.id}: sending ${transaction.amount.toFixed(2)} ${transaction.of} from ${transaction.from} to ${transaction.to}...`)
 
     const from = accounts.find(a => a.id == transaction.from)
@@ -132,7 +186,7 @@ export function processPendingTransaction(transaction: Activity): void {
     }
 }
 
-export function processPendingSystemActivity(activity: Activity): void {
+function processPendingSystemActivity(activity: Activity): void {
     switch (activity.of) {
         case "connection":
             console.log(`processing connection from ${activity.from} to ${activity.to}...`)
@@ -149,105 +203,4 @@ export function processPendingSystemActivity(activity: Activity): void {
         default:
             break
     }
-}
-
-export function queueWorldbankActivities(): void {
-    console.log(`TX${activities.length}: processing worldbank activities...`);
-    const account = accounts.find(a => a.id == 'worldbank')
-    if (account && account.credits.balance <= -1 * world.worldbank.maxDeficit) {
-        console.warn(`TX${activities.length}: worldbank's max deficit reached`);
-        return
-    }
-
-    buyFloorListing('water')
-    buyFloorListing('mineral')
-
-    const userWaters = assets.filter(a => a.owner == account?.id && a.type == "water")
-    const userMinerals = assets.filter(a => a.owner == account?.id && a.type == "mineral")
-
-    if (userWaters.reduce((sum, c) => sum + c.amount, 0) < 6 ||
-        userMinerals.reduce((sum, c) => sum + c.amount, 0) < 1) {
-        console.warn(`not enough balance to consume`)
-        return
-    }
-
-    // mint a bankstone
-    const mintActivity = createTransaction(
-        "world",
-        account?.id || '',
-        1,
-        'bankstone',
-        `Minting of a bankstone for ${account?.id}`
-    );
-
-    const creditConsumption = consume(
-        account?.id || '',
-        "credits",
-        100
-    );
-
-    const waterCost = Math.ceil(current.resources.water.supplied * Math.log(accounts.length * accounts.length) / current.resources.mineral.supplied);
-    const waterConsumption = consume(
-        account?.id || '',
-        'water',
-        waterCost
-    );
-
-    const mineralConsumption = consume(
-        account?.id || '',
-        "mineral",
-        10
-    );
-
-    current.activities.pending.push(...[creditConsumption.id, mineralConsumption.id, waterConsumption.id, mintActivity.id]);
-}
-
-export function buyFloorListing(type: string): void {
-    const txPrefix = type == 'water' ? 'WTR' : type == 'mineral' ? 'MNR' : 'BNK'
-
-    const floorListings = market.filter(l => !l.times.sold && !l.times.expired && l.item.startsWith(txPrefix))
-        .sort((a, b) => { return a.price / a.amount < b.price / b.amount ? -1 : 1 })
-
-    if (!floorListings || floorListings.length == 0) {
-        //console.debug(`TX${activities.length}: listing not found, skipping`)
-        return
-    }
-
-    const floorListing = floorListings[0]
-    const creditTx = createTransaction(
-        'worldbank',
-        floorListing.owner,
-        floorListing.price,
-        "credit",
-        `Purchase of ${floorListing.item} at ${floorListing.price} credit`
-    );
-
-    const itemTx = createTransaction(
-        floorListing.owner,
-        'worldbank',
-        floorListing.amount,
-        floorListing.item,
-        `Sale of ${floorListing.item} at ${floorListing.price} credit`
-    );
-
-    current.activities.pending.push(creditTx.id)
-    current.activities.pending.push(itemTx.id)
-    floorListing.times.sold = current.time
-}
-
-export function processResources(): void {
-    const waterRate = util.getRandomNumber(world.resources.water.rateLo, world.resources.water.rateHi) / 100 / world.interval.year / world.interval.day / world.interval.minute
-    const mineralRate = util.getRandomNumber(world.resources.mineral.rateLo, world.resources.mineral.rateHi) / 100 / world.interval.year / world.interval.day / world.interval.minute
-
-    const remainingWater = (world.resources.water.total - current.resources.water.supplied)
-    const water = remainingWater * waterRate
-
-    const remainingMineral = (world.resources.water.total - current.resources.water.supplied)
-    const mineral = remainingMineral * mineralRate
-
-    current.resources.water.balance += water
-    current.resources.water.supplied += water
-
-    current.resources.mineral.balance += mineral
-    current.resources.mineral.supplied += mineral
 }

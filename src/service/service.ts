@@ -1,9 +1,8 @@
-import * as util from '../common/utility.js'
 import * as model from './model.js'
-import { accounts, activities, assets, world, market, current } from './model.js'
-import { Activity } from '../types.js'
-import { createTransaction, consume } from './activity.js'
-import { processPendingCollect, processPendingMint, processPendingTransaction, processPendingConsume, processPendingSystemActivity, queueWorldbankActivities, buyFloorListing, processResources } from './process.js'
+import { assets, world, current } from './model.js'
+import { createTransaction } from './activity.js'
+import { processCurrentActivities, processResources } from './process.js'
+import { queueBankActivities } from './bank.js'
 
 let inProgress = false
 export async function onMinuteAsync(): Promise<void> {
@@ -79,44 +78,5 @@ async function onHourAsync(effectBatchSize: number): Promise<void> {
         current.effects.pending = current.effects.pending.filter(e => e != id)
     });
 
-    queueWorldbankActivities()
-}
-
-function processCurrentActivities(): void {
-    const notFoundActivities: string[] = []
-    current.activities.pending.forEach((id) => {
-        const activity = activities.find(a => a.id == id)
-        if (!activity) {
-            console.error(`pending activity ${id} not found`)
-            notFoundActivities.push(id)
-            return
-        } else {
-            // console.debug(`processing activity ${activity.id}..`)
-            switch (activity.type) {
-                case "system":
-                    processPendingSystemActivity(activity)
-                    break
-                case "transaction":
-                    processPendingTransaction(activity)
-                    break
-                case "mint":
-                    processPendingMint(activity)
-                    break
-                case "collect":
-                    processPendingCollect(activity)
-                    break
-                case "consume":
-                    processPendingConsume(activity)
-                    break
-                default:
-                    break
-            }
-
-            activity.times.completed = current.time
-            current.activities.completed.push(activity.id)
-            current.activities.pending = current.activities.pending.filter(id => id != activity.id)
-        }
-    })
-
-    //console.debug(`cleaning ${notFoundActivities.length} invalid activities...`)
+    queueBankActivities()
 }
