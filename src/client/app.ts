@@ -38,20 +38,13 @@ async function syncCurrentAsync(world: any) {
     return fetch('/api/current').then(async (res) => {
       const current = await res.json()
       console.debug(`T${current.global.time}: ...`)
-      onSyncCurrent(world, current)
+
+      updateWorld(world, current.global.time, current.global.resources)
+      updateCurrent(current.account, current.inventory)
+      
       inProgress = false
     })
   } else console.log(`skipping sync as in progress...`)
-}
-
-/**
- * Main entry every minute
- * @param {*} world 
- * @param {*} current 
- */
-function onSyncCurrent(world: any, current: any) {
-  updateWorld(world, current.global.time, current.global.resources)
-  updateCurrent(current.account, current.inventory)
 }
 
 function updateWorld(world: any, time: number, resources: any) {

@@ -34,24 +34,27 @@ router.get('/asset/:id', async (req, res) => {
 
 router.post('/mint', async (req, res) => {
     try {
-        if (!req.session || !req.session.username) {
+        if (req.body.type != 'account' && !req.session) {
             res.sendStatus(401);
             return;
         }
+        
+        const username = req.body.username ? req.body.username : req.session.username;
         const { activity, consumptions } = await mintAsset(
             req.body.type,
-            req.session.username,
+            username,
             req.body.password,
             req.body.invitation
         );
         setTimeout(
             () =>
                 req.query.return
-                    ? res.redirect(`/?user=${req.session.username}`)
+                    ? res.redirect(`/?user=${username}`)
                     : res.json([activity, ...consumptions]),
             world.interval.minute
         );
     } catch (error) {
+        console.error(error);
         res.sendStatus(500);
     }
 });

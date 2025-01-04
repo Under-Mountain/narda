@@ -50,7 +50,7 @@ export function createTransaction(from: string, to: string, amount: number, of: 
         amount,
         note
     );
-    current.activities.pending.push(activity.id);
+    
     return activity;
 }
 
@@ -70,7 +70,7 @@ export function consume(user: string, type: string, cost: number) {
         cost,
         `Consuming ${cost} ${type} for ${user}`
     );
-    current.activities.pending.push(activity.id);
+    
     return activity;
 }
 
@@ -90,7 +90,7 @@ export function collect(user: string, resource: string, amount: number) {
         amount,
         `Collecting ${amount} ${resource} for ${user}`
     );
-    current.activities.pending.push(activity.id);
+    
     return activity;
 }
 

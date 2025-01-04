@@ -1,17 +1,17 @@
 {
-  "time": 184156,
+  "time": 198702,
   "resources": {
     "water": {
-      "balance": 549662.3733796587,
-      "supplied": 720517.3733796731
+      "balance": 600069.8226811829,
+      "supplied": 783842.8226811973
     },
     "mineral": {
-      "balance": 225503.11046260473,
-      "supplied": 281685.1104626034
+      "balance": 245940.86462435147,
+      "supplied": 306486.8646243484
     },
     "credits": {
-      "balance": -76406.63982440029,
-      "supplied": 100323.36017559974
+      "balance": -81306.63982440029,
+      "supplied": 105223.36017559974
     }
   },
   "effects": {
@@ -459,7 +459,33 @@
       "BNK144",
       "BNK7",
       "BNK86",
-      "BNK23"
+      "BNK23",
+      "BNK540",
+      "BNK548",
+      "BNK549",
+      "BNK550",
+      "BNK551",
+      "BNK552",
+      "BNK553",
+      "BNK554",
+      "BNK555",
+      "BNK556",
+      "BNK557",
+      "BNK558",
+      "BNK559",
+      "BNK560",
+      "BNK561",
+      "BNK562",
+      "BNK563",
+      "BNK564",
+      "BNK565",
+      "BNK566",
+      "BNK567",
+      "BNK568",
+      "BNK569",
+      "BNK570",
+      "BNK571",
+      "BNK572"
     ],
     "completed": [],
     "rejected": []
@@ -467,42 +493,21 @@
   "activities": {
     "pending": [],
     "completed": [
-      "CONSUME9556",
-      "CONSUME9556",
-      "COLLECT9556",
-      "COLLECT9556",
-      "COLLECT9557",
-      "COLLECT9557",
-      "COLLECT9558",
-      "COLLECT9558",
-      "COLLECT9559",
-      "COLLECT9559",
-      "COLLECT9560",
-      "COLLECT9560",
-      "COLLECT9561",
-      "COLLECT9561",
-      "COLLECT9562",
-      "COLLECT9562",
-      "COLLECT9563",
-      "COLLECT9563",
-      "COLLECT9556",
-      "COLLECT9556",
-      "COLLECT9557",
-      "COLLECT9557",
-      "COLLECT9558",
-      "COLLECT9558",
-      "COLLECT9559",
-      "COLLECT9559",
-      "TX9560",
-      "TX9561",
-      "TX9562",
-      "TX9563",
-      "COLLECT9564",
-      "COLLECT9564",
-      "COLLECT9565",
-      "COLLECT9565",
-      "CONSUME9566",
-      "CONSUME9566"
+      "COLLECT9803",
+      "COLLECT9804",
+      "COLLECT9805",
+      "CNS9807",
+      "CNS9809",
+      "CNS9808",
+      "MNT9806",
+      "CNS9811",
+      "CNS9813",
+      "CNS9812",
+      "MNT9810",
+      "CNS9815",
+      "CNS9817",
+      "CNS9816",
+      "MNT9814"
     ],
     "rejected": []
   }

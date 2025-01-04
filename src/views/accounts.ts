@@ -68,7 +68,7 @@ export function AuthView(): string {
                 <button class="btn btn-primary">Enter</button>
             </div>
         </form>
-        <form action="/api/mint?return=/account" method="post" class="card-body m-0 pt-0">
+        <form action="/api/mint?return=/" method="post" class="card-body m-0 pt-0">
             <div class="form-control">
                 <input id="invitationCode" name="invitation" class="input input-bordered" placeholder="invitation code (hint: JRR's)" required />
             </div>
@@ -207,7 +207,7 @@ export function InventoryView(username: string, items: Asset[], userMineralTotal
                     Mint Bankstone (-200.00 credit)
                 </button>
             </form>
-            <ul id="inventory" class="text-xs grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 justify-between">
+            <ul id="inventory" class="text-xs grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 max-w-screen-md gap-1 justify-between">
         `
     if (items.length > 0) {
         items.slice(0, 100).forEach(i => {

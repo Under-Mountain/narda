@@ -19,7 +19,7 @@ export function MarketplaceView(listings: Listing[], username: string, session: 
             <a role="tab" class="tab">Yield</a>
         </div>
         <div role="tabpanel" class="tab-content">
-        <ul id="market" class="card-body p-0 mt-4 text-xs grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 justify-between">`
+        <ul id="market" class="card-body p-0 mt-4 text-xs grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 max-w-screen-md gap-1 justify-between">`
     if (listings.length > 0) {
         listings.slice(0, 100).forEach(l => {
             const i = assets.find(a => a.id == l.item)
