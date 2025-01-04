@@ -1,7 +1,7 @@
 {
   "id": "arda",
-  "name": "",
-  "description": "",
+  "name": "Project Arda",
+  "description": "Open World Metaverse Economy for Everyone, in tribute to J.R.R. Tolkien",
   "interval": {
     "minute": 1500,
     "hour": 60,
@@ -27,7 +27,7 @@
     "bankstone": {
       "rateLo": 1,
       "rateHi": 30,
-      "capLo": 100,
+      "capLo": 10,
       "capHi": 10000
     }
   }
