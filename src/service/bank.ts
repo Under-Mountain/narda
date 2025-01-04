@@ -20,7 +20,7 @@ export function queueBankActivities(): void {
     }
 
     const creditCost = 200
-    if (worldBank && worldBank.credits.balance - creditCost < world.bank.maxDeficit) {
+    if (worldBank && worldBank.credits.balance - creditCost < -1 * world.bank.maxDeficit) {
         console.warn(`TX${activities.length}: world's max deficit reached`);
         return
     }
@@ -50,25 +50,9 @@ export function queueBankActivities(): void {
         `Minting of a bankstone for ${worldBank?.id}`
     );
 
-    const creditConsumption = consume(
-        worldBank?.id || '',
-        "credits",
-        creditCost
-    );
-
-    const waterConsumption = consume(
-        worldBank?.id || '',
-        'water',
-        waterCost
-    );
-
-    const mineralConsumption = consume(
-        worldBank?.id || '',
-        "mineral",
-        mineralCost
-    );
-
-    current.activities.pending.push(...[creditConsumption.id, mineralConsumption.id, waterConsumption.id, mintActivity.id]);
+    const creditConsumption = consume(worldBank?.id || '', "credits", creditCost);
+    const waterConsumption = consume(worldBank?.id || '', 'water', waterCost);
+    const mineralConsumption = consume(worldBank?.id || '', "mineral", mineralCost);
 }
 
 export function buyFloorListing(type: string): void {
@@ -85,7 +69,7 @@ export function buyFloorListing(type: string): void {
     }
 
     const floorListing = floorListings[0];
-    if (floorListing.price > medianPrice) {
+    if (floorListing.price/floorListing.amount > medianPrice) {
         console.warn(`TX${activities.length}: listing price exceeds median sold price, skipping`);
         return;
     }
@@ -106,15 +90,15 @@ export function buyFloorListing(type: string): void {
         `Sale of ${floorListing.item} at ${floorListing.price} credit`
     );
 
-    current.activities.pending.push(creditTx.id)
-    current.activities.pending.push(itemTx.id)
     floorListing.times.sold = current.time
 }
 
 function getMedianPrice(txPrefix: string) {
     const soldListings = market.filter(l => l.times.sold && l.item.startsWith(txPrefix))
-        .sort((a, b) => a.price - b.price);
+        .sort((a, b) => (a.price / a.amount) - (b.price / b.amount));
 
-    const medianPrice = soldListings.length > 0 ? soldListings[Math.floor(soldListings.length / 2)].price : Infinity;
+    const medianPrice = soldListings.length > 0 ?
+        soldListings[Math.floor(soldListings.length / 2)].price / soldListings[Math.floor(soldListings.length / 2)].amount : Infinity;
+
     return medianPrice;
 }
