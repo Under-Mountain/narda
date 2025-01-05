@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": "PST0",
+    "author": "dev",
+    "title": "Creating a post from modal",
+    "content": "Some content",
+    "channels": [
+      "test"
+    ],
+    "likes": 0,
+    "dislikes": 0,
+    "times": {
+      "created": 11029
+    },
+    "comments": []
+  },
+  {
+    "id": "PST1",
+    "author": "dev",
+    "title": "This is some posting",
+    "content": "",
+    "channels": [
+      "test"
+    ],
+    "likes": 0,
+    "dislikes": 0,
+    "times": {
+      "created": 11312
+    },
+    "comments": []
+  }
+]

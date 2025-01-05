@@ -9,11 +9,11 @@ export function processResources(): void {
     const mineralRate = util.getRandomNumber(world.resources.mineral.rateLo, world.resources.mineral.rateHi) / 100 / world.interval.year / world.interval.day / world.interval.minute
 
     const remainingWater = (world.resources.water.total - current.resources.water.supplied)
-    const adjustedWaterRate = waterRate * (1 - Math.floor(current.resources.water.balance / 100) * 0.1)
+    const adjustedWaterRate = waterRate * (1 - Math.floor(current.resources.water.balance / 100) * 0.075)
     const water = remainingWater * adjustedWaterRate
 
     const remainingMineral = (world.resources.water.total - current.resources.water.supplied)
-    const adjustedMineralRate = mineralRate * (1 - Math.floor(current.resources.mineral.balance / 100) * 0.1)
+    const adjustedMineralRate = mineralRate * (1 - Math.floor(current.resources.mineral.balance / 100) * 0.075)
     const mineral = remainingMineral * adjustedMineralRate
 
     // This should be only place resource balance and supply increases

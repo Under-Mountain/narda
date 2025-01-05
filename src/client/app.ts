@@ -1,6 +1,5 @@
 import { initializeFormHandlers } from './events.js';
 import { buildTimeString, buildDateString, updateHeader, updateUserBalance } from './dom.js';
-import { initializeModalHandlers } from './modal.js';
 
 export const Current = {
   time: '..:.. (..% to yield)',
@@ -32,7 +31,6 @@ fetch('/api/world').then(async (res) => {
 })
 
 initializeFormHandlers();
-initializeModalHandlers();
 
 async function syncCurrentAsync(world: any) {
   if (!inProgress) {

@@ -97,7 +97,7 @@
     "properties": {
       "yield": 0.19,
       "cap": 6289,
-      "staked": 6279.183933424797
+      "staked": 6272.648402308069
     },
     "owner": "world",
     "visual": "8.png"
@@ -105,14 +105,14 @@
   {
     "id": "WTR14",
     "type": "water",
-    "amount": 630,
+    "amount": 633,
     "owner": "dev",
     "visual": "water.png"
   },
   {
     "id": "MNR15",
     "type": "mineral",
-    "amount": 84,
+    "amount": 81,
     "owner": "dev",
     "visual": "mineral.png"
   },
@@ -123,7 +123,7 @@
     "properties": {
       "yield": 0.2,
       "cap": 4661,
-      "staked": 4653.342279736094
+      "staked": 4648.24412369068
     },
     "owner": "world",
     "visual": "12.png"
@@ -135,7 +135,7 @@
     "properties": {
       "yield": 0.13,
       "cap": 1608,
-      "staked": 1606.282474880249
+      "staked": 1604.5667842707821
     },
     "owner": "world",
     "visual": "5.png"
@@ -175,7 +175,7 @@
     "properties": {
       "yield": 0.14,
       "cap": 3413,
-      "staked": 3409.074218493088
+      "staked": 3407.7666283818853
     },
     "owner": "test",
     "visual": "9.png"
@@ -187,7 +187,7 @@
     "properties": {
       "yield": 0.24,
       "cap": 6411,
-      "staked": 6398.361957425333
+      "staked": 6394.15481531634
     },
     "owner": "world",
     "visual": "46.png"
@@ -199,7 +199,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 1183,
-      "staked": 1181.7040943294164
+      "staked": 1180.7330967655673
     },
     "owner": "world",
     "visual": "4.png"
@@ -211,7 +211,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 1836,
-      "staked": 1834.4912689810471
+      "staked": 1832.9837777601813
     },
     "owner": "world",
     "visual": "4.png"
@@ -223,7 +223,7 @@
     "properties": {
       "yield": 0.11,
       "cap": 2736,
-      "staked": 2735.1754520547947
+      "staked": 2734.3511526034904
     },
     "owner": "world",
     "visual": "11.png"
@@ -235,7 +235,7 @@
     "properties": {
       "yield": 0.25,
       "cap": 3578,
-      "staked": 3570.6529797097555
+      "staked": 3565.763349362705
     },
     "owner": "world",
     "visual": "0.png"
@@ -247,7 +247,7 @@
     "properties": {
       "yield": 0.24,
       "cap": 6757,
-      "staked": 6748.1170035894165
+      "staked": 6739.245685086962
     },
     "owner": "dev",
     "visual": "1.png"
@@ -259,7 +259,7 @@
     "properties": {
       "yield": 0.21,
       "cap": 6141,
-      "staked": 6130.406562946046
+      "staked": 6123.354425770814
     },
     "owner": "dev",
     "visual": "12.png"
@@ -271,9 +271,21 @@
     "properties": {
       "yield": 0.08,
       "cap": 4220,
-      "staked": 4220
+      "staked": 4219.075068493151
     },
     "owner": "world",
     "visual": "0.png"
+  },
+  {
+    "id": "BNK31",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.09,
+      "cap": 7522,
+      "staked": 7520.145260273973
+    },
+    "owner": "dev",
+    "visual": "9.png"
   }
 ]

@@ -1,4 +1,4 @@
-import { showAlert, hideAlert, toggleElementVisibility, getElementById, getElementByIdAsButton } from './dom.js'
+import { showAlert, hideAlert, toggleElementVisibility, getElementById, getElementByIdAsButton, updateElementContent } from './dom.js'
 import { refreshInventoryAsync, refreshMarketListingAsync } from './refresh.js'
 import { collectResource } from './collect.js'
 
@@ -25,7 +25,7 @@ export function initializeFormHandlers() {
 
   const mintBankForm = document.getElementById('mintBankForm')
   if (mintBankForm) {
-    mintBankForm.addEventListener('submit', onExploreForm)
+    mintBankForm.addEventListener('submit', onRecruitPlaces)
   }
 
   const postForm = document.getElementById('postForm')
@@ -73,8 +73,10 @@ function onUpdateBioForm(e: Event) {
   }).then(res => {
     if (!res) throw new Error('No response received')
     return res.json()
-  }).then(res => {
-    showAlert(alert, alertContent, 'alert-success', `User bio has been successfully updated. (-100.00sl)`)
+  }).then(account => {
+    showAlert(alert, alertContent, 'alert-success', `User bio has been successfully updated. (-100.00sl)`);
+    updateElementContent('accountBio', account.bio);
+    (getElementById('editAccountModal') as HTMLFormElement).close()
     hideAlert(alert, updateBioBtn)
   })
 }
@@ -105,12 +107,13 @@ function onSendCreditForm(e: Event) {
     if (!res) throw new Error('No response received')
     return res.json()
   }).then(res => {
-    showAlert(alert, alertContent, 'alert-success', `Credit successfully sent to ${formData.get('to')}. (-${formData.get('amount')}sl)`)
+    showAlert(alert, alertContent, 'alert-success', `Credit successfully sent to ${formData.get('to')}. (-${formData.get('amount')}sl)`);
+    (getElementById('sendCreditModal') as HTMLFormElement).close()
     hideAlert(alert, sendBtn)
   })
 }
 
-function onExploreForm(e: Event) {
+function onRecruitPlaces(e: Event) {
   e.preventDefault()
   const formData = new FormData(e.target as HTMLFormElement)
 
@@ -166,7 +169,8 @@ function onPostForm(e: Event) {
     if (!res) throw new Error('No response received')
     return res.json()
   }).then(res => {
-    showAlert(alert, alertContent, 'alert-success', `Post successfully created. (-10.00sl)`)
+    showAlert(alert, alertContent, 'alert-success', `Post successfully created. (-10.00sl)`);
+    (getElementById('postContentModal') as HTMLFormElement).close()
     hideAlert(alert, postBtn)
   })
 }

@@ -9462,5 +9462,954 @@
       "created": 7740,
       "completed": 7740
     }
+  },
+  {
+    "type": "transaction",
+    "id": "TX728",
+    "of": "credit",
+    "from": "BNK13",
+    "to": "world",
+    "amount": 3.268616294111538,
+    "note": "BNK13: yield for day 0",
+    "times": {
+      "created": 8700,
+      "completed": 8700
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX729",
+    "of": "credit",
+    "from": "BNK17",
+    "to": "world",
+    "amount": 0.5721006074915955,
+    "note": "BNK17: yield for day 14",
+    "times": {
+      "created": 8820,
+      "completed": 8820
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX730",
+    "of": "credit",
+    "from": "BNK23",
+    "to": "world",
+    "amount": 4.207142108992,
+    "note": "BNK23: yield for day 13",
+    "times": {
+      "created": 8880,
+      "completed": 8880
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX731",
+    "of": "credit",
+    "from": "BNK24",
+    "to": "world",
+    "amount": 0.323754546391621,
+    "note": "BNK24: yield for day 12",
+    "times": {
+      "created": 8940,
+      "completed": 8940
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX732",
+    "of": "credit",
+    "from": "BNK25",
+    "to": "world",
+    "amount": 0.7539005214990604,
+    "note": "BNK25: yield for day 11",
+    "times": {
+      "created": 9000,
+      "completed": 9000
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX733",
+    "of": "credit",
+    "from": "BNK27",
+    "to": "world",
+    "amount": 2.4456527258286,
+    "note": "BNK27: yield for day 10",
+    "times": {
+      "created": 9120,
+      "completed": 9120
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX734",
+    "of": "credit",
+    "from": "BNK29",
+    "to": "dev",
+    "amount": 3.527083227996355,
+    "note": "BNK29: yield for day 8",
+    "times": {
+      "created": 9240,
+      "completed": 9240
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CSM735",
+    "of": "credits",
+    "from": "dev",
+    "to": "world",
+    "amount": 100,
+    "note": "Consuming 100 credits for dev",
+    "times": {
+      "created": 9983,
+      "completed": 9983
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CSM736",
+    "of": "credits",
+    "from": "dev",
+    "to": "world",
+    "amount": 100,
+    "note": "Consuming 100 credits for dev",
+    "times": {
+      "created": 10197,
+      "completed": 10197
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX737",
+    "of": "credit",
+    "from": "BNK16",
+    "to": "world",
+    "amount": 2.549776591636216,
+    "note": "BNK16: yield for day 10",
+    "times": {
+      "created": 10200,
+      "completed": 10200
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX738",
+    "of": "credit",
+    "from": "BNK17",
+    "to": "world",
+    "amount": 0.5718968456313931,
+    "note": "BNK17: yield for day 9",
+    "times": {
+      "created": 10260,
+      "completed": 10260
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CSM739",
+    "of": "credits",
+    "from": "dev",
+    "to": "world",
+    "amount": 100,
+    "note": "Consuming 100 credits for dev",
+    "times": {
+      "created": 10340,
+      "completed": 10340
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CSM740",
+    "of": "credits",
+    "from": "dev",
+    "to": "world",
+    "amount": 100,
+    "note": "Consuming 100 credits for dev",
+    "times": {
+      "created": 10346,
+      "completed": 10346
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CSM741",
+    "of": "credits",
+    "from": "dev",
+    "to": "world",
+    "amount": 100,
+    "note": "Consuming 100 credits for dev",
+    "times": {
+      "created": 10351,
+      "completed": 10351
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CSM742",
+    "of": "credits",
+    "from": "dev",
+    "to": "world",
+    "amount": 100,
+    "note": "Consuming 100 credits for dev",
+    "times": {
+      "created": 10406,
+      "completed": 10406
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX743",
+    "of": "credit",
+    "from": "BNK24",
+    "to": "world",
+    "amount": 0.32366584651589725,
+    "note": "BNK24: yield for day 7",
+    "times": {
+      "created": 10440,
+      "completed": 10440
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX744",
+    "of": "credit",
+    "from": "BNK26",
+    "to": "world",
+    "amount": 0.8242994513041848,
+    "note": "BNK26: yield for day 5",
+    "times": {
+      "created": 10560,
+      "completed": 10560
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX745",
+    "of": "credit",
+    "from": "BNK28",
+    "to": "dev",
+    "amount": 4.437118029757425,
+    "note": "BNK28: yield for day 3",
+    "times": {
+      "created": 10680,
+      "completed": 10680
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX746",
+    "of": "credit",
+    "from": "BNK30",
+    "to": "world",
+    "amount": 0.9249315068493151,
+    "note": "BNK30: yield for day 2",
+    "times": {
+      "created": 10800,
+      "completed": 10800
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CSM747",
+    "of": "credits",
+    "from": "dev",
+    "to": "world",
+    "amount": 10,
+    "note": "Consuming 10 credits for dev",
+    "times": {
+      "created": 11029,
+      "completed": 11029
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX748",
+    "of": "credit",
+    "from": "dev",
+    "to": "gandalf",
+    "amount": 1000,
+    "note": "",
+    "times": {
+      "created": 11049,
+      "completed": 11049
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX749",
+    "of": "credit",
+    "from": "dev",
+    "to": "sauron",
+    "amount": 1000,
+    "note": "",
+    "times": {
+      "created": 11181,
+      "completed": 11181
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX750",
+    "of": "credit",
+    "from": "dev",
+    "to": "saruman",
+    "amount": 1000,
+    "note": "",
+    "times": {
+      "created": 11191,
+      "completed": 11191
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX751",
+    "of": "credit",
+    "from": "dev",
+    "to": "sauron",
+    "amount": 1000,
+    "note": "",
+    "times": {
+      "created": 11232,
+      "completed": 11232
+    }
+  },
+  {
+    "type": "mint",
+    "id": "MNT752",
+    "of": "account",
+    "from": "world",
+    "to": "sauron",
+    "amount": 1,
+    "note": "Minting of account for sauron",
+    "times": {
+      "created": 11251,
+      "completed": 11251
+    }
+  },
+  {
+    "type": "mint",
+    "id": "MNT753",
+    "of": "account",
+    "from": "world",
+    "to": "saruman",
+    "amount": 1,
+    "note": "Minting of account for saruman",
+    "times": {
+      "created": 11262,
+      "completed": 11262
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX754",
+    "of": "credit",
+    "from": "dev",
+    "to": "sauron",
+    "amount": 1000,
+    "note": "",
+    "times": {
+      "created": 11290,
+      "completed": 11290
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX755",
+    "of": "credit",
+    "from": "dev",
+    "to": "saruman",
+    "amount": 1000,
+    "note": "",
+    "times": {
+      "created": 11298,
+      "completed": 11298
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CSM756",
+    "of": "credits",
+    "from": "dev",
+    "to": "world",
+    "amount": 10,
+    "note": "Consuming 10 credits for dev",
+    "times": {
+      "created": 11312,
+      "completed": 11312
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT757",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 15,
+    "note": "Collecting 15 water for dev",
+    "times": {
+      "created": 11328,
+      "completed": 11328
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT758",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 5,
+    "note": "Collecting 5 mineral for dev",
+    "times": {
+      "created": 11328,
+      "completed": 11328
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT759",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 17,
+    "note": "Collecting 17 water for dev",
+    "times": {
+      "created": 11329,
+      "completed": 11329
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT760",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 6,
+    "note": "Collecting 6 mineral for dev",
+    "times": {
+      "created": 11330,
+      "completed": 11330
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT761",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 5,
+    "note": "Collecting 5 water for dev",
+    "times": {
+      "created": 11331,
+      "completed": 11331
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT762",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 10,
+    "note": "Collecting 10 mineral for dev",
+    "times": {
+      "created": 11331,
+      "completed": 11331
+    }
+  },
+  {
+    "type": "mint",
+    "id": "MNT763",
+    "of": "bankstone",
+    "from": "world",
+    "to": "dev",
+    "amount": 1,
+    "note": "Minting of bankstone for dev",
+    "times": {
+      "created": 11336,
+      "completed": 11336
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CSM764",
+    "of": "credits",
+    "from": "dev",
+    "to": "world",
+    "amount": 200,
+    "note": "Consuming 200 credits for dev",
+    "times": {
+      "created": 11336,
+      "completed": 11336
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CSM765",
+    "of": "water",
+    "from": "dev",
+    "to": "world",
+    "amount": 101,
+    "note": "Consuming 101 water for dev",
+    "times": {
+      "created": 11336,
+      "completed": 11336
+    }
+  },
+  {
+    "type": "consume",
+    "id": "CSM766",
+    "of": "mineral",
+    "from": "dev",
+    "to": "world",
+    "amount": 100,
+    "note": "Consuming 100 mineral for dev",
+    "times": {
+      "created": 11336,
+      "completed": 11336
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT767",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 9,
+    "note": "Collecting 9 mineral for dev",
+    "times": {
+      "created": 11340,
+      "completed": 11340
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT768",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 5,
+    "note": "Collecting 5 water for dev",
+    "times": {
+      "created": 11341,
+      "completed": 11341
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT769",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 4,
+    "note": "Collecting 4 mineral for dev",
+    "times": {
+      "created": 11341,
+      "completed": 11341
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT770",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 10,
+    "note": "Collecting 10 water for dev",
+    "times": {
+      "created": 11342,
+      "completed": 11342
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT771",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 0,
+    "note": "Collecting 0 mineral for dev",
+    "times": {
+      "created": 11343,
+      "completed": 11343
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT772",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 12,
+    "note": "Collecting 12 water for dev",
+    "times": {
+      "created": 11344,
+      "completed": 11344
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT773",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 6,
+    "note": "Collecting 6 mineral for dev",
+    "times": {
+      "created": 11344,
+      "completed": 11344
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT774",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 1,
+    "note": "Collecting 1 water for dev",
+    "times": {
+      "created": 11345,
+      "completed": 11345
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT775",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 6,
+    "note": "Collecting 6 mineral for dev",
+    "times": {
+      "created": 11345,
+      "completed": 11345
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT776",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 10,
+    "note": "Collecting 10 water for dev",
+    "times": {
+      "created": 11346,
+      "completed": 11346
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT777",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 6,
+    "note": "Collecting 6 mineral for dev",
+    "times": {
+      "created": 11347,
+      "completed": 11347
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT778",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 10,
+    "note": "Collecting 10 water for dev",
+    "times": {
+      "created": 11348,
+      "completed": 11348
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT779",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 4,
+    "note": "Collecting 4 mineral for dev",
+    "times": {
+      "created": 11349,
+      "completed": 11349
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX780",
+    "of": "credit",
+    "from": "BNK13",
+    "to": "world",
+    "amount": 3.266914822615973,
+    "note": "BNK13: yield for day 6",
+    "times": {
+      "created": 11580,
+      "completed": 11580
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX781",
+    "of": "credit",
+    "from": "BNK16",
+    "to": "world",
+    "amount": 2.5483794537777853,
+    "note": "BNK16: yield for day 5",
+    "times": {
+      "created": 11640,
+      "completed": 11640
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX782",
+    "of": "credit",
+    "from": "BNK17",
+    "to": "world",
+    "amount": 0.5716931563439078,
+    "note": "BNK17: yield for day 4",
+    "times": {
+      "created": 11700,
+      "completed": 11700
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX783",
+    "of": "credit",
+    "from": "BNK22",
+    "to": "test",
+    "amount": 1.3075901112028285,
+    "note": "BNK22: yield for day 3",
+    "times": {
+      "created": 11760,
+      "completed": 11760
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX784",
+    "of": "credit",
+    "from": "BNK24",
+    "to": "world",
+    "amount": 0.3235771709415093,
+    "note": "BNK24: yield for day 2",
+    "times": {
+      "created": 11880,
+      "completed": 11880
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT785",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 8,
+    "note": "Collecting 8 mineral for dev",
+    "times": {
+      "created": 11905,
+      "completed": 11905
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT786",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 5,
+    "note": "Collecting 5 mineral for dev",
+    "times": {
+      "created": 11923,
+      "completed": 11923
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX787",
+    "of": "credit",
+    "from": "BNK25",
+    "to": "world",
+    "amount": 0.7535906993669376,
+    "note": "BNK25: yield for day 1",
+    "times": {
+      "created": 11940,
+      "completed": 11940
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT788",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 7,
+    "note": "Collecting 7 mineral for dev",
+    "times": {
+      "created": 11952,
+      "completed": 11952
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT789",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 0,
+    "note": "Collecting 0 mineral for dev",
+    "times": {
+      "created": 11954,
+      "completed": 11954
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT790",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 1,
+    "note": "Collecting 1 mineral for dev",
+    "times": {
+      "created": 11957,
+      "completed": 11957
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT791",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 6,
+    "note": "Collecting 6 mineral for dev",
+    "times": {
+      "created": 11960,
+      "completed": 11960
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT792",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 4,
+    "note": "Collecting 4 water for dev",
+    "times": {
+      "created": 11962,
+      "completed": 11962
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT793",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 0,
+    "note": "Collecting 0 mineral for dev",
+    "times": {
+      "created": 11964,
+      "completed": 11964
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT794",
+    "of": "water",
+    "from": "world",
+    "to": "dev",
+    "amount": 15,
+    "note": "Collecting 15 water for dev",
+    "times": {
+      "created": 11966,
+      "completed": 11966
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX795",
+    "of": "credit",
+    "from": "BNK27",
+    "to": "world",
+    "amount": 2.443977621221868,
+    "note": "BNK27: yield for day 14",
+    "times": {
+      "created": 12060,
+      "completed": 12060
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX796",
+    "of": "credit",
+    "from": "BNK28",
+    "to": "dev",
+    "amount": 4.434200472696762,
+    "note": "BNK28: yield for day 14",
+    "times": {
+      "created": 12120,
+      "completed": 12120
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX797",
+    "of": "credit",
+    "from": "BNK29",
+    "to": "dev",
+    "amount": 3.5250539472350417,
+    "note": "BNK29: yield for day 13",
+    "times": {
+      "created": 12180,
+      "completed": 12180
+    }
+  },
+  {
+    "type": "transaction",
+    "id": "TX798",
+    "of": "credit",
+    "from": "BNK31",
+    "to": "dev",
+    "amount": 1.8547397260273972,
+    "note": "BNK31: yield for day 11",
+    "times": {
+      "created": 12300,
+      "completed": 12300
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT799",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 4,
+    "note": "Collecting 4 mineral for dev",
+    "times": {
+      "created": 12608,
+      "completed": 12608
+    }
+  },
+  {
+    "type": "collect",
+    "id": "CLT800",
+    "of": "mineral",
+    "from": "world",
+    "to": "dev",
+    "amount": 10,
+    "note": "Collecting 10 mineral for dev",
+    "times": {
+      "created": 12611,
+      "completed": 12611
+    }
   }
 ]

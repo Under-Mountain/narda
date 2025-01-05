@@ -16,7 +16,6 @@ export function FooterView(session = undefined, account = undefined): string {
                 <span id="alertContent"></span>
             </div>
         </div>
-
         ${Modals(session, account)}
         </body>
         <script type="module" src="/scripts/app.js"></script>

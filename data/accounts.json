@@ -2,15 +2,15 @@
   {
     "id": "dev",
     "credits": {
-      "balance": 6811.41
+      "balance": 2991.41
     },
     "times": {
       "created": 18,
       "lastActive": 18,
-      "edited": 4890
+      "edited": 10406
     },
     "visual": "legolas.png",
-    "bio": "Official Dev Account"
+    "bio": "Official Dev Account..."
   },
   {
     "id": "test",
@@ -46,6 +46,39 @@
     "visual": "aragorn.png"
   },
   {
+    "id": "gandalf",
+    "credits": {
+      "balance": 1000
+    },
+    "times": {
+      "created": 148,
+      "lastActive": 148
+    },
+    "visual": "gandalf.png"
+  },
+  {
+    "id": "sauron",
+    "credits": {
+      "balance": 1000
+    },
+    "times": {
+      "created": 11251,
+      "lastActive": 11251
+    },
+    "visual": "bilbo.png"
+  },
+  {
+    "id": "saruman",
+    "credits": {
+      "balance": 1000
+    },
+    "times": {
+      "created": 11262,
+      "lastActive": 11262
+    },
+    "visual": "gandalf.png"
+  },
+  {
     "id": "bilbo",
     "credits": {
       "balance": 0
@@ -55,17 +88,6 @@
       "lastActive": 134
     },
     "visual": "frodo.png"
-  },
-  {
-    "id": "gandalf",
-    "credits": {
-      "balance": 0
-    },
-    "times": {
-      "created": 148,
-      "lastActive": 148
-    },
-    "visual": "gandalf.png"
   },
   {
     "id": "thorin",

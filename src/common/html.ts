@@ -75,9 +75,9 @@ export function ListingForm(l: any, i: any, session: any = null, username: strin
 export function ProfileResources(
     userWaterTotal: number, userMineralTotal: number, userActiveBankstones: number): string {
     return `
-        <small style="color:${"#00A0FF"}"><strong>water</strong></small> ${userWaterTotal}
-        <small style="color:${"#FF03EA"}"><strong>mineral</strong></small> ${userMineralTotal}
-        <small style="color:${"gray"}"><strong>bankstones</strong></small> ${userActiveBankstones}
+        <small class="text-blue-400">water <strong>${userWaterTotal}</strong></small>
+        <small class="text-yellow-400">mineral <strong>${userMineralTotal}</strong></small>
+        <small class="text-content">places <strong>${userActiveBankstones}</strong></small>
     `
 }
 

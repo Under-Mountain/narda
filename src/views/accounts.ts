@@ -29,9 +29,11 @@ export function ProfileView(account: Account, session: any): string {
                 <div class="p-2 mb-auto">
                     <h2 class="text-white-100 text-2xl">${account.id}</h2>
                     <div class="text-xs text-gray-500">
-                        <p class="">${account.bio ? account.bio : `The Unknown`}</p>
+                        <p class="" id="accountBio">${account.bio ? account.bio : `The Unknown`}</p>
                         <!-- The button to open modal -->
-                        <button id="editAccountBtn" class="btn btn-xs mt-1">edit</label>
+                        <button class="btn btn-primary btn-xs mt-1" onclick="document.getElementById('editAccountModal').showModal()">edit</button>
+                        <button class="btn btn-secondary btn-xs mt-1" onclick="document.getElementById('sendCreditModal').showModal()">send</button>
+                        <button class="btn btn-accent btn-xs mt-1" onclick="document.getElementById('postContentModal').showModal()">post</button>
                     </div>
                 </div>
             </div>
@@ -50,44 +52,8 @@ export function ProfileView(account: Account, session: any): string {
                 </div>
 
                 ${InventoryView(account, items, userMineralTotal, userWaterTotal, session.username != account.id)}
-
-                ${session.username && session.username == account.id ? `
-                    ${SendCreditView(account, session)}
-                    ` : ``}
             </div>
         </div>
-    `
-}
-
-export function SendCreditView(account: Account, session: any): string {
-    return `
-        <form id="sendCreditForm" class="text-right">
-            <input type="hidden" name="from" value="${session.username}" />
-            <div class="form-control">
-                <label for="to" class="label text-xs">Account</label>
-                <input name="to" placeholder="receiver's username" required class="input input-md m-1" />
-            </div>
-            <div class="form-control">
-                <label for="amount" class="label text-xs">Amount</label>
-                <input name="amount" type="number" min=".01" max="1000.00" value="0.01" step=".01" required class="input input-md m-1" />
-            </div>
-            <button id="sendBtn" ${(session.username && account.credits.balance < .01) ? `disabled` : ``} class="btn btn-primary btn-md m-1">Send</button>
-        </form>
-        <form id="postForm" class="text-right">
-            <div class="form-control">
-                <label for="title" class="label text-xs">Title</label>
-                <input name="title" class="input" placeholder="Title is required to post" required />
-            </div>
-            <div class="form-control">
-                <label for="channels" class="label text-xs">Channel</label>
-                <input name="channels" class="input" placeholder="general, question, issue, ..." />
-            </div>
-            <div class="form-control">
-                <label for="content" class="label text-xs">Content (optional)</label>
-                <textarea class="textarea" name="content" rows="4" cols="60" placeholder="Each credit consumption on the post will be fully rewarded to content creator."></textarea>
-            </div>
-            <button id="postBtn" class="btn btn-secondary m-1" ${(session.username && account.credits.balance < 10) ? `disabled` : ``}>Post (-10.00 credit)</button>
-        </form>
     `
 }
 
@@ -98,7 +64,7 @@ export function InventoryView(account: Account, items: Asset[], userMineralTotal
         <h3 class="text-bold pb-1">
             Inventory (<span id="inventoryTotal" class="text-white">${items.filter(i => i.owner == account.id).length}</span>/10)
         </h3>
-        <form id="mintBankForm" class="${readonly? 'hidden' : ''}">
+        <form id="mintBankForm" class="mb-2 ${readonly? 'hidden' : ''}">
             <div class="form-control">
                 <input type="hidden" name="type" value="bankstone" />
                 <label for="type" class="text-xs">
@@ -106,7 +72,7 @@ export function InventoryView(account: Account, items: Asset[], userMineralTotal
                     water + <small>${mineralCost}</small> mineral
                 </label>
             </div>
-            <button id="mintBankBtn" class="btn btn-xs"
+            <button id="mintBankBtn" class="btn btn-primary btn-xs"
                 ${(userMineralTotal < mineralCost || userWaterTotal < waterCost ||
                     account.credits.balance < creditCost) ? "disabled" : ""}>
                 Mint Bankstone (-${creditCost.toFixed(2)} credit)
