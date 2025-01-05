@@ -43,7 +43,7 @@ export function updateHeader(Current: any) {
   updateElementContent("headerTime", Current.time);
   updateElementContent("headerDate", Current.date);
   updateElementContent("headerWater", Current.resources.water);
-  updateElementContent("headerMithril", Current.resources.mithril);
+  updateElementContent("headerMineral", Current.resources.mineral);
 }
 
 export function updateStatus(res: any) {
@@ -79,18 +79,20 @@ export function toggleButtonState(button: HTMLButtonElement, icon: HTMLElement, 
 }
 
 export function updateUserBalance(Current: any, queryUser: string) {
-  const { creditCost, mineralCost, waterCost } = exploreCost(Current.water, Current.mithril);
-
   updateElementContent("userBalance", Current.user?.balance?.toFixed(2))
   if (queryUser == Current.user.id) updateElementContent('profileBalance', Current.user?.balance?.toFixed(2))
   updateElementContent("userWater", Current.user?.water)
-  updateElementContent("userMineral", Current.user.mithril)
+  updateElementContent("userMineral", Current.user?.mineral)
 
   const mintBankBtn = getElementById('mintBankBtn')
   const alert = getElementById('alert')
-  if (mintBankBtn && alert.classList.contains('hidden'))
-    (mintBankBtn as HTMLButtonElement).disabled = Current.user.mithril < mineralCost ||
-      Current.user.water < waterCost || Current.user.balance < creditCost
+  if (mintBankBtn && alert.classList.contains('hidden')) {
+    const { creditCost, mineralCost, waterCost } = exploreCost(Current.resources.water, Current.resources.mineral);
+
+    updateElementContent("waterCost", waterCost.toFixed(0));
+    (mintBankBtn as HTMLButtonElement).disabled = Current.user.mineral < mineralCost ||
+    Current.user.water < waterCost || Current.user.balance < creditCost
+  }
 }
 
 export function updateUserInventory(Current: any, inventory: any[]) {
@@ -108,7 +110,7 @@ export function updateUserInventory(Current: any, inventory: any[]) {
 
   Current.user.inventory.filter(i => i.amount > 0).slice(0, 100).forEach(i => {
     const itemElement = document.createElement('li');
-    itemElement.innerHTML = ItemForm(i).trim()
+    itemElement.innerHTML = ItemForm(i, false).trim()
     itemElement.children[0].addEventListener('submit', onSellItemForm)
 
     inventoryElement.appendChild(itemElement)

@@ -3,11 +3,12 @@ import { accounts, assets, posts, current, world, market, activities } from "../
 export function HeaderView(session: any, username: string): string {
     const resources = {
         water: 0,
-        mithril: 0
+        mineral: 0
     }
 
+    let account
     if (session.username) {
-        const account = accounts.find(a => a.id == username)
+        account = accounts.find(a => a.id == username)
 
         if (account) {
             const userWaters = assets.filter((a) => a.type == "water" && a.owner == account.id)
@@ -17,7 +18,7 @@ export function HeaderView(session: any, username: string): string {
             const userMineralTotal = userMinerals.reduce((sum, c) => { return sum + c.amount }, 0)
 
             resources.water = userWaterTotal
-            resources.mithril = userMineralTotal
+            resources.mineral = userMineralTotal
         }
     }
 
@@ -80,8 +81,8 @@ export function HeaderView(session: any, username: string): string {
                         <svg id="collectMineralIcon" class="p-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="2em"><path stroke="white" stroke-width="30" transform-origin="center" d="m148 84.7 13.8-8-10-17.3-13.8 8a50 50 0 0 0-27.4-15.9v-16h-20v16A50 50 0 0 0 63 67.4l-13.8-8-10 17.3 13.8 8a50 50 0 0 0 0 31.7l-13.8 8 10 17.3 13.8-8a50 50 0 0 0 27.5 15.9v16h20v-16a50 50 0 0 0 27.4-15.9l13.8 8 10-17.3-13.8-8a50 50 0 0 0 0-31.7Zm-47.5 50.8a35 35 0 1 1 0-70 35 35 0 0 1 0 70Z"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="3.5" values="0;120" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></path></svg>
                         <svg id="collectingMineralIcon" width="2em" class="hidden p-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><style>.spinner_OSmW{transform-origin:center;animation:spinner_T6mA 1.5s step-end infinite}@keyframes spinner_T6mA{8.3%{transform:rotate(30deg)}16.6%{transform:rotate(60deg)}25%{transform:rotate(90deg)}33.3%{transform:rotate(120deg)}41.6%{transform:rotate(150deg)}50%{transform:rotate(180deg)}58.3%{transform:rotate(210deg)}66.6%{transform:rotate(240deg)}75%{transform:rotate(270deg)}83.3%{transform:rotate(300deg)}91.6%{transform:rotate(330deg)}100%{transform:rotate(360deg)}}</style><g class="spinner_OSmW"><rect class="fill-white"x="11" y="1" width="2" height="5" opacity=".14"/><rect class="fill-white"x="11" y="1" width="2" height="5" transform="rotate(30 12 12)" opacity=".29"/><rect class="fill-white"x="11" y="1" width="2" height="5" transform="rotate(60 12 12)" opacity=".43"/><rect class="fill-white"x="11" y="1" width="2" height="5" transform="rotate(90 12 12)" opacity=".57"/><rect class="fill-white"x="11" y="1" width="2" height="5" transform="rotate(120 12 12)" opacity=".71"/><rect x="11" y="1" width="2" height="5" transform="rotate(150 12 12)" opacity=".86"/><rect class="fill-white"x="11" y="1" width="2" height="5" transform="rotate(180 12 12)"/></g></svg>
                         <div class="text-base-content">
-                            <div id="headerMithril" class="min-w-12">${current.resources.mineral.balance.toFixed(0)}</div>
-                            <small class="p-1 text-xs text-white"><small>mithril</small></small>
+                            <div id="headerMineral" class="min-w-12">${current.resources.mineral.balance.toFixed(0)}</div>
+                            <small class="p-1 text-xs text-white"><small>mineral</small></small>
                         </div>
                     </button>
                 </form>
@@ -93,7 +94,7 @@ export function HeaderView(session: any, username: string): string {
                             wtr <strong id="userWater">${resources.water}</strong><span class="hidden md:inline"><small>/${current.resources.water.supplied.toFixed(0)}(${(resources.water / current.resources.water.supplied * 100).toFixed(2)}%)</small></span>
                         </div>
                         <div class="text-xs text-white text-bold leading-3">
-                            mth <strong id="userMineral">${resources.mithril}</strong><span class="hidden md:inline"><small>/${current.resources.mineral.supplied.toFixed(0)}(${(resources.mithril / current.resources.mineral.supplied * 100).toFixed(2)}%)</small></span>
+                            mth <strong id="userMineral">${resources.mineral}</strong><span class="hidden md:inline"><small>/${current.resources.mineral.supplied.toFixed(0)}(${(resources.mineral / current.resources.mineral.supplied * 100).toFixed(2)}%)</small></span>
                         </div>
                     </div>
                     <a href="/?user=${session.username}" class="btn btn-ghost btn-md p-1">
@@ -106,7 +107,7 @@ export function HeaderView(session: any, username: string): string {
                         <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
                             <div class="w-10 rounded-full">
                             <img alt="Profile photo of ${session.username}"
-                                src="https://upload.wikimedia.org/wikipedia/en/f/f8/Sauron_Tolkien_illustration.jpg" />
+                                src="/images/profiles/${account.visual}" />
                             </div>
                         </div>
                         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow">

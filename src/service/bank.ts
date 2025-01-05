@@ -15,7 +15,7 @@ export function queueBankActivities(): void {
             times: {
                 created: current.time
             },
-            visual: 'world'
+            visual: 'world.png'
         }
 
         accounts.push(worldBank)

@@ -6,13 +6,13 @@ export const Current = {
   date: 'Year .. Day .. (x..)',
   resources: {
     water: -1,
-    mithril: -1
+    mineral: -1
   },
   user: {
     id: undefined,
     balance: 0,
     water: 0,
-    mithril: 0,
+    mineral: 0,
     inventory: [] as any[]
   }
 }
@@ -51,7 +51,7 @@ function updateWorld(world: any, time: number, resources: any) {
   Current.time = buildTimeString(world, time);
   Current.date = buildDateString(world, time);
   Current.resources.water = resources.water.balance.toFixed(0).toLocaleString();
-  Current.resources.mithril = resources.mineral.balance.toFixed(0).toLocaleString();
+  Current.resources.mineral = resources.mineral.balance.toFixed(0).toLocaleString();
 
   updateHeader(Current);
 }
@@ -60,7 +60,7 @@ function updateCurrent(account: any, inventory: any) {
   Current.user.balance = account?.credits.balance
   Current.user.id = account?.id
   Current.user.water = getResourceAmount(inventory, 'water')
-  Current.user.mithril = getResourceAmount(inventory, 'mineral')
+  Current.user.mineral = getResourceAmount(inventory, 'mineral')
 
   updateUserBalance(Current, queryUser)
 }

@@ -23,7 +23,7 @@ function PriceInput(i: any): string {
     return `<input name="price" type="number" class="input input-xs w-20" value="${value}" max="1000" step=".01" />`;
 }
 
-export function ItemForm(i: any): string {
+export function ItemForm(i: any, readonly: boolean): string {
     const html = `
         <form class="itemForm p-2 bg-base-200">
             <div>
@@ -34,7 +34,7 @@ export function ItemForm(i: any): string {
             <div class="text-center">
                 <img class="m-auto" src="${AssetImageUrl(i)}" />
             </div>
-            <div class="mt-4 text-right">
+            <div class="mt-4 text-right ${readonly? 'hidden' : ''}">
                 ${SellButton(i)}
                 <input name="amount" type="hidden" value="${i.amount}" />
                 <small for="id">${i.id}</small>

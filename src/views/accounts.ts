@@ -25,7 +25,7 @@ export function ProfileView(account: Account, session: any): string {
                 <div class="btn-circle avatar">
                     <div class="w-15 rounded-full">
                     <img alt="Profile photo of ${account.id}"
-                        src="https://upload.wikimedia.org/wikipedia/en/f/f8/Sauron_Tolkien_illustration.jpg" />
+                        src="/images/profiles/${account.visual}" />
                     </div>
                 </div>
                 <h2 class="text-white-100 text-5xl">${account.id}</h2>
@@ -60,10 +60,11 @@ export function ProfileView(account: Account, session: any): string {
                     </div>
                 </div>
 
-            ${session.username && session.username == account.id ? `
-                ${InventoryView(account, items, userMineralTotal, userWaterTotal)}
-                ${SendCreditView(account, session)}
-                ` : ``}
+                ${InventoryView(account, items, userMineralTotal, userWaterTotal, session.username != account.id)}
+
+                ${session.username && session.username == account.id ? `
+                    ${SendCreditView(account, session)}
+                    ` : ``}
             </div>
         </div>
     `
@@ -101,36 +102,33 @@ export function SendCreditView(account: Account, session: any): string {
     `
 }
 
-export function InventoryView(account: Account, items: Asset[], userMineralTotal: number, userWaterTotal: number): string {
+export function InventoryView(account: Account, items: Asset[], userMineralTotal: number, userWaterTotal: number, readonly = true): string {
     const { creditCost, mineralCost, waterCost } = exploreCost(current.resources.water.balance, current.resources.mineral.balance);
 
-    let inventoryHtml = `<div class="card bg-base-100 p-2 sm:p-4 lg:p-8">
-        <div class="card-title">
-            <h3>Inventory (<a id="inventoryTotal" href="/assets?user=${account.id}" class="link link-hover">${items.filter(i => i.owner == account.id).length}</a>)</h3>
-        </div>
-        <div class="card-body p-0">
-            <form id="mintBankForm">
-                <div class="form-control">
-                    <input type="hidden" name="type" value="bankstone" />
-                    <label for="type" class="text-xs">
-                        consumes ${waterCost}
-                        water + ${mineralCost} mineral
-                    </label>
-                </div>
-                <button id="mintBankBtn" class="btn btn-xs"
-                    ${userMineralTotal < mineralCost || userWaterTotal < waterCost ||
-                        account.credits.balance < creditCost ? "disabled" : ""}>
-                    Mint Bankstone (-${creditCost.toFixed(2)} credit)
-                </button>
-            </form>
-            <ul id="inventory" class="text-xs grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 max-w-screen-md gap-1 justify-between">
+    let inventoryHtml = `<div class="bg-base-100 p-2 sm:p-4 lg:p-8">
+        <h3>Inventory (<a id="inventoryTotal" href="/assets?user=${account.id}" class="link link-hover">${items.filter(i => i.owner == account.id).length}</a>)</h3>
+        <form id="mintBankForm" class="${readonly? 'hidden' : ''}">
+            <div class="form-control">
+                <input type="hidden" name="type" value="bankstone" />
+                <label for="type" class="text-xs">
+                    consumes <small id="waterCost">${waterCost}</small>
+                    water + <small>${mineralCost}</small> mineral
+                </label>
+            </div>
+            <button id="mintBankBtn" class="btn btn-xs"
+                ${(userMineralTotal < mineralCost || userWaterTotal < waterCost ||
+                    account.credits.balance < creditCost) ? "disabled" : ""}>
+                Mint Bankstone (-${creditCost.toFixed(2)} credit)
+            </button>
+        </form>
+        <ul id="inventory" class="text-xs grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 max-w-screen-md gap-1 justify-between">
         `
     if (items.length > 0) {
         items.slice(0, 100).forEach(i => {
-            inventoryHtml += `<li>${ItemForm(i)}</li>`
+            inventoryHtml += `<li>${ItemForm(i, readonly)}</li>`
         })
     } else inventoryHtml += `<li class="text-center">Empty. Collect resources or buy items from Marketplace</li>`
-    inventoryHtml += `</ul></div></div>`
+    inventoryHtml += `</ul></div>`
     return inventoryHtml
 }
 
