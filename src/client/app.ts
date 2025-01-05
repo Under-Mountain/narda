@@ -1,5 +1,6 @@
 import { initializeFormHandlers } from './events.js';
 import { buildTimeString, buildDateString, updateHeader, updateUserBalance } from './dom.js';
+import { initializeModalHandlers } from './modal.js';
 
 export const Current = {
   time: '..:.. (..% to yield)',
@@ -31,6 +32,7 @@ fetch('/api/world').then(async (res) => {
 })
 
 initializeFormHandlers();
+initializeModalHandlers();
 
 async function syncCurrentAsync(world: any) {
   if (!inProgress) {
@@ -70,3 +72,4 @@ function updateCurrent(account: any, inventory: any) {
 function getResourceAmount(inventory: any[], type: string) {
   return inventory?.filter(i => i.type == type).reduce((sum, c) => sum + c.amount, 0)
 }
+

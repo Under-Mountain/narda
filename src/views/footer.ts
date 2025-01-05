@@ -1,4 +1,6 @@
-export function FooterView(): string {
+import { Modals } from "./modals.js";
+
+export function FooterView(session = undefined, account = undefined): string {
     return `
         <footer class="footer footer-center mt-4 bg-base-300 text-base-content p-4">
             <aside class="">
@@ -14,6 +16,8 @@ export function FooterView(): string {
                 <span id="alertContent"></span>
             </div>
         </div>
+
+        ${Modals(session, account)}
         </body>
         <script type="module" src="/scripts/app.js"></script>
         <script>

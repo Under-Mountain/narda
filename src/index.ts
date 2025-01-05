@@ -80,7 +80,7 @@ app.get('/', (req: Request, res: Response) => {
                 ${marketplaceHtml}
             </div>
         </div>
-        ${FooterView()}`)
+        ${FooterView(session, account)}`)
         return
 })
 

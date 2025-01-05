@@ -29,19 +29,9 @@ export function ProfileView(account: Account, session: any): string {
                 <div class="p-2 mb-auto">
                     <h2 class="text-white-100 text-2xl">${account.id}</h2>
                     <div class="text-xs text-gray-500">
-                        ${session.username && session.username == account.id ? `
-                        <form id="updateBioForm" class="mb-2">
-                            <div class="form-control">
-                                <textarea name="bio" row="3" class="textarea w-full" placeholder="Write description of this account.">${account.bio ? account.bio : ''}</textarea>
-                            </div>
-                            <div class="text-right">
-                                <button id="updateBioBtn" class="btn btn-sm mt-1"
-                                    ${(session.username && account.credits.balance < 100) ? `disabled` : ``}>
-                                    Update Bio (-100.00 credit)
-                                </button>
-                            </div>
-                        </form>` : `
-                        <p class="">${account.bio ? account.bio : `No description`}</p>`}
+                        <p class="">${account.bio ? account.bio : `The Unknown`}</p>
+                        <!-- The button to open modal -->
+                        <button id="editAccountBtn" class="btn btn-xs mt-1">edit</label>
                     </div>
                 </div>
             </div>

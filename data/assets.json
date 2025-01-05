@@ -97,7 +97,7 @@
     "properties": {
       "yield": 0.19,
       "cap": 6289,
-      "staked": 6285.726273972603
+      "staked": 6279.183933424797
     },
     "owner": "world",
     "visual": "8.png"
@@ -135,7 +135,7 @@
     "properties": {
       "yield": 0.13,
       "cap": 1608,
-      "staked": 1607.427287671233
+      "staked": 1606.282474880249
     },
     "owner": "world",
     "visual": "5.png"
@@ -187,7 +187,7 @@
     "properties": {
       "yield": 0.24,
       "cap": 6411,
-      "staked": 6406.784547945205
+      "staked": 6398.361957425333
     },
     "owner": "world",
     "visual": "46.png"
@@ -199,7 +199,7 @@
     "properties": {
       "yield": 0.1,
       "cap": 1183,
-      "staked": 1182.3518696190654
+      "staked": 1181.7040943294164
     },
     "owner": "world",
     "visual": "4.png"
@@ -211,7 +211,7 @@
     "properties": {
       "yield": 0.15,
       "cap": 1836,
-      "staked": 1836
+      "staked": 1834.4912689810471
     },
     "owner": "world",
     "visual": "4.png"
@@ -235,7 +235,7 @@
     "properties": {
       "yield": 0.25,
       "cap": 3578,
-      "staked": 3575.5493150684933
+      "staked": 3570.6529797097555
     },
     "owner": "world",
     "visual": "0.png"
@@ -259,7 +259,7 @@
     "properties": {
       "yield": 0.21,
       "cap": 6141,
-      "staked": 6141
+      "staked": 6130.406562946046
     },
     "owner": "dev",
     "visual": "12.png"

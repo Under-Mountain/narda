@@ -1,24 +1,21 @@
 {
-  "time": 4957,
+  "time": 8365,
   "resources": {
     "water": {
-      "balance": 966.5359352299623,
-      "supplied": 3442.53593522997
+      "balance": 1000.0213597379341,
+      "supplied": 3476.0213597379407
     },
     "mineral": {
-      "balance": 948.2035531824631,
-      "supplied": 2659.2035531824554
+      "balance": 1000.1059605175715,
+      "supplied": 2711.105960517578
     },
     "credits": {
-      "balance": -2854.1355582021606,
-      "supplied": 45.864441797839625
+      "balance": -2799.3671727338533,
+      "supplied": 100.63282726614645
     }
   },
   "effects": {
-    "pending": [
-      "BNK29",
-      "BNK30"
-    ],
+    "pending": [],
     "completed": [
       "BNK13",
       "BNK16",
@@ -29,14 +26,16 @@
       "BNK25",
       "BNK26",
       "BNK27",
-      "BNK28"
+      "BNK28",
+      "BNK29",
+      "BNK30"
     ],
     "rejected": []
   },
   "activities": {
     "pending": [],
     "completed": [
-      "CLT713"
+      "TX728"
     ],
     "rejected": []
   }
