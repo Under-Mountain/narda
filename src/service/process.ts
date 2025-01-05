@@ -15,6 +15,7 @@ export function processResources(): void {
     const adjustedMineralRate = mineralRate * (1 - Math.floor(current.resources.mineral.balance / 100) * 0.01)
     const mineral = remainingMineral * adjustedMineralRate
 
+    // This should be only place resource balance and supply increases
     current.resources.water.balance += water
     current.resources.water.supplied += water
 
@@ -63,8 +64,7 @@ export function processCurrentActivities(): void {
 
 type ResourceType = 'water' | 'mineral' | 'credits'
 function processPendingConsume(consume: Activity): void {
-    console.debug(`${consume.id}: consuming ${consume.of} from ${consume.from} to ${consume.to}...`)
-    current.resources[consume.of as ResourceType].supplied += consume.amount
+    console.debug(`${consume.id}: consuming ${consume.of} from ${consume.from}...`)
 
     switch (consume.of) {
         case "credits":
@@ -81,13 +81,19 @@ function processPendingConsume(consume: Activity): void {
             }
             break
     }
+
+    console.log(`${consume.id}: ${consume.amount.toFixed(2)} ${consume.of} burn - \
+        ${current.resources[consume.of as ResourceType].balance}/${current.resources[consume.of as ResourceType].supplied}\
+        (${(current.resources[consume.of as ResourceType].balance/current.resources[consume.of as ResourceType].supplied).toFixed(2)}%) circulating..`)
 }
 
+/**
+ * 
+ * @param collect 
+ */
 function processPendingCollect(collect: Activity): void {
     console.log(`${collect.id}: collecting ${collect.amount} ${collect.of} from ${collect.from} to ${collect.to}...`)
-
     current.resources[collect.of as ResourceType].balance -= collect.amount
-    current.resources[collect.of as ResourceType].supplied += collect.amount
 
     const resource = assets.find(a => a.type == collect.of && a.owner == collect.to && a.amount > 0)
     if (resource) {

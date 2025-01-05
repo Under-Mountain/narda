@@ -32,8 +32,8 @@ export function queueBankActivities(): void {
     buyFloorListing('mineral')
     buyFloorListing('bankstone')
 
-    const userWaters = assets.filter(a => a.owner == worldBank?.id && a.type == "water")
-    const userMinerals = assets.filter(a => a.owner == worldBank?.id && a.type == "mineral")
+    const userWaters = assets.filter(a => a.owner == worldBank.id && a.type == "water")
+    const userMinerals = assets.filter(a => a.owner == worldBank.id && a.type == "mineral")
 
     if (userWaters.reduce((sum, c) => sum + c.amount, 0) < waterCost ||
         userMinerals.reduce((sum, c) => sum + c.amount, 0) < mineralCost) {
@@ -41,18 +41,18 @@ export function queueBankActivities(): void {
         return
     }
 
+    const creditConsumption = consume(worldBank.id, "credits", creditCost);
+    const waterConsumption = consume(worldBank.id, 'water', waterCost);
+    const mineralConsumption = consume(worldBank.id, "mineral", mineralCost);
+
     // mint a bankstone
     const mintActivity = createTransaction(
-        "world",
-        worldBank?.id || '',
+        worldBank.id,
+        worldBank.id,
         1,
         'bankstone',
-        `Minting of a bankstone for ${worldBank?.id}`
+        `Minting of a bankstone for ${worldBank.id}`
     );
-
-    const creditConsumption = consume(worldBank?.id || '', "credits", creditCost);
-    const waterConsumption = consume(worldBank?.id || '', 'water', waterCost);
-    const mineralConsumption = consume(worldBank?.id || '', "mineral", mineralCost);
 }
 
 export function buyFloorListing(type: string): void {

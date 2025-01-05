@@ -79,7 +79,6 @@ function AssetImageUrl(item: Asset): string {
     switch (item.type) {
         case 'water':
             return `/images/resources/water.png`
-            break
         case 'mineral':
             return `/images/resources/mineral.png`
         case 'bankstone':
