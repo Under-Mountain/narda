@@ -187,10 +187,20 @@ export async function mint(type: string, username: string, password?: string, in
     console.log(`${id}: minting ${type}...`);
     const to = type == "account" ? username.toLowerCase() : username;
     const account = accounts.find(a => a.id == to);
-    const userWaters = assets.filter(a => a.owner == to && a.type == "water");
-    const userMinerals = assets.filter(a => a.owner == to && a.type == "mineral");
 
     const { creditCost, mineralCost, waterCost } = exploreCost(current.resources.water.balance, current.resources.mineral.balance);
+    if (type == "bankstone" && !account) {
+        const userWaters = assets.filter(a => a.owner == to && a.type == "water");
+        const userMinerals = assets.filter(a => a.owner == to && a.type == "mineral");
+
+        if (account.credits.balance < creditCost ||
+            userWaters.reduce((sum, c) => sum + c.amount, 0) < waterCost ||
+            userMinerals.reduce((sum, c) => sum + c.amount, 0) < mineralCost) {
+            console.error(`${id}: Not enough balance to mint bankstone, abort.`);
+            return;
+        }
+    }
+
     const activity = createActivity(
         "mint" as ActivityType,
         type,
@@ -203,23 +213,22 @@ export async function mint(type: string, username: string, password?: string, in
     switch (type) {
         case "account":
             if (account) {
-                throw new Error(`Account ${account.id} already exists`);
+                console.error(`Account ${account.id} already exists`);
+                break;
             }
             if (!invitation || invitation != '1892') {
-                throw new Error(`Invalid invitation code ${invitation}`);
+                console.error(`Invalid invitation code ${invitation}`);
+                break;
             }
             const hash = await bcrypt.hash(password, 2);
             auth.push({ username: to, password: hash });
             break;
         case "bankstone":
             if (!account) {
-                throw new Error('Account not found');
+                console.error('Account not found');
+                break;
             }
-            if (account.credits.balance < creditCost ||
-                userWaters.reduce((sum, c) => sum + c.amount, 0) < waterCost ||
-                userMinerals.reduce((sum, c) => sum + c.amount, 0) < mineralCost) {
-                throw new Error(`Not enough balance to mint bankstone`);
-            }
+
             const creditConsumption = consume(to, "credits", creditCost);
             const waterConsumption = consume(to, 'water', waterCost);
             const mineralConsumption = consume(to, "mineral", mineralCost);

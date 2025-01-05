@@ -2,6 +2,7 @@ import { accounts, assets, current, world, market, activities } from './model.js
 import { Activity } from '../types.js'
 import * as util from '../common/utility.js'
 import * as fs from 'fs';
+import { getPlaceTier } from '../common/places.js';
 
 export function processResources(): void {
     const waterRate = util.getRandomNumber(world.resources.water.rateLo, world.resources.water.rateHi) / 100 / world.interval.year / world.interval.day / world.interval.minute
@@ -82,9 +83,7 @@ function processPendingConsume(consume: Activity): void {
             break
     }
 
-    console.log(`${consume.id}: ${consume.amount.toFixed(2)} ${consume.of} burn - \
-        ${current.resources[consume.of as ResourceType].balance}/${current.resources[consume.of as ResourceType].supplied}\
-        (${(current.resources[consume.of as ResourceType].balance/current.resources[consume.of as ResourceType].supplied).toFixed(2)}%) circulating..`)
+    console.log(`${consume.id}: ${consume.amount.toFixed(2)} ${consume.of} burnt ${current.resources[consume.of as ResourceType].balance.toFixed(2)}/${current.resources[consume.of as ResourceType].supplied.toFixed(2)} (${(current.resources[consume.of as ResourceType].balance/current.resources[consume.of as ResourceType].supplied *100).toFixed(2)}%) circulating..`)
 }
 
 /**
@@ -146,6 +145,8 @@ function processPendingMint(mint: Activity): void {
             const cap = util.getRandomNumber(world.items.bankstone.capLo, world.items.bankstone.capHi)
 
             const id = `BNK${assets.length}`
+            const { place, tier } = getPlaceTier(yld, cap)
+
             assets.push({
                 id: id,
                 type: "bankstone",
@@ -156,7 +157,7 @@ function processPendingMint(mint: Activity): void {
                     "staked": cap
                 },
                 owner: mint.to,
-                visual: getRandomFileName('./public/images/places/camp/h')
+                visual: getRandomFileName(`./public/images/places/${place}/${tier}`)
             })
             break
         default:

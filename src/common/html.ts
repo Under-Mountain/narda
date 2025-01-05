@@ -1,4 +1,5 @@
 import { Account, Asset } from "../types.js"
+import { getPlaceTier } from "./places.js";
 
 function Properties(properties: any): string {
     return properties?.yield && properties.staked && properties.cap ? `
@@ -46,7 +47,7 @@ export function ItemForm(i: any): string {
 
 export function ListingForm(l: any, i: any, session: any = null, username: string = '', account: Account = null): string {
     const html = `
-        <form class="p-2 bg-base-200">
+        <form class="listingForm p-2 bg-base-200">
             <div>
                 ${l.amount} unit of ${l.owner}'s ${i.type}
                 <input name="id" type="hidden" value="${l.id}" />
@@ -88,13 +89,7 @@ function AssetImageUrl(item: Asset): string {
             }
 
             asset = 'places'
-            if (item.properties.cap > 6000) place = 'house'
-            else if (item.properties.cap > 2000) place = 'settlement'
-            else place = 'camp'
-
-            if (item.properties.yield > .20) tier = 'h'
-            else if (item.properties.yield > .10) tier = 'm'
-            else tier = 'l'
+            const { place, tier } = getPlaceTier(item.properties.yield, item.properties.cap);
             return `/images/${asset}/${place}/${tier}/${item.visual}`
         default:
             return `/images/logo.png`
