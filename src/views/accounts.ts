@@ -21,11 +21,10 @@ export function ProfileView(account: Account, session: any): string {
     
     return `
         <div class="card bg-base-200 m-2 sm:m-4 lg:mt-8">
-            <div class="card-title m-auto pt-4 lg:pt-8">
-                <div class="btn-circle avatar">
-                    <div class="w-15 rounded-full">
-                    <img alt="Profile photo of ${account.id}"
-                        src="/images/profiles/${account.visual}" />
+            <div class="card-title m-auto pt-8">
+                <div class="avatar online">
+                    <div class="ring-base ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+                        <img src="/images/profiles/${account.visual}" />
                     </div>
                 </div>
                 <h2 class="text-white-100 text-5xl">${account.id}</h2>
@@ -152,10 +151,9 @@ export function LeaderboardView(): string {
                     <small>${idx + 1}.</small> <a href="/?user=${a.id}">${a.id}</a>
                 </div>
                 <div class="p-2 card-body">
-                    <div class="btn-circle avatar m-auto">
-                        <div class="w-15 rounded-full">
-                        <img alt="Profile photo of ${a.id}"
-                            src="https://upload.wikimedia.org/wikipedia/en/f/f8/Sauron_Tolkien_illustration.jpg" />
+                    <div class="btn-circle avatar online m-auto">
+                        <div class="ring-base ring-offset-base-100 rounded-full ring ring-offset-2">
+                            <img alt="Profile photo of ${a.id}" src="/images/profiles/${a.visual}" />
                         </div>
                     </div>
                     <div class="text-right text-xs">

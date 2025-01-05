@@ -14,7 +14,38 @@ import { exploreCost } from "../common/pricing.js";
  * @returns The created activity.
  */
 export function createActivity(type: ActivityType, of: string, from: string, to: string, amount: number, note: string) {
-    const id = `${type.toUpperCase()}${activities.length}`;
+    let prefix = 'TX';
+    switch (type) {
+        case 'mint':
+            prefix = 'MNT';
+            break;
+        case 'consume':
+            prefix = 'CSM';
+            break;
+        case 'collect':
+            prefix = 'CLT';
+            break;
+        case 'transaction':
+            prefix = 'TX';
+            break;
+        case 'system':
+            prefix = 'SYS';
+            break;
+        case 'exchange':
+            prefix = 'EXC';
+            break;
+        case 'stake':
+            prefix = 'STK';
+            break;
+        case 'withdraw':
+            prefix = 'WTD';
+            break;
+        default:
+            prefix = 'TX';
+            break;
+    }
+
+    const id = `${prefix}${activities.length}`;
     const activity = {
         type,
         id,

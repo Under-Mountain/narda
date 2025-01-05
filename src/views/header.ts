@@ -104,10 +104,9 @@ export function HeaderView(session: any, username: string): string {
                         </div>
                     </a>
                     <div class="dropdown dropdown-end">
-                        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-                            <div class="w-10 rounded-full">
-                            <img alt="Profile photo of ${session.username}"
-                                src="/images/profiles/${account.visual}" />
+                        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar online">
+                            <div class="w-9 rounded-full ring-base ring-offset-base-100 ring ring-offset-1">
+                            <img alt="Profile photo of ${session.username}" src="/images/profiles/${account.visual}" />
                             </div>
                         </div>
                         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow">
@@ -115,12 +114,11 @@ export function HeaderView(session: any, username: string): string {
                         </ul>
                     </div>
                     ` : `
-                    <a href="/#register"><small class="text-bold p-1">Arda v.1</small></a>
+                    <a href="/#register"><small class="text-bold">Arda v.1</small></a>
                     <div class="dropdown dropdown-end">
                         <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-                            <div class="w-10 rounded-full">
-                            <img alt="Profile photo of ${session.username}"
-                                src="/images/logo.png" />
+                            <div class="w-9 rounded-full">
+                            <img alt="Profile photo of ${session.username}" src="/images/logo.png" />
                             </div>
                         </div>
                         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow">
