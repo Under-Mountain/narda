@@ -1,6 +1,5 @@
-import { Current, queryUser } from './app.js'
 import { onSellItemForm, onBuyDelistForm } from './events.js'
-import { ItemForm, ListingForm } from "../common/html.js"
+import { ItemForm, ListingForm, ProfileResources } from "../common/html.js"
 import { exploreCost } from '../common/pricing.js'
 
 export function showAlert(alert: HTMLElement, alertContent: HTMLElement, alertClass: string, message: string, button?: HTMLButtonElement) {
@@ -79,19 +78,27 @@ export function toggleButtonState(button: HTMLButtonElement, icon: HTMLElement, 
 }
 
 export function updateUserBalance(Current: any, queryUser: string) {
-  updateElementContent("userBalance", Current.user?.balance?.toFixed(2))
-  if (queryUser == Current.user.id) updateElementContent('profileBalance', Current.user?.balance?.toFixed(2))
-  updateElementContent("userWater", Current.user?.water)
-  updateElementContent("userMineral", Current.user?.mineral)
+  if (!Current.user) return
 
-  const mintBankBtn = getElementById('mintBankBtn')
-  const alert = getElementById('alert')
+  updateElementContent("userBalance", Current.user.balance?.toFixed(2))
+  updateElementContent("userWater", Current.user.water)
+  updateElementContent("userMineral", Current.user.mineral)
+
+  if (queryUser == Current.user.id) {
+    updateElementContent('profileBalance', Current.user.balance.toFixed(2));
+    const profileResourcesHtml = ProfileResources(
+      Current.user?.water, Current.user?.mineral, Current.user?.inventory.filter(i => i.amount > 0 && i.type =="bankstone").length);
+    updateElementContent("profileResources", profileResourcesHtml);
+  }
+
+  const mintBankBtn = getElementById('mintBankBtn');
+  const alert = getElementById('alert');
   if (mintBankBtn && alert.classList.contains('hidden')) {
     const { creditCost, mineralCost, waterCost } = exploreCost(Current.resources.water, Current.resources.mineral);
 
     updateElementContent("waterCost", waterCost.toFixed(0));
     (mintBankBtn as HTMLButtonElement).disabled = Current.user.mineral < mineralCost ||
-    Current.user.water < waterCost || Current.user.balance < creditCost
+    Current.user.water < waterCost || Current.user.balance < creditCost;
   }
 }
 

@@ -1,6 +1,6 @@
-import { accounts, current, market, assets } from '../service/model.js';
+import { accounts, current, assets } from '../service/model.js';
 import { Account, Asset } from '../types.js';
-import { ItemForm } from "../common/html.js";
+import { ItemForm, ProfileResources } from "../common/html.js";
 import { exploreCost } from "../common/pricing.js";
 
 export function ProfileView(account: Account, session: any): string {
@@ -11,7 +11,6 @@ export function ProfileView(account: Account, session: any): string {
         .sort((a, b) => { return a.amount < b.amount ? 1 : -1})
 
     const userActiveBankstones = items.filter((a) => a.type == "bankstone" && a.amount > 0)
-    const activeEffectsTotal = current.effects.pending.length + current.effects.completed.length + current.effects.rejected.length
 
     const userWaters = assets.filter((a) => a.type == "water" && a.owner == account.id)
     const userWaterTotal = userWaters.reduce((sum, c) => { return sum + c.amount }, 0)
@@ -21,41 +20,42 @@ export function ProfileView(account: Account, session: any): string {
     
     return `
         <div class="card bg-base-200 m-2 sm:m-4 lg:mt-8">
-            <div class="card-title m-auto pt-8">
+            <div class="card-title m-auto pt-8 gap-4">
                 <div class="avatar online">
                     <div class="ring-base ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
                         <img src="/images/profiles/${account.visual}" />
                     </div>
                 </div>
-                <h2 class="text-white-100 text-5xl">${account.id}</h2>
+                <div class="p-2 mb-auto">
+                    <h2 class="text-white-100 text-2xl">${account.id}</h2>
+                    <div class="text-xs text-gray-500">
+                        ${session.username && session.username == account.id ? `
+                        <form id="updateBioForm" class="mb-2">
+                            <div class="form-control">
+                                <textarea name="bio" row="3" class="textarea w-full" placeholder="Write description of this account.">${account.bio ? account.bio : ''}</textarea>
+                            </div>
+                            <div class="text-right">
+                                <button id="updateBioBtn" class="btn btn-sm mt-1"
+                                    ${(session.username && account.credits.balance < 100) ? `disabled` : ``}>
+                                    Update Bio (-100.00 credit)
+                                </button>
+                            </div>
+                        </form>` : `
+                        <p class="">${account.bio ? account.bio : `No description`}</p>`}
+                    </div>
+                </div>
             </div>
             <div class="card-body">
-                ${session.username && session.username == account.id ? `
-                <form id="updateBioForm" class="mb-2">
-                    <div class="form-control">
-                        <textarea name="bio" row="3" class="textarea w-full" placeholder="Write description of this account.">${account.bio ? account.bio : ''}</textarea>
-                    </div>
-                    <div class="text-right">
-                        <button id="updateBioBtn" class="btn btn-sm mt-1"
-                            ${(session.username && account.credits.balance < 100) ? `disabled` : ``}>
-                            Update Bio (-100.00 credit)
-                        </button>
-                    </div>
-                </form>` : `
-                <p class="py-4">${account.bio ? account.bio : `No description`}</p>`}
-
                 <div style="text-align:right">
                     <h1 class="text-5xl" class="text-white-100">
                         <span id="profileBalance">${account.credits.balance.toFixed(2)}</span><small class="text-white-300">sl</small>
                     </h1>
-                    <small>
+                    <small class="text-xs text-gray-500">
                         holding ${(account.credits.balance / current.resources.credits.balance * 100).toFixed(2)}% of
                         ${current.resources.credits.balance.toFixed(2)} credits circulating..
                     </small>
-                    <div style="text-align:right">
-                        <small style="color:${"#00A0FF"}"><strong>water</strong></small> ${userWaterTotal}<small style="color:${"#BBB"}">/${current.resources.water.supplied.toFixed(0)}(${(userWaterTotal / current.resources.water.supplied * 100).toFixed(2)}%)</small>
-                        <small style="color:${"#FF03EA"}"><strong>mineral</strong></small> ${userMineralTotal}<small style="color:${"#BBB"}">/${current.resources.mineral.supplied.toFixed(0)}(${(userMineralTotal / current.resources.mineral.supplied * 100).toFixed(2)}%)</small>
-                        <small style="color:${"gray"}"><strong>bankstones</strong></small> ${userActiveBankstones.length}<small style="color:${"#BBB"}">/${activeEffectsTotal}(${(userActiveBankstones.length / activeEffectsTotal * 100).toFixed(2)}%)</small>
+                    <div class="text-sm" id="profileResources">
+                        ${ProfileResources(userWaterTotal, userMineralTotal, userActiveBankstones.length)}
                     </div>
                 </div>
 
@@ -104,8 +104,10 @@ export function SendCreditView(account: Account, session: any): string {
 export function InventoryView(account: Account, items: Asset[], userMineralTotal: number, userWaterTotal: number, readonly = true): string {
     const { creditCost, mineralCost, waterCost } = exploreCost(current.resources.water.balance, current.resources.mineral.balance);
 
-    let inventoryHtml = `<div class="bg-base-100 p-2 sm:p-4 lg:p-8">
-        <h3>Inventory (<a id="inventoryTotal" href="/assets?user=${account.id}" class="link link-hover">${items.filter(i => i.owner == account.id).length}</a>)</h3>
+    let inventoryHtml = `<div class="">
+        <h3 class="text-bold pb-1">
+            Inventory (<span id="inventoryTotal" class="text-white">${items.filter(i => i.owner == account.id).length}</span>/10)
+        </h3>
         <form id="mintBankForm" class="${readonly? 'hidden' : ''}">
             <div class="form-control">
                 <input type="hidden" name="type" value="bankstone" />
@@ -120,7 +122,7 @@ export function InventoryView(account: Account, items: Asset[], userMineralTotal
                 Mint Bankstone (-${creditCost.toFixed(2)} credit)
             </button>
         </form>
-        <ul id="inventory" class="text-xs grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 max-w-screen-md gap-1 justify-between">
+        <ul id="inventory" class="bg-base-100 p-1 sm:p-2 lg:p-3 text-xs grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 max-w-screen-md gap-1">
         `
     if (items.length > 0) {
         items.slice(0, 100).forEach(i => {

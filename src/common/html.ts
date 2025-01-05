@@ -72,6 +72,15 @@ export function ListingForm(l: any, i: any, session: any = null, username: strin
     return html;
 }
 
+export function ProfileResources(
+    userWaterTotal: number, userMineralTotal: number, userActiveBankstones: number): string {
+    return `
+        <small style="color:${"#00A0FF"}"><strong>water</strong></small> ${userWaterTotal}
+        <small style="color:${"#FF03EA"}"><strong>mineral</strong></small> ${userMineralTotal}
+        <small style="color:${"gray"}"><strong>bankstones</strong></small> ${userActiveBankstones}
+    `
+}
+
 function AssetImageUrl(item: Asset): string {
     let asset: string | undefined
     let place: string | undefined

@@ -57,11 +57,13 @@ function updateWorld(world: any, time: number, resources: any) {
 }
 
 function updateCurrent(account: any, inventory: any) {
-  Current.user.balance = account?.credits.balance
-  Current.user.id = account?.id
+  if (!account) return
+
+  Current.user.balance = account.credits.balance
+  Current.user.id = account.id
   Current.user.water = getResourceAmount(inventory, 'water')
   Current.user.mineral = getResourceAmount(inventory, 'mineral')
-
+  
   updateUserBalance(Current, queryUser)
 }
 
