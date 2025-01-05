@@ -18,6 +18,11 @@ export interface Account {
   };
 
   /**
+   * Visual representation of the account.
+   */
+  visual: string;
+
+  /**
    * Optional biography of the account holder.
    */
   bio?: string;

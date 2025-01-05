@@ -1,6 +1,7 @@
 import { accounts, assets, current, world, market, activities } from './model.js'
 import { Activity } from '../types.js'
 import * as util from '../common/utility.js'
+import * as fs from 'fs';
 
 export function processResources(): void {
     const waterRate = util.getRandomNumber(world.resources.water.rateLo, world.resources.water.rateHi) / 100 / world.interval.year / world.interval.day / world.interval.minute
@@ -93,23 +94,26 @@ function processPendingCollect(collect: Activity): void {
         resource.amount += collect.amount
     } else {
         let id = collect.id
+        let visual
         switch (collect.of) {
             case "water":
                 id = `WTR${assets.length}`
+                visual = 'water.png'
                 break
             case "mineral":
                 id = `MNR${assets.length}`
+                visual = 'mineral.png'
                 break
             default:
                 break
         }
 
         assets.push({
-            "id": id,
-            "type": collect.of,
-            "amount": collect.amount,
-            "owner": collect.to,
-            visual: undefined
+            id: id,
+            type: collect.of,
+            amount: collect.amount,
+            owner: collect.to,
+            visual: visual
         })
     }
 }
@@ -120,14 +124,15 @@ function processPendingMint(mint: Activity): void {
     switch (mint.of) {
         case "account":
             accounts.push({
-                "id": mint.to.toLowerCase(),
-                "credits": {
-                    "balance": 0
+                id: mint.to.toLowerCase(),
+                credits: {
+                    balance: 0
                 },
-                "times": {
-                    "created": current.time,
-                    "lastActive": current.time
-                }
+                times: {
+                    created: current.time,
+                    lastActive: current.time
+                },
+                visual: getRandomFileName('./public/images/profiles')
             })
             break
         case "bankstone":
@@ -136,16 +141,16 @@ function processPendingMint(mint: Activity): void {
 
             const id = `BNK${assets.length}`
             assets.push({
-                "id": id,
-                "type": "bankstone",
-                "amount": 1,
-                "properties": {
+                id: id,
+                type: "bankstone",
+                amount: 1,
+                properties: {
                     "yield": yld,
                     "cap": cap,
                     "staked": cap
                 },
-                "owner": mint.to,
-                visual: undefined
+                owner: mint.to,
+                visual: getRandomFileName('./public/images/places/camp/h')
             })
             break
         default:
@@ -204,5 +209,19 @@ function processPendingSystemActivity(activity: Activity): void {
             break
         default:
             break
+    }
+}
+
+function getRandomFileName(folderPath: string): string | null {
+    try {
+        const files = fs.readdirSync(folderPath);
+        if (files.length === 0) {
+            return null;
+        }
+        const randomIndex = Math.floor(Math.random() * files.length);
+        return files[randomIndex];
+    } catch (error) {
+        console.error(`Error reading folder: ${error.message}`);
+        return null;
     }
 }

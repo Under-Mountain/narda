@@ -9,9 +9,10 @@ export function AssetImageUrl(item: Asset): string {
 
     switch (item.type) {
         case 'water':
+            return `/images/resources/water.png`
             break
         case 'mineral':
-            break
+            return `/images/resources/mineral.png`
         case 'bankstone':
             asset = 'places'
             if (item.properties.cap > 6000) place = 'house'
@@ -21,30 +22,10 @@ export function AssetImageUrl(item: Asset): string {
             if (item.properties.yield > .20) tier = 'h'
             else if (item.properties.yield > .10) tier = 'm'
             else tier = 'l'
-            break
+            return `/images/${asset}/${place}/${tier}/${item.visual}`
         default:
-            break
+            return `/images/logo.png`
     }
-
-    if (asset && place) {
-        if (!item.visual) {
-            const dir = `./public/images/${asset}/${place}/${tier}`
-            // fs.readdir(dir, (err, files) => {
-            //     if (err) {
-            //         console.error('Error reading directory:', err)
-            //         return;
-            //     }
-            
-            //     const number = getRandomNumber(0, files.length-1)
-            //     item['visual'] = number
-                
-            // })
-        }
-
-        return `/images/${asset}/${place}/${tier}/${item.visual}.png`
-    }
-
-    return `/images/places/camp/l/0.png`
 }
 
 function createBankstoneInfo(properties: any): string {

@@ -81,7 +81,7 @@ router.post('/collect', async (req, res) => {
         let amount = 0;
         switch (req.body.resource) {
             case "water":
-                amount = getRandomNumber(0, 100);
+                amount = getRandomNumber(0, 20);
                 if (world.resources.water.balance - amount < 0) {
                     console.log(`not enough water to collect`);
                     res.sendStatus(403);
@@ -89,7 +89,7 @@ router.post('/collect', async (req, res) => {
                 }
                 break;
             case "mineral":
-                amount = getRandomNumber(0, 20);
+                amount = getRandomNumber(0, 10);
                 if (world.resources.water.balance - amount < 0) {
                     console.log(`not enough mineral to collect`);
                     res.sendStatus(403);
