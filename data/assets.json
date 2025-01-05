@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "id": "WTR2",
+    "type": "water",
+    "amount": 112,
+    "owner": "world",
+    "visual": "water.png"
+  },
+  {
+    "id": "MNR1",
+    "type": "mineral",
+    "amount": 15,
+    "owner": "world",
+    "visual": "mineral.png"
+  },
+  {
+    "id": "WTR0",
+    "type": "water",
+    "amount": 5,
+    "owner": "world",
+    "visual": "water.png"
+  },
+  {
+    "id": "MNR3",
+    "type": "mineral",
+    "amount": 0,
+    "owner": "dev",
+    "visual": "mineral.png"
+  },
+  {
+    "id": "WTR4",
+    "type": "water",
+    "amount": 0,
+    "owner": "dev",
+    "visual": "water.png"
+  },
+  {
+    "id": "MNR5",
+    "type": "mineral",
+    "amount": 0,
+    "owner": "dev",
+    "visual": "mineral.png"
+  }
+]

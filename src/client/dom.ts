@@ -1,6 +1,6 @@
 import { Current, queryUser } from './app.js'
 import { onSellItemForm, onBuyDelistForm } from './events.js'
-import { createItemElement, createListingElement } from "../common/html.js"
+import { ItemForm, ListingForm } from "../common/html.js"
 import { exploreCost } from '../common/pricing.js'
 
 export function showAlert(alert: HTMLElement, alertContent: HTMLElement, alertClass: string, message: string, button?: HTMLButtonElement) {
@@ -98,6 +98,7 @@ export function updateUserInventory(Current: any, inventory: any[]) {
   if (!inventoryElement) return
 
   inventoryElement.innerHTML = ''
+
   Current.user.inventory = inventory.sort((a, b) => {
     return a.properties && b.properties &&
       (a.properties.staked * a.properties.yield) > (b.properties.staked * b.properties.yield) ? 1 : -1
@@ -106,11 +107,11 @@ export function updateUserInventory(Current: any, inventory: any[]) {
   })
 
   Current.user.inventory.filter(i => i.amount > 0).slice(0, 100).forEach(i => {
-    const itemElement = createItemElement(i)
-    if (itemElement instanceof HTMLElement) {
-      inventoryElement.appendChild(itemElement)
-      itemElement.children[0].addEventListener('submit', onSellItemForm)
-    }
+    const itemElement = document.createElement('li');
+    itemElement.innerHTML = ItemForm(i).trim()
+    itemElement.children[0].addEventListener('submit', onSellItemForm)
+
+    inventoryElement.appendChild(itemElement)
   })
 
   const inventoryTotal = getElementById('inventoryTotal')
@@ -129,11 +130,11 @@ export function updateMarketListings(Current: any, listings: any[]) {
   activeListings.slice(0, 100).forEach(l => {
     const item = Current.user.inventory.find(i => i.id == l.item)
     if (item) {
-      const listingElement = createListingElement(l, item)
-      if (listingElement instanceof HTMLElement) {
-        marketElement.appendChild(listingElement)
-        listingElement.children[0].addEventListener('submit', onBuyDelistForm)
-      }
+      const listingElement = document.createElement('li');
+      listingElement.innerHTML = ListingForm(l, item).trim()
+      listingElement.children[0].addEventListener('submit', onBuyDelistForm)
+      
+      marketElement.appendChild(listingElement)
     } else {
       console.warn(`item ${l.item} not found in current user inventory. user's inventory: ${Current.user.inventory.length} items`)
     }

@@ -1,6 +1,6 @@
 import { accounts, current, market, assets } from '../service/model.js';
 import { Account, Asset } from '../types.js';
-import { createItemElement } from "../common/html.js";
+import { ItemForm } from "../common/html.js";
 import { exploreCost } from "../common/pricing.js";
 
 export function ProfileView(account: Account, session: any): string {
@@ -127,7 +127,7 @@ export function InventoryView(account: Account, items: Asset[], userMineralTotal
         `
     if (items.length > 0) {
         items.slice(0, 100).forEach(i => {
-            inventoryHtml += createItemElement(i)
+            inventoryHtml += `<li>${ItemForm(i)}</li>`
         })
     } else inventoryHtml += `<li class="text-center">Empty. Collect resources or buy items from Marketplace</li>`
     inventoryHtml += `</ul></div></div>`

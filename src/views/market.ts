@@ -1,7 +1,7 @@
 import { assets, world, market, accounts } from "../service/model.js"
 import { Listing, Account } from "../types.js"
 import { getStats } from "../common/utility.js"
-import { createListingElement } from "../common/html.js"
+import { ListingForm } from "../common/html.js"
 
 export function MarketplaceView(listings: Listing[], username: string, session: any): string {
     const account = accounts.find(a => a.id == session.username)
@@ -24,7 +24,7 @@ export function MarketplaceView(listings: Listing[], username: string, session: 
         listings.slice(0, 100).forEach(l => {
             const i = assets.find(a => a.id == l.item)
             if (i) {
-                marketplaceHtml += createListingElement(l, i, session, username, account)
+                marketplaceHtml += `<li>${ListingForm(l, i, session, username, account)}</li>`
             }
         })
     } else marketplaceHtml += `<li style="text-align:center">Nothing listed for sale at this time</li>`

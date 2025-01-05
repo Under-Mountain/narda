@@ -1,17 +1,17 @@
 {
-  "time": 0,
+  "time": 728,
   "resources": {
     "water": {
-      "balance": 0,
-      "supplied": 0
+      "balance": 2076.681687382967,
+      "supplied": 2831.681687382965
     },
     "mineral": {
-      "balance": 0,
-      "supplied": 0
+      "balance": 795.7624969829045,
+      "supplied": 1533.762496982903
     },
     "credits": {
-      "balance": 0,
-      "supplied": 0
+      "balance": -200,
+      "supplied": 200
     }
   },
   "effects": {

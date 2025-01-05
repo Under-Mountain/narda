@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "dev",
+    "credits": {
+      "balance": 3000
+    },
+    "times": {
+      "created": 20,
+      "lastActive": 20
+    },
+    "visual": "legolas.png"
+  },
+  {
+    "id": "world",
+    "credits": {
+      "balance": -3200
+    },
+    "times": {
+      "created": 0
+    },
+    "visual": "world"
+  }
+]
