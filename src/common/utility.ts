@@ -5,14 +5,13 @@ export function getRandomNumber(min: number, max: number): number {
     return Math.floor(randomValue * (max - min + 1)) + min;
 }
 
-export function getStats(arr: number[]): { count: number, sum: number, mean: number, median: number, mode: number[] } {
+export function getPricingStats(arr: number[]): { count: number, mean: number, median: number, mode: number[] } {
     const count = arr.length
-    const sum = arr.reduce((sum, c) => sum + c, 0)
     const mean = getMean(arr);
     const median = getMedian(arr);
     const mode = getMode(arr);
 
-    return { count, sum, mean, median, mode };
+    return { count, mean, median, mode };
 }
 
 function getMean(arr: number[]): number {

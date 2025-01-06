@@ -10,7 +10,7 @@ export function AuthView(): string {
     const marketStatsHtml = MarketStatsView()
 
     return `
-<div class="hero bg-base-300 sm:p-10">
+<div class="hero">
   <div class="hero-content flex-col lg:flex-row-reverse items-start">
     <div class="lg:text-left lg:p-4 lg:mb-auto">
         <div>

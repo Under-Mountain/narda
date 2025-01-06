@@ -1,5 +1,5 @@
 import { accounts, assets, posts, current, world, market, activities } from "../service/model.js"
-import { WaterIcon, WaterCollectingIcon, MineralIcon, MineralCollectingIcon, ClockIcon, ExitIcon, QuestionIcon, PostIcon, PlaceIcon, TrophyIcon, ScaleIcon, BookIcon, RecordIcon } from "../common/svg.js"
+import { WaterIcon, WaterCollectingIcon, MineralIcon, MineralCollectingIcon, ClockIcon, ExitIcon, QuestionIcon, PostIcon, PlaceIcon, TrophyIcon, ScaleIcon, BookIcon, RecordIcon, RadioIcon } from "../common/svg.js"
 
 export function HeaderView(session: any, username: string): string {
     const resources = {
@@ -42,7 +42,7 @@ export function HeaderView(session: any, username: string): string {
     </head>
     <body class="content-center">
     <div class="relative sticky top-0 z-40">
-        <nav class="navbar bg-base-300 p-0 min-h-min">
+        <nav class="navbar bg-black p-0 min-h-min shadow-lg">
             <div class="flex-1 p-0">
                 <a href="/" class="btn btn-ghost btn-md p-1 no-animation">
                     ${ClockIcon}
@@ -125,10 +125,26 @@ export function HeaderView(session: any, username: string): string {
                 `}
             </div>
         </nav>
-        <div id="statusMain" class="p-1.5 text-xs text-gray-400 bg-black text-center">
-            <a href="#" onclick="document.getElementById('contentModal').showModal()" class="hover:text-primary">
-                📢 Sponsored messages starting from 100.00sl/day
-            </a>
+        <div id="statusMain" class="p-1 text-xs text-gray-500 bg-base-300">
+            <div class="flex justify-start gap-1">
+                <div class="p-0.5 my-auto hover:text-secondary">
+                    ${RadioIcon}
+                </div>
+                <div class="my-auto flex justify-start gap-4 overflow-x-auto transition duration-700 transition-opacity hidden">
+                    <a href="#" onclick="document.getElementById('contentModal').showModal()" class="min-w-fit hover:text-accent">
+                        Sponsored messages starting from 100.00sl/day
+                    </a>
+                    <a href="#" onclick="document.getElementById('contentModal').showModal()" class="min-w-fit hover:text-accent">
+                        Sponsored messages starting from 100.00sl/day
+                    </a>
+                    <a href="#" onclick="document.getElementById('contentModal').showModal()" class="min-w-fit hover:text-accent">
+                        Sponsored messages starting from 100.00sl/day
+                    </a>
+                    <a href="#" onclick="document.getElementById('contentModal').showModal()" class="min-w-fit hover:text-accent">
+                        Sponsored messages starting from 100.00sl/day
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="flex justify-between text-xs absolute top-0 left-0 right-0 z-50">
             <div class="flex-none w-44 text-right md:w-56">
@@ -139,8 +155,8 @@ export function HeaderView(session: any, username: string): string {
                 <small id="topRightStatus" class="hidden text-bold"></small>
             </div>
         </div>
-        <div class="max-w-screen bg-base-100 overflow-x-auto text-center">
-            <ul class="menu-horizontal text-xs gap-4 p-1">
+        <div class="max-w-screen bg-base-200 overflow-x-auto text-center text-gray-200 shadow-lg">
+            <ul class="menu-horizontal text-xs gap-4 p-1.5">
                 <li class="min-w-fit"><a href="/posts" class="hover:text-primary">
                     ${PostIcon} Posts
                     <small>(${posts.length})</small>
@@ -157,17 +173,17 @@ export function HeaderView(session: any, username: string): string {
                     ${ScaleIcon} Marketplace
                     <small>(${market.length})</small>
                 </a></li>
-                <li class="min-w-fit"><a href="/explorer?type=item" class="hover:text-info">
+                <li class="min-w-fit"><a href="/world?type=item" class="hover:text-info">
                     ${BookIcon} Items
                     <small>(${assets.length})</small>
                 </a></li>
-                <li class="min-w-fit"><a href="/explorer?type=transaction" class="hover:text-info">
+                <li class="min-w-fit"><a href="/world?type=transaction" class="hover:text-info">
                     ${RecordIcon} Transactions
                     <small>(${activities.length})</small>
                 </a></li>
             </ul>
         </div>
     </div>
-    <main class="">
+    <main class="bg-neutral p-2 sm:p-4 lg:px-8 xl:px-12">
     `
 }

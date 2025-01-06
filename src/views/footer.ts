@@ -2,12 +2,12 @@ import { Modals } from "./modals.js";
 
 export function FooterView(session = undefined, account = undefined): string {
     return `
-        <footer class="footer footer-center mt-4 bg-base-300 text-base-content p-4">
+        </main>
+        <footer class="footer footer-center bg-base-300 text-base-content p-4">
             <aside class="">
                 Arda v.1
             </aside>
         </footer>
-        </main>
         <div id="alert" role="alert" class="hidden alert rounded-none opacity-80 text-xs text-bold z-50 p-1 fixed top-0">
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="inline h-6 w-6 stroke-current" fill="none" viewBox="0 0 24 24">

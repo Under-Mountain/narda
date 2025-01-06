@@ -68,15 +68,15 @@
   {
     "id": "dev",
     "credits": {
-      "balance": 681.4099999999999
+      "balance": 381.40999999999985
     },
     "times": {
       "created": 18,
       "lastActive": 18,
-      "edited": 16056
+      "edited": 23909
     },
     "visual": "legolas.png",
-    "bio": "Official Dev Account"
+    "bio": "Official Dev Account. All the funds will be used for maintenance and development of the platform."
   },
   {
     "id": "bilbo",

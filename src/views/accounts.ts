@@ -29,7 +29,7 @@ export function ProfileView(account: Account, session: any): string {
                 </div>
                 <div class="p-2 mb-auto">
                     <h2 class="text-white-100 text-2xl">${account.id}</h2>
-                    <div class="text-xs text-gray-500">
+                    <div class="text-xs text-gray-500 max-w-sm">
                         <p class="" id="accountBio">${account.bio ? account.bio : `The Unknown`}</p>
                     </div>
                 </div>
@@ -99,11 +99,13 @@ export function InventoryView(account: Account, items: Asset[], userMineralTotal
 
 export function LeaderboardView(): string {
     const balanceLeaders = accounts.sort((a, b) => { return a.credits.balance > b.credits.balance ? -1 : 1 })
-    let LeaderHtml = `<div class="px-2 sm:px-4 lg:px-8">
-        <h1 id="leaderboard" class="text-bold text-2xl text-white mb-2">
+    let LeaderHtml = `<div class="">
+        <h1 id="posts" class="text-bold text-xl text-gray-300">
             Leaderboard
+            <small>(<span class="text-primary">${accounts.length}</span> accounts)</small>
         </h1>
-        <div role="tablist" class="tabs tabs-bordered tabs-sm mb-2 justify-start">
+        <small>Leading accounts of the platform. Filter by league tabs below.</small>
+        <div role="tablist" class="tabs tabs-bordered tabs-sm mb-2 justify-end">
             <a role="tab" class="tab tab-active">Balance</a>
             <a role="tab" class="tab">Items</a>
             <a role="tab" class="tab">Yield</a>
@@ -112,7 +114,7 @@ export function LeaderboardView(): string {
     `
     if (balanceLeaders.length > 0) {
         balanceLeaders.slice(0, 100).forEach((a, idx) => {
-            LeaderHtml += `<div class="card bg-base-300 p-2">
+            LeaderHtml += `<div class="card bg-base-100 p-2 transition duration-300 hover:bg-base-300">
                 <div class="p-2 card-title ${idx < 3 ? 'text-white text-2xl': idx < 10 ? 'text-gray-200 text-xl' : 'text-lg'}">
                     <small>${idx + 1}.</small> <a href="/?user=${a.id}">${a.id}</a>
                 </div>

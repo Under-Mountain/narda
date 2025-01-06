@@ -25,14 +25,14 @@ function PriceInput(i: any): string {
 
 export function ItemForm(i: any, readonly: boolean): string {
     const html = `
-        <form class="itemForm p-2 bg-base-200">
+        <form class="itemForm p-2 bg-base-100 rounded-lg transition duration-300 hover:bg-base-300 shadow">
             <div>
                 ${i.amount} unit(s) of ${i.owner}'s ${i.type}
                 <input name="id" type="hidden" value="${i.id}" class="input input-xs" />
             </div>
             <div>${Properties(i.properties)}</div>
             <div class="text-center">
-                <img class="m-auto" src="${AssetImageUrl(i)}" />
+                <img class="m-auto transition duration-700 opacity-75 hover:opacity-100" src="${AssetImageUrl(i)}" />
             </div>
             <div class="mt-4 text-right ${readonly? 'hidden' : ''}">
                 ${SellButton(i)}
@@ -47,14 +47,14 @@ export function ItemForm(i: any, readonly: boolean): string {
 
 export function ListingForm(l: any, i: any, session: any = null, username: string = '', account: Account = null): string {
     const html = `
-        <form class="listingForm p-2 bg-base-200">
+        <form class="listingForm p-2 bg-base-100 rounded-lg transition duration-300 hover:bg-base-300 shadow">
             <div>
                 ${l.amount} unit of ${l.owner}'s ${i.type}
                 <input name="id" type="hidden" value="${l.id}" />
             </div>
             <div>${Properties(i.properties)}</div>
             <div class="text-center">
-                <img class="m-auto" src="${AssetImageUrl(i)}" />
+                <img class="m-auto transition duration-700 opacity-75 hover:opacity-100" src="${AssetImageUrl(i)}" />
             </div>
             <div class="text-right mt-4"><small>(${(l.price / l.amount).toFixed(2)}/unit)</small></div>
             <div class="text-right">

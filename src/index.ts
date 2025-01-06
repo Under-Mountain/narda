@@ -42,15 +42,12 @@ app.get('/', (req: Request, res: Response) => {
      * World Overview
      */
     if (!req.query.user) {
-        const leaderboardHtml = LeaderboardView()
-        const blogHtml = PostsView()
-
         res.send(`
         ${headerHtml}
         ${!session.username ? AuthView() : ``}
 
-        ${leaderboardHtml}
-        ${blogHtml}
+        ${LeaderboardView()}
+        ${PostsView()}
         
         ${FooterView()}`)
         return
@@ -98,30 +95,14 @@ app.get('/leaderboard', (req: Request, res: Response) => {
     `)
 })
 
-app.get('/explorer', (req: Request, res: Response) => {
+app.get('/world', (req: Request, res: Response) => {
     const session = req.session
     const username = req.query.user ? req.query.user as string : req.session.username as string
     const account: Account | undefined = accounts.find(a => a.id == username)
-    
-    const headerHtml = HeaderView(session, username)
 
-    let html = req.query.type == 'item' ? AssetsView() : ActivitiesView()
     res.send(`
-        ${headerHtml}
-        ${html}
-        ${FooterView()}
-    `)
-})
-
-app.get('/mints', (req: Request, res: Response) => {
-    const session = req.session
-    const username = req.query.user ? req.query.user as string : req.session.username as string
-    
-    const headerHtml = HeaderView(session, username)
-    const assetsHtml = AssetsView()
-    res.send(`
-        ${headerHtml}
-        ${assetsHtml}
+        ${HeaderView(session, username)}
+        ${req.query.type == 'item' ? AssetsView() : ActivitiesView()}
         ${FooterView()}
     `)
 })
