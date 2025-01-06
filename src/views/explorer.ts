@@ -62,6 +62,8 @@ export function ActivitiesView(): string {
             <td>${a.of}</td>
             <td>${a.from}</td>
             <td>${a.to}</td>
+            <th>T${a.times.created}</th>
+            <th>T${a.times.completed}</th>
             <td>${a.note}</td>
         </tr>
         `})
@@ -80,7 +82,7 @@ export function ActivitiesView(): string {
         <div class="bg-base-100 overflow-x-auto">
             <table class="table table-xs">
                 <thead>
-                    <tr><th>Tx ID</th><th>Amount</th><th>Of</th><th>From</th><th>To</th><th>Note</th></tr>
+                    <tr><th>Tx ID</th><th>Amount</th><th>Of</th><th>From</th><th>To</th><th>Note</th><th>Created</th><th>Completed</th></tr>
                 </thead>
                 ${activitiesRow}
             </table>

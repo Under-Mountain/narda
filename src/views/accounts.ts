@@ -110,7 +110,7 @@ export function LeaderboardView(): string {
             <a role="tab" class="tab">Items</a>
             <a role="tab" class="tab">Yield</a>
         </div>
-        <div role="tabpanel" class="tab-content grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-1 justify-between">
+        <div role="tabpanel" class="mb-10 tab-content grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-1 justify-between">
     `
     if (balanceLeaders.length > 0) {
         balanceLeaders.slice(0, 100).forEach((a, idx) => {

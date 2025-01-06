@@ -1,7 +1,7 @@
 import { PlaceIcon } from "../common/svg.js"
 import { accounts, posts } from "../service/model.js"
 import { Post } from "../types.js"
-import { TimeView } from "./world.js"
+import { TimeView } from "./explorer.js"
 
 export function PostsView(place?: string): string {
     const filteredPosts = posts.filter(p => !place ? true : p.channels.indexOf(place) >= 0).sort((a, b) => { return a.times.created > b.times.created ? -1 : 1 })
@@ -61,20 +61,20 @@ export function PostView(post: Post, session: any): string {
                         return `<a href="/posts?channel=${t}">#${t}</a>`}).join(", ")}</span>` : ''}
                         posted on ${TimeView(post.times.created)} by ${post.author}
                 </small>
-                <p>${post.content}</p>
-                <div class="mt-3"><small>
+                <p class="my-2 min-h-16">${post.content}</p>
+                <div class="flex justify-start">
                     <form id="postLikeForm">
                         <input type="hidden" name="postId" value="${post.id}" />
-                        <button class="btn btn-success btn-sm"
+                        <button class="btn btn-success btn-xs"
                             ${!session.username || (account && account.credits.balance < 1) ? `disabled` :``}>
                             ${post.likes} Like (-1.00 credit)</button>
                     </form>
                     <form id="postDislikeForm">
                         <input type="hidden" name="postId" value="${post.id}" />
-                        <button class="btn btn-warning btn-sm" ${!session.username || (account && account.credits.balance < 1) ? `disabled` :``}>
+                        <button class="btn btn-warning btn-xs" ${!session.username || (account && account.credits.balance < 1) ? `disabled` :``}>
                             ${post.dislikes} Dislike (-1.00 credit)</button>
                     </form>
-                </small></div>
+                </div>
                 <div class="mt-2">
                     <form action="/api/comment?return=/post?id=${post.id}" method="post" style="text-align:right">
                         <textarea class="textarea textarea-md" name="comment" rows="2" cols="60" placeholder="Leave your comment"></textarea>

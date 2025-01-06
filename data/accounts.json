@@ -1,5 +1,18 @@
 [
   {
+    "id": "dev",
+    "credits": {
+      "balance": 10381.41
+    },
+    "times": {
+      "created": 18,
+      "lastActive": 18,
+      "edited": 23909
+    },
+    "visual": "legolas.png",
+    "bio": "Official Dev Account. All the funds will be used for maintenance and development of the platform."
+  },
+  {
     "id": "gandalf",
     "credits": {
       "balance": 2000
@@ -64,19 +77,6 @@
       "lastActive": 11262
     },
     "visual": "gandalf.png"
-  },
-  {
-    "id": "dev",
-    "credits": {
-      "balance": 381.40999999999985
-    },
-    "times": {
-      "created": 18,
-      "lastActive": 18,
-      "edited": 23909
-    },
-    "visual": "legolas.png",
-    "bio": "Official Dev Account. All the funds will be used for maintenance and development of the platform."
   },
   {
     "id": "bilbo",
@@ -246,7 +246,7 @@
   {
     "id": "world",
     "credits": {
-      "balance": -13511.41
+      "balance": -23511.41
     },
     "times": {
       "created": 0
