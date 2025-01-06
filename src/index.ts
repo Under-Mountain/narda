@@ -1,7 +1,7 @@
 import { onMinuteAsync } from './service/service.js'
 import { accounts, world, market, posts } from './service/model.js'
 import { app } from './routes/api.js'
-import { ChannelsView, PostsView, PostView } from './views/posts.js'
+import { PlacesView, PostsView, PostView } from './views/posts.js'
 import { MarketplaceView } from './views/market.js'
 import { HeaderView } from './views/header.js'
 import { LeaderboardView, ProfileView } from './views/accounts.js'
@@ -171,7 +171,7 @@ app.get('/channels', (req: Request, res: Response) => {
 
     res.send(`
         ${HeaderView(session, username)}
-        ${ChannelsView()}
+        ${PlacesView()}
         ${FooterView()}
     `)
 })

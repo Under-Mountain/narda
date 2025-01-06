@@ -125,24 +125,13 @@ export function HeaderView(session: any, username: string): string {
                 `}
             </div>
         </nav>
-        <div id="statusMain" class="p-1 text-xs text-gray-500 bg-base-300">
+        <div class="p-2 text-xs text-gray-400 bg-base-300">
             <div class="flex justify-start gap-1">
-                <div class="p-0.5 my-auto hover:text-secondary">
+                <a id="connectionLink" href="#" class="my-auto min-w-min text-accent hover:text-secondary">
                     ${RadioIcon}
-                </div>
-                <div class="my-auto flex justify-start gap-4 overflow-x-auto transition duration-700 transition-opacity hidden">
-                    <a href="#" onclick="document.getElementById('contentModal').showModal()" class="min-w-fit hover:text-accent">
-                        Sponsored messages starting from 100.00sl/day
-                    </a>
-                    <a href="#" onclick="document.getElementById('contentModal').showModal()" class="min-w-fit hover:text-accent">
-                        Sponsored messages starting from 100.00sl/day
-                    </a>
-                    <a href="#" onclick="document.getElementById('contentModal').showModal()" class="min-w-fit hover:text-accent">
-                        Sponsored messages starting from 100.00sl/day
-                    </a>
-                    <a href="#" onclick="document.getElementById('contentModal').showModal()" class="min-w-fit hover:text-accent">
-                        Sponsored messages starting from 100.00sl/day
-                    </a>
+                </a>
+                <div id="connection" class="mt-1 ml-1 animate-pulse text-accent">tuning...</div>
+                <div id="broadcast" class="mt-1 ml-1 flex justify-start gap-4 animate-pulse truncate">
                 </div>
             </div>
         </div>

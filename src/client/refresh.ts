@@ -1,16 +1,16 @@
-import { Current } from './app.js'
+import { Connection } from './app.js'
 import { updateUserInventory, updateMarketListings } from './dom.js'
 
 export async function refreshInventoryAsync() {
-  await fetch(`/api/assets?user=${Current.user.id}`).then(async (res) => {
+  await fetch(`/api/assets?user=${Connection.user.id}`).then(async (res) => {
     const items = await res.json()
-    updateUserInventory(Current, items)
+    updateUserInventory(Connection, items)
   }).catch(err => console.error(err))
 }
 
 export async function refreshMarketListingAsync() {
-  await fetch(`/api/market?user=${Current.user.id}`).then(async (res) => {
+  await fetch(`/api/market?user=${Connection.user.id}`).then(async (res) => {
     const listings = await res.json()
-    updateMarketListings(Current, listings)
+    updateMarketListings(Connection, listings)
   }).catch(err => console.error(err))
 }

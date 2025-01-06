@@ -90,7 +90,7 @@ export function PostView(post: Post, session: any): string {
         ` : `<h3>Post ${post} not found</h3>`}`
 }
 
-export function ChannelsView(): string {
+export function PlacesView(): string {
     const allPlaces: string[] = []
     posts.forEach(p => {
         p.channels.forEach(t => {
@@ -118,7 +118,7 @@ export function ChannelsView(): string {
         <a role="tab" class="tab">Items</a>
         <a role="tab" class="tab">Yield</a>
     </div>
-    <ul role="tabpanel" id="market" class="tab-content flex gap-1 justify-between">
+    <ul role="tabpanel" id="market" class="tab-content flex gap-1 justify-start">
         ${placesHtml}
     </ul>
     </div>

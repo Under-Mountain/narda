@@ -17,6 +17,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "express-minify": "^1.0.0",
     "express-session": "^1.18.1",
     "lowdb": "^7.0.1"
   },
@@ -27,7 +28,7 @@
     "@types/express-session": "^1.18.1",
     "@types/lowdb": "^1.0.15",
     "copyfiles": "^2.4.1",
-    "typescript": "^5.7.2",
-    "tsc-watch": "^5.0.3"
+    "tsc-watch": "^5.0.3",
+    "typescript": "^5.7.2"
   }
 }

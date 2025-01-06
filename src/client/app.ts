@@ -1,13 +1,16 @@
 import { initializeFormHandlers } from './events.js';
 import { buildTimeString, buildDateString, updateHeader, updateUserBalance } from './dom.js';
+import broadcast from './broadcast.js';
+import { Post } from '../interfaces/Post.js';
 
-export const Current = {
+export const Connection = {
   time: '..:.. (..% to yield)',
   date: 'Year .. Day .. (x..)',
   resources: {
     water: -1,
     mineral: -1
   },
+  lastCast: undefined,
   user: {
     id: undefined,
     balance: 0,
@@ -39,32 +42,33 @@ async function syncCurrentAsync(world: any) {
       const current = await res.json()
       console.debug(`T${current.global.time}: ...`)
 
-      updateWorld(world, current.global.time, current.global.resources)
-      updateCurrent(current.account, current.inventory)
+      updateWorld(world, current.global.time, current.global.resources, current.broadcast)
+      updateConnection(current.account, current.inventory)
       
       inProgress = false
     })
   } else console.log(`skipping sync as in progress...`)
 }
 
-function updateWorld(world: any, time: number, resources: any) {
-  Current.time = buildTimeString(world, time);
-  Current.date = buildDateString(world, time);
-  Current.resources.water = resources.water.balance.toFixed(0).toLocaleString();
-  Current.resources.mineral = resources.mineral.balance.toFixed(0).toLocaleString();
+function updateWorld(world: any, time: number, resources: any, posts: Post[]) {
+  Connection.time = buildTimeString(world, time);
+  Connection.date = buildDateString(world, time);
+  Connection.resources.water = resources.water.balance.toFixed(0).toLocaleString();
+  Connection.resources.mineral = resources.mineral.balance.toFixed(0).toLocaleString();
 
-  updateHeader(Current);
+  updateHeader(Connection);
+  broadcast(posts);
 }
 
-function updateCurrent(account: any, inventory: any) {
+function updateConnection(account: any, inventory: any) {
   if (!account) return
 
-  Current.user.balance = account.credits.balance
-  Current.user.id = account.id
-  Current.user.water = getResourceAmount(inventory, 'water')
-  Current.user.mineral = getResourceAmount(inventory, 'mineral')
+  Connection.user.balance = account.credits.balance
+  Connection.user.id = account.id
+  Connection.user.water = getResourceAmount(inventory, 'water')
+  Connection.user.mineral = getResourceAmount(inventory, 'mineral')
   
-  updateUserBalance(Current, queryUser)
+  updateUserBalance(Connection, queryUser)
 }
 
 function getResourceAmount(inventory: any[], type: string) {

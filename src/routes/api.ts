@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import minify from 'express-minify'
 import session from 'express-session'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -9,7 +10,7 @@ import assetsRouter from './assets.js'
 import marketRouter from './market.js'
 import pagesRouter from './pages.js'
 import activitiesRouter from './activities.js'
-import { accounts, assets, current, world } from '../service/model.js'
+import { accounts, assets, current, posts, world } from '../service/model.js'
 
 export const app = express()
 const __filename = fileURLToPath(import.meta.url);
@@ -22,6 +23,7 @@ app.use(session({
 }))
 
 app.use(cors())
+app.use(minify())
 app.use(express.json())
 app.use(express.static(path.join(__dirname, '../public')))
 app.use('/scripts', express.static(path.join(__dirname, '../client')))
@@ -54,12 +56,12 @@ app.get('/api/current', async (req, res) => {
             }
             const inventory = assets.filter(a => a.owner == req.session.username);
             setTimeout(
-                () => res.json({ global: current, account, inventory }),
+                () => res.json({ global: current, account, inventory, broadcast:getBroadCasts() }),
                 world.interval.minute
             );
         } else {
             setTimeout(
-                () => res.json({ global: current }),
+                () => res.json({ global: current, broadcast:getBroadCasts() }),
                 world.interval.minute
             );
         }
@@ -69,3 +71,9 @@ app.get('/api/current', async (req, res) => {
 });
 
 export default app;
+
+function getBroadCasts() {
+    return posts.filter(p => p.channels.indexOf('broadcast') >= 0)
+        .sort((a, b) => a.times.created < b.times.created ? -1:-1)
+        .slice(0, 10)
+}

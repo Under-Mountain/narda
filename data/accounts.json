@@ -2,7 +2,7 @@
   {
     "id": "dev",
     "credits": {
-      "balance": 10381.41
+      "balance": 9001.41
     },
     "times": {
       "created": 18,
@@ -242,6 +242,17 @@
       "lastActive": 16233
     },
     "visual": "gollum.png"
+  },
+  {
+    "id": "sauron",
+    "credits": {
+      "balance": 0
+    },
+    "times": {
+      "created": 48903,
+      "lastActive": 48903
+    },
+    "visual": "bilbo.png"
   },
   {
     "id": "world",
