@@ -3,6 +3,9 @@ import { assets, world, current } from './model.js'
 import { createTransaction } from './activity.js'
 import { processCurrentActivities, processResources } from './process.js'
 import { queueBankActivities } from './bank.js'
+import * as fs from 'fs'
+import sharp from 'sharp'
+import { OptimizeResources } from './media.js'
 
 let inProgress = false
 export async function onMinuteAsync(): Promise<void> {
@@ -54,6 +57,8 @@ async function onDayAsync(): Promise<void> {
 
     current.effects.completed = []
     current.effects.rejected = []
+
+    OptimizeResources('./public/images')
 }
 
 async function onHourAsync(effectBatchSize: number): Promise<void> {

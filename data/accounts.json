@@ -2,14 +2,14 @@
   {
     "id": "dev",
     "credits": {
-      "balance": 9001.41
+      "balance": 10001.41
     },
     "times": {
       "created": 18,
       "lastActive": 18,
       "edited": 23909
     },
-    "visual": "legolas.png",
+    "visual": "legolas.webp",
     "bio": "Official Dev Account. All the funds will be used for maintenance and development of the platform."
   },
   {
@@ -21,7 +21,7 @@
       "created": 148,
       "lastActive": 148
     },
-    "visual": "gandalf.png"
+    "visual": "gandalf.webp"
   },
   {
     "id": "test",
@@ -32,7 +32,7 @@
       "created": 31,
       "lastActive": 31
     },
-    "visual": "sauron.png"
+    "visual": "sauron.webp"
   },
   {
     "id": "pm",
@@ -43,7 +43,7 @@
       "created": 46,
       "lastActive": 46
     },
-    "visual": "sauron.png"
+    "visual": "sauron.webp"
   },
   {
     "id": "pr",
@@ -54,7 +54,7 @@
       "created": 86,
       "lastActive": 86
     },
-    "visual": "aragorn.png"
+    "visual": "aragorn.webp"
   },
   {
     "id": "sauron",
@@ -65,7 +65,7 @@
       "created": 11251,
       "lastActive": 11251
     },
-    "visual": "bilbo.png"
+    "visual": "bilbo.webp"
   },
   {
     "id": "saruman",
@@ -76,7 +76,7 @@
       "created": 11262,
       "lastActive": 11262
     },
-    "visual": "gandalf.png"
+    "visual": "gandalf.webp"
   },
   {
     "id": "bilbo",
@@ -87,7 +87,7 @@
       "created": 134,
       "lastActive": 134
     },
-    "visual": "frodo.png"
+    "visual": "frodo.webp"
   },
   {
     "id": "thorin",
@@ -98,7 +98,7 @@
       "created": 159,
       "lastActive": 159
     },
-    "visual": "aragorn.png"
+    "visual": "aragorn.webp"
   },
   {
     "id": "smaug",
@@ -109,7 +109,7 @@
       "created": 170,
       "lastActive": 170
     },
-    "visual": "boromir.png"
+    "visual": "boromir.webp"
   },
   {
     "id": "gollum",
@@ -120,7 +120,7 @@
       "created": 181,
       "lastActive": 181
     },
-    "visual": "gandalf.png"
+    "visual": "gandalf.webp"
   },
   {
     "id": "frodo",
@@ -131,7 +131,7 @@
       "created": 193,
       "lastActive": 193
     },
-    "visual": "aragorn.png"
+    "visual": "aragorn.webp"
   },
   {
     "id": "samwise",
@@ -142,7 +142,7 @@
       "created": 216,
       "lastActive": 216
     },
-    "visual": "sauron.png"
+    "visual": "sauron.webp"
   },
   {
     "id": "aragorn",
@@ -153,7 +153,7 @@
       "created": 226,
       "lastActive": 226
     },
-    "visual": "frodo.png"
+    "visual": "frodo.webp"
   },
   {
     "id": "legolas",
@@ -164,7 +164,7 @@
       "created": 236,
       "lastActive": 236
     },
-    "visual": "saruman.png"
+    "visual": "saruman.webp"
   },
   {
     "id": "gimli",
@@ -175,7 +175,7 @@
       "created": 253,
       "lastActive": 253
     },
-    "visual": "bilbo.png"
+    "visual": "bilbo.webp"
   },
   {
     "id": "arwen",
@@ -186,7 +186,7 @@
       "created": 315,
       "lastActive": 315
     },
-    "visual": "gollum.png"
+    "visual": "gollum.webp"
   },
   {
     "id": "boromir",
@@ -197,7 +197,7 @@
       "created": 339,
       "lastActive": 339
     },
-    "visual": "sauron.png"
+    "visual": "sauron.webp"
   },
   {
     "id": "merry",
@@ -208,7 +208,7 @@
       "created": 349,
       "lastActive": 349
     },
-    "visual": "legolas.png"
+    "visual": "legolas.webp"
   },
   {
     "id": "pippin",
@@ -219,7 +219,7 @@
       "created": 358,
       "lastActive": 358
     },
-    "visual": "boromir.png"
+    "visual": "boromir.webp"
   },
   {
     "id": "mooa",
@@ -230,7 +230,7 @@
       "created": 16198,
       "lastActive": 16198
     },
-    "visual": "gimli.png"
+    "visual": "gimli.webp"
   },
   {
     "id": "sean",
@@ -241,7 +241,7 @@
       "created": 16233,
       "lastActive": 16233
     },
-    "visual": "gollum.png"
+    "visual": "gollum.webp"
   },
   {
     "id": "sauron",
@@ -252,16 +252,16 @@
       "created": 48903,
       "lastActive": 48903
     },
-    "visual": "bilbo.png"
+    "visual": "bilbo.webp"
   },
   {
     "id": "world",
     "credits": {
-      "balance": -23511.41
+      "balance": -24711.41
     },
     "times": {
       "created": 0
     },
-    "visual": "world.png"
+    "visual": "world.webp"
   }
 ]

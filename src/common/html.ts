@@ -88,9 +88,9 @@ function AssetImageUrl(item: Asset): string {
 
     switch (item.type) {
         case 'water':
-            return `/images/resources/water.png`
+            return `/images/resources/water.webp`
         case 'mineral':
-            return `/images/resources/mineral.png`
+            return `/images/resources/mineral.webp`
         case 'bankstone':
             if (!item.properties || !item.properties.cap || !item.properties.yield) {
                 console.error('Bankstone properties missing', item)
@@ -101,6 +101,6 @@ function AssetImageUrl(item: Asset): string {
             const { place, tier } = getPlaceTier(item.properties.yield, item.properties.cap);
             return `/images/${asset}/${place}/${tier}/${item.visual}`
         default:
-            return `/images/logo.png`
+            return `/images/logo.webp`
     }
 }

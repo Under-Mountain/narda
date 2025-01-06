@@ -115,7 +115,7 @@ export function HeaderView(session: any, username: string): string {
                     <div class="dropdown dropdown-end">
                         <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
                             <div class="w-9 rounded-full">
-                            <img alt="Profile photo of ${session.username}" src="/images/logo.png" />
+                            <img alt="Profile photo of ${session.username}" src="/images/logo.webp" />
                             </div>
                         </div>
                         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow">
