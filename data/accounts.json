@@ -1,16 +1,14 @@
 [
   {
-    "id": "dev",
+    "id": "gandalf",
     "credits": {
-      "balance": 2991.41
+      "balance": 2000
     },
     "times": {
-      "created": 18,
-      "lastActive": 18,
-      "edited": 10406
+      "created": 148,
+      "lastActive": 148
     },
-    "visual": "legolas.png",
-    "bio": "Official Dev Account..."
+    "visual": "gandalf.png"
   },
   {
     "id": "test",
@@ -46,17 +44,6 @@
     "visual": "aragorn.png"
   },
   {
-    "id": "gandalf",
-    "credits": {
-      "balance": 1000
-    },
-    "times": {
-      "created": 148,
-      "lastActive": 148
-    },
-    "visual": "gandalf.png"
-  },
-  {
     "id": "sauron",
     "credits": {
       "balance": 1000
@@ -77,6 +64,19 @@
       "lastActive": 11262
     },
     "visual": "gandalf.png"
+  },
+  {
+    "id": "dev",
+    "credits": {
+      "balance": 681.4099999999999
+    },
+    "times": {
+      "created": 18,
+      "lastActive": 18,
+      "edited": 16056
+    },
+    "visual": "legolas.png",
+    "bio": "Official Dev Account"
   },
   {
     "id": "bilbo",
@@ -220,6 +220,28 @@
       "lastActive": 358
     },
     "visual": "boromir.png"
+  },
+  {
+    "id": "mooa",
+    "credits": {
+      "balance": 0
+    },
+    "times": {
+      "created": 16198,
+      "lastActive": 16198
+    },
+    "visual": "gimli.png"
+  },
+  {
+    "id": "sean",
+    "credits": {
+      "balance": 0
+    },
+    "times": {
+      "created": 16233,
+      "lastActive": 16233
+    },
+    "visual": "gollum.png"
   },
   {
     "id": "world",

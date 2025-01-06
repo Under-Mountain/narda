@@ -1,4 +1,5 @@
 import { accounts, assets, posts, current, world, market, activities } from "../service/model.js"
+import { WaterIcon, WaterCollectingIcon, MineralIcon, MineralCollectingIcon, ClockIcon, ExitIcon, QuestionIcon, PostIcon, PlaceIcon, TrophyIcon, ScaleIcon, BookIcon, RecordIcon } from "../common/svg.js"
 
 export function HeaderView(session: any, username: string): string {
     const resources = {
@@ -40,18 +41,13 @@ export function HeaderView(session: any, username: string): string {
         <title>Arda v.1 - Open World Metaverse in tribute to JRR Toklien</title>
     </head>
     <body class="content-center">
-    <div id="statusMain" class="p-1.5 text-xs text-gray-400 bg-black text-center">
-        <a href="https://under-mountain.github.com" target="_blank">
-            📢 Sponsored messages starting from 100.00sl/day
-        </a>
-    </div>
     <div class="relative sticky top-0 z-40">
         <nav class="navbar bg-base-300 p-0 min-h-min">
             <div class="flex-1 p-0">
                 <a href="/" class="btn btn-ghost btn-md p-1 no-animation">
-                    <svg class="p-0.5" width="1.8em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="gray" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"/><rect fill="lightgray" x="11" y="6" rx="1" width="2" height="7"><animateTransform attributeName="transform" type="rotate" dur="2160s" values="0 12 12;360 12 12" repeatCount="indefinite"/></rect><rect fill="lightgray" x="11" y="4" rx="1" width="2" height="9"><animateTransform attributeName="transform" type="rotate" dur="3s" values="0 12 12;360 12 12" repeatCount="indefinite"/></rect></svg>
+                    ${ClockIcon}
                     <div class="text-xs hidden sm:inline">
-                        <div id="headerTime">
+                        <div id="headerTime" class="">
                             ${Math.floor(current.time % (world.interval.hour * world.interval.day) / (world.interval.hour))}:${current.time % (world.interval.hour) < 10 ? '0' : ''}${current.time % (world.interval.hour)}\
                             <small class="hidden md:inline">(${(current.time % (world.interval.hour) / world.interval.hour * 100).toFixed(0)}% to yield)</small>
                         </div>
@@ -65,24 +61,24 @@ export function HeaderView(session: any, username: string): string {
                     </div>
                 </a>
                 <form id="collectWaterForm">
-                    <button id="collectWaterBtn" class="btn btn-ghost btn-md p-0.5 hover:animate-pulse"  name="resource" value="water"
+                    <button id="collectWaterBtn" class="gap-0 btn btn-ghost btn-md p-0.5 hover:animate-pulse"  name="resource" value="water"
                         ${!session.username || session.username == username && current.resources.water.balance <= 0 ? "disabled" : ""}>
-                        <svg id="collectWaterIcon" class="p-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="1.5em"><circle fill="#00A0FF" stroke="#00A0FF" stroke-width="30" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="1" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#00C0FF" stroke="#00C0FF" stroke-width="30" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="1" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#00C0FF" stroke="#00C0FF" stroke-width="30" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="1" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>
-                        <svg id="collectingWaterIcon" width="1.5em" class="hidden p-0.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><style>.spinner_mHwL{animation:spinner_OeFQ 1.5s cubic-bezier(0.56,.52,.17,.98) infinite}.spinner_ote2{animation:spinner_ZEPt 1.5s cubic-bezier(0.56,.52,.17,.98) infinite}@keyframes spinner_OeFQ{0%{cx:4px;r:3px}50%{cx:9px;r:8px}}@keyframes spinner_ZEPt{0%{cx:15px;r:8px}50%{cx:20px;r:3px}}</style><defs><filter id="spinner-gF00"><feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="y"/><feColorMatrix in="y" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -7" result="z"/><feBlend in="SourceGraphic" in2="z"/></filter></defs><g filter="url(#spinner-gF00)"><circle class="spinner_mHwL fill-blue-600" cx="4" cy="12" r="3"/><circle class="spinner_ote2 fill-blue-400" cx="15" cy="12" r="8"/></g></svg>
+                        ${WaterIcon}
+                        ${WaterCollectingIcon}
                         <div class="text-base-content">
-                            <div id="headerWater" class="min-w-9">${current.resources.water.balance.toFixed(0)}</div>
-                            <small class="p-0 text-xs text-blue-400"><small>water</small></small>
+                            <div id="headerWater" class="text-blue-500 text-xs min-w-10">${current.resources.water.balance.toFixed(0)}</div>
+                            <small class="p-0 text-xs text-blue-400">water</small>
                         </div>
                     </button>
                 </form>
                 <form id="collectMineralForm">
-                    <button id="collectMineralBtn" class="btn btn-ghost btn-md p-0.5 hover:animate-pulse" name="resource" value="mineral"
+                    <button id="collectMineralBtn" class="gap-0 btn btn-ghost btn-md p-0.5 hover:animate-pulse" name="resource" value="mineral"
                         ${!session.username || session.username == username && current.resources.mineral.balance <= 0 ? "disabled" : ""}>
-                        <svg id="collectMineralIcon" class="p-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="1.5em"><path stroke="orange" stroke-width="30" transform-origin="center" d="m148 84.7 13.8-8-10-17.3-13.8 8a50 50 0 0 0-27.4-15.9v-16h-20v16A50 50 0 0 0 63 67.4l-13.8-8-10 17.3 13.8 8a50 50 0 0 0 0 31.7l-13.8 8 10 17.3 13.8-8a50 50 0 0 0 27.5 15.9v16h20v-16a50 50 0 0 0 27.4-15.9l13.8 8 10-17.3-13.8-8a50 50 0 0 0 0-31.7Zm-47.5 50.8a35 35 0 1 1 0-70 35 35 0 0 1 0 70Z"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="3.5" values="0;120" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></path></svg>
-                        <svg id="collectingMineralIcon" width="1.5em" class="hidden p-0.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><style>.spinner_OSmW{transform-origin:center;animation:spinner_T6mA 1.5s step-end infinite}@keyframes spinner_T6mA{8.3%{transform:rotate(30deg)}16.6%{transform:rotate(60deg)}25%{transform:rotate(90deg)}33.3%{transform:rotate(120deg)}41.6%{transform:rotate(150deg)}50%{transform:rotate(180deg)}58.3%{transform:rotate(210deg)}66.6%{transform:rotate(240deg)}75%{transform:rotate(270deg)}83.3%{transform:rotate(300deg)}91.6%{transform:rotate(330deg)}100%{transform:rotate(360deg)}}</style><g class="spinner_OSmW"><rect class="fill-orange"x="11" y="1" width="2" height="5" opacity=".14"/><rect class="fill-yellow-400"x="11" y="1" width="2" height="5" transform="rotate(30 12 12)" opacity=".29"/><rect class="fill-yellow-200"x="11" y="1" width="2" height="5" transform="rotate(60 12 12)" opacity=".43"/><rect class="fill-orange"x="11" y="1" width="2" height="5" transform="rotate(90 12 12)" opacity=".57"/><rect class="fill-orange"x="11" y="1" width="2" height="5" transform="rotate(120 12 12)" opacity=".71"/><rect x="11" y="1" width="2" height="5" transform="rotate(150 12 12)" opacity=".86"/><rect class="fill-orange"x="11" y="1" width="2" height="5" transform="rotate(180 12 12)"/></g></svg>
+                        ${MineralIcon}
+                        ${MineralCollectingIcon}
                         <div class="text-base-content">
-                            <div id="headerMineral" class="min-w-9">${current.resources.mineral.balance.toFixed(0)}</div>
-                            <small class="p-0 text-xs text-yellow-400"><small>mineral</small></small>
+                            <div id="headerMineral" class="text-yellow-500 text-xs min-w-10">${current.resources.mineral.balance.toFixed(0)}</div>
+                            <small class="p-0 text-xs text-yellow-400">mineral</small>
                         </div>
                     </button>
                 </form>
@@ -100,7 +96,7 @@ export function HeaderView(session: any, username: string): string {
                     <a href="/?user=${session.username}" class="btn btn-ghost btn-md p-1">
                         <div>
                             <div class="text-xs">${session.username}</div>
-                            <div><span id="userBalance">${accounts.find(a => a.id == session.username)?.credits.balance.toFixed(2)}</span><small class="lowercase">sl</small></div>
+                            <div><span id="userBalance" class="text-white">${accounts.find(a => a.id == session.username)?.credits.balance.toFixed(2)}</span><small class="lowercase">sl</small></div>
                         </div>
                     </a>
                     <div class="dropdown dropdown-end">
@@ -110,11 +106,12 @@ export function HeaderView(session: any, username: string): string {
                             </div>
                         </div>
                         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a href="/api/exit">Exit</a></li>
+                            <li><a href="/posts" class="hover:text-secondary">${QuestionIcon} Getting started</a></li>
+                            <li><a href="/api/exit" class="hover:text-warning">${ExitIcon} Exit</a></li>
                         </ul>
                     </div>
                     ` : `
-                    <a href="/#register"><small class="text-bold">Arda v.1</small></a>
+                    <a href="/#register"><small class="text-bold hover:text-yellow-500">Arda v.1</small></a>
                     <div class="dropdown dropdown-end">
                         <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
                             <div class="w-9 rounded-full">
@@ -122,14 +119,19 @@ export function HeaderView(session: any, username: string): string {
                             </div>
                         </div>
                         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a href="/posts">Getting started</a></li>
+                            <li><a href="/posts" class="hover:text-secondary">${QuestionIcon} Getting started</a></li>
                         </ul>
                     </div>
                 `}
             </div>
         </nav>
+        <div id="statusMain" class="p-1.5 text-xs text-gray-400 bg-black text-center">
+            <a href="#" onclick="document.getElementById('contentModal').showModal()" class="hover:text-primary">
+                📢 Sponsored messages starting from 100.00sl/day
+            </a>
+        </div>
         <div class="flex justify-between text-xs absolute top-0 left-0 right-0 z-50">
-            <div class="flex-none w-44 text-right md:w-64">
+            <div class="flex-none w-44 text-right md:w-56">
                 <small id="topLeftStatus" class="hidden" text-bold"></small>
             </div>
             <div class="flex-auto"></div>
@@ -137,30 +139,35 @@ export function HeaderView(session: any, username: string): string {
                 <small id="topRightStatus" class="hidden text-bold"></small>
             </div>
         </div>
+        <div class="max-w-screen bg-base-100 overflow-x-auto text-center">
+            <ul class="menu-horizontal text-xs gap-4 p-1">
+                <li class="min-w-fit"><a href="/posts" class="hover:text-primary">
+                    ${PostIcon} Posts
+                    <small>(${posts.length})</small>
+                </a></li>
+                <li class="min-w-fit"><a href="/channels" class="hover:text-secondary">
+                    ${PlaceIcon} Places
+                    <small>(${channels.length})</small>
+                </a></li>
+                <li class="min-w-fit"><a href="/leaderboard" class="hover:text-yellow-500">
+                    ${TrophyIcon} Leaderboard
+                    <small>(${accounts.length})</small>
+                </a></li>
+                <li class="min-w-fit"><a href="/marketplace" class="hover:text-accent">
+                    ${ScaleIcon} Marketplace
+                    <small>(${market.length})</small>
+                </a></li>
+                <li class="min-w-fit"><a href="/explorer?type=item" class="hover:text-info">
+                    ${BookIcon} Items
+                    <small>(${assets.length})</small>
+                </a></li>
+                <li class="min-w-fit"><a href="/explorer?type=transaction" class="hover:text-info">
+                    ${RecordIcon} Transactions
+                    <small>(${activities.length})</small>
+                </a></li>
+            </ul>
+        </div>
     </div>
-    
     <main class="">
-    <div class="bg-base-200 text-center text-xs overflow-x-auto">
-        <ul class="menu menu-horizontal bg-base-200">
-        <li>
-            <a href="/posts">Posts(${posts.length})</a>
-        </li>
-        <li>
-            <a href="/channels">Channels(${channels.length})</a>
-        </li>
-        <li>
-            <a href="/leaderboard">Leaderboard(${accounts.length})</a>
-        </li>
-        <li>
-            <a href="/marketplace">Marketplace(${market.length})</a>
-        </li>
-        <li>
-            <a href="/explorer?type=item">Items(${assets.length})</a>
-        </li>
-        <li>
-            <a href="/explorer?type=transaction">Transactions(${activities.length})</a>
-        </li>
-        </ul>
-    </div>
     `
 }

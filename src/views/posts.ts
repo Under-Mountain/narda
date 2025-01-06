@@ -4,11 +4,11 @@ import { TimeView } from "./world.js"
 
 export function PostsView(channel?: string): string {
     const filteredPosts = posts.filter(p => !channel ? true : p.channels.indexOf(channel) >= 0).sort((a, b) => { return a.times.created > b.times.created ? -1 : 1 })
-    let postsHtml = `<div class="p-2 sm:p-4 lg:p-8">
+    let postsHtml = `<div class="px-2 sm:px-4 lg:px-8">
         <h1 id="posts" class="text-bold text-2xl text-white mb-2">
             ${channel ? channel : `All Posts`}
         </h1>
-        <div role="tablist" class="tabs bg-base-200 mb-2">
+        <div role="tablist" class="tabs tabs-bordered tabs-sm mb-2 justify-start">
             <a role="tab" class="tab tab-active">News</a>
             <a role="tab" class="tab">Docs</a>
             <a role="tab" class="tab">Jobs</a>
@@ -88,11 +88,11 @@ export function PostView(post: Post, session: any): string {
 }
 
 export function ChannelsView(): string {
-    let channelsHtml = `<div class="p-2 sm:p-4 lg:p-8">
+    let channelsHtml = `<div class="px-2 sm:px-4 lg:px-8">
     <h1 id="leaderboard" class="text-bold text-2xl text-white mb-2">
         Channels
     </h1>
-    <div role="tablist" class="tabs bg-base-200 mb-2">
+    <div role="tablist" class="tabs tabs-bordered tabs-sm mb-2 justify-start">
         <a role="tab" class="tab tab-active">Balance</a>
         <a role="tab" class="tab">Items</a>
         <a role="tab" class="tab">Yield</a>

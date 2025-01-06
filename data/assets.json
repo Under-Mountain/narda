@@ -1,31 +1,66 @@
 [
   {
-    "id": "MNR1",
+    "id": "WTR14",
+    "type": "water",
+    "amount": 1036,
+    "owner": "dev",
+    "visual": "water.png"
+  },
+  {
+    "id": "WTR12",
+    "type": "water",
+    "amount": 160,
+    "owner": "world",
+    "visual": "water.png"
+  },
+  {
+    "id": "MNR20",
     "type": "mineral",
-    "amount": 17,
-    "owner": "pr",
+    "amount": 110,
+    "owner": "world",
     "visual": "mineral.png"
   },
   {
-    "id": "WTR3",
+    "id": "WTR36",
     "type": "water",
-    "amount": 3,
-    "owner": "pr",
+    "amount": 109,
+    "owner": "sean",
     "visual": "water.png"
   },
   {
-    "id": "WTR0",
+    "id": "WTR18",
     "type": "water",
-    "amount": 0,
-    "owner": "pr",
+    "amount": 108,
+    "owner": "test",
     "visual": "water.png"
   },
   {
-    "id": "WTR2",
-    "type": "water",
-    "amount": 0,
-    "owner": "pr",
-    "visual": "water.png"
+    "id": "MNR10",
+    "type": "mineral",
+    "amount": 105,
+    "owner": "world",
+    "visual": "mineral.png"
+  },
+  {
+    "id": "MNR21",
+    "type": "mineral",
+    "amount": 59,
+    "owner": "test",
+    "visual": "mineral.png"
+  },
+  {
+    "id": "MNR15",
+    "type": "mineral",
+    "amount": 47,
+    "owner": "dev",
+    "visual": "mineral.png"
+  },
+  {
+    "id": "MNR35",
+    "type": "mineral",
+    "amount": 31,
+    "owner": "sean",
+    "visual": "mineral.png"
   },
   {
     "id": "WTR4",
@@ -42,6 +77,262 @@
     "visual": "mineral.png"
   },
   {
+    "id": "MNR1",
+    "type": "mineral",
+    "amount": 17,
+    "owner": "pr",
+    "visual": "mineral.png"
+  },
+  {
+    "id": "WTR3",
+    "type": "water",
+    "amount": 3,
+    "owner": "pr",
+    "visual": "water.png"
+  },
+  {
+    "id": "BNK28",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.24,
+      "cap": 6757,
+      "staked": 6712.701643607262
+    },
+    "owner": "dev",
+    "visual": "1.png"
+  },
+  {
+    "id": "BNK23",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.24,
+      "cap": 6411,
+      "staked": 6385.748828299444
+    },
+    "owner": "world",
+    "visual": "46.png"
+  },
+  {
+    "id": "BNK39",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.17,
+      "cap": 7824,
+      "staked": 7820.35594520548
+    },
+    "owner": "dev",
+    "visual": "27.png"
+  },
+  {
+    "id": "BNK29",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.21,
+      "cap": 6141,
+      "staked": 6102.246651648632
+    },
+    "owner": "dev",
+    "visual": "12.png"
+  },
+  {
+    "id": "BNK33",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.24,
+      "cap": 5059,
+      "staked": 5055.673534246575
+    },
+    "owner": "dev",
+    "visual": "0.png"
+  },
+  {
+    "id": "BNK13",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.19,
+      "cap": 6289,
+      "staked": 6253.082594706981
+    },
+    "owner": "world",
+    "visual": "8.png"
+  },
+  {
+    "id": "BNK16",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.2,
+      "cap": 4661,
+      "staked": 4643.151553134899
+    },
+    "owner": "world",
+    "visual": "12.png"
+  },
+  {
+    "id": "BNK27",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.25,
+      "cap": 3578,
+      "staked": 3553.5685476965723
+    },
+    "owner": "world",
+    "visual": "0.png"
+  },
+  {
+    "id": "BNK31",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.09,
+      "cap": 7522,
+      "staked": 7512.730873573162
+    },
+    "owner": "dev",
+    "visual": "9.png"
+  },
+  {
+    "id": "BNK37",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.11,
+      "cap": 5138,
+      "staked": 5136.451561643836
+    },
+    "owner": "dev",
+    "visual": "13.png"
+  },
+  {
+    "id": "BNK22",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.14,
+      "cap": 3413,
+      "staked": 3401.2361971007244
+    },
+    "owner": "test",
+    "visual": "9.png"
+  },
+  {
+    "id": "BNK32",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.19,
+      "cap": 2047,
+      "staked": 2043.8049788075305
+    },
+    "owner": "dev",
+    "visual": "7.png"
+  },
+  {
+    "id": "BNK38",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.11,
+      "cap": 3516,
+      "staked": 3513.8810864597485
+    },
+    "owner": "dev",
+    "visual": "13.png"
+  },
+  {
+    "id": "BNK30",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.08,
+      "cap": 4220,
+      "staked": 4213.529735116239
+    },
+    "owner": "world",
+    "visual": "0.png"
+  },
+  {
+    "id": "BNK26",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.11,
+      "cap": 2736,
+      "staked": 2731.8797444642123
+    },
+    "owner": "world",
+    "visual": "11.png"
+  },
+  {
+    "id": "BNK25",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.15,
+      "cap": 1836,
+      "staked": 1829.2204671408135
+    },
+    "owner": "world",
+    "visual": "4.png"
+  },
+  {
+    "id": "BNK40",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.18,
+      "cap": 1433,
+      "staked": 1432.2933150684933
+    },
+    "owner": "dev",
+    "visual": "2.png"
+  },
+  {
+    "id": "BNK17",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.13,
+      "cap": 1608,
+      "staked": 1602.2820470877314
+    },
+    "owner": "world",
+    "visual": "5.png"
+  },
+  {
+    "id": "BNK24",
+    "type": "bankstone",
+    "amount": 1,
+    "properties": {
+      "yield": 0.1,
+      "cap": 1183,
+      "staked": 1179.7628970632757
+    },
+    "owner": "world",
+    "visual": "4.png"
+  },
+  {
+    "id": "WTR0",
+    "type": "water",
+    "amount": 0,
+    "owner": "pr",
+    "visual": "water.png"
+  },
+  {
+    "id": "WTR2",
+    "type": "water",
+    "amount": 0,
+    "owner": "pr",
+    "visual": "water.png"
+  },
+  {
     "id": "WTR6",
     "type": "water",
     "amount": 0,
@@ -56,95 +347,10 @@
     "visual": "mineral.png"
   },
   {
-    "id": "MNR8",
-    "type": "mineral",
-    "amount": -97,
-    "owner": "world",
-    "visual": "mineral.png"
-  },
-  {
-    "id": "WTR9",
-    "type": "water",
-    "amount": -96,
-    "owner": "world",
-    "visual": "water.png"
-  },
-  {
-    "id": "MNR10",
-    "type": "mineral",
-    "amount": 105,
-    "owner": "world",
-    "visual": "mineral.png"
-  },
-  {
     "id": "WTR11",
     "type": "water",
     "amount": 0,
     "owner": "dev",
-    "visual": "water.png"
-  },
-  {
-    "id": "WTR12",
-    "type": "water",
-    "amount": 160,
-    "owner": "world",
-    "visual": "water.png"
-  },
-  {
-    "id": "BNK13",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.19,
-      "cap": 6289,
-      "staked": 6272.648402308069
-    },
-    "owner": "world",
-    "visual": "8.png"
-  },
-  {
-    "id": "WTR14",
-    "type": "water",
-    "amount": 633,
-    "owner": "dev",
-    "visual": "water.png"
-  },
-  {
-    "id": "MNR15",
-    "type": "mineral",
-    "amount": 81,
-    "owner": "dev",
-    "visual": "mineral.png"
-  },
-  {
-    "id": "BNK16",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.2,
-      "cap": 4661,
-      "staked": 4648.24412369068
-    },
-    "owner": "world",
-    "visual": "12.png"
-  },
-  {
-    "id": "BNK17",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.13,
-      "cap": 1608,
-      "staked": 1604.5667842707821
-    },
-    "owner": "world",
-    "visual": "5.png"
-  },
-  {
-    "id": "WTR18",
-    "type": "water",
-    "amount": 108,
-    "owner": "test",
     "visual": "water.png"
   },
   {
@@ -155,137 +361,24 @@
     "visual": "mineral.png"
   },
   {
-    "id": "MNR20",
+    "id": "WTR34",
+    "type": "water",
+    "amount": 0,
+    "owner": "sean",
+    "visual": "water.png"
+  },
+  {
+    "id": "WTR9",
+    "type": "water",
+    "amount": -96,
+    "owner": "world",
+    "visual": "water.png"
+  },
+  {
+    "id": "MNR8",
     "type": "mineral",
-    "amount": 110,
+    "amount": -97,
     "owner": "world",
     "visual": "mineral.png"
-  },
-  {
-    "id": "MNR21",
-    "type": "mineral",
-    "amount": 59,
-    "owner": "test",
-    "visual": "mineral.png"
-  },
-  {
-    "id": "BNK22",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.14,
-      "cap": 3413,
-      "staked": 3407.7666283818853
-    },
-    "owner": "test",
-    "visual": "9.png"
-  },
-  {
-    "id": "BNK23",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.24,
-      "cap": 6411,
-      "staked": 6394.15481531634
-    },
-    "owner": "world",
-    "visual": "46.png"
-  },
-  {
-    "id": "BNK24",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.1,
-      "cap": 1183,
-      "staked": 1180.7330967655673
-    },
-    "owner": "world",
-    "visual": "4.png"
-  },
-  {
-    "id": "BNK25",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.15,
-      "cap": 1836,
-      "staked": 1832.9837777601813
-    },
-    "owner": "world",
-    "visual": "4.png"
-  },
-  {
-    "id": "BNK26",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.11,
-      "cap": 2736,
-      "staked": 2734.3511526034904
-    },
-    "owner": "world",
-    "visual": "11.png"
-  },
-  {
-    "id": "BNK27",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.25,
-      "cap": 3578,
-      "staked": 3565.763349362705
-    },
-    "owner": "world",
-    "visual": "0.png"
-  },
-  {
-    "id": "BNK28",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.24,
-      "cap": 6757,
-      "staked": 6739.245685086962
-    },
-    "owner": "dev",
-    "visual": "1.png"
-  },
-  {
-    "id": "BNK29",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.21,
-      "cap": 6141,
-      "staked": 6123.354425770814
-    },
-    "owner": "dev",
-    "visual": "12.png"
-  },
-  {
-    "id": "BNK30",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.08,
-      "cap": 4220,
-      "staked": 4219.075068493151
-    },
-    "owner": "world",
-    "visual": "0.png"
-  },
-  {
-    "id": "BNK31",
-    "type": "bankstone",
-    "amount": 1,
-    "properties": {
-      "yield": 0.09,
-      "cap": 7522,
-      "staked": 7520.145260273973
-    },
-    "owner": "dev",
-    "visual": "9.png"
   }
 ]

@@ -48,20 +48,20 @@ export function updateHeader(Current: any) {
 export function updateStatus(res: any) {
   const topRight = getElementById("topRightStatus");
   updateElementContent("topRightStatus", `+${res.amount} ${res.of}`);
-  topRight.classList.remove('text-blue-400', 'text-white')
+  topRight.classList.remove('text-blue-400', 'text-yellow-400')
 
   const topLeft = getElementById("topLeftStatus");
   updateElementContent("topLeftStatus", `-${res.amount} ${res.of}`);
-  topLeft.classList.remove('text-blue-500', 'text-gray-300')
+  topLeft.classList.remove('text-blue-400', 'text-yellow-400')
 
   switch(res.of) {
     case 'water':
       topRight.classList.add('text-blue-400')
-      topLeft.classList.add('text-blue-500')
+      topLeft.classList.add('text-blue-400')
       break
     case 'mineral':
-      topRight.classList.add('text-white')
-      topLeft.classList.add('text-gray-300')
+      topRight.classList.add('text-yellow-400')
+      topLeft.classList.add('text-yellow-400')
       break
     default:
       break

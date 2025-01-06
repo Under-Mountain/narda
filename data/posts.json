@@ -28,5 +28,20 @@
       "created": 11312
     },
     "comments": []
+  },
+  {
+    "id": "PST2",
+    "author": "dev",
+    "title": "hello world",
+    "content": "test",
+    "channels": [
+      "test"
+    ],
+    "likes": 0,
+    "dislikes": 0,
+    "times": {
+      "created": 16069
+    },
+    "comments": []
   }
 ]

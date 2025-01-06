@@ -6,14 +6,14 @@ import { ListingForm } from "../common/html.js"
 export function MarketplaceView(listings: Listing[], username: string, session: any): string {
     const account = accounts.find(a => a.id == session.username)
 
-    let marketplaceHtml = `<div class="p-2 sm:p-4 lg:p-8 w-full">
+    let marketplaceHtml = `<div class="px-2 sm:px-4 lg:px-8">
         <h1 id="marketplace" class="text-bold text-2xl text-white mb-2">
             ${username ? `${username}'s Store` : `Global Marketplace`} (<a id="marketTotal" href="/market?expired=false&sold=false">${listings.length}</a>)
         </h1>
         <div class="mb-2">
             ${MarketStatsView()}
         </div>
-        <div role="tablist" class="tabs bg-base-200 mb-2">
+        <div role="tablist" class="tabs tabs-bordered tabs-sm mb-2 justify-start">
             <a role="tab" class="tab tab-active">Balance</a>
             <a role="tab" class="tab">Items</a>
             <a role="tab" class="tab">Yield</a>

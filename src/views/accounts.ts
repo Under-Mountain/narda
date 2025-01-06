@@ -2,6 +2,7 @@ import { accounts, current, assets } from '../service/model.js';
 import { Account, Asset } from '../types.js';
 import { ItemForm, ProfileResources } from "../common/html.js";
 import { exploreCost } from "../common/pricing.js";
+import { EditIcon, PostIcon, SendIcon } from '../common/svg.js';
 
 export function ProfileView(account: Account, session: any): string {
     const items = assets.filter(a => a.owner == account.id && a.amount > 0)
@@ -30,17 +31,24 @@ export function ProfileView(account: Account, session: any): string {
                     <h2 class="text-white-100 text-2xl">${account.id}</h2>
                     <div class="text-xs text-gray-500">
                         <p class="" id="accountBio">${account.bio ? account.bio : `The Unknown`}</p>
-                        <!-- The button to open modal -->
-                        <button class="btn btn-primary btn-xs mt-1" onclick="document.getElementById('editAccountModal').showModal()">edit</button>
-                        <button class="btn btn-secondary btn-xs mt-1" onclick="document.getElementById('sendCreditModal').showModal()">send</button>
-                        <button class="btn btn-accent btn-xs mt-1" onclick="document.getElementById('postContentModal').showModal()">post</button>
                     </div>
                 </div>
             </div>
-            <div class="card-body">
+            <div class="card-body pt-0">
                 <div style="text-align:right">
+                    <ul class="menu menu-xs menu-horizontal rounded-box p-0">
+                        <li class="hover:text-accent"><a onclick="document.getElementById('editAccountModal').showModal()">
+                            ${EditIcon} edit
+                        </li></a>
+                        <li class="hover:text-secondary"><a onclick="document.getElementById('sendCreditModal').showModal()">
+                            ${SendIcon} send
+                        </li></a>
+                        <li class="hover:text-primary"><a onclick="document.getElementById('postContentModal').showModal()">
+                            ${PostIcon} post
+                        </li></a>
+                    </ul>
                     <h1 class="text-5xl" class="text-white-100">
-                        <span id="profileBalance">${account.credits.balance.toFixed(2)}</span><small class="text-white-300">sl</small>
+                        <span id="profileBalance" class="text-white">${account.credits.balance.toFixed(2)}</span><small class="text-white-300 text-sm">sl</small>
                     </h1>
                     <small class="text-xs text-gray-500">
                         holding ${(account.credits.balance / current.resources.credits.balance * 100).toFixed(2)}% of
@@ -91,11 +99,11 @@ export function InventoryView(account: Account, items: Asset[], userMineralTotal
 
 export function LeaderboardView(): string {
     const balanceLeaders = accounts.sort((a, b) => { return a.credits.balance > b.credits.balance ? -1 : 1 })
-    let LeaderHtml = `<div class="p-2 sm:p-4 lg:p-8">
+    let LeaderHtml = `<div class="px-2 sm:px-4 lg:px-8">
         <h1 id="leaderboard" class="text-bold text-2xl text-white mb-2">
             Leaderboard
         </h1>
-        <div role="tablist" class="tabs bg-base-200 mb-2">
+        <div role="tablist" class="tabs tabs-bordered tabs-sm mb-2 justify-start">
             <a role="tab" class="tab tab-active">Balance</a>
             <a role="tab" class="tab">Items</a>
             <a role="tab" class="tab">Yield</a>
