@@ -137,9 +137,8 @@ export function HeaderView(session: any, username: string): string {
                 <div id="broadcast" class="mt-1 ml-1 flex justify-start gap-5 truncate">
                     ${BroadcastLinks(
                         posts.filter(p => p.channels.indexOf('broadcast') >= 0)
-                        .sort((a, b) => a.times.created < b.times.created ? -1:1)
-                        .slice(0, 20)
-                        .sort((a, b) => a.times.created < b.times.created ? 1:-1))}
+                        .sort((a, b) => a.times.created > b.times.created ? -1:1)
+                        .slice(0, 10))}
                 </div>
             </div>
         </div>

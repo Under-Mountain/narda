@@ -74,7 +74,6 @@ export default app;
 
 function getBroadcasts() {
     return posts.filter(p => p.channels.indexOf('broadcast') >= 0)
-        .sort((a, b) => a.times.created < b.times.created ? -1:1)
-        .slice(0, 20)
-        .sort((a, b) => a.times.created < b.times.created ? 1:-1)
+        .sort((a, b) => a.times.created > b.times.created ? -1:1)
+        .slice(0, 10)
 }
