@@ -63,18 +63,17 @@ function togglePlay(e: Event): void {
 
     radioOn = !radioOn;
     if (!radioOn) {
-        window.speechSynthesis.pause();
-    } else {
-        if (!!script) window.speechSynthesis.resume();
+        window.speechSynthesis.cancel;
+        return
     }
 
-    script += `
-    Thanks for listening to Global Arda Broadcasting service sponsored by Under Mountain Development Group.
-    We are building sustainable virtual socio-economy for better future in real life. Value through openness and connection.
-    Project Arda is to build Open Socio-Economic Metaverse & Trading Community of digital assets.
-    Here, user can collect resources, craft items, and trade in marketplace.
-    Create a settlement for passive income, join houses and participate in activities to build friendship and receive greater incentives.
-    `;
+    // script += `
+    // Thanks for listening to Global Arda Broadcasting service sponsored by Under Mountain Development Group.
+    // We are building sustainable virtual socio-economy for better future in real life. Value through openness and connection.
+    // Project Arda is to build Open Socio-Economic Metaverse & Trading Community of digital assets.
+    // Here, user can collect resources, craft items, and trade in marketplace.
+    // Create a settlement for passive income, join houses and participate in activities to build friendship and receive greater incentives.
+    // `;
 
     if ('speechSynthesis' in window) {
         const utterance = new SpeechSynthesisUtterance(script);

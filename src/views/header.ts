@@ -132,7 +132,7 @@ export function HeaderView(session: any, username: string): string {
                     ${RadioIcon}
                 </button>
                 <div id="connection" class="mt-1 ml-1 animate-pulse text-warning hidden">
-                    loading broadcasts... from ${posts.length} posts.. total ${posts.reduce((sum, c) => sum += c.comments.length, 0)} comments, total ${posts.reduce((sum, c) => sum += c.likes, 0)} likes and ${posts.reduce((sum, c) => sum += c.dislikes, 0)} dislikes...
+                    loading broadcasts from ${posts.length} streamss.. total ${posts.reduce((sum, c) => sum += c.comments.length, 0)} comments...
                 </div>
                 <div id="broadcast" class="mt-1 ml-1 flex justify-start gap-5 truncate">
                     ${BroadcastLinks(
