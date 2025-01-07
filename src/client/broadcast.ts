@@ -25,7 +25,7 @@ export default function broadcast(posts: Post[]) {
     const connection = document.getElementById('connection');
     const broadcastElement = document.getElementById('broadcast');
 
-    if (!radioBtn || !posts || !connection || !broadcastElement) {
+    if (!radioBtn || !posts || posts.length == 0 || !connection || !broadcastElement) {
         console.warn('standing by...');
         return;
     }
@@ -39,12 +39,14 @@ export default function broadcast(posts: Post[]) {
         broadcastElement.classList.remove('hidden');
         broadcastElement.classList.remove('animate-pulse');
         connection.classList.add('hidden');
-    } else if (broadcastElement.firstChild.nodeValue.indexOf(posts[0].title) >= 0) {
+        return;
+    } else if (broadcastElement.firstElementChild.getHTML().trim().indexOf(posts[0].title) < 0) {
         // offsync detected
         broadcastElement.classList.add('hidden');
         broadcastElement.classList.add('animate-pulse');
         connection.classList.remove('hidden');
-    } else return;
+        return;
+    }
 
     script = `You're listening to the official Broadcast by Global Arda network...`;
     broadcastElement.innerHTML = BroadcastLinks(posts);
