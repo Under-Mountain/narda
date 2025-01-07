@@ -36,8 +36,12 @@ export default function broadcast(posts: Post[]) {
         connection.classList.add('hidden');
     } else if (broadcastElement.firstElementChild.getHTML().trim().indexOf(posts[0].title) < 0) {
         // offsync detected
-        script = `New message has been broadcasted. ${posts[0].title} by ${posts[0].author}`;
-        togglePlay()
+        if (radioOn) {
+            script = `${posts[0].title}`;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(script);
+            window.speechSynthesis.speak(utterance);
+        }
 
         broadcastElement.classList.add('hidden');
         broadcastElement.classList.add('animate-pulse');
@@ -48,10 +52,8 @@ export default function broadcast(posts: Post[]) {
     broadcastElement.innerHTML = BroadcastLinks(posts);
 
     posts.forEach((post, idx) => {
-        script += `Message broadcasted by ${post.author}`;
         script += `${post.title}.`;
         script += `${post.content}.`;
-        //script += `There are ${post.comments.length} comments left so far, and there are ${post.likes} likes and ${post.dislikes} dislikes.`;
     });
 }
 
@@ -76,8 +78,8 @@ function togglePlay(): void {
 
                 utterance.onend = () => {
                     console.debug(`broadcast ended`)
-                    radioBtn.classList.remove('text-accent');
-                    radioOn = false
+                    //radioBtn.classList.remove('text-accent');
+                    //radioOn = false
                     script = ''
                 }
 
