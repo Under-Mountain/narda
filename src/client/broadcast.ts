@@ -39,7 +39,6 @@ export default function broadcast(posts: Post[]) {
         broadcastElement.classList.remove('hidden');
         broadcastElement.classList.remove('animate-pulse');
         connection.classList.add('hidden');
-        return;
     } else if (broadcastElement.firstElementChild.getHTML().trim().indexOf(posts[0].title) < 0) {
         // offsync detected
         broadcastElement.classList.add('hidden');
