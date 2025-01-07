@@ -56,12 +56,12 @@ app.get('/api/current', async (req, res) => {
             }
             const inventory = assets.filter(a => a.owner == req.session.username);
             setTimeout(
-                () => res.json({ global: current, account, inventory, broadcast:getBroadCasts() }),
+                () => res.json({ global: current, account, inventory, broadcast:getBroadcasts() }),
                 world.interval.minute
             );
         } else {
             setTimeout(
-                () => res.json({ global: current, broadcast:getBroadCasts() }),
+                () => res.json({ global: current, broadcast:getBroadcasts() }),
                 world.interval.minute
             );
         }
@@ -72,8 +72,9 @@ app.get('/api/current', async (req, res) => {
 
 export default app;
 
-function getBroadCasts() {
+function getBroadcasts() {
     return posts.filter(p => p.channels.indexOf('broadcast') >= 0)
-        .sort((a, b) => a.times.created < b.times.created ? -1:-1)
-        .slice(0, 10)
+        .sort((a, b) => a.times.created < b.times.created ? -1:1)
+        .slice(0, 20)
+        .sort((a, b) => a.times.created < b.times.created ? 1:-1)
 }

@@ -1,38 +1,90 @@
+import { BroadcastLinks } from "../common/html.js";
 import { Post } from "../interfaces/Post";
 import { Connection } from "./app.js";
 
+let radioBtn: HTMLElement | null;
+let voices: SpeechSynthesisVoice[] = [];
+let script = ``;
+let radioOn = false;
+
+export function initializeBroadcastHandlers() {
+    if ('speechSynthesis' in window) {
+        voices = window.speechSynthesis.getVoices();
+        window.speechSynthesis.onvoiceschanged = () => {
+            voices = window.speechSynthesis.getVoices();
+        };
+    }
+
+    radioBtn = document.getElementById('radioBtn');
+    if (radioBtn) {
+        radioBtn.addEventListener('click', togglePlay);
+    }
+}
+
 export default function broadcast(posts: Post[]) {
-    //console.debug(`Broadcasting ${posts.length} posts`);
-    const connectionLink = document.getElementById('connectionLink');
     const connection = document.getElementById('connection');
     const broadcastElement = document.getElementById('broadcast');
 
-    if (!connectionLink || !posts || !connection || !broadcastElement) {
+    if (!radioBtn || !posts || !connection || !broadcastElement) {
         console.warn('standing by...');
         return;
+    }
+
+    if (radioOn) radioBtn.classList.add('text-accent');
+    else {
+        radioBtn.classList.remove('text-accent');
     }
 
     if (broadcastElement.classList.contains('animate-pulse')) {
         broadcastElement.classList.remove('hidden');
         broadcastElement.classList.remove('animate-pulse');
         connection.classList.add('hidden');
-        connectionLink.classList.replace('text-accent', 'text-gray-100');
-    } else if (posts[0].id != Connection.lastCast) {
+    } else if (broadcastElement.firstChild.nodeValue.indexOf(posts[0].title) >= 0) {
+        // offsync detected
         broadcastElement.classList.add('hidden');
         broadcastElement.classList.add('animate-pulse');
         connection.classList.remove('hidden');
-        connectionLink.classList.replace('text-gray-100', 'text-accent');
+    } else return;
+
+    script = `You're listening to the official Broadcast by Global Arda network...`;
+    broadcastElement.innerHTML = BroadcastLinks(posts);
+
+    posts.forEach((post, idx) => {
+        script += `Message left by ${post.author} in ${post.channels.length > 2 ? post.channels[1] : `unspecified`} place...`;
+        script += `${post.title}...`;
+        script += `${post.content}...`;
+        script += `There are ${post.comments.length} comments left so far, and there are ${post.likes} likes and ${post.dislikes} dislikes...`;
+    });
+}
+
+function togglePlay(e: Event): void {
+    e.preventDefault();
+
+    radioOn = !radioOn;
+    if (!radioOn) {
+        window.speechSynthesis.pause();
+    } else {
+        if (!!script) window.speechSynthesis.resume();
     }
 
-    Connection.lastCast = posts[0].id;
-    broadcastElement.innerHTML = '';
-    posts.forEach((post, idx) => {
-        const postElement = `
-        <a href="#" onclick="document.getElementById('contentModal').showModal()" class="${`
-            text-gray-${idx < 9/3 ? idx*3+1 : 9}00 xs:text-gray-${idx < 9/2 ? idx*2+1 : 9}00 md:text-gray-${idx < 9 ? Math.floor(idx)+1 : 9}00 xl:text-gray-${idx/1.5 < 9 ? Math.floor(idx/1.5)+1 : 9}00
-            `} hover:text-accent">
-            ${post.title} <small>(${post.id} at T${post.times.created} by ${post.author})</small>
-        </a>`;
-        broadcastElement.innerHTML += postElement;
-    });
+    script += `
+    Thanks for listening to Global Arda Broadcasting service sponsored by Under Mountain Development Group.
+    We are building sustainable virtual socio-economy for better future in real life. Value through openness and connection.
+    Project Arda is to build Open Socio-Economic Metaverse & Trading Community of digital assets.
+    Here, user can collect resources, craft items, and trade in marketplace.
+    Create a settlement for passive income, join houses and participate in activities to build friendship and receive greater incentives.
+    `;
+
+    if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(script);
+        //utterance.lang = 'en-GB';
+
+        try {
+            window.speechSynthesis.speak(utterance);
+        } catch (e) {
+            console.error(e);
+        }
+    } else {
+        alert("Text-to-Speech is not supported in this browser.");
+    }
 }

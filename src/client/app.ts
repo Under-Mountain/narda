@@ -1,6 +1,6 @@
 import { initializeFormHandlers } from './events.js';
 import { buildTimeString, buildDateString, updateHeader, updateUserBalance } from './dom.js';
-import broadcast from './broadcast.js';
+import broadcast, { initializeBroadcastHandlers } from './broadcast.js';
 import { Post } from '../interfaces/Post.js';
 
 export const Connection = {
@@ -10,14 +10,14 @@ export const Connection = {
     water: -1,
     mineral: -1
   },
-  lastCast: undefined,
   user: {
     id: undefined,
     balance: 0,
     water: 0,
     mineral: 0,
     inventory: [] as any[]
-  }
+  },
+  broadcast: []
 }
 
 const queryString = window.location.search;
@@ -34,6 +34,7 @@ fetch('/api/world').then(async (res) => {
 })
 
 initializeFormHandlers();
+initializeBroadcastHandlers();
 
 async function syncCurrentAsync(world: any) {
   if (!inProgress) {
@@ -42,8 +43,8 @@ async function syncCurrentAsync(world: any) {
       const current = await res.json()
       console.debug(`T${current.global.time}: ...`)
 
+      updateConnection(current.account, current.inventory, current.broadcast)
       updateWorld(world, current.global.time, current.global.resources, current.broadcast)
-      updateConnection(current.account, current.inventory)
       
       inProgress = false
     })
@@ -60,13 +61,14 @@ function updateWorld(world: any, time: number, resources: any, posts: Post[]) {
   broadcast(posts);
 }
 
-function updateConnection(account: any, inventory: any) {
+function updateConnection(account: any, inventory: any, broadcast: any[]) {
   if (!account) return
 
   Connection.user.balance = account.credits.balance
   Connection.user.id = account.id
   Connection.user.water = getResourceAmount(inventory, 'water')
   Connection.user.mineral = getResourceAmount(inventory, 'mineral')
+  Connection.broadcast = broadcast
   
   updateUserBalance(Connection, queryUser)
 }

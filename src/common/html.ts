@@ -1,4 +1,4 @@
-import { Account, Asset } from "../types.js"
+import { Account, Asset, Post } from "../types.js"
 import { getPlaceTier } from "./places.js";
 
 function Properties(properties: any): string {
@@ -103,4 +103,19 @@ function AssetImageUrl(item: Asset): string {
         default:
             return `/images/logo.webp`
     }
+}
+
+export function BroadcastLinks(posts: Post[]) {
+    let broadcast = ''
+    posts.forEach((post, idx) => {
+        const postElement = `
+        <a href="/post?id=${post.id}" class="${`
+            text-gray-${idx < 9 / 3 ? idx * 3 + 1 : 9}00 xs:text-gray-${idx < 9 / 2 ? idx * 2 + 1 : 9}00 md:text-gray-${idx < 9 ? Math.floor(idx) + 1 : 9}00 xl:text-gray-${idx / 1.5 < 9 ? Math.floor(idx / 1.5) + 1 : 9}00
+            `} hover:text-accent">
+            ${post.title} <small>(at T${post.times.created} by ${post.author})</small>
+        </a>`;
+        broadcast += postElement;
+    });
+
+    return broadcast
 }

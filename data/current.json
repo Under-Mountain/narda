@@ -1,48 +1,21 @@
 {
-  "time": 6,
+  "time": 0,
   "resources": {
     "water": {
-      "balance": 671.5236982593776,
-      "supplied": 5797.523698259213
+      "balance": 0,
+      "supplied": 0
     },
     "mineral": {
-      "balance": 785.3675850371336,
-      "supplied": 4054.3675850372
+      "balance": 0,
+      "supplied": 0
     },
     "credits": {
-      "balance": -5750.677561317391,
-      "supplied": 1299.322438682604
+      "balance": 0,
+      "supplied": 0
     }
   },
   "effects": {
-    "pending": [
-      "BNK23",
-      "BNK39",
-      "BNK29",
-      "BNK33",
-      "BNK13",
-      "BNK16",
-      "BNK27",
-      "BNK31",
-      "BNK37",
-      "BNK22",
-      "BNK32",
-      "BNK38",
-      "BNK30",
-      "BNK26",
-      "BNK25",
-      "BNK40",
-      "BNK47",
-      "BNK46",
-      "BNK17",
-      "BNK43",
-      "BNK48",
-      "BNK24",
-      "BNK49",
-      "BNK41",
-      "BNK42",
-      "BNK28"
-    ],
+    "pending": [],
     "completed": [],
     "rejected": []
   },

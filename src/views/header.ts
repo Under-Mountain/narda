@@ -1,5 +1,6 @@
 import { accounts, assets, posts, current, world, market, activities } from "../service/model.js"
 import { WaterIcon, WaterCollectingIcon, MineralIcon, MineralCollectingIcon, ClockIcon, ExitIcon, QuestionIcon, PostIcon, PlaceIcon, TrophyIcon, ScaleIcon, BookIcon, RecordIcon, RadioIcon } from "../common/svg.js"
+import { BroadcastLinks } from "../common/html.js"
 
 export function HeaderView(session: any, username: string): string {
     const resources = {
@@ -31,7 +32,7 @@ export function HeaderView(session: any, username: string): string {
     })
 
     return `<!DOCTYPE html>
-    <html>
+    <html class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
@@ -105,7 +106,7 @@ export function HeaderView(session: any, username: string): string {
                             <img alt="Profile photo of ${session.username}" src="/images/profiles/${account.visual}" />
                             </div>
                         </div>
-                        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <ul tabindex="0" class="menu menu-sm dropdown-content bg-black rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             <li><a href="/posts" class="hover:text-secondary">${QuestionIcon} Getting started</a></li>
                             <li><a href="/api/exit" class="hover:text-warning">${ExitIcon} Exit</a></li>
                         </ul>
@@ -118,20 +119,27 @@ export function HeaderView(session: any, username: string): string {
                             <img alt="Profile photo of ${session.username}" src="/images/logo.webp" />
                             </div>
                         </div>
-                        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <ul tabindex="0" class="menu menu-sm dropdown-content bg-black rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             <li><a href="/posts" class="hover:text-secondary">${QuestionIcon} Getting started</a></li>
                         </ul>
                     </div>
                 `}
             </div>
         </nav>
-        <div class="p-2 text-xs text-gray-400 bg-base-300">
-            <div class="flex justify-start gap-1">
-                <a id="connectionLink" href="#" class="my-auto min-w-min text-accent hover:text-secondary">
+        <div class="text-xs text-gray-400 bg-base-300">
+            <div class="flex justify-start gap-1 p-2 opacity-50 hover:opacity-60">
+                <button id="radioBtn" class="btn btn-ghost btn-xs min-w-min p-0">
                     ${RadioIcon}
-                </a>
-                <div id="connection" class="mt-1 ml-1 animate-pulse text-accent">tuning...</div>
-                <div id="broadcast" class="mt-1 ml-1 flex justify-start gap-4 animate-pulse truncate">
+                </button>
+                <div id="connection" class="mt-1 ml-1 animate-pulse text-warning hidden">
+                    loading broadcasts... from ${posts.length} posts.. total ${posts.reduce((sum, c) => sum += c.comments.length, 0)} comments, total ${posts.reduce((sum, c) => sum += c.likes, 0)} likes and ${posts.reduce((sum, c) => sum += c.dislikes, 0)} dislikes...
+                </div>
+                <div id="broadcast" class="mt-1 ml-1 flex justify-start gap-5 truncate">
+                    ${BroadcastLinks(
+                        posts.filter(p => p.channels.indexOf('broadcast') >= 0)
+                        .sort((a, b) => a.times.created < b.times.created ? -1:1)
+                        .slice(0, 20)
+                        .sort((a, b) => a.times.created < b.times.created ? 1:-1))}
                 </div>
             </div>
         </div>
