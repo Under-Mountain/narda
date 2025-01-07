@@ -30,43 +30,32 @@ export default function broadcast(posts: Post[]) {
         return;
     }
 
-    if (radioOn) radioBtn.classList.add('text-accent');
-    else {
-        radioBtn.classList.remove('text-accent');
-    }
-
     if (broadcastElement.classList.contains('animate-pulse')) {
         broadcastElement.classList.remove('hidden');
         broadcastElement.classList.remove('animate-pulse');
         connection.classList.add('hidden');
     } else if (broadcastElement.firstElementChild.getHTML().trim().indexOf(posts[0].title) < 0) {
         // offsync detected
+        script = `New message has been broadcasted. ${posts[0].title} by ${posts[0].author}`;
+        togglePlay()
+
         broadcastElement.classList.add('hidden');
         broadcastElement.classList.add('animate-pulse');
         connection.classList.remove('hidden');
         return;
     }
 
-    script = `You're listening to the official Broadcast by Global Arda network...`;
     broadcastElement.innerHTML = BroadcastLinks(posts);
 
     posts.forEach((post, idx) => {
-        script += `Message left by ${post.author} in ${post.channels.length > 2 ? post.channels[1] : `unspecified`} place...`;
-        script += `${post.title}...`;
-        script += `${post.content}...`;
-        script += `There are ${post.comments.length} comments left so far, and there are ${post.likes} likes and ${post.dislikes} dislikes...`;
+        script += `Message broadcasted by ${post.author}`;
+        script += `${post.title}.`;
+        script += `${post.content}.`;
+        //script += `There are ${post.comments.length} comments left so far, and there are ${post.likes} likes and ${post.dislikes} dislikes.`;
     });
 }
 
-function togglePlay(e: Event): void {
-    e.preventDefault();
-
-    radioOn = !radioOn;
-    if (!radioOn) {
-        window.speechSynthesis.cancel;
-        return
-    }
-
+function togglePlay(): void {
     // script += `
     // Thanks for listening to Global Arda Broadcasting service sponsored by Under Mountain Development Group.
     // We are building sustainable virtual socio-economy for better future in real life. Value through openness and connection.
@@ -76,11 +65,34 @@ function togglePlay(e: Event): void {
     // `;
 
     if ('speechSynthesis' in window) {
-        const utterance = new SpeechSynthesisUtterance(script);
-        //utterance.lang = 'en-GB';
+        radioOn = !radioOn;
 
         try {
-            window.speechSynthesis.speak(utterance);
+            if (radioOn) {
+                radioBtn.classList.add('text-accent');
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(script);
+                window.speechSynthesis.speak(utterance);
+
+                utterance.onend = () => {
+                    console.debug(`broadcast ended`)
+                    radioBtn.classList.remove('text-accent');
+                    radioOn = false
+                    script = ''
+                }
+
+                utterance.onerror = (e) => {
+                    console.error(`TTS error`, e.error)
+                    radioBtn.classList.remove('text-accent');
+                    radioOn = false
+                    script = ''
+                }
+            }
+            else {
+                radioBtn.classList.remove('text-accent');
+                window.speechSynthesis.cancel();
+                script = ''
+            }
         } catch (e) {
             console.error(e);
         }
