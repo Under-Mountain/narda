@@ -1,5 +1,5 @@
-import { PlaceIcon } from "../common/svg"
-import { posts } from "../service/model"
+import { PlaceIcon } from "../common/svg.js"
+import { posts } from "../service/model.js"
 
 export function PlacesView(): string {
     const allPlaces: string[] = []
