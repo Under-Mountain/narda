@@ -80,7 +80,7 @@ export function updateUserBalance(Current: any, queryUser: string) {
   if (queryUser == Current.user.id) {
     updateElementContent('profileBalance', Current.user.balance.toFixed(2));
     const profileResourcesHtml = ProfileResources(
-      Current.user?.water, Current.user?.mineral, Current.user?.inventory.filter(i => i.amount > 0 && i.type =="bankstone").length);
+      Current.user?.water, Current.user?.mineral, Current.user?.inventory.filter(i => i.amount > 0 && i.type =="place").length);
     updateElementContent("profileResources", profileResourcesHtml);
   }
 

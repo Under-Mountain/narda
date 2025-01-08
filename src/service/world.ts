@@ -30,7 +30,7 @@ export function queueWorldActivities(): void {
 
     buyFloorListing('water')
     buyFloorListing('mineral')
-    buyFloorListing('bankstone')
+    buyFloorListing('place')
 
     const userWaters = assets.filter(a => a.owner == worldBank.id && a.type == "water")
     const userMinerals = assets.filter(a => a.owner == worldBank.id && a.type == "mineral")
@@ -45,13 +45,13 @@ export function queueWorldActivities(): void {
     const waterConsumption = consume(worldBank.id, 'water', waterCost);
     const mineralConsumption = consume(worldBank.id, "mineral", mineralCost);
 
-    // mint a bankstone
+    // mint a place
     const mintActivity = createTransaction(
         worldBank.id,
         worldBank.id,
         1,
-        'bankstone',
-        `Minting of a bankstone for ${worldBank.id}`
+        'place',
+        `Minting of a place for ${worldBank.id}`
     );
 }
 

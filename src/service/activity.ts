@@ -220,14 +220,14 @@ export async function mint(type: string, username: string, password?: string, in
     const account = accounts.find(a => a.id == to);
 
     const { creditCost, mineralCost, waterCost } = exploreCost(current.resources.water.balance, current.resources.mineral.balance);
-    if (type == "bankstone" && !account) {
+    if (type == "place" && !account) {
         const userWaters = assets.filter(a => a.owner == to && a.type == "water");
         const userMinerals = assets.filter(a => a.owner == to && a.type == "mineral");
 
         if (account.credits.balance < creditCost ||
             userWaters.reduce((sum, c) => sum + c.amount, 0) < waterCost ||
             userMinerals.reduce((sum, c) => sum + c.amount, 0) < mineralCost) {
-            console.error(`${id}: Not enough balance to mint bankstone, abort.`);
+            console.error(`${id}: Not enough balance to mint place, abort.`);
             return;
         }
     }
@@ -254,7 +254,7 @@ export async function mint(type: string, username: string, password?: string, in
             const hash = await bcrypt.hash(password, 2);
             auth.push({ username: to, password: hash });
             break;
-        case "bankstone":
+        case "place":
             if (!account) {
                 console.error('Account not found');
                 break;

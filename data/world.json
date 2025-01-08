@@ -24,7 +24,7 @@
     }
   },
   "items": {
-    "bankstone": {
+    "place": {
       "rateLo": 1,
       "rateHi": 30,
       "capLo": 10,

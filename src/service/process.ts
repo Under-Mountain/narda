@@ -140,16 +140,16 @@ function processPendingMint(mint: Activity): void {
                 visual: getRandomFileName('./public/images/profiles')
             })
             break
-        case "bankstone":
-            const yld = util.getRandomNumber(world.items.bankstone.rateLo, world.items.bankstone.rateHi) / 100
-            const cap = util.getRandomNumber(world.items.bankstone.capLo, world.items.bankstone.capHi)
+        case "place":
+            const yld = util.getRandomNumber(world.items.place.rateLo, world.items.place.rateHi) / 100
+            const cap = util.getRandomNumber(world.items.place.capLo, world.items.place.capHi)
 
             const id = `BNK${assets.length}`
             const { place, tier } = getPlaceTier(yld, cap)
 
             assets.push({
                 id: id,
-                type: "bankstone",
+                type: "place",
                 amount: 1,
                 properties: {
                     "yield": yld,

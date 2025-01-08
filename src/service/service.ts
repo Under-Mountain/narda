@@ -50,7 +50,7 @@ export async function onMinuteAsync(): Promise<void> {
 }
 
 async function onDayAsync(): Promise<void> {
-    const effectItems = assets.filter(a => a.type == "bankstone" && a.amount > 0)
+    const effectItems = assets.filter(a => a.type == "place" && a.amount > 0)
     effectItems.forEach(i => {
         if (current.effects.pending.findIndex(e => e == i.id) < 0) current.effects.pending.push(i.id)
     })
@@ -66,7 +66,7 @@ async function onHourAsync(effectBatchSize: number): Promise<void> {
     current.effects.pending.slice(0, effectBatchSize).forEach(id => {
         const b = assets.find(a => a.id == id && a.amount > 0)
         if (!b) {
-            console.warn(`invalid bankstone id ${id}`);
+            console.warn(`invalid place id ${id}`);
             return;
         }
 

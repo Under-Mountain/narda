@@ -17,7 +17,7 @@ function SellButton(i: any): string {
 }
 
 function PriceInput(i: any): string {
-    const value = i.type == "bankstone" && i.properties?.yield && i.properties.staked && i.properties.cap ?
+    const value = i.type == "place" && i.properties?.yield && i.properties.staked && i.properties.cap ?
         (i.properties.staked * i.properties.yield * .33).toFixed(2) :
         (i.amount * (i.type == 'water' ? .03 : .09)).toFixed(2);
     return `<input name="price" type="number" class="input input-xs w-20" value="${value}" max="1000" step=".01" />`;
@@ -73,11 +73,11 @@ export function ListingForm(l: any, i: any, session: any = null, username: strin
 }
 
 export function ProfileResources(
-    userWaterTotal: number, userMineralTotal: number, userActiveBankstones: number): string {
+    userWaterTotal: number, userMineralTotal: number, userActivePlaces: number): string {
     return `
         <small class="text-blue-400">water <strong>${userWaterTotal}</strong></small>
         <small class="text-yellow-400">mineral <strong>${userMineralTotal}</strong></small>
-        <small class="text-content">places <strong>${userActiveBankstones}</strong></small>
+        <small class="text-content">places <strong>${userActivePlaces}</strong></small>
     `
 }
 
@@ -91,9 +91,9 @@ function AssetImageUrl(item: Asset): string {
             return `/images/resources/water.webp`
         case 'mineral':
             return `/images/resources/mineral.webp`
-        case 'bankstone':
+        case 'place':
             if (!item.properties || !item.properties.cap || !item.properties.yield) {
-                console.error('Bankstone properties missing', item)
+                console.error('place properties missing', item)
                 break
             }
 

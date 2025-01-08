@@ -180,7 +180,7 @@
   },
   {
     "id": "LST15",
-    "item": "BNK43",
+    "item": "PLC43",
     "price": 100,
     "owner": "sauron",
     "amount": 1,
@@ -192,7 +192,7 @@
   },
   {
     "id": "LST16",
-    "item": "BNK45",
+    "item": "PLC45",
     "price": 100,
     "owner": "sauron",
     "amount": 1,
@@ -204,7 +204,7 @@
   },
   {
     "id": "LST17",
-    "item": "BNK47",
+    "item": "PLC47",
     "price": 100,
     "owner": "sauron",
     "amount": 1,
@@ -216,7 +216,7 @@
   },
   {
     "id": "LST18",
-    "item": "BNK46",
+    "item": "PLC46",
     "price": 150,
     "owner": "sauron",
     "amount": 1,
@@ -227,7 +227,7 @@
   },
   {
     "id": "LST19",
-    "item": "BNK43",
+    "item": "PLC43",
     "price": 200,
     "owner": "sauron",
     "amount": 1,
@@ -238,7 +238,7 @@
   },
   {
     "id": "LST20",
-    "item": "BNK54",
+    "item": "PLC54",
     "price": 100,
     "owner": "dev",
     "amount": 1,
@@ -250,7 +250,7 @@
   },
   {
     "id": "LST21",
-    "item": "BNK48",
+    "item": "PLC48",
     "price": 100,
     "owner": "dev",
     "amount": 1,
@@ -262,7 +262,7 @@
   },
   {
     "id": "LST22",
-    "item": "BNK13",
+    "item": "PLC13",
     "price": 100,
     "owner": "dev",
     "amount": 1,
@@ -274,7 +274,7 @@
   },
   {
     "id": "LST23",
-    "item": "BNK12",
+    "item": "PLC12",
     "price": 100,
     "owner": "dev",
     "amount": 1,
@@ -286,7 +286,7 @@
   },
   {
     "id": "LST24",
-    "item": "BNK8",
+    "item": "PLC8",
     "price": 100,
     "owner": "dev",
     "amount": 1,
@@ -298,7 +298,7 @@
   },
   {
     "id": "LST25",
-    "item": "BNK15",
+    "item": "PLC15",
     "price": 100,
     "owner": "dev",
     "amount": 1,
@@ -310,7 +310,7 @@
   },
   {
     "id": "LST26",
-    "item": "BNK52",
+    "item": "PLC52",
     "price": 100,
     "owner": "dev",
     "amount": 1,
@@ -322,7 +322,7 @@
   },
   {
     "id": "LST27",
-    "item": "BNK6",
+    "item": "PLC6",
     "price": 108.37,
     "owner": "dev",
     "amount": 1,
@@ -334,18 +334,19 @@
   },
   {
     "id": "LST28",
-    "item": "BNK42",
+    "item": "PLC42",
     "price": 127.85,
     "owner": "dev",
     "amount": 1,
     "times": {
       "created": 34265,
-      "lastUpdated": 34265
+      "lastUpdated": 34265,
+      "sold": 34860
     }
   },
   {
     "id": "LST29",
-    "item": "BNK17",
+    "item": "PLC17",
     "price": 137.34,
     "owner": "dev",
     "amount": 1,
@@ -356,7 +357,7 @@
   },
   {
     "id": "LST30",
-    "item": "BNK56",
+    "item": "PLC56",
     "price": 138.72,
     "owner": "dev",
     "amount": 1,
@@ -367,7 +368,7 @@
   },
   {
     "id": "LST31",
-    "item": "BNK14",
+    "item": "PLC14",
     "price": 147.52,
     "owner": "dev",
     "amount": 1,
@@ -378,7 +379,7 @@
   },
   {
     "id": "LST32",
-    "item": "BNK19",
+    "item": "PLC19",
     "price": 166.96,
     "owner": "dev",
     "amount": 1,
@@ -389,7 +390,7 @@
   },
   {
     "id": "LST33",
-    "item": "BNK49",
+    "item": "PLC49",
     "price": 192.59,
     "owner": "dev",
     "amount": 1,
@@ -400,7 +401,7 @@
   },
   {
     "id": "LST34",
-    "item": "BNK18",
+    "item": "PLC18",
     "price": 194.07,
     "owner": "dev",
     "amount": 1,
@@ -412,7 +413,7 @@
   },
   {
     "id": "LST35",
-    "item": "BNK18",
+    "item": "PLC18",
     "price": 194.07,
     "owner": "dev",
     "amount": 1,
@@ -423,7 +424,7 @@
   },
   {
     "id": "LST36",
-    "item": "BNK58",
+    "item": "PLC58",
     "price": 197.76,
     "owner": "dev",
     "amount": 1,
@@ -434,7 +435,7 @@
   },
   {
     "id": "LST37",
-    "item": "BNK16",
+    "item": "PLC16",
     "price": 269.06,
     "owner": "dev",
     "amount": 1,
@@ -445,7 +446,7 @@
   },
   {
     "id": "LST38",
-    "item": "BNK53",
+    "item": "PLC53",
     "price": 269.93,
     "owner": "dev",
     "amount": 1,
@@ -456,7 +457,7 @@
   },
   {
     "id": "LST39",
-    "item": "BNK22",
+    "item": "PLC22",
     "price": 298.49,
     "owner": "dev",
     "amount": 1,
@@ -467,7 +468,7 @@
   },
   {
     "id": "LST40",
-    "item": "BNK9",
+    "item": "PLC9",
     "price": 333.74,
     "owner": "dev",
     "amount": 1,
@@ -478,7 +479,7 @@
   },
   {
     "id": "LST41",
-    "item": "BNK57",
+    "item": "PLC57",
     "price": 342.39,
     "owner": "dev",
     "amount": 1,
@@ -489,7 +490,7 @@
   },
   {
     "id": "LST42",
-    "item": "BNK51",
+    "item": "PLC51",
     "price": 439.34,
     "owner": "dev",
     "amount": 1,
@@ -501,7 +502,7 @@
   },
   {
     "id": "LST43",
-    "item": "BNK7",
+    "item": "PLC7",
     "price": 612.37,
     "owner": "dev",
     "amount": 1,
@@ -513,7 +514,7 @@
   },
   {
     "id": "LST44",
-    "item": "BNK7",
+    "item": "PLC7",
     "price": 612.37,
     "owner": "dev",
     "amount": 1,
@@ -549,7 +550,7 @@
   },
   {
     "id": "LST47",
-    "item": "BNK28",
+    "item": "PLC28",
     "price": 100,
     "owner": "test",
     "amount": 1,
@@ -561,7 +562,7 @@
   },
   {
     "id": "LST48",
-    "item": "BNK35",
+    "item": "PLC35",
     "price": 100,
     "owner": "test",
     "amount": 1,
@@ -573,7 +574,7 @@
   },
   {
     "id": "LST49",
-    "item": "BNK26",
+    "item": "PLC26",
     "price": 154.09,
     "owner": "test",
     "amount": 1,
@@ -584,7 +585,7 @@
   },
   {
     "id": "LST50",
-    "item": "BNK25",
+    "item": "PLC25",
     "price": 300.43,
     "owner": "test",
     "amount": 1,
@@ -596,7 +597,7 @@
   },
   {
     "id": "LST51",
-    "item": "BNK34",
+    "item": "PLC34",
     "price": 311.49,
     "owner": "test",
     "amount": 1,
@@ -608,7 +609,7 @@
   },
   {
     "id": "LST52",
-    "item": "BNK61",
+    "item": "PLC61",
     "price": 100,
     "owner": "dev",
     "amount": 1,

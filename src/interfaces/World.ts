@@ -92,26 +92,26 @@ export interface World {
    */
   items: {
     /**
-     * Bankstone item details.
+     * place item details.
      */
-    bankstone: {
+    place: {
       /**
-       * Low rate of bankstone usage or replenishment.
+       * Low rate of place usage or replenishment.
        */
       rateLo: number;
 
       /**
-       * High rate of bankstone usage or replenishment.
+       * High rate of place usage or replenishment.
        */
       rateHi: number;
 
       /**
-       * Low capacity of bankstone.
+       * Low capacity of place.
        */
       capLo: number;
 
       /**
-       * High capacity of bankstone.
+       * High capacity of place.
        */
       capHi: number;
     };

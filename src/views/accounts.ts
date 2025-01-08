@@ -11,7 +11,7 @@ export function ProfileView(account: Account, session: any): string {
             1 : -1})
         .sort((a, b) => { return a.amount < b.amount ? 1 : -1})
 
-    const userActiveBankstones = items.filter((a) => a.type == "bankstone" && a.amount > 0)
+    const userActivePlaces = items.filter((a) => a.type == "place" && a.amount > 0)
 
     const userWaters = assets.filter((a) => a.type == "water" && a.owner == account.id)
     const userWaterTotal = userWaters.reduce((sum, c) => { return sum + c.amount }, 0)
@@ -55,7 +55,7 @@ export function ProfileView(account: Account, session: any): string {
                         ${current.resources.credits.balance.toFixed(2)} credits circulating..
                     </small>
                     <div class="text-sm" id="profileResources">
-                        ${ProfileResources(userWaterTotal, userMineralTotal, userActiveBankstones.length)}
+                        ${ProfileResources(userWaterTotal, userMineralTotal, userActivePlaces.length)}
                     </div>
                 </div>
 
@@ -74,7 +74,7 @@ export function InventoryView(account: Account, items: Asset[], userMineralTotal
         </h3>
         <form id="mintBankForm" class="mb-2 ${readonly? 'hidden' : ''}">
             <div class="form-control">
-                <input type="hidden" name="type" value="bankstone" />
+                <input type="hidden" name="type" value="place" />
                 <label for="type" class="text-xs">
                     consumes <small id="waterCost">${waterCost}</small>
                     water + <small>${mineralCost}</small> mineral
@@ -83,7 +83,7 @@ export function InventoryView(account: Account, items: Asset[], userMineralTotal
             <button id="mintBankBtn" class="btn btn-primary btn-xs"
                 ${(userMineralTotal < mineralCost || userWaterTotal < waterCost ||
                     account.credits.balance < creditCost) ? "disabled" : ""}>
-                Mint Bankstone (-${creditCost.toFixed(2)} credit)
+                Discover New Place (-${creditCost.toFixed(2)} credit)
             </button>
         </form>
         <ul id="inventory" class="bg-base-100 p-1 sm:p-2 lg:p-3 text-xs grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 max-w-screen-md gap-1 opacity-100 transition duration-200">

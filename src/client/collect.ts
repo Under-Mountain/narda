@@ -16,12 +16,14 @@ export function collectResource(resource: string) {
   switch(resource) {
     case 'water':
       waterProgress.removeAttribute('value')
-      waterProgress.classList.replace('opacity-0', 'opacity-100')
+      waterProgress.classList.replace('h-1', 'h-0.5')
+      waterProgress.classList.replace('opacity-0', 'opacity-80')
       toggleButtonState(collectWaterBtn, collectWaterIcon, collectingWaterIcon, true)
       break
     case 'mineral':
       mineralProgress.removeAttribute('value')
-      mineralProgress.classList.replace('opacity-0', 'opacity-100')
+      mineralProgress.classList.replace('h-1', 'h-0.5')
+      mineralProgress.classList.replace('opacity-0', 'opacity-80')
       toggleButtonState(collectMineralBtn, collectMineralIcon, collectingMineralIcon, true)
       break
     default:
@@ -42,17 +44,19 @@ export function collectResource(resource: string) {
     }
     return res.json();
   }).then(res => {
-    waterProgress.value = 100
-    mineralProgress.value = 100
     updateStatus(res)
 
     switch(res.of) {
       case 'water':
-        waterProgress.classList.replace('opacity-100', 'opacity-0')
+        waterProgress.value = 100
+        waterProgress.classList.replace('h-0.5', 'h-1')
+        waterProgress.classList.replace('opacity-80', 'opacity-100')
         toggleButtonState(collectWaterBtn, collectWaterIcon, collectingWaterIcon, false)
         break
       case 'mineral':
-        mineralProgress.classList.replace('opacity-100', 'opacity-0')
+        mineralProgress.value = 100
+        mineralProgress.classList.replace('h-0.5', 'h-1')
+        mineralProgress.classList.replace('opacity-80', 'opacity-100')
         toggleButtonState(collectMineralBtn, collectMineralIcon, collectingMineralIcon, false)
         break
       default:
@@ -60,6 +64,8 @@ export function collectResource(resource: string) {
     }
 
     setTimeout(async () => {
+      mineralProgress.classList.replace('opacity-100', 'opacity-0')
+      waterProgress.classList.replace('opacity-100', 'opacity-0')
       toggleElementVisibility(getElementById("topRightStatus"), true)
       await refreshInventoryAsync()
     }, 500)

@@ -4,7 +4,7 @@
     "author": "dev",
     "title": "Hello World",
     "content": "This is dev. Testing our broadcasting system.",
-    "channels": [
+    "places": [
       "broadcast"
     ],
     "likes": 0,
@@ -19,7 +19,7 @@
     "author": "dev",
     "title": "Broadcasted content will show up in the radio bar",
     "content": "If you keep it on, it will read out for you",
-    "channels": [
+    "places": [
       "broadcast"
     ],
     "likes": 0,
@@ -34,7 +34,7 @@
     "author": "dev",
     "title": "It will read out to users with radio on",
     "content": "If you keep it on, it will read out for you",
-    "channels": [
+    "places": [
       "broadcast"
     ],
     "likes": 0,
@@ -49,7 +49,7 @@
     "author": "dev",
     "title": "<span class=\"text-blue-600\">Mint or buy decoration items</span>",
     "content": "If you keep it on, it will read out for you",
-    "channels": [
+    "places": [
       "broadcast"
     ],
     "likes": 0,
@@ -64,7 +64,7 @@
     "author": "dev",
     "title": "<span class=\"text-secondary\">Premium item costs more</span>",
     "content": "If you keep it on, it will read out for you",
-    "channels": [
+    "places": [
       "broadcast"
     ],
     "likes": 0,
@@ -79,7 +79,7 @@
     "author": "dev",
     "title": "Test",
     "content": "",
-    "channels": [
+    "places": [
       "broadcast"
     ],
     "likes": 0,
@@ -94,7 +94,7 @@
     "author": "test",
     "title": "Read this message loud and clear",
     "content": "",
-    "channels": [
+    "places": [
       "broadcast"
     ],
     "likes": 0,
@@ -109,7 +109,7 @@
     "author": "test",
     "title": "Say something you want to say and it will pop out right away",
     "content": "",
-    "channels": [
+    "places": [
       "broadcast"
     ],
     "likes": 0,
@@ -124,7 +124,7 @@
     "author": "test",
     "title": "Beautiful Christmas",
     "content": "",
-    "channels": [
+    "places": [
       "broadcast"
     ],
     "likes": 0,
@@ -139,7 +139,7 @@
     "author": "dev",
     "title": "Hello world!",
     "content": "",
-    "channels": [
+    "places": [
       "broadcast"
     ],
     "likes": 0,
