@@ -25,8 +25,8 @@ export function PostContentView(account: any, session: any) {
             <input autofocus name="title" class="bg-base-300 input input-md" placeholder="Title is required to post" required />
         </div>
         <div class="form-control">
-            <label for="channels" class="label text-xs">Channel</label>
-            <input name="channels" class="bg-base-300 input input-md" placeholder="general, question, issue, ..." />
+            <label for="places" class="label text-xs">Channel</label>
+            <input name="places" class="bg-base-300 input input-md" placeholder="general, question, issue, ..." />
         </div>
         <div class="form-control">
             <label for="content" class="label text-xs">Content (optional)</label>

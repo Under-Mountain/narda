@@ -2,6 +2,9 @@ import { updateStatus, toggleButtonState, toggleElementVisibility, getElementByI
 import { refreshInventoryAsync } from './refresh.js'
 
 export function collectResource(resource: string) {
+  const waterProgress = getElementById('waterProgress') as HTMLProgressElement
+  const mineralProgress = getElementById('mineralProgress') as HTMLProgressElement
+
   const collectWaterBtn = getElementByIdAsButton('collectWaterBtn')
   const collectWaterIcon = getElementById('collectWaterIcon')
   const collectingWaterIcon = getElementById('collectingWaterIcon')
@@ -12,9 +15,13 @@ export function collectResource(resource: string) {
 
   switch(resource) {
     case 'water':
+      waterProgress.removeAttribute('value')
+      waterProgress.classList.replace('opacity-0', 'opacity-100')
       toggleButtonState(collectWaterBtn, collectWaterIcon, collectingWaterIcon, true)
       break
     case 'mineral':
+      mineralProgress.removeAttribute('value')
+      mineralProgress.classList.replace('opacity-0', 'opacity-100')
       toggleButtonState(collectMineralBtn, collectMineralIcon, collectingMineralIcon, true)
       break
     default:
@@ -35,13 +42,17 @@ export function collectResource(resource: string) {
     }
     return res.json();
   }).then(res => {
+    waterProgress.value = 100
+    mineralProgress.value = 100
     updateStatus(res)
 
     switch(res.of) {
       case 'water':
+        waterProgress.classList.replace('opacity-100', 'opacity-0')
         toggleButtonState(collectWaterBtn, collectWaterIcon, collectingWaterIcon, false)
         break
       case 'mineral':
+        mineralProgress.classList.replace('opacity-100', 'opacity-0')
         toggleButtonState(collectMineralBtn, collectMineralIcon, collectingMineralIcon, false)
         break
       default:
@@ -50,7 +61,6 @@ export function collectResource(resource: string) {
 
     setTimeout(async () => {
       toggleElementVisibility(getElementById("topRightStatus"), true)
-      toggleElementVisibility(getElementById("topLeftStatus"), true)
       await refreshInventoryAsync()
     }, 500)
   })

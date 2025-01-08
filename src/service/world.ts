@@ -3,8 +3,8 @@ import { createTransaction, consume } from "./activity.js";
 import { activities, accounts, world, assets, current, market } from "./model.js";
 import { exploreCost } from "../common/pricing.js";
 
-export function queueBankActivities(): void {
-    console.log(`TX${activities.length}: processing banking activities...`);
+export function queueWorldActivities(): void {
+    console.log(`TX${activities.length}: processing world activities...`);
     let worldBank = accounts.find(a => a.id == 'world') as Account
     if (!worldBank) {
         worldBank = {
@@ -58,7 +58,7 @@ export function queueBankActivities(): void {
 export function buyFloorListing(type: string): void {
     const itemPrefix = type == 'water' ? 'WTR' : type == 'mineral' ? 'MNR' : 'BNK'
 
-    const medianPrice = getMedianPrice(itemPrefix);
+    const avgPrice = getAvgPrice(itemPrefix);
 
     const floorListings = market.filter(l => !l.times.sold && !l.times.expired && l.item.startsWith(itemPrefix))
         .sort((a, b) => { return a.price / a.amount < b.price / b.amount ? -1 : 1 });
@@ -69,7 +69,7 @@ export function buyFloorListing(type: string): void {
     }
 
     const floorListing = floorListings[0];
-    if (floorListing.price/floorListing.amount > medianPrice) {
+    if (floorListing.price/floorListing.amount > avgPrice) {
         console.warn(`TX${activities.length}: listing price exceeds median sold price, skipping`);
         return;
     }
@@ -93,12 +93,15 @@ export function buyFloorListing(type: string): void {
     floorListing.times.sold = current.time
 }
 
-function getMedianPrice(txPrefix: string) {
-    const soldListings = market.filter(l => l.times.sold && l.item.startsWith(txPrefix))
-        .sort((a, b) => (a.price / a.amount) - (b.price / b.amount));
+function getAvgPrice(txPrefix: string) {
+    const soldListings = market.filter(l => l.times.sold && l.item.startsWith(txPrefix));
 
-    const medianPrice = soldListings.length > 0 ?
-        soldListings[Math.floor(soldListings.length / 2)].price / soldListings[Math.floor(soldListings.length / 2)].amount : Infinity;
+    if (soldListings.length === 0) {
+        return Infinity;
+    }
 
-    return medianPrice;
+    const totalAmount = soldListings.reduce((sum, l) => sum + l.amount, 0);
+    const totalPrice = soldListings.reduce((sum, l) => sum + l.price, 0);
+
+    return totalPrice / totalAmount;
 }

@@ -50,25 +50,18 @@ export function updateStatus(res: any) {
   updateElementContent("topRightStatus", `+${res.amount} ${res.of}`);
   topRight.classList.remove('text-blue-400', 'text-yellow-400')
 
-  const topLeft = getElementById("topLeftStatus");
-  updateElementContent("topLeftStatus", `-${res.amount} ${res.of}`);
-  topLeft.classList.remove('text-blue-400', 'text-yellow-400')
-
   switch(res.of) {
     case 'water':
       topRight.classList.add('text-blue-400')
-      topLeft.classList.add('text-blue-400')
       break
     case 'mineral':
       topRight.classList.add('text-yellow-400')
-      topLeft.classList.add('text-yellow-400')
       break
     default:
       break
   }
 
   toggleElementVisibility(topRight, false)
-  toggleElementVisibility(topLeft, false)
 }
 
 export function toggleButtonState(button: HTMLButtonElement, icon: HTMLElement, loadingIcon: HTMLElement, isLoading: boolean) {
@@ -106,8 +99,6 @@ export function updateUserInventory(Current: any, inventory: any[]) {
   const inventoryElement = getElementById('inventory')
   if (!inventoryElement) return
 
-  inventoryElement.innerHTML = ''
-
   Current.user.inventory = inventory.sort((a, b) => {
     return a.properties && b.properties &&
       (a.properties.staked * a.properties.yield) > (b.properties.staked * b.properties.yield) ? 1 : -1
@@ -115,13 +106,30 @@ export function updateUserInventory(Current: any, inventory: any[]) {
     return a.amount < b.amount ? 1 : -1
   })
 
+  const latest: HTMLLIElement[] = []
   Current.user.inventory.filter(i => i.amount > 0).slice(0, 100).forEach(i => {
     const itemElement = document.createElement('li');
     itemElement.innerHTML = ItemForm(i, false).trim()
     itemElement.children[0].addEventListener('submit', onSellItemForm)
 
-    inventoryElement.appendChild(itemElement)
+    latest.push(itemElement)
   })
+
+  let idx = 0
+  for (let current of inventoryElement.children) {
+    const newElem = latest[idx]
+    if (!newElem) current.remove()
+    else if (current.getHTML() != newElem.getHTML()) {
+      current.replaceWith(newElem)
+    }
+    
+    idx++
+  }
+
+  while (latest[idx]) {
+    inventoryElement.appendChild(latest[idx])
+    idx++
+  }
 
   const inventoryTotal = getElementById('inventoryTotal')
   if (inventoryTotal) inventoryTotal.innerHTML = inventory.filter(a => a.amount > 0).length.toString()

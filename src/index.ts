@@ -1,7 +1,7 @@
 import { onMinuteAsync } from './service/service.js'
 import { accounts, world, market, posts } from './service/model.js'
 import { app } from './routes/api.js'
-import { PlacesView, PostsView, PostView } from './views/posts.js'
+import { PostsView, PostView } from './views/posts.js'
 import { MarketplaceView } from './views/market.js'
 import { HeaderView } from './views/header.js'
 import { LeaderboardView, ProfileView } from './views/accounts.js'
@@ -15,6 +15,7 @@ import { fileURLToPath } from 'url'
 import { Request, Response } from 'express'
 import { Account, Listing, Post } from './types.js'
 import { AuthView } from './views/auth.js'
+import { PlacesView } from './views/places.js'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -165,7 +166,7 @@ app.get('/post', (req: Request, res: Response) => {
     `)
 })
 
-app.get('/channels', (req: Request, res: Response) => {
+app.get('/places', (req: Request, res: Response) => {
     const session = req.session
     const username = req.query.user ? req.query.user as string : req.session.username as string
 

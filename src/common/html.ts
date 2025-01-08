@@ -25,7 +25,7 @@ function PriceInput(i: any): string {
 
 export function ItemForm(i: any, readonly: boolean): string {
     const html = `
-        <form class="itemForm p-2 bg-base-100 rounded-lg transition duration-300 hover:bg-base-300 shadow">
+        <form class="itemForm p-2 bg-base-300 rounded-lg transition duration-300 hover:bg-base-300 shadow">
             <div>
                 ${i.amount} unit(s) of ${i.owner}'s ${i.type}
                 <input name="id" type="hidden" value="${i.id}" class="input input-xs" />

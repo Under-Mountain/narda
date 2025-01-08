@@ -23,9 +23,9 @@ export interface Post {
   content: string;
 
   /**
-   * Channels where the post is shared.
+   * places where the post is shared.
    */
-  channels: string[];
+  places: string[];
 
   /**
    * Number of likes the post has received.

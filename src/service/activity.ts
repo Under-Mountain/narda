@@ -179,10 +179,10 @@ export function like(username: string, postId: string, dislike: boolean) {
  * @param username - The username of the poster.
  * @param title - The title of the post.
  * @param content - The content of the post.
- * @param channels - The channels of the post.
+ * @param places - The places of the post.
  * @returns The created post.
  */
-export function postContent(username: string, title: string, content: string, channels: string) {
+export function postContent(username: string, title: string, content: string, places: string) {
     const account = accounts.find(a => a.id == username);
     if (!account || account.credits.balance < 10) {
         throw new Error('Not enough balance to post');
@@ -193,7 +193,7 @@ export function postContent(username: string, title: string, content: string, ch
         author: username,
         title,
         content,
-        channels: channels.replace(/\s+/g, '').split(','),
+        places: places.replace(/\s+/g, '').split(','),
         likes: 0,
         dislikes: 0,
         times: {

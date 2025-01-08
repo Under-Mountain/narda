@@ -2,7 +2,7 @@ import * as model from './model.js'
 import { assets, world, current } from './model.js'
 import { createTransaction } from './activity.js'
 import { processCurrentActivities, processResources } from './process.js'
-import { queueBankActivities } from './bank.js'
+import { queueWorldActivities } from './world.js'
 import * as fs from 'fs'
 import sharp from 'sharp'
 import { OptimizeResources } from './media.js'
@@ -83,5 +83,5 @@ async function onHourAsync(effectBatchSize: number): Promise<void> {
         current.effects.pending = current.effects.pending.filter(e => e != id)
     });
 
-    queueBankActivities()
+    queueWorldActivities()
 }

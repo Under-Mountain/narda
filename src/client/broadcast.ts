@@ -1,8 +1,7 @@
 import { BroadcastLinks } from "../common/html.js";
-import { Post } from "../interfaces/Post";
-import { Connection } from "./app.js";
+import { Post } from "../interfaces/Post.js";
 
-let radioBtn: HTMLElement | null;
+let radioBtn: HTMLButtonElement | null;
 let voices: SpeechSynthesisVoice[] = [];
 let script = ``;
 let radioOn = false;
@@ -15,7 +14,7 @@ export function initializeBroadcastHandlers() {
         };
     }
 
-    radioBtn = document.getElementById('radioBtn');
+    radioBtn = document.getElementById('radioBtn') as HTMLButtonElement;
     if (radioBtn) {
         radioBtn.addEventListener('click', togglePlay);
     }
@@ -51,10 +50,13 @@ export default function broadcast(posts: Post[]) {
 
     broadcastElement.innerHTML = BroadcastLinks(posts);
 
+    script = ''
     posts.forEach((post, idx) => {
         script += `${post.title}.`;
         script += `${post.content}.`;
     });
+
+    radioBtn.disabled = false;
 }
 
 function togglePlay(): void {

@@ -24,10 +24,10 @@ export function HeaderView(session: any, username: string): string {
         }
     }
 
-    const channels: string[] = []
+    const places: string[] = []
     posts.forEach(p => {
-        p.channels.forEach(t => {
-            if (channels.indexOf(t) < 0) channels.push(t)
+        p.places.forEach(t => {
+            if (places.indexOf(t) < 0) places.push(t)
         })
     })
 
@@ -43,8 +43,8 @@ export function HeaderView(session: any, username: string): string {
     </head>
     <body class="content-center">
     <div class="relative sticky top-0 z-40">
-        <nav class="navbar bg-black p-0 min-h-min shadow-lg">
-            <div class="flex-1 p-0">
+        <nav class="navbar bg-black p-0 min-h-min shadow-lg flex justify-between">
+            <div class="p-0">
                 <a href="/" class="btn btn-ghost btn-md p-1 no-animation">
                     ${ClockIcon}
                     <div class="text-xs hidden sm:inline">
@@ -62,7 +62,7 @@ export function HeaderView(session: any, username: string): string {
                     </div>
                 </a>
                 <form id="collectWaterForm">
-                    <button id="collectWaterBtn" class="gap-0 btn btn-ghost btn-md p-0.5 hover:animate-pulse"  name="resource" value="water"
+                    <button id="collectWaterBtn" class="gap-0 btn btn-ghost btn-md p-0.5 no-animation hover:animate-pulse"  name="resource" value="water"
                         ${!session.username || session.username == username && current.resources.water.balance <= 0 ? "disabled" : ""}>
                         ${WaterIcon}
                         ${WaterCollectingIcon}
@@ -73,7 +73,7 @@ export function HeaderView(session: any, username: string): string {
                     </button>
                 </form>
                 <form id="collectMineralForm">
-                    <button id="collectMineralBtn" class="gap-0 btn btn-ghost btn-md p-0.5 hover:animate-pulse" name="resource" value="mineral"
+                    <button id="collectMineralBtn" class="gap-0 btn btn-ghost btn-md p-0.5 no-animation hover:animate-pulse" name="resource" value="mineral"
                         ${!session.username || session.username == username && current.resources.mineral.balance <= 0 ? "disabled" : ""}>
                         ${MineralIcon}
                         ${MineralCollectingIcon}
@@ -84,7 +84,13 @@ export function HeaderView(session: any, username: string): string {
                     </button>
                 </form>
             </div>
-            <div class="flex-none gap-1">
+            <div class="flex-1 px-4">
+                <div class="w-full gap-0">
+                    <progress id="waterProgress" class="progress progress-info transition h-0.5 opacity-0 top-1" value="0"></progress>
+                    <progress id="mineralProgress" class="progress progress-warning transition h-0.5 opacity-0 bottom-4" value="0"></progress>
+                </div>
+            </div>
+            <div class="gap-1">
                 ${session.username ? `
                     <div class="">
                         <div class="text-xs text-blue-400 text-bold leading-3">
@@ -128,7 +134,7 @@ export function HeaderView(session: any, username: string): string {
         </nav>
         <div class="text-xs text-gray-400 bg-base-300">
             <div class="flex justify-start gap-1 p-2 opacity-50 hover:opacity-60">
-                <button id="radioBtn" class="btn btn-ghost btn-xs min-w-min p-0">
+                <button id="radioBtn" class="btn btn-ghost btn-xs min-w-min p-0" disabled>
                     ${RadioIcon}
                 </button>
                 <div id="connection" class="mt-1 ml-1 animate-pulse text-warning hidden">
@@ -136,7 +142,7 @@ export function HeaderView(session: any, username: string): string {
                 </div>
                 <div id="broadcast" class="mt-1 ml-1 flex justify-start gap-5 truncate">
                     ${BroadcastLinks(
-                        posts.filter(p => p.channels.indexOf('broadcast') >= 0)
+                        posts.filter(p => p.places.indexOf('broadcast') >= 0)
                         .sort((a, b) => a.times.created > b.times.created ? -1:1)
                         .slice(0, 10))}
                 </div>
@@ -144,7 +150,6 @@ export function HeaderView(session: any, username: string): string {
         </div>
         <div class="flex justify-between text-xs absolute top-0 left-0 right-0 z-50">
             <div class="flex-none w-44 text-right md:w-56">
-                <small id="topLeftStatus" class="hidden" text-bold"></small>
             </div>
             <div class="flex-auto"></div>
             <div class="flex-none w-40">
@@ -157,9 +162,9 @@ export function HeaderView(session: any, username: string): string {
                     ${PostIcon} Posts
                     <small>(${posts.length})</small>
                 </a></li>
-                <li class="min-w-fit"><a href="/channels" class="hover:text-secondary">
+                <li class="min-w-fit"><a href="/places" class="hover:text-secondary">
                     ${PlaceIcon} Places
-                    <small>(${channels.length})</small>
+                    <small>(${places.length})</small>
                 </a></li>
                 <li class="min-w-fit"><a href="/leaderboard" class="hover:text-yellow-500">
                     ${TrophyIcon} Leaderboard

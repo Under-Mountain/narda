@@ -36,20 +36,20 @@ export function ProfileView(account: Account, session: any): string {
             </div>
             <div class="card-body pt-0">
                 <div style="text-align:right">
-                    <ul class="menu menu-xs menu-horizontal rounded-box p-0">
-                        <li class="hover:text-accent"><a onclick="document.getElementById('editAccountModal').showModal()">
-                            ${EditIcon} edit
-                        </li></a>
-                        <li class="hover:text-secondary"><a onclick="document.getElementById('sendCreditModal').showModal()">
-                            ${SendIcon} send
-                        </li></a>
-                        <li class="hover:text-primary"><a onclick="document.getElementById('postContentModal').showModal()">
-                            ${PostIcon} post
-                        </li></a>
-                    </ul>
-                    <h1 class="text-5xl" class="text-white-100">
+                    <h1 class="text-5xl mb-2" class="text-white-100">
                         <span id="profileBalance" class="text-white">${account.credits.balance.toFixed(2)}</span><small class="text-white-300 text-sm">sl</small>
                     </h1>
+                    <div>
+                        <a onclick="document.getElementById('editAccountModal').showModal()" class="btn btn-primary btn-xs">
+                            ${EditIcon} edit
+                        </a>
+                        <a onclick="document.getElementById('sendCreditModal').showModal()" class="btn btn-secondary btn-xs">
+                            ${SendIcon} send
+                        </a>
+                        <a onclick="document.getElementById('postContentModal').showModal()" class="btn btn-accent btn-xs">
+                            ${PostIcon} post
+                        </a>
+                    </div>
                     <small class="text-xs text-gray-500">
                         holding ${(account.credits.balance / current.resources.credits.balance * 100).toFixed(2)}% of
                         ${current.resources.credits.balance.toFixed(2)} credits circulating..
@@ -86,7 +86,7 @@ export function InventoryView(account: Account, items: Asset[], userMineralTotal
                 Mint Bankstone (-${creditCost.toFixed(2)} credit)
             </button>
         </form>
-        <ul id="inventory" class="bg-base-100 p-1 sm:p-2 lg:p-3 text-xs grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 max-w-screen-md gap-1">
+        <ul id="inventory" class="bg-base-100 p-1 sm:p-2 lg:p-3 text-xs grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 max-w-screen-md gap-1 opacity-100 transition duration-200">
         `
     if (items.length > 0) {
         items.slice(0, 100).forEach(i => {

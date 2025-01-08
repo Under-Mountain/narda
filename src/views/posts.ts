@@ -4,7 +4,7 @@ import { Post } from "../types.js"
 import { TimeView } from "./explorer.js"
 
 export function PostsView(place?: string): string {
-    const filteredPosts = posts.filter(p => !place ? true : p.channels.indexOf(place) >= 0).sort((a, b) => { return a.times.created > b.times.created ? -1 : 1 })
+    const filteredPosts = posts.filter(p => !place ? true : p.places.indexOf(place) >= 0).sort((a, b) => { return a.times.created > b.times.created ? -1 : 1 })
     let postsHtml = `<div>
         <h1 id="posts" class="text-bold text-xl text-gray-300">
             ${place ? `Stories from '<span class="text-accent">${place}</span>' Place` : `Stories from Everywhere`}
@@ -32,7 +32,7 @@ export function PostsView(place?: string): string {
                     <a href="/post?id=${p.id}" class="link-hover">${p.title}</a>
                 </div>
                 <div class="p-2 card-body">
-                    ${p.channels ? `<div class="badge badge-xs p-1">${p.channels.map(t => {
+                    ${p.places ? `<div class="badge badge-xs p-1">${p.places.map(t => {
                         return `<a href="/posts?channel=${t}">#${t}</a>`
                     }).join(", ")}</div> ` : ''}
                     <p class="text-xs text-ellipsis">${p.content}</p>
@@ -57,7 +57,7 @@ export function PostView(post: Post, session: any): string {
             <h1 class="card-title text-white-300 text-xl">${post.title}</h1>
             <div class="card-body p-0 my-1">
                 <small>
-                    ${post.channels ? `channels: <span style="color:gray">${post.channels.map(t => {
+                    ${post.places ? `places: <span style="color:gray">${post.places.map(t => {
                         return `<a href="/posts?channel=${t}">#${t}</a>`}).join(", ")}</span>` : ''}
                         posted on ${TimeView(post.times.created)} by ${post.author}
                 </small>
@@ -88,41 +88,6 @@ export function PostView(post: Post, session: any): string {
             </div>
         </div>
         ` : `<h3>Post ${post} not found</h3>`}`
-}
-
-export function PlacesView(): string {
-    const allPlaces: string[] = []
-    posts.forEach(p => {
-        p.channels.forEach(t => {
-            if (allPlaces.indexOf(t) < 0) allPlaces.push(t)
-        })
-    })
-
-    let placesHtml = ``
-    if (allPlaces.length > 0) {
-        allPlaces.forEach((channel, idx) => {
-            placesHtml += `<li><a href="/posts?channel=${channel}" class="btn hover:animate-pulse">
-                ${PlaceIcon} ${channel}
-            </a></li>`
-        })
-    } else { `<li>Empty</li>`}
-
-    return `<div class="">
-    <h1 id="posts" class="text-bold text-xl text-gray-300">
-        All Places to Explore
-        <small>(<span id="marketTotal" class="text-primary">${allPlaces.length}</span> total)</small>
-    </h1>
-    <small>Leading accounts of the platform. Filter by league tabs below.</small>
-    <div role="tablist" class="tabs tabs-bordered tabs-sm mb-2 justify-end">
-        <a role="tab" class="tab tab-active">Balance</a>
-        <a role="tab" class="tab">Items</a>
-        <a role="tab" class="tab">Yield</a>
-    </div>
-    <ul role="tabpanel" id="market" class="tab-content flex gap-1 justify-start">
-        ${placesHtml}
-    </ul>
-    </div>
-    `
 }
 
 export function CommentsView(post: Post): string {

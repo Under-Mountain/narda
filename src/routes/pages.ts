@@ -65,7 +65,7 @@ router.post('/post', async (req, res) => {
             req.session.username,
             req.body.title,
             req.body.content,
-            req.body.channels
+            req.body.places
         );
         setTimeout(
             () =>

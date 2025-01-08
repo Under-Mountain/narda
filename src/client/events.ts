@@ -160,7 +160,7 @@ function onPostForm(e: Event) {
     },
     body: JSON.stringify({
       title: formData.get('title'),
-      channels: formData.get('channels'),
+      places: formData.get('places'),
       content: formData.get('content')
     })
   }).catch(err => {
