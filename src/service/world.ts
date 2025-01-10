@@ -56,7 +56,7 @@ export function queueWorldActivities(): void {
 }
 
 export function buyFloorListing(type: string): void {
-    const itemPrefix = type == 'water' ? 'WTR' : type == 'mineral' ? 'MNR' : 'BNK'
+    const itemPrefix = type == 'water' ? 'WTR' : type == 'mineral' ? 'MNR' : 'PLC'
 
     const avgPrice = getAvgPrice(itemPrefix);
 

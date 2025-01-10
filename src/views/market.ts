@@ -3,7 +3,7 @@ import { Listing } from "../types.js"
 import { getPricingStats } from "../common/utility.js"
 import { ListingForm } from "../common/html.js"
 
-export function MarketplaceView(listings: Listing[], username: string, session: any): string {
+export function MarketplaceView(listings: Listing[], queryUser: string, session: any, fullScreen = false): string {
     const account = accounts.find(a => a.id == session.username)
 
     let marketplaceHtml = `<div>
@@ -20,12 +20,12 @@ export function MarketplaceView(listings: Listing[], username: string, session: 
         <div class="mb-2 flex flex-wrap justify-start text-xs md:gap-x-3">
             ${MarketStatsView()}
         </div>
-        <ul role="tabpanel" id="market" class="tab-content text-xs grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-1 justify-between">`
+        <ul role="tabpanel" id="market" class="tab-content text-xs grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 ${fullScreen? `md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8` : `max-w-screen-md`} gap-1 justify-between">`
     if (listings.length > 0) {
         listings.slice(0, 100).forEach(l => {
             const i = assets.find(a => a.id == l.item)
             if (i) {
-                marketplaceHtml += `<li>${ListingForm(l, i, session, username, account)}</li>`
+                marketplaceHtml += `<li>${ListingForm(l, i, session, queryUser, account)}</li>`
             }
         })
     } else marketplaceHtml += `<li style="text-align:center">Nothing listed for sale at this time</li>`
@@ -34,7 +34,7 @@ export function MarketplaceView(listings: Listing[], username: string, session: 
 }
 
 export function MarketStatsView(): string {
-    const itemPrefix = ['WTR', 'MNR', 'BNK'];
+    const itemPrefix = ['WTR', 'MNR', 'PLC'];
     let marketStatsHtml = '';
 
     itemPrefix.forEach(prefix => {

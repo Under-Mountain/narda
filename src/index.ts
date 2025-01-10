@@ -36,8 +36,8 @@ setInterval(async () => await onMinuteAsync(), world.interval.minute)
 
 app.get('/', (req: Request, res: Response) => {
     const session = req.session
-    const username = req.query.user ? req.query.user as string : req.session.username as string
-    const headerHtml = HeaderView(session, username)
+    const queryUser = req.query.user ? req.query.user as string : req.session.username as string
+    const headerHtml = HeaderView(session, queryUser)
 
     /**
      * World Overview
@@ -57,7 +57,7 @@ app.get('/', (req: Request, res: Response) => {
     /**
      * Account Overview
      */
-    const account = accounts.find(a => a.id == username)
+    const account = accounts.find(a => a.id == queryUser)
     if (!account) {
         res.send(404)
         return
@@ -67,7 +67,7 @@ app.get('/', (req: Request, res: Response) => {
         .sort((a, b) => a.price / a.amount < b.price / b.amount ? 1 : -1)
         .sort((a, b) => a.amount < b.amount ? 1 : -1)
     
-    const marketplaceHtml = MarketplaceView(listings, username, session)
+    const marketplaceHtml = MarketplaceView(listings, queryUser, session)
 
     res.send(`${headerHtml}
         <div class="lg:flex flex-row-reverse">
@@ -118,7 +118,7 @@ app.get('/marketplace', (req: Request, res: Response) => {
     .sort((a, b) => a.price / a.amount < b.price / b.amount ? 1 : -1)
     .sort((a, b) => a.amount < b.amount ? 1 : -1)
 
-    const marketplaceHtml = MarketplaceView(listings, username, session)
+    const marketplaceHtml = MarketplaceView(listings, username, session, true)
     res.send(`
         ${headerHtml}
         ${marketplaceHtml}

@@ -144,7 +144,7 @@ function processPendingMint(mint: Activity): void {
             const yld = util.getRandomNumber(world.items.place.rateLo, world.items.place.rateHi) / 100
             const cap = util.getRandomNumber(world.items.place.capLo, world.items.place.capHi)
 
-            const id = `BNK${assets.length}`
+            const id = `PLC${assets.length}`
             const { place, tier } = getPlaceTier(yld, cap)
 
             assets.push({
@@ -173,7 +173,7 @@ function processPendingTransaction(transaction: Activity): void {
 
     switch (transaction.of) {
         case "credit":
-            if (transaction.from.startsWith("BNK")) {
+            if (transaction.from.startsWith("PLC")) {
                 const bank = assets.find(a => a.id == transaction.from)
                 if (bank && bank.properties?.staked) {
                     bank.properties.staked -= transaction.amount
